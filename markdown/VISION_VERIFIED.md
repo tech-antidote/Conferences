@@ -4,13 +4,13 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**5678 slides across 211 documents.**
+**5745 slides across 211 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2206 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2801 | structure held; individual characters or lines wrong |
-| accurate | 643 | OCR was already correct; text confirmed, not changed |
+| badly-mangled | 2213 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 2835 | structure held; individual characters or lines wrong |
+| accurate | 669 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
@@ -337,7 +337,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Tiny Chips, Big Leaks Breaking TrustZone-M with Single-Stepping Attacks | 210-211, 236-238, 274, 276 | badly-mangled | 0 |
 | Black Hat USA 2026 | Tractor ECU RE When a Noise Triggered Recall is Also a Security Patch | 1-43 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Transformers Dark Side of the Type - Weaponizing the Conversion Layer | 1-53 | minor-errors | 0 |
-| Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 50 | minor-errors | 0 |
+| Black Hat USA 2026 | Trusted Enough to Run Breaking AI Agents in Official Workflows | 1-68 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Turning Enterprise Update Servers Into Backdoor Factories (0_o) | 1-77 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | When Agentic Glue Melts Exploiting Cloudflare CodeMode and Workers | 1-43 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Zero-Day Provisioning Chaining TP-Link ZTP Vulnerabilities for Infiltrating Networks | 1-47 | badly-mangled, minor-errors, accurate | 0 |
