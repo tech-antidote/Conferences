@@ -104,8 +104,8 @@ converter output. Frontmatter carries `vision_verified_pages` and
 
 | Deck | Verified | Total | Resume at | Model | Note |
 |---|---:|---:|---|---|---|
-| `BlackHat_USA_2026_Slides/angelboy-yang-vulnerabilities-assembled-the-vulnerability-factory-inside-the-windows-kernel.md` | 110 | 211 | 111–211 | Sonnet | resuming now — rate-limit interrupt |
-| `BlackHat_USA_2026_Slides/ben-gardiner-tractor-ecu-re-when-a-noise-triggered-recall-is-also-a-security-patch-wp.md` | 34 | 179 | 35–179 | Opus | resuming now — rate-limit interrupt |
+| `BlackHat_USA_2026_Slides/angelboy-yang-vulnerabilities-assembled-the-vulnerability-factory-inside-the-windows-kernel.md` | 201 | 211 | 202–211 | Sonnet | stopped mid-resume — org Claude Code access disabled (403); 10 pages left |
+| `BlackHat_USA_2026_Slides/ben-gardiner-tractor-ecu-re-when-a-noise-triggered-recall-is-also-a-security-patch-wp.md` | 77 | 179 | 78–179 | Opus | stopped mid-resume — org Claude Code access disabled (403) |
 | `BlackHat_USA_2026_Slides/dion-blazakisjosh-mainebruce-dang-apple-macos-kernel-exploitation-with-mie-building-on-the-ashes-of-100-vulnerabilities.md` | 44 | 58 | 45–58 | — | cyber-safeguard blocked on 45–58 (both models) — see UNVERIFIED.md |
 | `BlackHat_USA_2026_Slides/tristan-madani-secure-a-single-wrong-negation-to-root-linux-and-escape-managed-containers.md` | 33 | 73 | 34–73 | — | earlier partial — re-extract and resume the range |
 
