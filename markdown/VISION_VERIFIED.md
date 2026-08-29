@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**6278 slides across 221 documents.**
+**6405 slides across 222 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2265 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 3261 | structure held; individual characters or lines wrong |
+| badly-mangled | 2304 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 3349 | structure held; individual characters or lines wrong |
 | accurate | 724 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
@@ -81,7 +81,7 @@ under more than one heading or under none. Counts are slides.
 - **Install Me Maybe Turning Claimable VS Code Extension IDs into Supply-Chain Attacks** (DEF CON 34) — slides 1-27
 - **Keychained Melody - Grabbing the Keys to the iCloud Kingdom** (DEF CON 34) — slides 1-31
 
-### Zero-day, RCE and novel exploitation — 45 talks, 1557 slides
+### Zero-day, RCE and novel exploitation — 46 talks, 1684 slides
 
 - **Cloudy With a Chance of Exploits** (Black Hat ASIA 2023) — slide 19
 - **Prototype Pollution Leads to RCE** (Black Hat ASIA 2023) — slide 45
@@ -111,6 +111,7 @@ under more than one heading or under none. Counts are slides.
 - **One Click to System Exploiting Bixby's Trust Model for Full Device Compromise** (Black Hat USA 2026) — slides 1-71
 - **One Percent of the Tokens, All of the Strategy LLM-Assisted Vulnerability Discovery in IoT and Embedded Firmware** (Black Hat USA 2026) — slides 1-55
 - **Pre-auth RCE in Enterprise Java When Middleware Becomes the Exploit** (Black Hat USA 2026) — slides 1-48
+- **Prompt2Own Real-World Kernel Exploit Development with LLMs** (Black Hat USA 2026) — slides 1-127
 - **Render Safe Reverse Engineering and Exploiting an EOD Robot** (Black Hat USA 2026) — slides 1-57
 - **Root From Kilometers Away Ubiquiti AirMax RCE** (Black Hat USA 2026) — slides 1-120
 - **The 0-Day Engine Finding 100+ Vulns with LLMs in Chrome and Android** (Black Hat USA 2026) — slides 1-47
@@ -325,6 +326,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Pass-the-Passkey Family of Attacks | 1-73 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Pre-auth RCE in Enterprise Java When Middleware Becomes the Exploit | 1-48 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Privacy at Scale Roblox's Infrastructure for Honoring User Privacy Rights | 1-46 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | Prompt2Own Real-World Kernel Exploit Development with LLMs | 1-127 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Render Safe Live EOD PackBot Demonstration | 1-57 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Render Safe Reverse Engineering and Exploiting an EOD Robot | 1-57 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Root From Kilometers Away Ubiquiti AirMax RCE | 1-120 | badly-mangled, minor-errors, accurate | 0 |
