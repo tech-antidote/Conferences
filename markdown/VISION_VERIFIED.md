@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**5831 slides across 212 documents.**
+**5890 slides across 213 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
 | badly-mangled | 2221 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2913 | structure held; individual characters or lines wrong |
+| minor-errors | 2972 | structure held; individual characters or lines wrong |
 | accurate | 669 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
@@ -310,6 +310,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | If the Adversary Lives Off Your Land, So Should You | 1-67 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis | 1-81 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | LANJack Turning Ads into IoT Recon Tools | 1-56 | badly-mangled, minor-errors, accurate | 3 |
+| Black Hat USA 2026 | LANJack Turning Ads into IoT Recon Tools | 1-59 | minor-errors | 0 |
 | Black Hat USA 2026 | Managing Security Culture Half Life | 1-15 | minor-errors, accurate | 0 |
 | Black Hat USA 2026 | No Tools Required Post-Injection Exploitation Across AI Agent Frameworks | 1-46 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | One Click to System Exploiting Bixby's Trust Model for Full Device Compromise | 1-71 | badly-mangled, minor-errors, accurate | 0 |
