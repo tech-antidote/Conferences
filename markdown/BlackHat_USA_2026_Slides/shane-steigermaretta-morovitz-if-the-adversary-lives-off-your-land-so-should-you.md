@@ -14,6 +14,8 @@ has_ocr: false
 redacted_secrets: 0
 ocr_confidence: null
 ocr_unreliable_blocks: 0
+vision_verified_pages_changed: 67
+vision_verified_pages: 67
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -31,11 +33,7 @@ converted_at: "2026-08-12T05:42:40Z"
 
 ###### **If the Adversary Lives Off Your Land, So Should You**
 
-Going beyond **A** dversary e **X** posure while **O** bviating them in **L** iving **O** ff **T** he **L** and (AXOLOTL)
-
-1
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Going beyond **A**dversary e**X**posure while **O**bviating them in **L**iving **O**ff **T**he **L**and (AXOLOTL)
 
 ## Slide 2
 
@@ -45,106 +43,96 @@ Shane Steiger, Esq., CISSP _Principal Cyber Security Engineer_ Cyber Resiliency 
 
 Maretta Morovitz _Department Manager Digital Investigations_ Cyber Denial, Deception, and Adversary Engagement & Engage Team
 
-2
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
-
 ## Slide 3
 
 ##### **Briefing Flow**
 
-**What is Adversary Engagement and Why Does it Matter? How Do We Advance Beyond “Deception for Detection”?**
+**01** What is Adversary Engagement and Why Does it Matter?
 
-01
+**02** How Do We Advance Beyond “Deception for Detection”?
 
-**How Are We Working to Enable Advanced Adversary Engagement at Scale? An open-source framework, AXOLOTL, to explore adversary engagement in your environment today**
+**03** How Are We Working to Enable Advanced Adversary Engagement at Scale?
 
-03
-
-04
-
-02
-
-3
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**04** An open-source framework, AXOLOTL, to explore adversary engagement in your environment today
 
 ## Slide 4
 
 ##### **Before We Begin…**
 
-We will not focus on Engage
-in this talk, but you can visit
-engage.mitre.org to learn
-more.
+| Prepare — Plan | Expose — Collect | Expose — Detect | Affect — Prevent | Affect — Direct | Affect — Disrupt | Elicit — Reassure | Elicit — Motivate | Understand — Analyze |
+|---|---|---|---|---|---|---|---|---|
+| Cyber Threat Intelligence | API Monitoring | Introduced Vulnerabilities | Baseline | Attack Vector Migration | Isolation | Application Diversity | Application Diversity | Cyber Threat Intelligence |
+| Engagement Environment | Network Monitoring | Lures | Hardware Manipulation | Email Manipulation | Lures | Artifact Diversity | Artifact Diversity | After-Action Review |
+| Gating Criteria | Software Manipulation | Malware Detonation | Isolation | Introduced Vulnerabilities | Network Manipulation | Burn-In | Information Manipulation | Threat Model |
+| Operational Objective | System Activity Monitoring | Network Analysis | Network Manipulation | Lures | Software Manipulation | Email Manipulation | Introduced Vulnerabilities | |
+| Persona Creation | | | Security Controls | Malware Detonation | | Information Manipulation | Malware Detonation | |
+| Storyboarding | | | | Network Manipulation | | Network Diversity | Network Diversity | |
+| Threat Model | | | | Peripheral Management | | Peripheral Management | Personas | |
+| | | | | Security Controls | | Pocket Litter | | |
+| | | | | Software Manipulation | | | | |
 
-4
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+We will not focus on Engage in this talk, but you can visit engage.mitre.org to learn more.
 
 ## Slide 5
 
 ##### **Before We Begin…**
 
+| Prepare — Plan | Expose — Collect | Expose — Detect | Affect — Prevent | Affect — Direct | Affect — Disrupt | Elicit — Reassure | Elicit — Motivate | Understand — Analyze |
+|---|---|---|---|---|---|---|---|---|
+| Cyber Threat Intelligence | API Monitoring | Introduced Vulnerabilities | Baseline | Attack Vector Migration | Isolation | Application Diversity | Application Diversity | Cyber Threat Intelligence |
+| Engagement Environment | Network Monitoring | Lures | Hardware Manipulation | Email Manipulation | Lures | Artifact Diversity | Artifact Diversity | After-Action Review |
+| Gating Criteria | Software Manipulation | Malware Detonation | Isolation | Introduced Vulnerabilities | Network Manipulation | Burn-In | Information Manipulation | Threat Model |
+| Operational Objective | System Activity Monitoring | Network Analysis | Network Manipulation | Lures | Software Manipulation | Email Manipulation | Introduced Vulnerabilities | |
+| Persona Creation | | | Security Controls | Malware Detonation | | Information Manipulation | Malware Detonation | |
+| Storyboarding | | | | Network Manipulation | | Network Diversity | Network Diversity | |
+| Threat Model | | | | Peripheral Management | | Peripheral Management | Personas | |
+| | | | | Security Controls | | Pocket Litter | | |
+| | | | | Software Manipulation | | | | |
+
 **We will not focus on Engage in this talk, but you can visit engage.mitre.org to learn more.**
-
-5
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
 
 ## Slide 6
 
 ##### **Everyone thought Helms Deep was impenetrable…**
 
-6
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
-
 ## Slide 7
 
 ##### **Because no one paid attention to this**
-
-7
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
 
 ## Slide 8
 
 ##### **But do you remember this guy?**
 
-8
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
-
 ## Slide 9
 
 ##### **And then this…**
-
-9
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
 
 ## Slide 10
 
 #### **Defense-in-Depth: Our Helm’s Deep**
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
-
-10
+- Data
+- Application
+- Host
+- Intranet
+- Perimeter
+- Physical Security
 
 ## Slide 11
-
-to
 
 **Cyber Denial: conceal facts and fictions** to create ambiguity about what is or is not real.
 
 **Cyber Deception: reveal facts and fictions** to create and reinforce perceptions and beliefs.
 
-When used together with **strategic planning and analysis** , they provide the pillars of **Adversary Engagement** .
+When used together with **strategic planning and analysis**, they provide the pillars of **Adversary Engagement**.
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Adversary Engagement
 
-10
+Planning & Analysis
+
+Denial
+
+Deception
 
 ## Slide 12
 
@@ -156,45 +144,27 @@ Negatively **Affect** adversaries’ cyber operations
 
 **Elicit** intelligence from adversaries
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
-
-12
-
 ## Slide 13
 
 ##### **Most people start here.**
 
-Expose  adversaries
+**Expose** adversaries
 
-Negatively  Affect  adversaries’ cyber operations
+Negatively **Affect** adversaries’ cyber operations
 
-Elicit  intelligence from adversaries
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
-
-13
+**Elicit** intelligence from adversaries
 
 ## Slide 14
 
 ##### **Briefing Flow**
 
-**What is Adversary Engagement and Why Does it Matter?**
+**01** What is Adversary Engagement and Why Does it Matter?
 
-01
+**02** How Do We Advance Beyond “Deception for Detection”?
 
-**How Do We Advance Beyond “Deception for Detection”?**
+**03** How Are We Working to Enable Advanced Adversary Engagement at Scale?
 
-**How Are We Working to Enable Advanced Adversary Engagement at Scale? An open-source framework, AXOLOTL, to explore adversary engagement in your environment today**
-
-03
-
-04
-
-02
-
-14.
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**04** An open-source framework, AXOLOTL, to explore adversary engagement in your environment today
 
 ## Slide 15
 
@@ -202,175 +172,145 @@ Elicit  intelligence from adversaries
 
 Deception technology can act as a **canary in the coalmine** when we have known weaknesses or risks we cannot remediate in the near term…
 
-…or as lead
-generation
-mechanism with
-large amounts of
-data
+…or as lead generation mechanism with large amounts of data
 
-15
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Example: Sprinkle deceptive assets on the desktop of your senior leaders or employees that repeatedly fail phishing tests
 
 ## Slide 16
 
 ##### **It is easy to find the weakness when there is only one.**
 
-16
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
-
 ## Slide 17
 
 **What if only ONE of these storm drains actually led into the castle, while all the others were convincing decoys?**
-
-**17**
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
 
 ## Slide 18
 
 ###### **Start to think about “Affecting” Operations**
 
-Malicious cyber
-operations
-
-18
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+- Better
+- Quality
+- Worse
+- Malicious cyber operations
+- ~~Product Scope~~
+- Later
+- Costlier
+- Time
+- Cost
+- Faster
+- Cheaper
+- The Project Management Golden Triangle
 
 ## Slide 19
 
 ##### **Traditional Defense is Reactive**
 
+Reconnaissance | Weaponization | Delivery | Exploitation | Installation | Command and Control | Act on Objectives
+
+Give up? Costly? Don’t know what to do?
+
 Most defensive postures implicitly accept a disadvantage.
 
-During reconnaissance and weaponization, the **adversary operates freely and accurately** .
+During reconnaissance and weaponization, the **adversary operates freely and accurately**.
 
 The defender has conceded:
 
 - **Time** (the adversary sets the pace)
-
-*referencing Lockheed <u>Martin’s Cyber Kill Chain® as an attack life cycle</u>
-
 - **Position** (the adversary chooses the attack surface)
+- **Initiative** (the adversary dictates the engagement)
 
-- • **Initiative** (the adversary dictates the engagement)
-
-19
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+*referencing Lockheed Martin’s Cyber Kill Chain® as an attack life cycle
 
 ## Slide 20
 
 ##### **Adversary Engagement is Proactive**
 
-Deception assets Traditional defenses
+Reconnaissance | Weaponization | Delivery | Exploitation | Installation | Command and Control | Act on Objectives
+
+Deception assets
+
+Traditional defenses
+
 Red’s malicious activities
 
-###### Deceptive assets **disrupt this asymmetry.**
+Deceptive assets **disrupt this asymmetry.**
 
-Engage the adversary through believable false signals **before they gain certainty** . The **adversary’s view becomes incomplete, inaccurate,** and **expensive to validate.**
+Engage the adversary through believable false signals **before they gain certainty**. The **adversary’s view becomes incomplete, inaccurate,** and **expensive to validate.**
 
-We want to cause them to **make poor decisions, force re-validation/hesitation** , **cost them resources** , and ideally **deter them** altogether.
-
-20
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+We want to cause them to **make poor decisions, force re-validation/hesitation**, **cost them resources**, and ideally **deter them** altogether.
 
 ## Slide 21
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4 21
+This slide carries no title or text of its own.
 
 ## Slide 22
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4 22
+This slide carries no title or text of its own.
 
 ## Slide 23
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
-
-23
+This slide carries no title or text of its own.
 
 ## Slide 24
 
 You want to get here.
 
-You are here. ©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
-
-24
+You are here.
 
 ## Slide 25
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4 25
+This slide carries no title or text of its own.
 
 ## Slide 26
 
 ##### **Our Dam Metaphor**
 
 - Adversaries are an endless stream
-
 - Stop what you can
-
 - But assume the APT will always find a way through
-
 - Adversaries often follow path of least resistance. Therefore:
-
    - Make their job difficult, confusing, and slow
-
    - Channel away from important things
-
    - Give yourself every opportunity to find them
-
    - Observe their actions to better detect them
-
-26
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
 
 ## Slide 27
 
 ##### **Briefing Flow**
 
-**What is Adversary Engagement and Why Does it Matter?**
+**01** What is Adversary Engagement and Why Does it Matter?
 
-01
+**02** How Do We Advance Beyond “Deception for Detection”?
 
-> **How Do We Advance Beyond** 02 **“Deception for Detection”?**
+**03** How Are We Working to Enable Advanced Adversary Engagement at Scale?
 
-**How Are We Working to Enable Advanced Adversary Engagement at Scale? An open-source framework, AXOLOTL, to explore adversary engagement in your environment today**
-
-03
-
-04
-
-27
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**04** An open-source framework, AXOLOTL, to explore adversary engagement in your environment today
 
 ## Slide 28
 
 ##### **Barriers to Advanced Adversary Engagement at Scale**
 
-**Requirement for Additional Commercial Off The Shelf (COTS) Products** Adding another technology is overwhelming
+**Requirement for Additional Commercial Off The Shelf (COTS) Products**
+Adding another technology is overwhelming
 
-**Expert Dependent Vendor Lock-In** Effective deployments needs technical Heavy dependence on a single expertise and an understanding of the vendor’s ecosystem can limit threat landscape & the defender’s customization and adaptability. environments
+**Expert Dependent**
+Effective deployments needs technical expertise and an understanding of the threat landscape & the defender’s environments
 
-28..
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**Vendor Lock-In**
+Heavy dependence on a single vendor’s ecosystem can limit customization and adaptability.
 
 ## Slide 29
 
 ##### **How We Needed to Overcome These Barriers**
 
-**Requirement for Additional COTS Products** Leverage existing & open-source resources
+**Requirement for Additional COTS Products**
+Leverage existing & open-source resources
 
-**Expert Dependent Vendor Lock-In** Use AI & mapping to Offer flexible, modular ATT&CK® to lower this solutions intended to work expert dependency. alongside common tools
+**Expert Dependent**
+Use AI & mapping to ATT&CK® to lower this expert dependency.
 
-29.
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**Vendor Lock-In**
+Offer flexible, modular solutions intended to work alongside common tools
 
 ## Slide 30
 
@@ -378,9 +318,18 @@ You are here. ©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT A
 
 Reusing existing assets, data, and forensic artifacts as breadcrumbs, tripwires, and decoys
 
-30
+Living Off the Land: Turning 2025 CVEs Into Active Defense Opportunities
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Owen Sutter, DSc.
+Specialist in Cybersecurity Strategy and Innovation
+
+April 29, 2025
+
+Introduction
+
+As threat actors increasingly exploit emerging vulnerabilities, defenders have an opportunity to shift from reactive defense to intentional engagement. One powerful strategy is **living off the land cyber-deception** — using existing technologies to embed deceptive artifacts into an enterprise infrastructure to mislead and monitor adversaries without deploying standalone honeypots.
+
+Rather than deploying exotic, high-friction traps, this approach builds deception into familiar technologies already present in the environment. By aligning deception with existing assets, organizations can engage adversaries earlier and gather valuable intelligence with minimal operational risk.
 
 ## Slide 31
 
@@ -388,103 +337,69 @@ Reusing existing assets, data, and forensic artifacts as breadcrumbs, tripwires,
 
 ###### **Opportunities**
 
+- No new technology.
+- Deploy as a stand-alone solution or to fill gaps alongside existing products.
+- Harder to detect or signature.
+- Tailor deployments to current maturity, environment, goals, and threats.
+
 ###### **Challenges**
 
-▪ No new technology.
-
-▪ Deploy as a stand-alone solution or to fill gaps alongside existing products. ▪ Harder to detect or signature.
-
-▪ Tailor deployments to current maturity, environment, goals, and threats.
-
-▪ Require knowledge of assets, data, user behavior, and the threat landscape to be effective. ▪ Often need to write custom solutions to deploy at scale. ▪ Even vendors that sell honeytokens specifically provide only basic deployment resources.
-
-31
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+- Require knowledge of assets, data, user behavior, and the threat landscape to be effective.
+- Often need to write custom solutions to deploy at scale.
+   - Even vendors that sell honeytokens specifically provide only basic deployment resources.
 
 ## Slide 32
 
 ##### **Briefing Flow**
 
-**What is Adversary Engagement and Why Does it Matter?**
+**01** What is Adversary Engagement and Why Does it Matter?
 
-01
+**02** How Do We Advance Beyond “Deception for Detection”?
 
-**How Do We Advance Beyond “Deception for Detection”?**
+**03** How Are We Working to Enable Advanced Adversary Engagement at Scale?
 
-**How Are We Working to Enable Advanced Adversary Engagement at Scale?**
-
-03
-
-**An open-source framework, AXOLOTL, to explore adversary engagement in your environment today**
-
-04
-
-02
-
-32.
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**04** An open-source framework, AXOLOTL, to explore adversary engagement in your environment today
 
 ## Slide 33
 
 ### **High Level Architecture**
 
-###### Defender Controlled
+Defender Controlled
 
-1 Understanding of the 3 Gather inputs about yourself, the 2 Understanding of the network and “normal”. threats, priorities, etc. threat landscape. Profiler Planner Threat Landscape
-
-5 Collection of means to 4 Collection of adversary deploy capabilities to engagement capabilities. network/endpoints.
-
-Collection 6 tools to Playbook Planter Processor collect and analyze alerts.
-
-33.
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+1. Profiler — Understanding of the network and “normal”.
+2. Threat Landscape — Understanding of the threat landscape.
+3. Planner — Gather inputs about yourself, the threats, priorities, etc.
+4. Playbook — Collection of adversary engagement capabilities.
+5. Planter — Collection of means to deploy capabilities to network/endpoints.
+6. Processor — Collection tools to collect and analyze alerts.
 
 ## Slide 34
 
-**Proof-of-Concept A** dversary e **X** posure and **O** bviation with **L** iving **O** ff the **L** and (AXOLOTL)
+**Proof-of-Concept**
 
-35.
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**A**dversary e**X**posure and **O**bviation with **L**iving **O**ff the **L**and (AXOLOTL)
 
 ## Slide 35
 
 ##### **Starting with our architecture let’s examine each component**
 
-Starting with our architecture let’s examine each component
 Defender Controlled
-Profiler Planner Threat Landscape
-Processor
-Playbook Planter
-36.
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Profiler | Planner | Threat Landscape
+
+Playbook | Planter | Processor
 
 ## Slide 36
 
 ### **Let’s get started**
 
-Sun Tzu said
 Defender Controlled
-“If you  know the
-enemy and know
-yourself , you need
-not fear the result of
-a hundred battles.”
-Profiler Planner Threat Landscape
-Processor
-Playbook Planter
 
-Sun Tzu said “If you **know the enemy and know yourself** , you need not fear the result of a hundred battles.”
+Profiler | Planner | Threat Landscape
 
-Threat Landscape
+Playbook | Planter | Processor
 
-37.
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Sun Tzu said “If you **know the enemy and know yourself,** you need not fear the result of a hundred battles.”
 
 ## Slide 37
 
@@ -492,12 +407,9 @@ Threat Landscape
 
 Defender Controlled
 
-Profiler Planner Threat Landscape
-Processor
-Playbook Planter
-38.
+Profiler | Planner | Threat Landscape
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Playbook | Planter | Processor
 
 ## Slide 38
 
@@ -505,13 +417,19 @@ Playbook Planter
 
 Defender Controlled
 
-Profiler Planner Threat Landscape
-Processor
-Playbook Planter
+Profiler | Planner | Threat Landscape
 
-39..
+Playbook | Planter | Processor
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+FEDERAL BUREAU OF INVESTIGATION — Public Service Announcement
+Alert Number: I-072026-PSA | 20 July 2026
+FBI Warns of Scammers Impersonating the IC3
+
+CVE®
+
+Cybersecurity & Infrastructure Security Agency (CISA)
+
+CISA Known Exploited Vulnerabilities Catalog
 
 ## Slide 39
 
@@ -519,41 +437,37 @@ Playbook Planter
 
 Defender Controlled
 
-CTI
-Reporting
-Profiler Planner Threat Landscape
-Processor
-Playbook Planter
+Profiler | Planner | Threat Landscape
 
-40..
+Playbook | Planter | Processor
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+CTI Reporting
 
 ## Slide 40
 
 ### **The Profiler**
 
-###### Defender Controlled
+Defender Controlled
 
-CTI
-Reporting
-Profiler Planner Threat Landscape
-Processor
-Playbook Planter
+Profiler | Planner | Threat Landscape
 
-41.
+Playbook | Planter | Processor
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+CTI Reporting
 
 ## Slide 41
 
 ### **The Profiler**
 
-Sometimes the Defender Controlled adversary knows more about me than I do. Can I take advantage of th a t? CTI Reporting Profiler Planner Threat Landscape Processor Playbook Planter
+Defender Controlled
 
-42..
+Sometimes the adversary knows more about me than I do. Can I take advantage of that?
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Profiler | Planner | Threat Landscape
+
+Playbook | Planter | Processor
+
+CTI Reporting
 
 ## Slide 42
 
@@ -561,38 +475,31 @@ Sometimes the Defender Controlled adversary knows more about me than I do. Can I
 
 Defender Controlled
 
-Sometimes the adversary knows more about me than I do. Can I take advantage of th a t?
+Sometimes the adversary knows more about me than I do. Can I take advantage of that?
 
-CTI Reporting Profiler Planner Threat Landscape Processor Playbook Planter
+Profiler | Planner | Threat Landscape
 
-43.
+Playbook | Planter | Processor
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+CALDERA
+
+CTI Reporting
 
 ## Slide 43
 
 ### **The Profiler**
 
-Profiler Playbook
-
 Defender Controlled
 
-an open-source adversary emulation platform.
+CALDERA = an open-source adversary emulation platform.
 
-Defender Controlled
-platform.
-CTI
-Reporting
-Planner
+Profiler | Planner | Threat Landscape
 
-CTI Reporting Threat Landscape
+Playbook | Planter | Processor
 
-Processor
-Planter
+CALDERA
 
-44.
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+CTI Reporting
 
 ## Slide 44
 
@@ -602,93 +509,124 @@ Defender Controlled
 
 And since Caldera is essentially a C2 can I reuse it?
 
-CTI Reporting Profiler Planner Threat Landscape Processor Playbook Planter
+Profiler (CALDERA) | Planner | Threat Landscape (CTI Reporting)
 
-45.
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Playbook | Planter (CALDERA) | Processor
 
 ## Slide 45
 
 ### **The Planter**
 
 Defender Controlled
-I  wonder what else
-we could have used
-CTI
-as our C2? Reporting
-Profiler Planner Threat Landscape
-Processor
-Playbook Planter
-46.
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+I wonder what else we could have used as our C2?
+
+Profiler (CALDERA) | Planner | Threat Landscape (CTI Reporting)
+
+Playbook | Planter (CALDERA) | Processor
 
 ## Slide 46
 
 ### **CrowdStrike (or any EDR) can also act as a planter**
 
 Defender Controlled
-Profiler Planner Threat Landscape
-Processor
-Playbook Planter
-47.
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Profiler | Planner | Threat Landscape
+
+Playbook | Planter (CALDERA) | Processor
+
+Deception
+$whoami
+
+CrowdStrike
+
+<whoami>
+
+<{Deception}>
+
+View only - LOTL Cyber Deception - whoami RDP Breadcrumb — Workflow details
+
+Trigger
+Alert > EPP Detection
+
+Condition
+If Custom IOA rule is equal to whoami LOLT Deception
+
+TRUE
+
+Administrator: Windows PowerShell ISE — 10.1.4.60
+
+This PC > Local Disk (C:) > Users > Administrator > Documents
+
+| Name | Date modified | Type | Size |
+|---|---|---|---|
+| My Documents | 10/7/2024 3:55 PM | File folder | |
+| WindowsPowerShell | 1/27/2025 8:33 PM | File folder | |
+| aws-new-i-0237cd510e2a017b3.rdp | 11/19/2024 3:57 PM | Remote Desktop … | 2 KB |
+| Default.rdp | 12/31/2024 5:08 PM | Remote Desktop … | 0 KB |
+| document2.xml | 11/21/2024 9:54 PM | XML Document | 10 KB |
+| iis7 | 11/19/2024 5:13 PM | Internet Shortcut | 1 KB |
+| RDP-Fake.ps1 | 4/14/2025 5:42 PM | Windows PowerS… | 1 KB |
+| test.rdp | 4/14/2025 6:13 PM | Remote Desktop … | 1 KB |
+
+8 items
 
 ## Slide 47
 
 ### **The Planner**
 
-###### Defender Controlled
+Defender Controlled
 
-CTI
-Reporting
-Engage
-Profiler Planning  Planner Threat Landscape
-Process
-Processor
-Playbook Planter
+Profiler (CALDERA) | Planner (Engage Planning Process) | Threat Landscape (CTI Reporting)
 
-48
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Playbook | Planter (CALDERA) | Processor
 
 ## Slide 48
 
 ### **The Planner**
 
-###### Defender Controlled
+Defender Controlled
 
-CTI
-Reporting
-Engage
-Profiler Planning  Planner Threat Landscape
-Process
-Processor
-Playbook Planter
+Profiler (CALDERA) | Planner | Threat Landscape (CTI Reporting)
 
-49
+Playbook | Planter | Processor
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**Prepare**
+
+1. **Step 1:** Assess knowledge of your adversaries and your organization
+2. **Step 2:** Determine your operational objective
+3. **Step 3:** Determine how you want your adversary to react
+4. **Step 4:** Determine what you want your adversary to perceive
+5. **Step 5:** Determine channels to engage with your adversary
+6. **Step 6:** Determine the success and gating criteria
+
+**Operate**
+
+7. **Step 7:** Execute your operation
+
+**Understand**
+
+8. **Step 8:** Turn raw data into actionable intelligence
+9. **Step 9:** Feedback intelligence
+10. **Step 10:** Analyze successes & failures to inform future actions
 
 ## Slide 49
 
 ### **The Planner**
 
-###### Defender Controlled
+Defender Controlled
 
-CTI
-Reporting
-Engage
-Profiler Planning  Planner Threat Landscape
-Process
-Processor
-Playbook Planter
+Profiler (CALDERA) | Planner | Threat Landscape (CTI Reporting)
 
-50
+Playbook | Planter | Processor
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Profile
+
+- Campaign A
+  - Operation A1
+  - Operation A2
+- Campaign B
+  - Operation B1
 
 ## Slide 50
 
@@ -696,262 +634,230 @@ Playbook Planter
 
 Defender Controlled
 
-CTI
-Reporting
-Engage
-Profiler Planning  Planner Threat Landscape
-Process
-Processor
-Playbook Planter
-51.
+Profiler (CALDERA) | Planner (Engage Planning Process) | Threat Landscape (CTI Reporting)
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Playbook | Planter (CALDERA) | Processor
 
 ## Slide 51
 
-The Playbook
+### **The Playbook**
+
 Defender Controlled
-Found our
-IT assets
-CTI
-Reporting
-Engage
-Profiler Planning  Planner Threat Landscape
-Process
-Processor
-Playbook Planter
-52.
 
-52.
+Found our IT assets
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Profiler (CALDERA) | Planner (Engage Planning Process) | Threat Landscape (CTI Reporting)
+
+Playbook | Planter (CALDERA) | Processor
 
 ## Slide 52
 
-The Playbook
+### **The Playbook**
+
 Defender Controlled
-Found our
-IT assets
-Maps to
-ATT&CK®
-CTI
-Reporting
-Engage
-Profiler Planning  Planner Threat Landscape
-Process
-Processor
-Playbook Planter
-53.
 
-53.
+Found our IT assets
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Maps to ATT&CK®
+
+Profiler (CALDERA) | Planner (Engage Planning Process) | Threat Landscape (CTI Reporting)
+
+Playbook | Planter (CALDERA) | Processor
 
 ## Slide 53
 
-Found our
-IT assets
-CTI
-Reporting
-Threat Landscape
-
 ### **The Playbook**
 
-Defender Controlled Maps to ATT&CK®
+Defender Controlled
 
-Engage
-Profiler Planning  Planner
-Process
-Artifact  Playbook Planter
-Dictionary
+Found our IT assets
 
-Processor
+Maps to ATT&CK®
 
-54.
+**Common IT Element** — This IT asset…
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**ATT&CK Technique** — …is impacted by this adversary behavior.
+
+**Engage Activity** — We can collect, observe, or manipulate this behavior…
+
+**LOTLE Opportunity** — …because we have this available resource.
+
+**Implementation** — This is how we can do this for the resources in our specific environment
+
+Profiler (CALDERA) | Planner (Engage Planning Process) | Threat Landscape (CTI Reporting)
+
+Playbook (Artifact Dictionary) | Planter (CALDERA) | Processor
 
 ## Slide 54
 
-The Plays
-What else can we do
+### **The Plays**
+
 Defender Controlled
-with our
-understanding of
-“normal”?
-CTI
-Reporting
-Engage
-Profiler Planning  Planner Threat Landscape
-Process
-Artifact  Processor
-Playbook Planter
-Dictionary
-55
 
-55
+What else can we do with our understanding of “normal”?
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Profiler (CALDERA) | Planner (Engage Planning Process) | Threat Landscape (CTI Reporting)
+
+Playbook (Artifact Dictionary) | Planter (CALDERA) | Processor
 
 ## Slide 55
 
 ### **The Plays**
 
 Defender Controlled
-We decided to
-sh o wca s e 2 ty pes of
-AI enabled “plays”:
-CTI
-honeypots and  Engage  Reporting
-Profiler Planning  Planner Threat Landscape
-Process
-honeytokens
-Artifact  Playbook LLMs Planter Processor
-Dictionary
-56
 
-56
+We decided to showcase 2 types of AI enabled “plays”: honeypots and honeytokens
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Profiler (CALDERA) | Planner (Engage Planning Process) | Threat Landscape (CTI Reporting)
+
+Playbook (Artifact Dictionary, LLMs) | Planter (CALDERA) | Processor
 
 ## Slide 56
 
 ### **The Plays**
 
-Defender Controlled an open-source AI honeypot from Splunk CTI Reporting Engage Profiler Planning Planner Threat Landscape Process Artifact Playbook LLMs Planter Processor Dictionary DECEIVE AI Honeypot
+Defender Controlled
 
-57
+DECEIVE AI Honeypot = an open-source AI honeypot from Splunk
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Profiler (CALDERA) | Planner (Engage Planning Process) | Threat Landscape (CTI Reporting)
+
+Playbook (Artifact Dictionary, LLMs, DECEIVE AI Honeypot) | Planter (CALDERA) | Processor
 
 ## Slide 57
 
 ### **The Plays**
 
-Defender Controlled open-source honeypots and honeytokens from Thinks
+Defender Controlled
 
-CTI Reporting Engage Profiler Planning Planner Threat Landscape Process OpenCanary & Canarytokens Artifact Playbook LLMs Planter Processor Dictionary DECEIVE AI Honeypot
+OpenCanary & Canarytokens = open-source honeypots and honeytokens from Thinks
 
-58
+Profiler (CALDERA) | Planner (Engage Planning Process) | Threat Landscape (CTI Reporting)
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Playbook (Artifact Dictionary, OpenCanary & Canarytokens, LLMs, DECEIVE AI Honeypot) | Planter (CALDERA) | Processor
 
 ## Slide 58
 
-The Plays
+### **The Plays**
+
 Defender Controlled
-CTI
-Reporting
-Engage
-Profiler Planning  Planner Threat Landscape
-Process
-OpenCanary &
-Canarytokens
-Artifact  Playbook LLMs Planter Processor
-Dictionary
-DECEIVE AI
-Honeypot 59
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+
+Profiler (CALDERA) → LLMs → DECEIVE AI Honeypot / OpenCanary & Canarytokens
+
+Profiler (CALDERA) | Planner (Engage Planning Process) | Threat Landscape (CTI Reporting)
+
+Playbook (Artifact Dictionary, OpenCanary & Canarytokens, LLMs, DECEIVE AI Honeypot) | Planter (CALDERA) | Processor
 
 ## Slide 59
 
 ### **The Processor**
 
-Defender Controlled Blue Agave (BBX, REY) CTI Reporting Engage Profiler Planning Planner Threat Landscape Process OpenCanary & Canarytokens Blue Agave **Artifact** Playbook LLMs Planter (BBX, REY) Processor **Dictionary** DECEIVE AI Honeypot
+Defender Controlled
 
-60
+Blue Agave (BBX, REY) = Organizational Network (Host, Host, Host) → Event log files → BBX (Activity set generation) → Activity set file → Rey (User visualization / analysis)
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Profiler (CALDERA) | Planner (Engage Planning Process) | Threat Landscape (CTI Reporting)
+
+Playbook (Artifact Dictionary, OpenCanary & Canarytokens, LLMs, DECEIVE AI Honeypot) | Planter (CALDERA) | Processor (Blue Agave — BBX, REY)
 
 ## Slide 60
 
 ### **The Processor**
 
-###### Defender Controlled
+Defender Controlled
 
-CTI
-Reporting
-Engage
-Profiler Planning  Planner Threat Landscape
-Process
-OpenCanary &
-Canarytokens
-Blue Agave
-Artifact  Playbook LLMs Planter (BBX, REY) Processor
-Dictionary
-DECEIVE AI
-Honeypot 61
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+Activity-set graph — powershell.exe, explorer.exe, systeminfo.exe, whoami.exe, Acrobat.exe, AcroCEF.exe (DESKTOP-0DC3M4B\Sysm…); …PSScriptPolicyTest…create
+
+Execution T1059.001 · Discovery T1082 · Discovery T1033 · Detect EAC0005
+
+Profiler (CALDERA) | Planner (Engage Planning Process) | Threat Landscape (CTI Reporting)
+
+Playbook (Artifact Dictionary, OpenCanary & Canarytokens, LLMs, DECEIVE AI Honeypot) | Planter (CALDERA) | Processor (Blue Agave — BBX, REY)
 
 ## Slide 61
 
 ### **Use activity sets to visualize alerts**
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
-
-62
+**RED ACTIVITY**
+Red conducts operations, which may include Living Off the Land (LOTL) activities.
 
 ## Slide 62
 
 ### **Use activity sets to visualize alerts**
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**RED ACTIVITY**
+Red conducts operations, which may include Living Off the Land (LOTL) activities.
 
-63
+**RED TRIGGERS CANARYTOKEN**
+During malicious operation, red unknowingly triggers tripwire.
 
 ## Slide 63
 
 ### **Use activity sets to visualize alerts**
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**RED ACTIVITY**
+Red conducts operations, which may include Living Off the Land (LOTL) activities.
 
-64
+**RED TRIGGERS CANARYTOKEN**
+During malicious operation, red unknowingly triggers tripwire.
+
+**CANARYTOKEN BEACONS**
+Token alerts the canarytoken server. Sysmon records this network activity
 
 ## Slide 64
 
 ### **Use activity sets to visualize alerts**
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**RED ACTIVITY**
+Red conducts operations, which may include Living Off the Land (LOTL) activities.
 
-65
+**RED TRIGGERS CANARYTOKEN**
+During malicious operation, red unknowingly triggers tripwire.
+
+**CANARYTOKEN BEACONS**
+Token alerts the canarytoken server. Sysmon records this network activity
+
+**BBX GENERATES AN ACTIVITY SET**
+BBX uses this log as a first pass analytic to trigger the generation of an Activity Set
 
 ## Slide 65
 
 ### **Use activity sets to visualize alerts**
 
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**RED ACTIVITY**
+Red conducts operations, which may include Living Off the Land (LOTL) activities.
 
-66
+**RED TRIGGERS CANARYTOKEN**
+During malicious operation, red unknowingly triggers tripwire.
+
+**CANARYTOKEN BEACONS**
+Token alerts the canarytoken server. Sysmon records this network activity
+
+**BBX GENERATES AN ACTIVITY SET**
+BBX uses this log as a first pass analytic to trigger the generation of an Activity Set
+
+**ACTIVITY SET VIEWABLE IN REY**
+Defender can now see an activity set, based on the activity surrounding the token, in Rey.
 
 ## Slide 66
 
 # **AXOLOTL Components: Overview**
 
-**Caldera** Open-source adversary Profiler emulation platform Playbook Planter **Artifact Dictionary** Map your IT assets, to Playbook Processor ATT&CK, to Engage, to LOTLE opportunities. Planner Playbook **OpenCanar y** Playbook Open-source tools to generate honeypots
+**Caldera** — Open-source adversary emulation platform (Profiler, Planter)
 
-**Canarytokens** Open-source tools to generate  honeytokens
+**Artifact Dictionary** — Map your IT assets, to ATT&CK, to Engage, to LOTLE opportunities. (Playbook)
 
-**Blue Agave** Detect, label, and visualize ATT&CKbased attack activity through causal graphs
+**OpenCanary** — Open-source tools to generate honeypots (Playbook)
 
-###### **Engage Planning Process**
+**DECEIVE** — Open-source AI honeypot to show how AI can lower the barrier to building realistic, high-fidelity honeypots (Playbook)
 
-Set of resources to walk trough the 10-step planning process
+**Canarytokens** — Open-source tools to generate honeytokens (Playbook)
 
-###### **DECEIVE**
+**Blue Agave** — Detect, label, and visualize ATT&CK-based attack activity through causal graphs (Processor)
 
-Open-source AI honeypot  to show how AI can lower the barrier to building realistic, high-fidelity honeypots
-
-67
-
-©2026 THE MITRE CORPORATION. ALL RIGHTS RESERVED. MITRE CONTENT APPROVED FOR PUBLIC RELEASE. DISTRIBUTION UNLIMITED PR_25-02157-4
+**Engage Planning Process** — Set of resources to walk trough the 10-step planning process (Planner)
 
 ## Slide 67
-
-###### **Thanks to everyone who made this possible!**
-
-Alice Koeninger
-
-Ouwen Dai Bronwyn Patrick
 
 ## **QUESTIONS?**
 
@@ -961,12 +867,33 @@ engage@mitre.org
 
 https://www.linkedin.com/showcase/mitre-engage
 
-Austin Gibbons Mark Perry Ken Smith
+**Thanks to everyone who made this possible!**
+
+Alice Koeninger
+
+Ouwen Dai
+
+Bronwyn Patrick
+
+Austin Gibbons
+
+Mark Perry
+
+Ken Smith
 
 Stan Barr
 
 Chris Peloquin
 
-Justin Bui Sean Ha
+Justin Bui
 
-Jake Steele Baydan Hussen Stephen Forbin Mustafa Akpina
+Sean Ha
+
+Jake Steele
+
+Baydan Hussen
+
+Stephen Forbin
+
+Mustafa Akpina
+

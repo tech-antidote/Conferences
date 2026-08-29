@@ -4,12 +4,12 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**5555 slides across 209 documents.**
+**5622 slides across 210 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2175 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 2709 | structure held; individual characters or lines wrong |
+| badly-mangled | 2188 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 2763 | structure held; individual characters or lines wrong |
 | accurate | 643 | OCR was already correct; text confirmed, not changed |
 | unrecorded | 28 | reviewed before verdicts were recorded |
 
@@ -306,6 +306,7 @@ under more than one heading or under none. Counts are slides.
 | Black Hat USA 2026 | Handle With Care Chaining Azure Automation Flaws for Cross-Tenant Identity Takeover | 1-50 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Hunting LANDFALL From Overlooked Images to State-Linked Mobile Spyware | 1-54 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | Identity Crisis Novel Vulnerabilities Leading to Kerberos Downgrade, DoS, and Full Domain Takeover | 1-83 | badly-mangled, minor-errors, accurate | 0 |
+| Black Hat USA 2026 | If the Adversary Lives Off Your Land, So Should You | 1-67 | badly-mangled, minor-errors | 0 |
 | Black Hat USA 2026 | Invisible Threads Remote Building Surveillance Through Encrypted Thread Traffic Analysis | 1-81 | badly-mangled, minor-errors, accurate | 0 |
 | Black Hat USA 2026 | LANJack Turning Ads into IoT Recon Tools | 1-56 | badly-mangled, minor-errors, accurate | 3 |
 | Black Hat USA 2026 | Managing Security Culture Half Life | 1-15 | minor-errors, accurate | 0 |
