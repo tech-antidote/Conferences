@@ -14,9 +14,9 @@ has_ocr: true
 redacted_secrets: 0
 ocr_confidence: 87.6
 ocr_unreliable_blocks: 0
-vision_unreviewed_pages: 23
-vision_verified_pages_changed: 24
-vision_verified_pages: 41
+vision_unreviewed_pages: 0
+vision_verified_pages_changed: 45
+vision_verified_pages: 64
 ocr_timeouts: 0
 pages_recovered_from_text_layer: 0
 companion_files: []
@@ -1085,177 +1085,194 @@ loaded dylibs not shown :( which affords a <u>high level of stealth</u>
 
 ## Slide 43
 
+### **`"Equation group" 1st-stage OS X implant`**
+
+**`dylib version persisted via DYLD_INSERT_LIBRARIES?`**
+
 \```
-01
-02
-03
-04
-05
-06
-07
-08
-09
-10
-11
+01 cmd_exec(char* path) {
+03    chmod(path, 0700);
+05    pid = fork()
+07    //child
+08    if(0 == pid) {
+09       //unset DYLD_INSERT_LIBRARIES
+11       execle(...);
 \```
 
 \```
-"Equation group" 1st-stage OS X implant
-dylib version persisted via DYLD_INSERT_LIBRARIES?
+01 memcpy(*(env + envIndex_DYLD * 0x4),
+02         "DYLD_INSERT_LIBRARIES", lengthOf_DYLD);
+04 *(env + envIndex_DYLD * 0x4) + lengthOf_DYLD) = '=';
+05 *(env + envIndex_DYLD * 0x4) + lengthOf_DYLD + 0x1) = '\x00';
 \```
 
-\```
-cmd_exec(char* path) {
-\```
+**`unset DYLD_INSERT_LIBRARIES variable`**
 
-\```
-   chmod(path, 0700);
-\```
-
-\```
-   pid = fork()
-\```
-
-\```
-//child
-\```
-
-\```
-   if(0 == pid) {
-//unset DYLD_INSERT_LIBRARIES
-      execle(...);
-\```
-
-\```
-01
-02
-03
-04
-05
-\```
-
-\```
-memcpy(*(env + envIndex_DYLD * 0x4),
-        "DYLD_INSERT_LIBRARIES", lengthOf_DYLD);
-\```
-
-**`04 *(env + envIndex_DYLD * 0x4) + lengthOf_DYLD) = '='; 05 *(env + envIndex_DYLD * 0x4) + lengthOf_DYLD + 0x1) = '\x00'; unset DYLD_INSERT_LIBRARIES variable`** …appears there is an execution/persistence mechanism where the implant is spawned via **`DYLD_INSERT_LIBRARIES`** ??
+appears there is an execution/persistence mechanism where
+the implant is spawned via **`DYLD_INSERT_LIBRARIES`** ??
 
 ## Slide 44
 
-### **`Flashback (first wide-spread Mac malware) Persistence + browser "injection" via DYLD_INSERT_LIBRARIES`**
+### **`Flashback (first wide-spread Mac malware)`**
 
-**`Process 64337 stopped installer`: ->  0x100001934 <+6452>: movq   %rax, %r13 (lldb) x/s $rax 0x7f8b62808800: "#!/bin/sh\nmv %s %s\nchmod 777 %s\nmv %s %s\nchmod 777 %s\ndefaults write /Applications/Safari.app/Contents/Info LSEnvironment -dict DYLD_INSERT_LIBRARIES "%s"\nchmod 666 /Applications/Safari.app/Contents/Info.plist\ntouch /Applications/Safari.app" Flashback installer (in debugger) ... <key>LSEnvironment</key> <dict>`** Flashback's dylib **`<key>DYLD_INSERT_LIBRARIES</key> <string>/Applications/Safari.app/Contents/Resources/.<name from C&C>.xsl</string> </dict> Safari.app/Contents/Info.plist (infected)`**
+**`Persistence + browser "injection" via DYLD_INSERT_LIBRARIES`**
+
+\```
+Process 64337 stopped
+installer`:
+->  0x100001934 <+6452>: movq    %rax, %r13
+
+(lldb) x/s $rax
+0x7f8b62808800: "#!/bin/sh\nmv %s %s\nchmod 777 %s\nmv %s %s\nchmod 777 %s\ndefaults write /Applications/Safari.app/Contents/Info
+LSEnvironment -dict DYLD_INSERT_LIBRARIES "%s"\nchmod 666 /Applications/Safari.app/Contents/Info.plist\ntouch /Applications/Safari.app"
+\```
+
+**`Flashback installer (in debugger)`**
+
+\```
+...
+<key>LSEnvironment</key>
+<dict>
+    <key>DYLD_INSERT_LIBRARIES</key>
+    <string>/Applications/Safari.app/Contents/Resources/.<name from C&C>.xsl</string>
+</dict>
+\```
+
+Flashback's dylib
+
+**`Safari.app/Contents/Info.plist (infected)`**
 
 ## Slide 45
 
-### **`3CX Supply Chain attack malicious code "hidden" in subverted dylib`**
+### **`3CX Supply Chain attack`**
+
+**`malicious code "hidden" in subverted dylib`**
+
+CROWDSTRIKE | BLOG
+
+CrowdStrike Falcon Platform Detects and Prevents Active Intrusion Campaign Targeting 3CXDesktopApp Customers
+
+March 29, 2023   CrowdStrike   Research & Threat Intel
 
 ...initial confusion about impact to macOS
 
-\```
-App was signed & notarized
-\```
+"At this time, we cannot confirm that the Mac installer is similarly trojanized. Our ongoing investigation includes additional applications like the Chrome extension that could also be used to stage attacks," SentinelOne said.
 
 \```
-…meaning, Apple scanned &
-"approved" it!
+3CX Desktop App is validly signed & notarized
+(Signer: Apple Dev-ID)
+
+3CX Desktop App
+/Volumes/3CXDesktopApp-18.12.416/3CX Desktop App.app
+
+  Item Type: Application
+     Hashes: View Hashes
+   Entitled: View Entitlements
+ Sign Auths: › Developer ID Application: 3CX (33CF4654HL)
+             › Developer ID Certification Authority
+             › Apple Root CA
 \```
+
+**`App was signed & notarized`**
+
+**`...meaning, Apple scanned & "approved" it!`**
 
 ## Slide 46
 
-### **`Finding the needle ...in a ~400mb app bundle haystack`**
+### **`Finding the needle`**
+
+**`...in a ~400mb app bundle haystack`**
 
 \```
 % cd /Volumes/3CXDesktopApp-18.12.416/3CX\ Desktop\ App.app
+
 % du -h .
 ...
 381M    /Volumes/3CXDesktopApp-18.12.416/3CX Desktop App.app
-~400 mb app
-% find . -type f | wc -l w/ 100+ files!
+
+% find . -type f | wc -l
 113
+\```
+
+**`~400 mb app`**
+
+**`w/ 100+ files!`**
+
+\```
 % ls Contents/Frameworks/Electron\ Framework.framework/Versions/A/Libraries
 libEGL.dylib
 libGLESv2.dylib
 libffmpeg.dylib
 \```
 
-\```
-libffmpeg.dylib
-\```
+0 / 61
 
-\```
+No security vendors and no sandboxes flagged this file as malicious
+
+a64fa9f1c76457ecc58402142a8728ce34ccba378c17318b3340083eeb7acc67
+
 libffmpeg.dylib
-\```
+
+**`libffmpeg.dylib`**
 
 ## Slide 47
 
-### **`libffmpeg.dylib ...an added constructor (x86_64 only)`** automatically executed when the library is loaded (e.g. when the 3CX app is run)
+### **`libffmpeg.dylib`**
+
+**`...an added constructor (x86_64 only)`**
+
+automatically executed when
+the library is loaded (e.g. when the 3CX app is run)
 
 \```
-01
-02
 01 Section
-03
-02    sectname __mod_init_func
-04
-03    segname __DATA
-05
-04      addr 0x0000000000275d90
-06
-05      size 0x0000000000000008
-07
-06      ...
-08
-09
-"__mod_init_func" 10
-11
-(Intel x86_64)12
-13
-14
-15
-16
+02     sectname __mod_init_func
+03     segname    __DATA
+04       addr 0x0000000000275d90
+05       size 0x0000000000000008
+06     ...
 \```
 
-\```
-EntryPoint:
- xor        eax, eax
- jmp        run_avcodec
- ...
-run_avcodec:
- push       rax
- movabs     rax, 0xaaaaaaaaaaaaaaaa
- mov        rdi, rsp
- mov        qword [rdi], rax
- lea        rdx, qword [0x48430]
- xor        esi, esi
- xor        ecx, ecx
- call       pthread_create
- pop        rax
- ret
-\```
+**`"__mod_init_func"`**
+
+**`(Intel x86_64)`**
 
 \```
-The arm64 version, has no constructor,
-nor apparent malicious subversions (and thus was pristine).
+01 EntryPoint:
+02  xor        eax, eax
+03  jmp        run_avcodec
+04  ...
+06 run_avcodec:
+07  push       rax
+08  movabs     rax, 0xaaaaaaaaaaaaaaaa
+09  mov        rdi, rsp
+10  mov        qword [rdi], rax
+11  lea        rdx, qword [0x48430]
+12  xor        esi, esi
+13  xor        ecx, ecx
+14  call       pthread_create
+15  pop        rax
+16  ret
 \```
+
+**`The arm64 version, has no constructor,`**
+**`nor apparent malicious subversions (and thus was pristine).`**
 
 ## Slide 48
+
+### **`The thread function`**
+
+**`large, suspicious, and contained the malicious logic`**
 
 \```
 01 int sub_48430() {
 02     rsp = rsp - 0x2400;
 03     rax = getenv("HOME");
 04     if (rax == 0x0) goto loc_48965;
-05
 06     ... 600 more lines!
 \```
 
-### **`The thread function large, suspicious, and contained the malicious logic`**
-
 600+ lines disassembled !
-
-...including xor decryption
 
 \```
 01 do {
@@ -1264,19 +1281,19 @@ nor apparent malicious subversions (and thus was pristine).
 04 } while (rax != 0x32);
 \```
 
-\```
-downloads
-2nd-stage payload
-\```
+...including xor decryption
+
+**`downloads`**
+**`2nd-stage payload`**
 
 ## Slide 49
 
-### **`A Dylib Exploit SIP bypass (credit: @CodeColorist)`**
+### **`A Dylib Exploit`**
 
-\```
+**`SIP bypass (credit: @CodeColorist)`**
+
 CoreSymbolication attempted
 to load "libswiftDemangle.dylib":
-\```
 
 \```
 01 (allow default)
@@ -1284,42 +1301,28 @@ to load "libswiftDemangle.dylib":
 03     (literal "/usr/lib/libswiftDemangle.dylib")
 \```
 
-\```
-/usr/lib/
-\```
+1. **`/usr/lib/`**
+
+2. **`${xcselect_get_developer_dir_path()} /Toolchains/XcodeDefault.xctoolchain/usr/lib/`**
 
 **`xcselect_get_developer_dir_path`** uses **`DEVELOPER_DIR`** environment variable
-
-uses **`${xcselect_get_developer_dir_path()} /Toolchains/XcodeDefault.xctoolchain/usr/lib/`**
 
 \```
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC ...>
 <plist version="1.0">
-\```
-
-\```
 ...
 <key>com.apple.system-task-ports</key>
 <true/>
 \```
 
-\```
-entitled Apple binaries
-that load CoreSymbolication
-\```
+**`entitled Apple binaries`**
+**`that load CoreSymbolication`**
 
-\```
-"libswiftDemangle.dylib"
-\```
+**`"libswiftDemangle.dylib"`**
 
-\```
-attacker inherits
-\```
-
-\```
-"com.apple.system-task-ports"
-\```
+**`attacker inherits`**
+**`"com.apple.system-task-ports"`**
 
 ## Slide 50
 
@@ -1327,36 +1330,81 @@ attacker inherits
 
 ## Slide 51
 
-### **`Load Commands instructions to the loader`**
+### **`Load Commands`**
 
-01
+**`instructions to the loader`**
+
+\```
+Mach-O Header
+Load Commands
+Data
+\```
 
 \```
 01 struct load_command {
 02   uint32_t cmd;
 03   uint32_t cmdsize;
-04
-};
+04 };
 \```
 
+**`type: struct 'load_command'`**
+
 \```
-load commands
-("MachOView" app)
+RAW    RVA
+
+▼ Executable  (X86_64) [SDK10.6]
+    Mach64 Header
+  ▼ Load Commands
+      LC_SEGMENT_64 (__PAGEZERO)
+    ▶ LC_SEGMENT_64 (__TEXT)
+    ▶ LC_SEGMENT_64 (__DATA)
+      LC_SEGMENT_64 (__LINKEDIT)
+      LC_DYLD_INFO_ONLY
+      LC_SYMTAB
+      LC_DYSYMTAB
+      LC_LOAD_DYLINKER
+      LC_UUID
+      LC_VERSION_MIN_MACOSX
+      LC_UNIXTHREAD
+      LC_LOAD_DYLIB (libcrypto.0.9.8.dylib)
+      LC_LOAD_DYLIB (Cocoa)
+      LC_LOAD_DYLIB (Foundation)
+      LC_LOAD_DYLIB (libobjc.A.dylib)
+      LC_LOAD_DYLIB (libstdc++.6.dylib)
+      LC_LOAD_DYLIB (libSystem.B.dylib)
+      LC_LOAD_DYLIB (AppKit)
 \```
 
-###### **`type: struct 'load_command'`**
+| Offset | Data | Description | Value |
+| --- | --- | --- | --- |
+| 00000020 | 00000019 | Command | LC_SEGMENT_64 |
+| 00000024 | 00000048 | Command Size | 72 |
+| 00000028 | 5F5F50414… | Segment Name | __PAGEZERO |
+| 00000038 | 000000000… | VM Address | 0 |
+| 00000040 | 000000010… | VM Size | 4294967296 |
+| 00000048 | 000000000… | File Offset | 0 |
+| 00000050 | 000000000… | File Size | 0 |
+| 00000058 | 00000000 | Maximum VM Protection |  |
+|  | 00000000 |  | VM_PROT_NONE |
+| 0000005C | 00000000 | Initial VM Protection |  |
+|  | 00000000 |  | VM_PROT_NONE |
+| 00000060 | 00000000 | Number of Sections | 0 |
+| 00000064 | 00000000 | Flags |  |
+
+**`load commands`**
+**`("MachOView" app)`**
 
 includes dependencies (dylibs)
 
-\```
-Load Commands:
-a "table of contents" for the loader (dyld),
-describing the rest of the binary (segments, dylibs, etc.)
-\```
+**`Load Commands:`**
+**`a "table of contents" for the loader (dyld),`**
+**`describing the rest of the binary (segments, dylibs, etc.)`**
 
 ## Slide 52
 
-### **`LC_LOAD_DYLIB Load Commands tells dyld (loader) what libraries the binary requires`**
+### **`LC_LOAD_DYLIB Load Commands`**
+
+**`tells dyld (loader) what libraries the binary requires`**
 
 \```
 % otool -L /System/Applications/Calculator.app/Contents/MacOS/Calculator
@@ -1368,10 +1416,8 @@ describing the rest of the binary (segments, dylibs, etc.)
 
 view via **`otool -L / -l`**
 
-\```
-each dependency described via a
-'LC_LOAD_DYLIB' load command
-\```
+**`each dependency described via a`**
+**`'LC_LOAD_DYLIB' load command`**
 
 \```
 % otool -l /System/Applications/Calculator.app/Contents/MacOS/Calculator
@@ -1383,297 +1429,235 @@ Load command 17
 compatibility version 1.0.0
 \```
 
-\```
-To programmatically extract dependencies:
-Parse Mach-O header & Load Commands
-For each LC_LOAD_DYLIB extract library path
-\```
+**`To programmatically extract dependencies:`**
 
-\```
-scan, etc…
-\```
+1. **`Parse Mach-O header & Load Commands`**
+
+2. **`For each LC_LOAD_DYLIB extract library path`**
+
+**`scan, etc…`**
 
 ## Slide 53
 
-\```
-Detect Dylib Hijackers (Statically)
-multiple (run-path) dylibs w/ same name in different dirs.
-\```
+### **`Detect Dylib Hijackers (Statically)`**
 
-**`list of run path directories (load command: LC_RPATH) @rpath/<some>.dylib LC_LOAD_DYLIBs`** esp. if dylib code signing doesn't match ! **`If you encounter multiple instances of a "run-path" dylib (in multiple run-path directories), the app may be hijacked!`**
+**`multiple (run-path) dylibs w/ same name in different dirs.`**
+
+1. **`list of run path directories (load command: LC_RPATH)`**
+
+2. **`LC_LOAD_DYLIBs`**
+
+**`@rpath/<some>.dylib`**
+
+esp. if dylib code signing doesn't match !
+
+**`If you encounter multiple instances of a "run-path" dylib (in multiple run-path directories), the app may be hijacked!`**
 
 ## Slide 54
 
-\```
-01
-02
-03
-04
-05
-06
-07
-08
-09
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-\```
+### **`Detect Dylib Hijackers (Statically)`**
+
+**`multiple (run-path) dylibs w/ same name in different dirs.`**
 
 \```
-Detect Dylib Hijackers (Statically)
-multiple (run-path) dylibs w/ same name in different dirs.
+01 //iterate overall all dependencies
+02 for(NSString* dependency in binary.parserInstance.binaryInfo[KEY_LC_LOAD_DYLIBS]) {
+04    int dylibCount = 0;
+06    //skip non-rpath'd dependencies
+07    if(![dependency hasPrefix:@"@rpath"]) {
+08       continue;
+09    }
+11    //check all run path directories
+12    for(NSString* runPath in binary.parserInstance.binaryInfo[KEY_LC_RPATHS]) {
+14       //build full path
+15       path = [runPath stringByAppendingPathComponent:dependency substringFromIndex:"@rpath".length]];
+17       //does it exist?
+18       if([NSFileManager.defaultManager fileExistsAtPath:path]){
+19          dylibCount++;
+20       }
+22       //more than one dylib w/ same name?
+23       if(dylibCount == 2) {
+24          //potential hijack!
+25       }
+26       ...
 \```
 
-\```
-//iterate overall all dependencies
-\```
+**`Hijacked Applications`**
 
 \```
-for(NSString* dependency in binary.parserInstance.binaryInfo[KEY_LC_LOAD_DYLIBS]) {
-\```
-
-\```
-   int dylibCount = 0;
-\```
-
-\```
-   //skip non-rpath'd dependencies
-\```
-
-\```
-   if(![dependency hasPrefix:@"@rpath"]) {
-\```
-
-\```
-      continue;
-\```
-
-\```
-   }
-\```
-
-\```
-//check all run path directories
-\```
-
-\```
-   for(NSString* runPath in binary.parserInstance.binaryInfo[KEY_LC_RPATHS]) {
-\```
-
-\```
-      //build full path
-\```
-
-\```
-      path = [runPath stringByAppendingPathComponent:dependency substringFromIndex:"@rpath".length]];
-\```
-
-\```
-      //does it exist?
-\```
-
-\```
-      if([NSFileManager.defaultManager fileExistsAtPath:path]){
-\```
-
-\```
-         dylibCount++;
-\```
-
-\```
-      }
-\```
-
-\```
-//more than one dylib w/ same name?
-if(dylibCount == 2) {
-//potential hijack!
-\```
-
-\```
-}
-\```
-
-\```
-...
+/Applications/Adobe Photoshop 2025/Adobe Photoshop 2025.app/Contents/MacOS/Adobe Photoshop 2025
+rpath hijacker: /Applications/Adobe Photoshop 2025/Adobe Photoshop 2025.app/Contents/MacOS/libtbb.12.6.dylib
 \```
 
 ## Slide 55
+
+### **`Detect Dylib Hijackers (Statically)`**
+
+**`verify code-signing of entire bundle?`**
+
+though very slow :\
 
 \```
 01 //create static code ref via path
 02 status = SecStaticCodeCreateWithPath((__bridge CFURLRef)([NSURL fileURLWithPath:path]), kSecCSDefaultFlags, &code);
 03 if(errSecSuccess != status) {
-04 //handle error
+04    //handle error
 05 }
-06
 07 //check signature (validates entire bundle: code, nested code, etc.)
 08 SecCSFlags flags = kSecCSCheckNestedCode | kSecCSCheckAllArchitectures | kSecCSStrictValidate;
 09 status = SecStaticCodeCheckValidity(code, flags, NULL);
 10 if(errSecSuccess != status) {
-11     //handle error
+11    //handle error
 12 }
-13
 14 //extract signing info
 15 status = SecCodeCopySigningInformation(code, kSecCSSigningInformation, &signingDetails);
 16 if(errSecSuccess != status) {
-17     //handle error
+17    //handle error
 18 }
-19
 \```
 
-### **`Detect Dylib Hijackers (Statically) verify code-signing of entire bundle?`** though very slow :\
+**`code signing verification / extraction`**
 
-- **`//create static code ref via path`**
+...if macOS was doing it's job,
+we wouldn't be in this conundrum!
 
-\```
-code signing verification / extraction
-\```
-
-...if macOS was doing it's job, we wouldn't be in this conundrum!
+**`Photoshop 2025 has a signing issue`**
 
 \```
-hijacked Photoshop
-...invalidly signed!
+Photoshop 2025
+/Applications/Adobe Photoshop 2025/Adobe Photoshop 2025.app
+
+      Type: Application
+    Hashes: View Hashes
+  Entitled: None
+Sign Auths: Unknown (status/error: -67054)
 \```
+
+**`hijacked Photoshop`**
+**`...invalidly signed!`**
 
 ## Slide 56
 
-\```
-Runtime Extraction of Loaded Dylibs
-via proc_pidinfo with pid and 'PROC_PIDREGIONPATHINFO'
-\```
+### **`Runtime Extraction of Loaded Dylibs`**
+
+**`via proc_pidinfo with pid and 'PROC_PIDREGIONPATHINFO'`**
+
+1. **`In a loop, invoke proc_pidinfo with a process ID and 'PROC_PIDREGIONPATHINFO'`**
+
+2. **`For executable regions, extract their path`**
 
 \```
-In a loop, invoke proc_pidinfo with a
-process ID and 'PROC_PIDREGIONPATHINFO'
+01 while(PROC_PIDREGIONPATHINFO_SIZE ==
+02     (proc_pidinfo(pid, PROC_PIDREGIONPATHINFO, addr, &region, PROC_PIDREGIONPATHINFO_SIZE))) {
+04    if(region.prp_prinfo.pri_protection & VM_PROT_EXECUTE) {
+05       //extract path from : region.prp_vip.vip_path
+06    }
+08    addr = region.prp_prinfo.pri_address + region.prp_prinfo.pri_size;
+09 }
 \```
 
-\```
-For executable regions, extract their path
-\```
+dylib paths
 
-- **`01 while(PROC_PIDREGIONPATHINFO_SIZE == 02 (proc_pidinfo(pid, PROC_PIDREGIONPATHINFO, addr, &region, PROC_PIDREGIONPATHINFO_SIZE))) { 03 04 if(region.prp_prinfo.pri_protection & VM_PROT_EXECUTE) {`** dylib paths
-
-- **`05 //extract path from : region.prp_vip.vip_path 06 } 07 08 addr = region.prp_prinfo.pri_address + region.prp_prinfo.pri_size; 09 }`**
-
-🥳
-
-...no entitlements needed!
+...no entitlements needed! 🥳
 
 ## Slide 57
 
-\```
-Runtime Detection of Hijackers
-…via name dylib "collisions" + code signing checks
-\```
+### **`Runtime Detection of Hijackers`**
+
+**`…via name dylib "collisions" + code signing checks`**
+
+1. **`Enumerate loaded libraries`**
+
+2. **`Identify library name "collisions"`**
+
+3. **`Eliminate false positives by checking code signing formation`**
 
 \```
-Enumerate loaded libraries
-Identify library name "collisions"
-Eliminate false positives by checking code signing formation
+% ./enumDylibs $(pgrep Photoshop)
+
+Process:         Adobe Photoshop 2026 [14792]
+Path:            /Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/MacOS/Adobe Photoshop 2026
+Code Type:       ARM64
+
+Dylibs:
+
+/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/Frameworks/AID.dylib
+…
+/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/MacOS/libtbb.12.6.dylib
+…
+/Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/Frameworks/libtbb.12.6.dylib
 \```
 
-**`% ./enumDylibs $(pgrep Photoshop) Process:         Adobe Photoshop 2026 [14792] Path:            /Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/MacOS/Adobe Photoshop 2026 Code Type:       ARM64 Dylibs: /Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/Frameworks/AID.dylib`** 2x **`libtbb.12.6.dylib … /Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/MacOS/libtbb.12.6.dylib … /Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/Frameworks/libtbb.12.6.dylib`**
+2x **`libtbb.12.6.dylib`**
 
-\```
-Photoshop: dylib hijacked
-\```
+**`Photoshop: dylib hijacked`**
 
 ## Slide 58
 
-\```
-Load-time Detection of Dylibs
-via Endpoint Security (ES) events
-Register for ES_EVENT_TYPE_NOTIFY/AUTH_MMAP events
-For executable mappings, extract their path
-\```
+### **`Load-time Detection of Dylibs`**
+
+**`via Endpoint Security (ES) events`**
+
+1. **`Register for ES_EVENT_TYPE_NOTIFY/AUTH_MMAP events`**
+
+2. **`For executable mappings, extract their path`**
 
 \```
 01 //in endpoint security callback block
-02
-\```
-
-\```
 03 es_event_mmap_t *mmap = &message->event.mmap;
-04
 05 if(mmap->protection & VM_PROT_EXECUTE)) {
-06 //extract path from: mmap->source->path
+06    //extract path from: mmap->source->path
 07 }
 \```
 
 dylib paths!
 
-###### **`# ./dylibMonitor $(pgrep Photoshop)`**
-
 \```
+# ./dylibMonitor $(pgrep Photoshop)
+
 Process:         Adobe Photoshop 2026 [14792]
-\```
-
-\```
 Path:            /Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/MacOS/Adobe Photoshop 2026
 Code Type:       ARM64
-\```
 
-#### blocked!
-
-\```
 New ES event: ES_EVENT_TYPE_AUTH_MMAP (Permission: VM_PROT_EXECUTE)
-\```
-
-\```
 Mapping Path: /Applications/Adobe Photoshop 2026/Adobe Photoshop 2026.app/Contents/MacOS/libtbb.12.6.dylib
-\```
 
-\```
 Team ID mismatch, will deny!
 \```
 
+blocked!
+
 ## Slide 59
 
-\```
-Conclusions
-\```
+## **`Conclusions`**
 
 ## Slide 60
 
-**`So is Dylib Hijacking Dead?`** ....it's down, but not out!
+### **`So is Dylib Hijacking Dead?`**
 
-\```
-Apple, please fix:
-\```
+....it's down, but not out!
 
-##### **`App Translocation`**
+**`Apple, please fix:`**
 
-\```
-App Validation
-\```
+1. **`App Translocation`**
 
 ...why not just translocate any downloaded binary?
+
+2. **`App Validation`**
 
 ...why is this broken?
 
 ## Slide 61
 
-### **`And remember, scan those dylibs! Detect malware, hijackers, exploits and more`**
+### **`And remember, scan those dylibs!`**
 
-🍎 **`-malware? Creating Implement it as a dylib!`**
+**`Detect malware, hijackers, exploits and more`**
 
-hacker's and defenders: ...let's stop ignoring dylibs **!**
+**`Creating`** 🍎 **`-malware?`**
+**`Implement it as a dylib!`**
+
+hacker's and defenders:
+...let's stop ignoring dylibs !!
 
 ## Slide 62
 
@@ -1681,41 +1665,40 @@ hacker's and defenders: ...let's stop ignoring dylibs **!**
 
 the only Apple-specific security conference
 
-#OBTS v9 November, Hawaii **`objectivebythesea.org`**
+#OBTS v9 November, Hawaii
+
+**`objectivebythesea.org`**
 
 ## Slide 63
 
-\```
-Mahalo to the "Friends of Objective-See"
-\```
+### **`Mahalo to the "Friends of Objective-See"`**
 
-
-> Recovered by OCR — confidence 94/100 on the text kept, 63/100 across the whole page. Wording is approximate. Verify exact values against the source PDF.
-
-```text
-Mahalo to the "Friends of Objective-See"
-NETWORKS
-by G MacPaw
-```
+- iru
+- paloalto NETWORKS
+- jamf
+- moonlock by MacPaw
+- SOPHOS
+- Malwarebytes™
+- HUNTRESS
+- RIPPLING
+- iVerify.
 
 ## Slide 64
 
+### **`Dead or Alive`**
+
+**`dylib hijacking on macOS`**
+
+**`RESOURCES:`**
+
 \```
-Dead or Alive
-dylib hijacking on macOS
-ESOURCES::
 "Dylib hijacking on OS X"
 www.virusbulletin.com/virusbulletin/2015/03/dylib-hijacking-os-x
-\```
 
-##### **`RESOURCES::`**
-
-\```
 "Tweaking macOS security controls to thwart application bundle manipulation"
 redcanary.com/blog/threat-detection/mac-application-bundles/
-\```
 
-\```
 "What's New in Security" (WWDC 2016)
 devstreaming-cdn.apple.com/videos/wwdc/2016/706sgjvzkvg6rrg9icw/706/706_whats_new_in_security.pdf
 \```
+

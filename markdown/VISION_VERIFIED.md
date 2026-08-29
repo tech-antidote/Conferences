@@ -4,14 +4,14 @@ Every slide listed here had its page image read by a vision model and
 compared against what OCR produced for it. The verdict is that model's
 judgement of the OCR text, not of the slide.
 
-**7075 slides across 229 documents.**
+**7098 slides across 229 documents.**
 
 | Verdict | Slides | Meaning |
 |---|---:|---|
-| badly-mangled | 2445 | OCR text was unusable — rebuilt from the page |
-| minor-errors | 3753 | structure held; individual characters or lines wrong |
-| accurate | 848 | OCR was already correct; text confirmed, not changed |
-| unrecorded | 29 | reviewed before verdicts were recorded |
+| badly-mangled | 2463 | OCR text was unusable — rebuilt from the page |
+| minor-errors | 3757 | structure held; individual characters or lines wrong |
+| accurate | 850 | OCR was already correct; text confirmed, not changed |
+| unrecorded | 28 | reviewed before verdicts were recorded |
 
 ## Coverage by subject
 
@@ -376,7 +376,7 @@ under more than one heading or under none. Counts are slides.
 | DEF CON 34 | Compounding Interest Exploiting the ATM Supply Chain | 1-42 | badly-mangled, minor-errors, accurate | 2 |
 | DEF CON 34 | Cracking North Korea's Information Control How Smugglers, Defectors, and Technologists are Breaking Open the World's Most Locked-D | 1-47 | badly-mangled, minor-errors, accurate | 2 |
 | DEF CON 34 | Crashing the Party Pwning Control-Flow Integrity with Segmentation Fault-Oriented Programming | 1-140 | badly-mangled, minor-errors, accurate | 0 |
-| DEF CON 34 | Dylib Hijacking on macOS Dead or Alive | 1-41 | badly-mangled, minor-errors, accurate | 0 |
+| DEF CON 34 | Dylib Hijacking on macOS Dead or Alive | 1-64 | badly-mangled, minor-errors, accurate | 0 |
 | DEF CON 34 | Gone in 60 Frames - USB Video Exploitation | 1-30 | badly-mangled, minor-errors, accurate | 1 |
 | DEF CON 34 | Gotta Catch 'Em All How To Capture 3.5 Billion WhatsApp Accounts | 1 | badly-mangled | 0 |
 | DEF CON 34 | Hacking Your Life with AI Can Get You Hacked How AI Orchestration Platforms Ship RCE by Design | 1-58 | badly-mangled, minor-errors, accurate | 0 |

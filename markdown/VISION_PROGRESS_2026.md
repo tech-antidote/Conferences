@@ -9,11 +9,9 @@ _Snapshot: 2026-08-29 (UTC)._ Every deck listed as verified
 below has had its page images read against the converter output and the corrections
 applied and committed.
 
-## Fully verified end to end — 76 decks, 4,616 pages
+## Fully verified end to end — 77 decks, 4,680 pages
 
 Read cover to cover; corrections are in the tree, per-page detail in VISION_VERIFIED.md.
-The 2026 decks completed in this run: CRLF-Powered Desync (111), Prompt2Own (127),
-C and Its Consequences (156), A 0-Click Exploit Chain for the Pixel 10 (116).
 
 <details><summary>All fully-verified 2026 decks</summary>
 
@@ -93,6 +91,7 @@ C and Its Consequences (156), A 0-Click Exploit Chain for the Pixel 10 (116).
 - `BlackHat_USA_2026_Slides/yisroel-mirskyshir-rozenfeldgilad-gresselrahul-pankajakshan-rules-for-neural-traffic-a-new-defensive-layer-for-llms.md` — 52pp
 - `BlackHat_USA_2026_Slides/yotam-meitar-the-crypto-caper-exposing-a-sophisticated-multi-cloud-bandit.md` — 16pp
 - `DEF CON 34/def-con-34-matteo-giordano-beyond-the-ceremony-the-2026-passkey-attack-surface-v2.md` — 100pp
+- `DEF CON 34/def-con-34-patrick-wardle-dylib-hijacking-on-macos-dead-or-alive-hijack-2026.md` — 64pp
 
 </details>
 
@@ -100,9 +99,7 @@ C and Its Consequences (156), A 0-Click Exploit Chain for the Pixel 10 (116).
 
 Verified pages are corrected and committed; the resume range still carries first-pass
 converter output. Frontmatter carries `vision_verified_pages` and
-`vision_unreviewed_pages` for mechanical filtering. The four rows marked "resuming
-now" were interrupted by a session rate limit (not a content block) and have agents
-in flight for the listed range.
+`vision_unreviewed_pages` for mechanical filtering.
 
 | Deck | Verified | Total | Resume at | Model | Note |
 |---|---:|---:|---|---|---|
@@ -111,7 +108,6 @@ in flight for the listed range.
 | `BlackHat_USA_2026_Slides/dion-blazakisjosh-mainebruce-dang-apple-macos-kernel-exploitation-with-mie-building-on-the-ashes-of-100-vulnerabilities.md` | 44 | 58 | 45–58 | — | cyber-safeguard blocked on 45–58 (both models) — see UNVERIFIED.md |
 | `BlackHat_USA_2026_Slides/splitline-ng-born-corrupted-how-we-backdoored-trusted-language-binaries.md` | 102 | 174 | 103–174 | Sonnet | resuming now — rate-limit interrupt |
 | `BlackHat_USA_2026_Slides/tristan-madani-secure-a-single-wrong-negation-to-root-linux-and-escape-managed-containers.md` | 33 | 73 | 34–73 | — | earlier partial — re-extract and resume the range |
-| `DEF CON 34/def-con-34-patrick-wardle-dylib-hijacking-on-macos-dead-or-alive-hijack-2026.md` | 41 | 64 | 41, 43–64 | Opus | resuming now — rate-limit interrupt; slide 42 already done |
 
 ## Not yet started
 
